@@ -1,13 +1,115 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+		
+		<title> TRADUCTOR DE EMOCIONES </title> 
+	</head>
+	<body>
+		<div class="container">
+			<br>
+			<div class="row">
+				<div class="col-sm-9">
+					<h2 style="text-align: left;"> TRADUCTOR DE EMOCIONES </h2>
+				</div>
+				<div class="col-sm-3">
+					<button type="button" class="btn btn-default">Aquí pondremos el icono de ajustes</button>
+				</div>
+			</div>
+			<div class="row">
+				<textarea class="form-control" rows="10" id="textArea" placeholder="Introduzca aquí su texto..."></textarea>
+			</div>
+			<br>
+			<center>
+				
+					<button type="button" class="btn btn-default" id="texto">Traducir</button>
+				
+			</center>
+			
+		</div>
 
-<head>
-	<meta charset="UTF-8">
-	<title>EmoTraductor</title>
-</head>
-
-<body>
+		<div id="salida"></div>
+		<div class="row">
+		Tristeza:<div id="tristeza" class="col-md-1"></div>
+		Miedo:<div id="miedo" class="col-md-1"></div>
+		Alegria:<div id="alegria" class="col-md-1"></div>
+		Enfado:<div id="enfado" class="col-md-1"></div>
+		Sorpresa:<div id="sorpresa" class="col-md-1"></div>
+		</div>
 	
-</body>
-	<h1>Bienvenidos al Traductor de emociones</h1>
+		
+
+		
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
+
+<script type=text/javascript>
+$(document).ready(function(){
+    $("#texto").click(function(){	
+	var datos = $("#textArea").val();
+	
+       $.ajax({
+		type: 'GET', /*Creo que por defecto es GET*/
+		url: 'http://sesat.fdi.ucm.es/emociones/'+datos+'/',
+		contentType: 'application/json',
+		dataType: 'json',
+		crossDomain: true,
+		success: function(data){
+			
+			$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/   
+			var porcentajes = data.porcentajes;
+			var porcentajes_array = data.porcentajes.replace('[', ' ').replace(']', ' ').split(',');
+			var tristeza = porcentajes_array[0];
+			var miedo = porcentajes_array[1];
+			var alegria = porcentajes_array[2];
+			var enfado = porcentajes_array[3];
+			var sorpresa = porcentajes_array[4];
+			if(tristeza != 0){
+				$("#tristeza").html(tristeza); /*Aquí mostrará el porcentaje de tristeza */
+				var imgTristeza = $('<img src="tristeza.png" alt="Smiley face" width="50" height="50"/>');
+				$('#tristeza').append(imgTristeza); 
+			}
+			if(miedo != 0){
+				$("#miedo").html(miedo); /*Aquí mostrará el porcentaje de miedo */
+				var imgMiedo = $('<img src="miedo.png" alt="Smiley face" width="50" height="50"/>');
+				$('#miedo').append(imgMiedo); 
+			}
+			if(alegria != 0){
+				$("#alegria").html(alegria); /*Aquí mostrará el porcentaje de alegría */
+				var imgAlegria = $('<img src="alegria.png" alt="Smiley face" width="50" height="50"/>');
+				$('#alegria').append(imgAlegria); 
+			}
+			if(enfado != 0){
+				$("#enfado").html(enfado); /*Aquí mostrará el porcentaje de enfado */
+				var imgEnfado = $('<img src="enfado.png" alt="Smiley face" width="50" height="50"/>');
+				$('#enfado').append(imgEnfado); 
+			}
+			if(sorpresa != 0){
+				$("#sorpresa").html(sorpresa); /*Aquí mostrará el porcentaje de sorpresa */
+				var imgSorpresa = $('<img src="sorpresa.png" alt="Smiley face" width="50" height="50"/>');
+				$('#sorpresa').append(imgSorpresa); 
+			}
+			
+		},	
+		error: function(request, status, errorThrown) {
+               		alert(request);
+			alert(status);
+                	alert(errorThrown);
+
+            	},
+	});
+    });
+});
+</script>
+	</body>
 </html>
 
-Abejas
+
+
+
