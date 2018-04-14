@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['Expertos', 'recomiendan', 'declarar', 'país', 'libre', 'malaria', 'grupo', 'expertos', 'recomendó', 'declarar', 'país', 'libre', 'malaria', 'verificar', 'situación', 'enfermedad', 'terreno', 'semanas', 'informó', 'domingo', 'cartera', 'sanitaria', 'explicó', 'través', 'comunicado', 'expertos', 'comprobaron', 'país', 'suramericano', 'registran', 'casos', 'transmisión', 'local', 'malaria', 'últimos', 'años', 'sistema', 'sanitario', 'prevenir', 'eventuales', 'casos', 'enfermedad', 'recomendación', 'cierra', 'esfuerzo', 'sistema', 'sanitario', 'paraguayo', 'últimos', 'años', '2012', 'registra', 'casos', 'autóctonos', 'enfermedad', 'gran', 'logro', 'nacional', 'posibilita', 'privilegiado', 'sitial', 'primer', 'país', 'sudamericano', 'erradicar', 'enfermedad', 'indicaron', 'malaria', 'pasó', 'historia', 'registros', 'médicos', 'país', '2011', 'último', 'caso', 'registrado', 'datos', 'presentados', 'septiembre', 'fundó', 'raíz', 'brote', 'malaria', 'sufrió', '1957', '90', 'personas', 'territorio', 'país', 'contrajeran', 'enfermedad', 'paludismo', 'malaria', 'enfermedad', 'letal', 'causada', 'parásitos', 'género', 'plasmodium', 'transmiten', 'ser', 'humano', 'picadura', 'mosquitos', 'infectados', 'paludismo', 'mantiene', 'presente', 'países', 'concentrados', 'calcula', '2016', 'fallecidos', 'mundo', 'millones', 'casos', 'datos']
+Porcentaje de tristeza: 31.04%
+Porcentaje de miedo: 16.73%
+Porcentaje de alegria: 16.05%
+Porcentaje de enfado: 0.34%
+Porcentaje de sorpresa: 0.0%
+Porcentaje de neutral: 45.82%
+La mayoritaria es Neutral con un 45.82%
+-----------------------------------------------------------

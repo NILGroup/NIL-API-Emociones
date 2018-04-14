@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['quería', 'llevar', 'honor', 'familia', 'veces', 'difícil', 'día', 'padre', 'enteró', 'tenía', 'ir', 'guerra', 'fingió', 'muchacho', 'unió', 'ejército', 'padre', 'tuviera', 'hacerlo', 'entrenó', 'Ayudó', 'ejército', 'chino', 'ganar', 'guerra', 'familia', 'sintió', 'orgullosa']
+Porcentaje de tristeza: 3.54%
+Porcentaje de miedo: 12.54%
+Porcentaje de alegria: 35.71%
+Porcentaje de enfado: 1.21%
+Porcentaje de sorpresa: 0.0%
+Porcentaje de neutral: 61.29%
+La mayoritaria es Neutral con un 61.29%
+-----------------------------------------------------------

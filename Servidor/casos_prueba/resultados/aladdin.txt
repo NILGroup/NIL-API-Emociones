@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['princesa', 'vivía', 'palacio', 'real', 'padre', 'quería', 'casar', 'enamorada', 'escapó', 'palacio', 'Deseaba', 'libre', 'conoció', 'bazar', 'ayuda', 'enamoraron']
+Porcentaje de tristeza: 0.0%
+Porcentaje de miedo: 0.0%
+Porcentaje de alegria: 77.0%
+Porcentaje de enfado: 0.0%
+Porcentaje de sorpresa: 0.0%
+Porcentaje de neutral: 39.67%
+La mayoritaria es Alegria con un 77.0%
+-----------------------------------------------------------

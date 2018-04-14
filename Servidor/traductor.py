@@ -7,15 +7,15 @@ from salida import Salida
 
 
 _salida = Salida() # gestionar salida
-URL = 'http://127.0.0.1:8000/' # URL del servidor
+URL = 'http://127.0.0.1:8000/emociones/' # URL del servidor
 
 def interpretar_palabra(palabra):
-	servicios = ['porcentajes/', 'consensuada/', 'mayoritaria/']
+	servicios = ['/porcentajes/', '/consensuada/', '/mayoritaria/']
 	destinos = []
 	interpreta = InterpretePalabras()
 	palabra = palabra.lower()
 	for i in range(3):
-		dest = URL + servicios[i] + palabra
+		dest = URL + palabra + servicios[i]
 		destinos.append(dest)
 	porcentajes = interpreta.interpretar_porcentajes(destinos[0])
 	_salida.mostrar_porcentajes(porcentajes)

@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['año', 'enero', 'página', 'blanco', 'llena', 'palabras', 'brotan', 'interior', 'salpicadas', 'cosas', 'contar', 'escapan', 'entendimiento', 'año', 'pasado', 'mañana', 'fría', 'cuerpos', 'separaban', 'almas', 'conectadas', 'verte', 'escucharte', 'achucharte', 'embargo', 'sentirte', 'través', 'personas', 'llegando', 'través', 'través', 'historias', 'entremezclan', 'convierten', 'lágrimas', 'vida', 'besarte', 'olerte', 'achucharte', 'forman', 'parte', 'instante']
+Porcentaje de tristeza: 0.0%
+Porcentaje de miedo: 0.0%
+Porcentaje de alegria: 13.53%
+Porcentaje de enfado: 0.0%
+Porcentaje de sorpresa: 0.0%
+Porcentaje de neutral: 119.81%
+La mayoritaria es Neutral con un 119.81%
+-----------------------------------------------------------

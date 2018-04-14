@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['nació', 'princesa', 'hadas', 'buenas', 'hicieron', 'maravillosos', 'regalos', 'regalo', 'malvada', 'maldición', 'cumplir', 'años', 'princesa', 'pincharía', 'rueca', 'hadas', 'llevaron', 'vivir', 'bosque', 'Querían', 'protegerla', 'maldición', 'fuerte', 'Hizo', 'pinchara', 'dedo', 'durmiera', 'príncipe', 'rompió', 'hechizo', 'despertó']
+Porcentaje de tristeza: 1.21%
+Porcentaje de miedo: 2.36%
+Porcentaje de alegria: 44.33%
+Porcentaje de enfado: 3.57%
+Porcentaje de sorpresa: 0.81%
+Porcentaje de neutral: 62.0%
+La mayoritaria es Neutral con un 62.0%
+-----------------------------------------------------------

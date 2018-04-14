@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['conocéis', 'seguido', 'redes', 'sabréis', 'críticas', 'llevado', 'aguantado', 'obvio', 'agradable', 'leer', 'mentiras', 'semana', 'semana', 'hacer', 'oídos', 'sordos', 'seguir', 'trabajo', 'familia', 'amigos', 'personajes', 'públicos', 'tenemos', 'riesgo', 'rosa', 'exponemos', 'gente', 'hable', 'regular', 'quieran', 'existe', 'tipo', 'límite', 'pone', 'nochecita', 'prensa', 'visto', 'desde', 'existe', 'límite']
+Porcentaje de tristeza: 0.0%
+Porcentaje de miedo: 0.0%
+Porcentaje de alegria: 20.09%
+Porcentaje de enfado: 4.44%
+Porcentaje de sorpresa: 0.0%
+Porcentaje de neutral: 88.8%
+La mayoritaria es Neutral con un 88.8%
+-----------------------------------------------------------

@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['Pocahontas', 'indígena', 'Amaba', 'naturaleza', 'día', 'barco', 'llegó', 'ingleses', 'codiciosos', 'malvados', 'bondadoso', 'amable', 'tribu', 'quería', 'ingleses', 'fueran', 'ingleses', 'fueron', 'barco', 'olvidarían']
+Porcentaje de tristeza: 1.7%
+Porcentaje de miedo: 3.3%
+Porcentaje de alegria: 26.8%
+Porcentaje de enfado: 5.0%
+Porcentaje de sorpresa: 0.0%
+Porcentaje de neutral: 83.2%
+La mayoritaria es Neutral con un 83.2%
+-----------------------------------------------------------

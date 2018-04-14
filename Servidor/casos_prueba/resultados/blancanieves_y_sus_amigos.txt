@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['amable', 'gentil', 'tenía', 'amigos', 'animales', 'bosque', 'amigos', 'pequeño', 'pajarito', 'amigo', 'príncipe', 'azul', 'amigo', 'enanitos', 'mejores', 'amigos']
+Porcentaje de tristeza: 2.12%
+Porcentaje de miedo: 0.0%
+Porcentaje de alegria: 112.5%
+Porcentaje de enfado: 0.0%
+Porcentaje de sorpresa: 0.0%
+Porcentaje de neutral: 10.38%
+La mayoritaria es Alegria con un 112.5%
+-----------------------------------------------------------

@@ -8,6 +8,9 @@ cada una de ellas, y devolver la información que tiene sobre ella.
 interpreta = InterpreteFrases() # nos permitirá interpretar las frases
 
 emociones = ["Tristeza", "Miedo", "Alegria", "Enfado", "Sorpresa", "Neutral"] # lista de emociones con las que trabajamos
+#subfrases = [] # frases que componen el texto
+#tipos = [] # 1 enunciativa, 2 interrogativa, 3 exclamativa
+#num_frases = 0
 
 def obtener_medias(porcentajes,num_frases):
 	"""
@@ -40,31 +43,53 @@ def calcular_mayoritaria(contadores,porcentajes):
 				indices.append(i)
 	return indices,mayor
 
-def obtener_contrario(signo):
+def obtener_signos(signo):
 	if signo == '¿':
 		return '¡','!'
 	elif signo == '¡':
 		return '¿','?'
 
+def limpiar_frase(frase):
+	if frase[0] == " ":
+		frase = frase.lstrip(" ")
+	if '\n' in frase:
+		frase = frase.lstrip('\n')
+	return frase
+
 def procesar_frase(frase):
 	"""
 	Comprueba si la frase contiene alguna pregunta o exclamación y en caso positivo la parte.
 	"""
+	frase = limpiar_frase(frase)
 	if ("?" in frase) and ("!" not in frase): # hay una pregunta
-		frase_bien = frase.split('?')
+		subfrases = frase.split('?')
+		subfrases[0] = subfrases[0].lstrip('¿')
+		subfrases[1] = subfrases[1].lstrip(' ')
+		tipos = [2,1]
 	elif ("?" not in frase) and ("!" in frase): # hay una exclamación
-		frase_bien = frase.split('!')
+		subfrases = frase.split('!')
+		subfrases[0] = subfrases[0].lstrip('¡')
+		subfrases[1] = subfrases[1].lstrip(' ')
+		tipos = [3,1]
 	elif ("?" in frase) and ("!" in frase): # hay ambas
-		c = frase[0]
-		s1,s2 = obtener_contrario(c)
-		fase1 = frase.split(s1)
-		fase2 = fase1[1].split(s2)
-		frase_bien = [fase1[0]] + fase2
+		c = frase[0] # primer caracter de la frase
+		s1,s2 = obtener_signos(c) # obtenemos los signos por los que partir
+		subfrase1 = frase.split(s1)
+		subfrase2 = subfrase1[1].split(s2)
+		s1,s2 = obtener_signos(s1) # signos de la primera frase para quitarlos
+		subfrase1[0] = (subfrase1[0].lstrip(s1)).rstrip(s2)
+		subfrases = [subfrase1[0]] + subfrase2
+		if s1 == '¿':
+			tipos = [2,3,1]
+		else:
+			tipos = [3,2,1]
 	elif ":" in frase:
-		frase_bien = frase.split(':')
+		subfrases = frase.split(':')
+		tipos = [1]
 	else:
-		frase_bien = [frase]
-	return frase_bien
+		subfrases = [frase]
+		tipos = [1]
+	return subfrases,tipos
 
 def frase_vacia(frase):
 	"""
@@ -77,12 +102,21 @@ def frase_vacia(frase):
 	else:
 		return False
 
-def analizar_porcentajes_frase(frase, porcentajes, lista_palabras):
+def determinar_peso(tipo):
+	if tipo == 1:
+		return 1.0
+	elif tipo == 2:
+		return 0.5
+	else:
+		return 2.0
+
+def analizar_porcentajes_frase(frase, porcentajes, lista_palabras, peso, num_frases):
 	emociones,aux = interpreta.emociones_frase(frase)
 	lista_palabras = lista_palabras + aux
 	for j in range(6):
-		porcentajes[j] = porcentajes[j] + float(emociones[j])
-	return porcentajes, lista_palabras
+		porcentajes[j] = porcentajes[j] + (float(emociones[j]) * peso)
+	num_frases = num_frases + peso
+	return porcentajes, lista_palabras, num_frases
 
 def analizar_mayoritarias(frase, porcentajes, contadores):
 	mayoritarias,porcentaje = interpreta.emociones_mayoritaria_frase(frases)
@@ -101,17 +135,19 @@ class InterpreteTexto():
 		Devuelve los porcentajes y las palabras que permiten llegar a ellos.
 		"""
 		frases = texto.split('.')
-		num_frases = len(frases) - 1
-		n = num_frases
+		num_frases = 0
+		n = len(frases)
 		porcentajes = [0,0,0,0,0,0]
 		palabras = []
 		for i in range(n):
 			if frase_vacia(frases[i]) == False:
-				subfrases = procesar_frase(frases[i])
+				subfrases, tipos = procesar_frase(frases[i])
 				for j in range(len(subfrases)):
-					porcentajes, palabras = analizar_porcentajes_frase(subfrases[j], porcentajes, palabras)
-					if j > 0:
-						num_frases = num_frases + 1
+					if j < len(tipos):
+						peso = determinar_peso(tipos[j])
+					else:
+						peso = 1.0
+					porcentajes, palabras, num_frases = analizar_porcentajes_frase(subfrases[j], porcentajes, palabras, peso, num_frases)
 			else:
 				num_frases = num_frases - 1
 		resultado = obtener_medias(porcentajes,num_frases)

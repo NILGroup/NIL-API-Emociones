@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['vez', 'gracias', 'vez', 'dejáis', 'palabras', 'hacéis', 'merezca', 'pena', 'verdad', 'gracias', 'regalo', 'muñeca', 'especial', 'Significa', 'estáis', 'apoyáis', 'sabéis', 'ganas', 'comerme', 'mundo', 'siento', 'Os', 'dejo', 'fotos', 'paso', 'paso', 'veáis', 'detalles', 'cuidado', 'Menudo', 'trabajazo', 'solo', 'marca', 'hecho', 'vuestro', 'calor', 'Gracias', 'vosotros', 'PedrocheCampanadas', 'tienen', 'sentido', 'adoro']
+Porcentaje de tristeza: 9.09%
+Porcentaje de miedo: 0.0%
+Porcentaje de alegria: 29.29%
+Porcentaje de enfado: 0.77%
+Porcentaje de sorpresa: 1.55%
+Porcentaje de neutral: 68.39%
+La mayoritaria es Neutral con un 68.39%
+-----------------------------------------------------------

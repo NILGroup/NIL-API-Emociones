@@ -56,28 +56,28 @@ def porcentajes(op,frase):
 	Porcentaje de sorpresa: 0.0%
 	Porcentaje de neutral: 50.0%
 	>>> porcentajes(0,"Ana está triste porque se ha roto su ascensor")
-	Porcentaje de tristeza: 55.67%
+	Porcentaje de tristeza: 58.5%
 	Porcentaje de miedo: 0.0%
 	Porcentaje de alegria: 0.0%
-	Porcentaje de enfado: 11.0%
+	Porcentaje de enfado: 16.5%
 	Porcentaje de sorpresa: 0.0%
-	Porcentaje de neutral: 33.33%
+	Porcentaje de neutral: 25.0%
 	>>> porcentajes(1,"Ana está triste y avergonzada")
-	La mayoritaria es Tristeza con un 100%
+	La mayoritaria es Tristeza con un 100.0%
 	>>> porcentajes(1,"Llevaba una escopeta")
-	La mayoritaria es Miedo con un 100%
+	La mayoritaria es Miedo con un 100.0%
 	>>> porcentajes(1,"Mañana es mi boda")
-	La mayoritaria es Alegria con un 100%
+	La mayoritaria es Alegría con un 100.0%
 	>>> porcentajes(1,"Ese tipo es un arrogante")
-	La mayoritaria es Enfado con un 100%
+	La mayoritaria es Enfado con un 100.0%
 	>>> porcentajes(1,"Me ha sorprendido su actitud")
-	La mayoritaria es Sorpresa con un 100%
+	La mayoritaria es Sorpresa con un 100.0%
 	>>> porcentajes(1,"Pásame un tenedor")
-	La mayoritaria es Neutral con un 100%
+	La mayoritaria es Neutral con un 100.0%
 	>>> porcentajes(1,"Me voy a dormir")
-	La mayoritaria es Hay dos emociones mayoritarias: Alegria y Neutral con un 50%
+	La mayoritaria es Alegría con un 50.0%
 	>>> porcentajes(1,"Ana está triste porque se ha roto su ascensor")
-	La mayoritaria es Tristeza con un 67%
+	La mayoritaria es Tristeza con un 58.5%
 	"""
 	interpreta = InterpreteFrases()
 	_salida = Salida()

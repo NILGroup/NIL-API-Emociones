@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['madre', 'primer', 'hijo', 'sabemos', 'nombre', 'influencer', 'pronunciado', 'redes', 'sociales', 'medios', 'italianos', 'confirman', 'nacimiento', 'pequeño', 'años', 'fin', 'mamá', 'influencer', 'italiana', 'pronunciado', 'través', 'cotizadas', 'redes', 'sociales', 'portal', 'italiano', 'confirmado', 'noticia', 'italiano', 'anunciado', 'hijo', 'rapero', 'llegó', 'mundo', 'noche', 'marzo', 'italiana', 'dio', 'luz', 'hospital', 'dio', 'luz', 'través', 'parto', 'programado', 'millones', 'seguidores', 'influencer', 'apuntaban', 'últimas', 'horas', 'dando', 'luz', 'desaparición', 'redes', 'sociales', 'final', 'noticia', 'confirmaba', 'horas', 'apodando', 'redes', 'sociales', 'pequeño', 'baby', 'origen', 'padres', 'anunciaron', 'nombre', 'pequeño', 'medio', 'parto', 'adelantado', 'semanas', 'bebé', 'madre', 'encuentran', 'perfecto', 'estado', 'encargada', 'desvelar', 'sexo', 'nombre', 'primer', 'hijo', 'seguidores', 'considerada', 'influencer', 'poderosa', 'mundo', 'moda', 'dándose', 'conocer', 'gracias', 'web']
+Porcentaje de tristeza: 0.63%
+Porcentaje de miedo: 2.38%
+Porcentaje de alegria: 14.19%
+Porcentaje de enfado: 0.0%
+Porcentaje de sorpresa: 3.67%
+Porcentaje de neutral: 90.23%
+La mayoritaria es Neutral con un 90.23%
+-----------------------------------------------------------

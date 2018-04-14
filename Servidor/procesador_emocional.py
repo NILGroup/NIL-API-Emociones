@@ -24,6 +24,7 @@ buscar_derivables = ["afectar","asesinar","comer","inspirar","libro","salud","ve
 
 no_derivables = ["beb","pen","chic","call","cur","gener","muert","orden","orgull","sol","tont","victim","viv"]
 alternativas = ["bebé","pene","chica","calle","cura","género","muerto","ordenador","orgullo","soleado","tontería","victimismo","vivido"]
+alternativas_plural = ["bebés","penes","chicas","calles","curas","géneros","muertos","ordenadores","orgullos","soleados","tonterías","victimismos","vividos"]
 buscar_no_derivables = ["bebida","pena","chico","callado","curar","generoso","muerte","ordenado","orgulloso","sol","tonto","victim","vivo"]
 
 def es_verbo(pos):
@@ -55,6 +56,18 @@ def casos_especiales(palabra):
 	else:
 		return False,""
 
+def limpiar_palabra(palabra):
+	if palabra[0] == "-":
+		return palabra.lstrip('-')
+	elif '-' in palabra:
+		return palabra[0:palabra.index("-")]
+	elif palabra[0] == '"':
+		return palabra.lstrip('"')
+	elif palabra[len(palabra)-1] == '"':
+		return palabra.rstrip('"')
+	else:
+		return palabra
+	
 def descartar_palabras(doc):
 	"""
 	Descarta todas las palabras que no son emocionales y obtiene los lexemas de las que sí lo son.
@@ -64,16 +77,17 @@ def descartar_palabras(doc):
 	lexemas = [] # lista con los lexemas de las palabras emocionales
 	for token in (doc):
 		pos = token.pos_ # part of speach de la palabra
-		lexema = stemmer.stemWord(token.text) # lexema de la palabra
+		palabra = limpiar_palabra(token.text)
+		lexema = stemmer.stemWord(palabra) # lexema de la palabra
 		if (es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) == True):
-			palabras.append(token.text)
-			especial,buscar = casos_especiales(lexema)
+			palabras.append(palabra)
+			especial,buscar = casos_especiales(lexema.lower())
 			if especial == True:
 				lexemas.append(buscar)
 				if es_verbo(pos) == True:
 					lexemas.append(buscar)
 			else:
-				procesada = procesar_palabra(token.text,lexema)
+				procesada = procesar_palabra(palabra.lower(),lexema.lower())
 				lexemas.append(procesada)
 				if es_verbo(pos) == True:
 					lexemas.append(procesada)
@@ -89,7 +103,7 @@ def procesar_palabra(palabra,lexema):
 		return buscar_iguales[i]
 	elif lexema in no_derivables:
 		i = no_derivables.index(lexema)
-		if alternativas[i] == palabra:
+		if alternativas[i] == palabra or alternativas_plural[i] == palabra:
 			return palabra
 		else:
 			return buscar_no_derivables[i]

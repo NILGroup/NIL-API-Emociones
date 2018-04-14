@@ -2,11 +2,10 @@
 
 rm -r resultados
 mkdir resultados
-for i in *; 
+for i in *;
 do
-	if [ $i != 'pruebas.sh' ];
-	then
-		echo $i 
+	if [ $i != 'pruebas.sh' ] && [ $i != 'resultados' ]; then
+		echo $i
 		python3 ../traductor.py $i > resultados/$i
 	fi;
 done
