@@ -1,0 +1,57 @@
+.progress {
+	width: 100%;
+}
+.progress-bar {
+	text-align: left;
+	white-space: nowrap;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: pointer;
+}
+
+.progress-bar > .progress-type {
+	padding-left: 10px;
+}
+
+.progress-meter {
+	min-height: 15px;
+	border-bottom: 2px solid rgb(160, 160, 160);
+}
+
+.progress-meter > .meter {
+	position: relative;
+	float: left;
+	min-height: 15px;
+	border-width: 0px;
+	border-style: solid;
+	border-color: rgb(160, 160, 160);
+}
+
+.progress-meter > .meter-left {
+	border-left-width: 2px;
+}
+
+.progress-meter > .meter-right {
+	float: right;
+	border-right-width: 2px;
+}
+
+.progress-meter > .meter-right:last-child {
+	border-left-width: 2px;
+}
+
+.progress-meter > .meter > .meter-text {
+	position: absolute;
+	display: inline-block;
+	bottom: -20px;
+	width: 100%;
+	font-weight: 700;
+	font-size: 0.85em;
+	color: rgb(160, 160, 160);
+	text-align: left;
+}
+
+.progress-meter > .meter.meter-right > .meter-text {
+	text-align: right;
+}
