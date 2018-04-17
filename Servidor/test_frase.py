@@ -75,7 +75,7 @@ def porcentajes(op,frase):
 	>>> porcentajes(1,"Pásame un tenedor")
 	La mayoritaria es Neutral con un 100.0%
 	>>> porcentajes(1,"Me voy a dormir")
-	La mayoritaria es Alegría con un 50.0%
+	Hay dos emociones mayoritarias: Alegría y Neutral con un 50.0%
 	>>> porcentajes(1,"Ana está triste porque se ha roto su ascensor")
 	La mayoritaria es Tristeza con un 58.5%
 	"""

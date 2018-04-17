@@ -56,12 +56,52 @@ def limpiar_frase(frase):
 		frase = frase.lstrip('\n')
 	return frase
 
+def leer_interrogativa(frase):
+	longitud = 1
+	while frase[longitud] != "?" and longitud < len(frase):
+		longitud = longitud + 1
+	#longitud = longitud + 1
+	return frase[1:longitud],longitud+1
+
+def leer_exclamativa(frase):
+	longitud = 1
+	while frase[longitud] != "!" and longitud < len(frase):
+		longitud = longitud + 1
+	#longitud = longitud + 1
+	return frase[1:longitud],longitud+1
+
 def procesar_frase(frase):
 	"""
 	Comprueba si la frase contiene alguna pregunta o exclamación y en caso positivo la parte.
 	"""
+	subfrases = []
+	tipos = [] #
+	marca = 0
+	i = 0
+	fin = len(frase)
 	frase = limpiar_frase(frase)
-	if ("?" in frase) and ("!" not in frase): # hay una pregunta
+	while i < len(frase):
+		if frase[i] == "¿" or frase[i] == "¡":
+			if i > 0:
+				subfrases.append(frase[marca:(i-1)])
+				tipos.append(2)
+			if frase[i] == "¿":
+				subfrase,tam = leer_interrogativa(frase[i:fin])
+				tipos.append(1)
+			else:
+				subfrase,tam = leer_exclamativa(frase[i:fin])
+				tipos.append(4)
+			subfrases.append(subfrase)
+			marca = marca + tam
+			i = marca
+		else:
+			i = i + 1
+	if marca < fin:
+		subfrases.append(frase[marca:fin])
+		tipos.append(2)
+	"""
+	if ("¿" in frase) and ("!" not in frase): # hay una pregunta pero no una exclamación
+		posicion = frase.
 		subfrases = frase.split('?')
 		subfrases[0] = subfrases[0].lstrip('¿')
 		subfrases[1] = subfrases[1].lstrip(' ')
@@ -89,6 +129,7 @@ def procesar_frase(frase):
 	else:
 		subfrases = [frase]
 		tipos = [1]
+	"""
 	return subfrases,tipos
 
 def frase_vacia(frase):
@@ -141,12 +182,15 @@ class InterpreteTexto():
 		palabras = []
 		for i in range(n):
 			if frase_vacia(frases[i]) == False:
+				print(frases[i])
 				subfrases, tipos = procesar_frase(frases[i])
+				print(subfrases)
+				print(tipos)
 				for j in range(len(subfrases)):
 					if j < len(tipos):
 						peso = determinar_peso(tipos[j])
 					else:
-						peso = 1.0
+						peso = 2.0
 					porcentajes, palabras, num_frases = analizar_porcentajes_frase(subfrases[j], porcentajes, palabras, peso, num_frases)
 			else:
 				num_frases = num_frases - 1

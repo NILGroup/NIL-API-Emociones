@@ -11,11 +11,11 @@ def consensuada(palabra):
 	>>> consensuada("te")
 	{'detail': 'Not found.'}
 	"""
-	URL = 'http://127.0.0.1:8000/' # URL del servidor
-	sufijo = 'consensuada/' # sufijo de la consulta
+	URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
+	sufijo = '/consensuada/' # sufijo de la consulta
 	buscar = palabra
 	buscada = buscar.lower()
-	destino = URL+sufijo+buscada
+	destino = URL+buscada+sufijo
 	respuesta = requests.get(destino)
 	consensuada = respuesta.json()
 	print(consensuada)

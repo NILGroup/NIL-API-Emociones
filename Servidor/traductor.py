@@ -7,7 +7,7 @@ from salida import Salida
 
 
 _salida = Salida() # gestionar salida
-URL = 'http://127.0.0.1:8000/emociones/' # URL del servidor
+URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
 
 def interpretar_palabra(palabra):
 	servicios = ['/porcentajes/', '/consensuada/', '/mayoritaria/']

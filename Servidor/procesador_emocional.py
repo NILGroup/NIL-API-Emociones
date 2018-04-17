@@ -59,14 +59,15 @@ def casos_especiales(palabra):
 def limpiar_palabra(palabra):
 	if palabra[0] == "-":
 		return palabra.lstrip('-')
-	elif '-' in palabra:
+	if '-' in palabra:
 		return palabra[0:palabra.index("-")]
-	elif palabra[0] == '"':
+	if palabra[0] == '"':
 		return palabra.lstrip('"')
-	elif palabra[len(palabra)-1] == '"':
+	if palabra[len(palabra)-1] == '"':
 		return palabra.rstrip('"')
-	else:
-		return palabra
+	if palabra[len(palabra)-1] == ',':
+		return palabra.rstrip(',')
+	return palabra
 	
 def descartar_palabras(doc):
 	"""

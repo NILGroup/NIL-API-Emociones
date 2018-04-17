@@ -9,7 +9,7 @@ en el servicio web, y devolver la información que tiene sobre ella.
 interpreta = InterpretePalabras() # nos permitirá interpretar las palabras emocionales
 procesador = PalabrasEmocionales() # nos permitirá encontrar las palabras emocionales
 
-URL = 'http://127.0.0.1:8000/emociones/' # URL base del servicio web
+URL = 'http://sesat.fdi.ucm.es/emociones/' # URL base del servicio web
 
 emociones = ["Tristeza", "Miedo", "Alegría", "Enfado", "Sorpresa", "Neutral"] # lista de emociones con las que trabajamos
 

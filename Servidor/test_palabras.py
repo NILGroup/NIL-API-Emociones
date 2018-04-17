@@ -6,46 +6,46 @@ def porcentajes(op,destino):
 	"""
 	Devuelve los porcentajes de emocion para una palabra.
 
-	>>> porcentajes(0,"http://127.0.0.1:8000/emociones/alegre/porcentajes/")
+	>>> porcentajes(0,"http://sesat.fdi.ucm.es/emociones/alegre/porcentajes/")
 	Porcentaje de tristeza: 0%
 	Porcentaje de miedo: 0%
 	Porcentaje de alegria: 100%
 	Porcentaje de enfado: 0%
 	Porcentaje de sorpresa: 0%
 	Porcentaje de neutral: 0%
-	>>> porcentajes(0,"http://127.0.0.1:8000/emociones/araña/porcentajes/")
+	>>> porcentajes(0,"http://sesat.fdi.ucm.es/emociones/araña/porcentajes/")
 	Porcentaje de tristeza: 0%
 	Porcentaje de miedo: 67%
 	Porcentaje de alegria: 0%
 	Porcentaje de enfado: 0%
 	Porcentaje de sorpresa: 0%
 	Porcentaje de neutral: 33%
-	>>> porcentajes(0,"http://127.0.0.1:8000/emociones/corazón/porcentajes/")
+	>>> porcentajes(0,"http://sesat.fdi.ucm.es/emociones/corazón/porcentajes/")
 	Porcentaje de tristeza: 0%
 	Porcentaje de miedo: 0%
 	Porcentaje de alegria: 50%
 	Porcentaje de enfado: 0%
 	Porcentaje de sorpresa: 0%
 	Porcentaje de neutral: 50%
-	>>> porcentajes(0,"http://127.0.0.1:8000/emociones/te/porcentajes/")
+	>>> porcentajes(0,"http://sesat.fdi.ucm.es/emociones/te/porcentajes/")
 	No se ha encontrado la palabra. Asegurese de haberla escrito bien.
 
-	>>> porcentajes(1,"http://127.0.0.1:8000/emociones/mesa/consensuada/")
+	>>> porcentajes(1,"http://sesat.fdi.ucm.es/emociones/mesa/consensuada/")
 	La emocion consensuada es Neutral
-	>>> porcentajes(1,"http://127.0.0.1:8000/emociones/araña/consensuada/")
+	>>> porcentajes(1,"http://sesat.fdi.ucm.es/emociones/araña/consensuada/")
 	No hay emocion consensuada.
-	>>> porcentajes(1,"http://127.0.0.1:8000/emociones/corazón/consensuada/")
+	>>> porcentajes(1,"http://sesat.fdi.ucm.es/emociones/corazón/consensuada/")
 	No hay emocion consensuada.
-	>>> porcentajes(1,"http://127.0.0.1:8000/emociones/te/consensuada/")
+	>>> porcentajes(1,"http://sesat.fdi.ucm.es/emociones/te/consensuada/")
 	No se ha encontrado la palabra. Asegurese de haberla escrito bien.
 
-	>>> porcentajes(2,"http://127.0.0.1:8000/emociones/mesa/mayoritaria/")
+	>>> porcentajes(2,"http://sesat.fdi.ucm.es/emociones/mesa/mayoritaria/")
 	La mayoritaria es Neutral con un 100%
-	>>> porcentajes(2,"http://127.0.0.1:8000/emociones/araña/mayoritaria/")
+	>>> porcentajes(2,"http://sesat.fdi.ucm.es/emociones/araña/mayoritaria/")
 	La mayoritaria es Miedo con un 67%
-	>>> porcentajes(2,"http://127.0.0.1:8000/emociones/corazón/mayoritaria/")
-	Hay dos emociones mayoritarias: Alegría y Neutral con un 50%
-	>>> porcentajes(2,"http://127.0.0.1:8000/emociones/te/mayoritaria/")
+	>>> porcentajes(2,"http://sesat.fdi.ucm.es/emociones/corazón/mayoritaria/")
+	Hay dos emociones mayoritarias: Alegria y Neutral con un 50%
+	>>> porcentajes(2,"http://sesat.fdi.ucm.es/emociones/te/mayoritaria/")
 	No se ha encontrado la palabra. Asegurese de haberla escrito bien.
 	"""
 	interpreta = InterpretePalabras()
