@@ -10,7 +10,7 @@ from django.shortcuts import render
 
 def index(request):
     num_palabras = Palabra.objects.all().count()
-    return render(request,'index.html',context={'num_palabras':num_palabras},)
+    return render(request,'main.html',context={'num_palabras':num_palabras},)
     
 class ListaPalabras(APIView):
     """
@@ -132,7 +132,7 @@ class ObtenerMayoritaria(APIView):
                 raise Http404()
         
     def get(self,request,pk,format=None):
-        emociones = ["Tristeza", "Miedo", "Alegría", "Enfado", "Sorpresa", "Neutral"]
+        emociones = ["Tristeza", "Miedo", "Alegria", "Enfado", "Sorpresa", "Neutral"]
         palabra = self.get_object(pk)
         porcentajes = palabra.porcentajes
         numerosAux = ObtenerPorcentajes()
