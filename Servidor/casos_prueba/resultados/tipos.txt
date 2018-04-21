@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['ido', 'parque', 'ma√±ana', 'S√\xad', 'ido', 'Sabes', 'n', 'visto', 'Vaya', 'sorpresa', 'sab√\xada', 'ah√\xad', 'quedado', 'flipando', 'Llevaba', 'verle', 'd√\xadas', 'qu√', 'dijo', 'genial']
+Porcentaje de tristeza: 0.0%
+Porcentaje de miedo: 0.0%
+Porcentaje de alegria: 12.5%
+Porcentaje de enfado: 0.0%
+Porcentaje de sorpresa: 0.0%
+Porcentaje de neutral: 87.5%
+La mayoritaria es Neutral con un 87.5%
+-----------------------------------------------------------

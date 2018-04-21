@@ -1,11 +1,11 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
-['vez', 'artesano', 'labraba', 'madera', 'juguetes', 'bellos', 'tenían', 'escultor', 'maestro', 'llamaba', 'anciano', 'virtudes', 'figuraba', 'buen', 'carácter', 'envejecido', 'solo', 'día', 'sinténdose', 'viejo', 'solo', 'costumbre', 'ahuyentar', 'soledad', 'decidió', 'tallar', 'madera', 'muñeco', 'hiciera', 'compañía', 'construido', 'transformar', 'aburrimiento', 'niños', 'momentos', 'maravillosos', 'fabricaría', 'taller', 'colega', 'consiguió', 'tronco', 'pino', 'dispuso', 'fabricar', 'muñeco', 'Corta', 'talla', 'he', 'cabeza', 'nariz', 'boca', 'cuanto', 'modelar', 'boca', 'madera', 'muñeco', 'rompió', 'hablar', 'excalamndo', 'abuelito', 'Superado', 'asombro', 'maese', 'apresuró', 'completar', 'obra', 'tallado', 'muñeco', 'tronco', 'pino', 'pensó', 'llamarlo', 'reparar', 'traviesa', 'mirada', 'decidió', 'iría', 'nombre', 'cuanto', 'tuvo', 'par', 'piernas', 'madera', 'incorporó', 'salto', 'cogió', 'impulso', 'marchó']
-Porcentaje de tristeza: 3.75%
-Porcentaje de miedo: 3.3%
-Porcentaje de alegria: 28.43%
-Porcentaje de enfado: 0.42%
-Porcentaje de sorpresa: 5.42%
-Porcentaje de neutral: 88.67%
-La mayoritaria es Neutral con un 88.67%
+['vez', 'artesano', 'labraba', 'madera', 'juguetes', 'bellos', 'ten�\xadan', 'escultor', 'maestro', 'as�\xad', 'llamaba', 'anciano', 'virtudes', 'figuraba', 'buen', 'carácter', 'envejecido', 'solo', 'd�\xada', 'sint�', 'viejo', 'solo', 'costumbre', 'ahuyentar', 'soledad', 'decidió', 'tallar', 'madera', 'muñeco', 'hiciera', 'hab�\xada', 'construido', 'transformar', 'aburrimiento', 'niños', 'momentos', 'maravillosos', 'fabricar�\xada', '�', 'taller', 'colega', 'carpintero', 'consiguió', 'tronco', 'pino', 'dispuso', 'fabricar', 'muñeco', 'Corta', 'aqu�\xad', 'talla', 'aqu�\xad', 'cabeza', 'nariz', 'boca', 'cuanto', 'modelar', 'boca', 'madera', 'muñeco', 'rompió', 'hablar', 'excalamndo', 'n', 'abuelito', 'Superado', 'asombro', 'maese', 'completar', 'obra', 'hab�\xada', 'tallado', 'muñeco', 'tronco', 'pino', 'llamarlo', 'despu�', 'reparar', 'traviesa', 'mirada', 'decidió', 'nombre', 'cuanto', 'tuvo', 'par', 'piernas', 'madera', 'salto', 'cogió', 'impulso']
+Porcentaje de tristeza: 4.17%
+Porcentaje de miedo: 2.75%
+Porcentaje de alegria: 20.36%
+Porcentaje de enfado: 0.47%
+Porcentaje de sorpresa: 8.81%
+Porcentaje de neutral: 63.44%
+La mayoritaria es Neutral con un 63.44%
 -----------------------------------------------------------

@@ -1,11 +1,11 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
-['vivía', 'pequeña', 'aldea', 'encantaba', 'leer', 'quería', 'padre', 'desapareció', 'salió', 'buscarlo', 'encontró', 'padre', 'castillo', 'aprendieron', 'amigos', 'enamoró', 'volvió', 'convertirse', 'príncipe']
+['viv�\xada', 'pequeña', 'aldea', 'encantaba', 'leer', 'quer�\xada', 'padre', 'desapareció', 'buscarlo', 'padre', 'castillo', 'aprendieron', 'amigos', 'enamoró', '�', 'convertirse', 'pr�\xadncipe']
 Porcentaje de tristeza: 0.0%
 Porcentaje de miedo: 0.0%
-Porcentaje de alegria: 62.05%
-Porcentaje de enfado: 1.89%
+Porcentaje de alegria: 27.05%
+Porcentaje de enfado: 1.62%
 Porcentaje de sorpresa: 0.0%
-Porcentaje de neutral: 52.72%
-La mayoritaria es Alegria con un 62.05%
+Porcentaje de neutral: 71.33%
+La mayoritaria es Neutral con un 71.33%
 -----------------------------------------------------------

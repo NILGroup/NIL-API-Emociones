@@ -1,11 +1,11 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
-['estancamiento', 'político', 'agobia', 'meses', 'llegar', 'fin', 'espera', 'parlamento', 'apruebe', 'gobierno', 'liderado', 'presidente', 'interino', 'necesitaba', 'mayoría', 'parlamento', 'escaños', 'primera', 'votación', 'realizada', 'jueves', 'logró', 'sábado', 'realiza', 'segunda', 'votación', 'necesita', 'votos', 'favor', 'contra', 'Cuenta', 'apoyo', 'legisladores', 'partido', 'centroderechista', 'dependerá', 'accedido', 'abstenerse', 'votación', 'sábado', 'diputados', 'dicho', 'votarán', 'contra', 'elegido', 'juramentado', 'rey', 'domingo', 'lunes', 'gobierno', 'convocará', 'tercera', 'elección']
-Porcentaje de tristeza: 4.38%
+['estancamiento', 'pol�\xadtico', 'agobia', 'meses', 'llegar', 'fin', 'espera', 'parlamento', 'apruebe', 'gobierno', 'liderado', 'presidente', 'interino', 'necesitaba', 'mayor�\xada', 'parlamento', 'primera', 'votación', 'realizada', 'jueves', 'sábado', 'realiza', 'segunda', 'votación', 'sólo', 'necesita', 'votos', 'favor', 'contra', 'Cuenta', 'apoyo', 'legisladores', 'partido', 'centroderechista', 'accedido', 'abstenerse', 'votación', 'sábado', 'diputados', 'dicho', 'votarán', 'contra', 'elegido', 'juramentado', 'rey', 'domingo', 'lunes', 'gobierno', 'convocar�', 'tercera', 'elección']
+Porcentaje de tristeza: 3.83%
 Porcentaje de miedo: 0.0%
-Porcentaje de alegria: 39.71%
-Porcentaje de enfado: 0.81%
+Porcentaje de alegria: 22.25%
+Porcentaje de enfado: 0.71%
 Porcentaje de sorpresa: 0.0%
-Porcentaje de neutral: 69.43%
-La mayoritaria es Neutral con un 69.43%
+Porcentaje de neutral: 73.25%
+La mayoritaria es Neutral con un 73.25%
 -----------------------------------------------------------

@@ -1,11 +1,11 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
-['brutal', 'caso', 'violencia', 'machista', 'paraliza', 'centros', 'comerciales', 'concurridos', 'controles', 'seguridad', 'Subió', 'segunda', 'planta', 'centro', 'comercial', 'disparos', 'pecho', 'abdomen', 'dejó', 'nota', 'mostrador', 'tienda', 'trabajaba', 'esposa', 'disparó', 'cara', 'feminicidio', 'intento', 'suicidio', 'paralizó', 'lunes', 'centros', 'comerciales', 'concurridos', 'Selene', 'años', 'falleció', 'horas', 'agresor', 'sobrevivió', 'encuentra', 'grave', 'estable', 'hospital', 'capital', 'detonaciones', 'trabajadores', 'tiendas', 'clientes', 'corrieron', 'protegerse', 'resguardarse', 'hechos', 'produjeron', 'tarde', 'anodina', 'puente', 'primeras', 'versiones', 'barajaban', 'tratado', 'robo', 'zapatería', 'plaza', 'comercial', 'encuentra', 'avenidas', 'transitadas', 'icónicas', 'capital', 'autoridades', 'dieron', 'homicidio', 'local', 'iniciado', 'investigaciones', 'delito', 'homicidio', 'calificado', 'pedido', 'divorcio', 'custodia', 'hijo', 'agresor', 'preso', 'veces', 'robo', '2002', '2004', '2012', 'amenazado', 'días', 'vas', 'destruir', 'vida', 'puta', 'pasó', 'lee', 'supuesta', 'nota', 'dejó', 'feminicida', 'divulgada', 'prensa', 'mexicana', 'mujer', 'lesionada', 'manifestó', 'hombre', 'amenazado', 'causa', 'conflicto', 'pasional', 'señaló', 'policía', 'capitalina', 'país', 'asesinadas', 'mujeres', 'diario', 'violencia', 'machista', 'crímenes', 'pasionales', 'vistos', 'excusas', 'detonantes', 'atacar', 'mujeres', 'hecho', 'mujeres']
-Porcentaje de tristeza: 11.71%
-Porcentaje de miedo: 15.95%
-Porcentaje de alegria: 13.26%
-Porcentaje de enfado: 6.31%
-Porcentaje de sorpresa: 0.45%
-Porcentaje de neutral: 57.6%
-La mayoritaria es Neutral con un 57.6%
+['brutal', 'caso', 'violencia', 'machista', 'paraliza', 'centros', 'comerciales', 'más', 'concurridos', '�', 'xico', 'controles', 'seguridad', 'Subió', 'segunda', 'planta', 'centro', 'comercial', 'disparos', 'pecho', 'abdomen', 'Despu�', '�', 'nota', 'mostrador', 'tienda', 'trabajaba', 'esposa', 'disparó', 'cara', 'feminicidio', 'intento', 'suicidio', 'paralizó', 'lunes', 'centros', 'comerciales', 'más', 'concurridos', '�', 'xico', 'Selene', 'horas', 'agresor', 'sobrevivió', 'encuentra', 'grave', 'estable', 'hospital', 'capital', 'Despu�', '�', 'detonaciones', 'trabajadores', 'tiendas', 'clientes', 'corrieron', 'protegerse', 'resguardarse', 'hechos', 'produjeron', 'tarde', 'anodina', 'puente', 'primeras', 'versiones', 'barajaban', 'tratado', 'robo', 'zapater�\xada', 'plaza', 'comercial', 'encuentra', 'avenidas', 'transitadas', 'icónicas', 'capital', 'Despu�', '�', 'autoridades', 'dieron', 'hab�\xada', 'homicidio', 'local', 'iniciado', 'investigaciones', 'delito', 'homicidio', 'calificado', 'Selene', 'pedido', 'divorcio', 'custodia', 'hijo', 'agresor', 'estado', 'preso', 'veces', 'robo', '2002', '2004', '2012', 'amenazado', 'd�\xadas', 'vas', 'destruir', 'vida', 'despu�', 'puta', 'pasó', 'lee', 'supuesta', 'nota', 'dejó', 'feminicida', 'divulgada', 'prensa', 'mexicana', 'mujer', 'lesionada', 'manifestó', 'hombre', 'hab�\xada', 'amenazado', 'causa', 'conflicto', 'pasional', 'señaló', 'capitalina', 'pa�\xads', 'asesinadas', 'mujeres', 'diario', 'violencia', 'machista', 'cr�\xadmenes', 'pasionales', 'aún', 'vistos', 'excusas', 'detonantes', 'atacar', 'mujeres', 'hecho', 'mujeres']
+Porcentaje de tristeza: 11.09%
+Porcentaje de miedo: 14.26%
+Porcentaje de alegria: 12.7%
+Porcentaje de enfado: 5.93%
+Porcentaje de sorpresa: 0.42%
+Porcentaje de neutral: 55.62%
+La mayoritaria es Neutral con un 55.62%
 -----------------------------------------------------------

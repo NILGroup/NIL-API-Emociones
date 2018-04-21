@@ -1,11 +1,11 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
-['conoc√©is', 'seguido', 'redes', 'sabr√©is', 'cr√≠ticas', 'llevado', 'aguantado', 'obvio', 'agradable', 'leer', 'mentiras', 'semana', 'semana', 'hacer', 'o√≠dos', 'sordos', 'seguir', 'trabajo', 'familia', 'amigos', 'personajes', 'p√∫blicos', 'tenemos', 'riesgo', 'rosa', 'exponemos', 'gente', 'hable', 'regular', 'quieran', 'existe', 'tipo', 'l√≠mite', 'pone', 'nochecita', 'prensa', 'visto', 'desde', 'existe', 'l√≠mite']
+['conoc√', '©', 'hab√', 'seguido', 'redes', 'sabr√', '©', 'cr√\xadticas', 'llevado', 'aguantado', 'obvio', 'agradable', 'leer', 'mentiras', 'semana', 'semana', 'hacer', 'o√\xaddos', 'sordos', 'seguir', 'trabajo', 'familia', 'amigos', 'personajes', 'p√∫blicos', 'tenemos', 'riesgo', 'rosa', 'exponemos', 'gente', 'hable', 'regular', 'quieran', 'existe', 'alg√∫n', 'tipo', 'l√\xadmite', 'Qui√', 'n', 'pone', 'Despu√', '©', 's', 'nochecita', 'prensa', 'visto', 'desde', 'existe', 'l√\xadmite']
 Porcentaje de tristeza: 0.0%
 Porcentaje de miedo: 0.0%
-Porcentaje de alegria: 20.09%
-Porcentaje de enfado: 4.44%
+Porcentaje de alegria: 9.3%
+Porcentaje de enfado: 3.7%
 Porcentaje de sorpresa: 0.0%
-Porcentaje de neutral: 88.8%
-La mayoritaria es Neutral con un 88.8%
+Porcentaje de neutral: 87.0%
+La mayoritaria es Neutral con un 87.0%
 -----------------------------------------------------------

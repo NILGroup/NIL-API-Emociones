@@ -1,16 +1,14 @@
 from interprete_frases import InterpreteFrases
-
+from seccionador import SeccionadorFrases
 """
 Programa que se encarga de procesar un texto, dividiendolo en frases para procesar
 cada una de ellas, y devolver la información que tiene sobre ella.
 """
 
 interpreta = InterpreteFrases() # nos permitirá interpretar las frases
+secciona = SeccionadorFrases() # nos permitirá seccionar las frases en subfrases y obtener sus tipos
 
 emociones = ["Tristeza", "Miedo", "Alegria", "Enfado", "Sorpresa", "Neutral"] # lista de emociones con las que trabajamos
-#subfrases = [] # frases que componen el texto
-#tipos = [] # 1 enunciativa, 2 interrogativa, 3 exclamativa
-#num_frases = 0
 
 def obtener_medias(porcentajes,num_frases):
 	"""
@@ -43,114 +41,6 @@ def calcular_mayoritaria(contadores,porcentajes):
 				indices.append(i)
 	return indices,mayor
 
-def obtener_signos(signo):
-	if signo == '¿':
-		return '¡','!'
-	elif signo == '¡':
-		return '¿','?'
-
-def limpiar_frase(frase):
-	if frase[0] == " ":
-		frase = frase.lstrip(" ")
-	if '\n' in frase:
-		frase = frase.lstrip('\n')
-	return frase
-
-def leer_interrogativa(frase):
-	longitud = 1
-	while frase[longitud] != "?" and longitud < len(frase):
-		longitud = longitud + 1
-	#longitud = longitud + 1
-	return frase[1:longitud],longitud+1
-
-def leer_exclamativa(frase):
-	longitud = 1
-	while frase[longitud] != "!" and longitud < len(frase):
-		longitud = longitud + 1
-	#longitud = longitud + 1
-	return frase[1:longitud],longitud+1
-
-def procesar_frase(frase):
-	"""
-	Comprueba si la frase contiene alguna pregunta o exclamación y en caso positivo la parte.
-	"""
-	subfrases = []
-	tipos = [] #
-	marca = 0
-	i = 0
-	fin = len(frase)
-	frase = limpiar_frase(frase)
-	while i < len(frase):
-		if frase[i] == "¿" or frase[i] == "¡":
-			if i > 0:
-				subfrases.append(frase[marca:(i-1)])
-				tipos.append(2)
-			if frase[i] == "¿":
-				subfrase,tam = leer_interrogativa(frase[i:fin])
-				tipos.append(1)
-			else:
-				subfrase,tam = leer_exclamativa(frase[i:fin])
-				tipos.append(4)
-			subfrases.append(subfrase)
-			marca = marca + tam
-			i = marca
-		else:
-			i = i + 1
-	if marca < fin:
-		subfrases.append(frase[marca:fin])
-		tipos.append(2)
-	"""
-	if ("¿" in frase) and ("!" not in frase): # hay una pregunta pero no una exclamación
-		posicion = frase.
-		subfrases = frase.split('?')
-		subfrases[0] = subfrases[0].lstrip('¿')
-		subfrases[1] = subfrases[1].lstrip(' ')
-		tipos = [2,1]
-	elif ("?" not in frase) and ("!" in frase): # hay una exclamación
-		subfrases = frase.split('!')
-		subfrases[0] = subfrases[0].lstrip('¡')
-		subfrases[1] = subfrases[1].lstrip(' ')
-		tipos = [3,1]
-	elif ("?" in frase) and ("!" in frase): # hay ambas
-		c = frase[0] # primer caracter de la frase
-		s1,s2 = obtener_signos(c) # obtenemos los signos por los que partir
-		subfrase1 = frase.split(s1)
-		subfrase2 = subfrase1[1].split(s2)
-		s1,s2 = obtener_signos(s1) # signos de la primera frase para quitarlos
-		subfrase1[0] = (subfrase1[0].lstrip(s1)).rstrip(s2)
-		subfrases = [subfrase1[0]] + subfrase2
-		if s1 == '¿':
-			tipos = [2,3,1]
-		else:
-			tipos = [3,2,1]
-	elif ":" in frase:
-		subfrases = frase.split(':')
-		tipos = [1]
-	else:
-		subfrases = [frase]
-		tipos = [1]
-	"""
-	return subfrases,tipos
-
-def frase_vacia(frase):
-	"""
-	Comprueba si la frase que se va a intentar analizar está vacía.
-	"""
-	if frase == "":
-		return True
-	elif frase == "\n":
-		return True
-	else:
-		return False
-
-def determinar_peso(tipo):
-	if tipo == 1:
-		return 1.0
-	elif tipo == 2:
-		return 0.5
-	else:
-		return 2.0
-
 def analizar_porcentajes_frase(frase, porcentajes, lista_palabras, peso, num_frases):
 	emociones,aux = interpreta.emociones_frase(frase)
 	lista_palabras = lista_palabras + aux
@@ -175,25 +65,13 @@ class InterpreteTexto():
 		Función que dado un texto lo divide en frases y procesa cada una de ellas.
 		Devuelve los porcentajes y las palabras que permiten llegar a ellos.
 		"""
-		frases = texto.split('.')
-		num_frases = 0
+		frases,tipos = secciona.seccionar_texto(texto)
 		n = len(frases)
+		num_frases = 0
 		porcentajes = [0,0,0,0,0,0]
 		palabras = []
 		for i in range(n):
-			if frase_vacia(frases[i]) == False:
-				print(frases[i])
-				subfrases, tipos = procesar_frase(frases[i])
-				print(subfrases)
-				print(tipos)
-				for j in range(len(subfrases)):
-					if j < len(tipos):
-						peso = determinar_peso(tipos[j])
-					else:
-						peso = 2.0
-					porcentajes, palabras, num_frases = analizar_porcentajes_frase(subfrases[j], porcentajes, palabras, peso, num_frases)
-			else:
-				num_frases = num_frases - 1
+			porcentajes,palabras,num_frases = analizar_porcentajes_frase(frases[i],porcentajes,palabras,tipos[i],num_frases)
 		resultado = obtener_medias(porcentajes,num_frases)
 		return resultado,palabras
 

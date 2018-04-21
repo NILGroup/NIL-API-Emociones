@@ -1,11 +1,11 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
-['princesa', 'viv铆a', 'palacio', 'real', 'padre', 'quer铆a', 'casar', 'enamorada', 'escap贸', 'palacio', 'Deseaba', 'libre', 'conoci贸', 'bazar', 'ayuda', 'enamoraron']
+['Yasm肻xadn', 'princesa', 'viv肻xada', 'palacio', 'real', 'padre', 'quer肻xada', 'casar', 'enamorada', 'Yasm肻xadn', 'escap贸', 'palacio', 'Deseaba', 'libre', 'conoci贸', 'bazar', 'ayuda', 'enamoraron']
 Porcentaje de tristeza: 0.0%
 Porcentaje de miedo: 0.0%
-Porcentaje de alegria: 77.0%
+Porcentaje de alegria: 50.14%
 Porcentaje de enfado: 0.0%
 Porcentaje de sorpresa: 0.0%
-Porcentaje de neutral: 39.67%
-La mayoritaria es Alegria con un 77.0%
+Porcentaje de neutral: 49.86%
+La mayoritaria es Alegria con un 50.14%
 -----------------------------------------------------------

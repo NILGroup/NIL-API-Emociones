@@ -1,11 +1,11 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
-['vez', 'princesa', 'dulce', 'gentil', 'llamada', 'malvada', 'reina', 'celosa', 'belleza', 'tuvo', 'huir', 'refugi贸', 'casa', 'enanitos', 'reina', 'enga帽贸', 'manzana', 'envenenada', 'lleg贸', 'pr铆ncipe', 'despert贸', 'beso', 'vivieron', 'felices']
-Porcentaje de tristeza: 5.96%
-Porcentaje de miedo: 2.06%
-Porcentaje de alegria: 31.61%
-Porcentaje de enfado: 21.14%
+['vez', 'princesa', 'dulce', 'gentil', 'llamada', 'malvada', 'reina', 'celosa', 'belleza', 'tuvo', 'huir', 'refugi贸', 'casa', 'enanitos', 'reina', 'manzana', 'envenenada', 'lleg贸', 'pr肻xadncipe', 'despert贸', 'beso', 'vivieron', 'felices']
+Porcentaje de tristeza: 2.5%
+Porcentaje de miedo: 1.65%
+Porcentaje de alegria: 25.28%
+Porcentaje de enfado: 5.85%
 Porcentaje de sorpresa: 0.0%
-Porcentaje de neutral: 64.23%
-La mayoritaria es Neutral con un 64.23%
+Porcentaje de neutral: 64.72%
+La mayoritaria es Neutral con un 64.72%
 -----------------------------------------------------------

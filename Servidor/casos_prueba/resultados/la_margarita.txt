@@ -1,11 +1,11 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
-['vez', 'casa', 'campo', 'jardín', 'lleno', 'flores', 'pintada', 'medio', 'bello', 'verde', 'césped', 'crecía', 'pequeña', 'margarita', 'sol', 'igual', 'generoso', 'pequeña', 'margarita', 'grandes', 'suntuosas', 'flores', 'jardín', 'margarita', 'crecía', 'hora', 'hora', 'mañana', 'margarita', 'recibiendo', 'calor', 'sol', 'despreocupada', 'dolerse', 'pobre', 'flor', 'insignificante', 'contenta', 'mirando', 'sol', 'escuchaba', 'alegre', 'canto', 'alondra', 'feliz', 'día', 'fiesta', 'niños', 'estaban', 'escuela', 'estudiaban', 'margarita', 'aprendía', 'conocer', 'bondad', 'calor', 'sol', 'belleza', 'rodeaba']
+['vez', 'casa', 'campo', 'jard�\xadn', 'lleno', 'flores', 'pintada', 'medio', 'bello', 'verde', '�', 'sped', 'pequeña', 'margarita', 'sol', 'igual', 'generoso', 'pequeña', 'margarita', 'grandes', 'suntuosas', 'flores', 'jard�\xadn', 'margarita', 'hora', 'hora', 'All�\xad', 'mañana', 'margarita', 'recibiendo', 'calor', 'sol', 'despreocupada', 'dolerse', 'pobre', 'flor', 'insignificante', 'contenta', 'mirando', 'sol', 'escuchaba', 'alegre', 'canto', 'alondra', 'feliz', 'd�\xada', 'fiesta', 'niños', 'estaban', 'escuela', 'estudiaban', 'margarita', 'conocer', 'bondad', 'calor', 'sol', 'belleza', 'rodeaba']
 Porcentaje de tristeza: 0.0%
 Porcentaje de miedo: 0.0%
-Porcentaje de alegria: 48.38%
-Porcentaje de enfado: 2.2%
+Porcentaje de alegria: 45.8%
+Porcentaje de enfado: 1.46%
 Porcentaje de sorpresa: 0.0%
-Porcentaje de neutral: 66.13%
-La mayoritaria es Neutral con un 66.13%
+Porcentaje de neutral: 52.78%
+La mayoritaria es Neutral con un 52.78%
 -----------------------------------------------------------

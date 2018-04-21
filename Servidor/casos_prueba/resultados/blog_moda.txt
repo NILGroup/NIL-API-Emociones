@@ -1,11 +1,11 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
-['dejo', 'outfit', 'entretiempo', 'blanco', 'negro', 'llevo', 'blusa', 'blanca', 'volantes', 'enseñado', 'vez', 'instagram', 'combiné', 'negro', 'zapatos', 'abrigo', 'línea', 'oversize', 'paño', 'fino', 'usando', 'días', 'frío', 'calor']
+['dejo', 'outfit', 'entretiempo', 'blanco', 'negro', 'llevo', 'blusa', 'blanca', 'volantes', 'enseñado', 'vez', 'instagram', 'combin�', 'negro', 'zapatos', 'abrigo', 'oversize', 'paño', 'fino', 'usando', 'd�\xadas', 'fr�\xado', 'calor']
 Porcentaje de tristeza: 0.0%
 Porcentaje de miedo: 0.0%
 Porcentaje de alegria: 0.0%
-Porcentaje de enfado: 2.83%
+Porcentaje de enfado: 4.25%
 Porcentaje de sorpresa: 0.0%
-Porcentaje de neutral: 130.5%
-La mayoritaria es Neutral con un 130.5%
+Porcentaje de neutral: 95.75%
+La mayoritaria es Neutral con un 95.75%
 -----------------------------------------------------------

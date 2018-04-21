@@ -1,11 +1,11 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
-['trabajaba', 'd√≠a', 'noche', 'pesar', 'alegre', 'divert√≠a', 'amigos', 'ratones', 'pon√≠a', 'contenta', 'cantaba', 'creer', 'sue√±os', 'hac√≠a', 'sentirse', 'feliz']
-Porcentaje de tristeza: 8.38%
+['trabajaba', 'd√\xada', 'noche', 'pesar', 'alegre', 'divert√\xada', 'amigos', 'ratones', 'Tambi√', 'n', 'contenta', 'cantaba', 'creer', 'sue√±os', 'hac√\xada', 'sentirse', 'feliz']
+Porcentaje de tristeza: 6.7%
 Porcentaje de miedo: 0.0%
 Porcentaje de alegria: 50.0%
 Porcentaje de enfado: 0.0%
 Porcentaje de sorpresa: 0.0%
-Porcentaje de neutral: 66.62%
-La mayoritaria es Neutral con un 66.62%
+Porcentaje de neutral: 43.3%
+La mayoritaria es Alegria con un 50.0%
 -----------------------------------------------------------
