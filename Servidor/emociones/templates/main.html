@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		{% load staticfiles %}
+		{% load static %}
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="{% static 'css/estiloBarra.css' %}">
-		<link rel="stylesheet" href="{% static 'css/estiloBotones.css' %}">
-		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" crossorigin="anonymous">
+		<link rel="stylesheet" href="{%static 'css/estiloBarra.css' %}">
+		<link rel="stylesheet" href="{%static 'css/estiloBotones.css' %}">
+		<link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}" crossorigin="anonymous">
 		
 		
 		<title> TRADUCTOR DE EMOCIONES </title> 
@@ -20,7 +20,7 @@
 					<h2 style="text-align: left;"> TRADUCTOR DE EMOCIONES </h2>
 				</div>
 				<div class="col-sm-3">
-					<button type="button" class="btn btn-default botonGlyphicon"> <span class="glyphicon glyphicon-wrench"> </span> </button>
+					<button type="button" class="btn btn-default botonGlyphicon" data-toggle="modal" data-target="#miModal"> <span class="glyphicon glyphicon-wrench"> </span> </button>
 				</div>
 			</div>
 			<div class="row">
@@ -33,57 +33,70 @@
 				
 			</center>
 			
-		</div>
-
+	
 		
 			<div id="salida"></div>
 			<div id="hola" style= "display:none;"></div>
 
 			<br>
-			<div class="row">
-				<div class="col-md-2 textoCentrado">
-					<p> Tristeza: <span id="tristeza"></span></p>
-					<div id="tristezaF"></div>
-				</div>
-				<div class="col-md-2 textoCentrado">
-					<p> Miedo: <span id="miedo"></span></p>
-					<div id="miedoF"></div>
-				</div>
-				<div class="col-md-2 textoCentrado">
-					<p> Alegria: <span id="alegria"></span></p>
-					<div id="alegriaF"></div>
-				</div>
-				<div class="col-md-2 textoCentrado">
-					<p> Enfado: <span id="enfado"></span></p>
-					<div id="enfadoF"></div>
-				</div>
-				<div class="col-md-2 textoCentrado">
-					<p> Sorpresa: <span id="sorpresa"></span></p>
-					<div id="sorpresaF"></div>
-				</div>
-			</div>
-	
+			
 		<div class="progress">
 					<div class="progress-bar progress-bar bTristeza" id="barritaTristeza"> 
-						<span class="textoProgress" id="textoTristeza"></span> 
+						<span class="textoProgress textoCentrado" id="textoTristeza"></span>
+						<span class="textoProgress textoCentrado" id="imagenTristeza"></span>
 					</div>
 					<div class="progress-bar progress-bar bMiedo" id="barritaMiedo"> 
-						<span class="textoProgress" id="textoMiedo"></span>
+						<span class="textoProgress textoCentrado" id="textoMiedo"></span>
+						<span class="textoProgress textoCentrado" id="imagenMiedo"></span>
 					</div>
 					<div class="progress-bar progress-bar bAlegria" id="barritaAlegria"> 
-						<span class="textoProgress" id="textoAlegria"></span>
+						<span class="textoProgress textoCentrado" id="textoAlegria"></span>
+						<span class="textoProgress textoCentrado" id="imagenAlegria"></span>
 					</div>
 					<div class="progress-bar progress-bar bEnfado" id="barritaEnfado"> 
-						<span class="textoProgress" id="textoEnfado"></span>
+						<span class="textoProgress textoCentrado" id="textoEnfado"></span>
+						<span class="textoProgress textoCentrado" id="imagenEnfado"></span>
 					</div>
-					<div class="progress-bar progress-bar bSorpresa" id="barritaSorpresa"> 
-						<span class="textoProgress" id="textoSopresa"></span>
+					<div class="progress-bar progress-bar bAsco" id="barritaAsco"> 
+						<span class="textoProgress textoCentrado" id="textoAsco"></span>
+						<span class="textoProgress textoCentrado" id="imagenAsco"></span>
 					</div>
 				</div>
 		
+			</div>
 
 		
-		
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">Ajustes</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h6> Posición de las emociones</h6>
+				<div class="radio">
+					<label class="radio-inline"><input type="radio" name="optradio">Abajo</label>
+				</div>
+				<div class="radio">
+				  	<label class="radio-inline"><input type="radio" name="optradio">Derecha</label>
+				</div>
+				<h6> ¿Qué emociones quieres ver? </h6>
+				<div class="radio">
+					<label class="radio-inline"><input type="radio" name="optradio">Todas</label>
+				</div>
+				<div class="radio">
+				  	<label class="radio-inline"><input type="radio" name="optradio">Solo las del texto</label>
+				</div>
+				<div>
+				  	<label class="radio-inline"><input type="radio" name="optradio">Solo mayoritaria</label>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -109,87 +122,77 @@ $(document).ready(function(){
 			var miedo = porcentajes_array[1];
 			var alegria = porcentajes_array[2];
 			var enfado = porcentajes_array[3];
-			var sorpresa = porcentajes_array[4];
+			var asco = porcentajes_array[4];
 			
 			if(tristeza != 0){
-				$("#tristeza").html('');
-				$("#tristezaF").html('');
-				$("#tristeza").html(tristeza); /*Aquí mostrará el porcentaje de tristeza */
-				var imgTristeza = $('<img src="{% static "img/tristeza.jpg" %}" alt="sad face" width="60" height="60"/>');
-				$('#tristezaF').append(imgTristeza); 
+				var imgTristeza = $('<img src="{% static "img/tristeza.png" %}" alt="sad face" width="60" height="60"/>');
+				$('#textoTristeza').html('');
+				$('#imagenTristeza').html('');
 				$('#textoTristeza').html("Tristeza");
+				$('#imagenTristeza').append(imgTristeza); 
 		
 			}
 			else {
-				$("#tristeza").html('');
-				$("#tristezaF").html('');
 				$('#textoTristeza').html('');
+				$('#imagenTristeza').html('');
 
 			}
 			if(miedo != 0){
-				$("#miedo").html('');
-				$("#miedoF").html('');
-				$("#miedo").html(miedo); /*Aquí mostrará el porcentaje de miedo */
-				var imgMiedo = $('<img src="img/miedo.jpg" alt="scary face" width="60" height="60"/>');
-				$('#miedoF').append(imgMiedo); 
+				var imgMiedo = $('<img src="{% static "img/miedo.png" %}" alt="scary face" width="60" height="60"/>');
+				$('#textoMiedo').html('');
+				$('#imagenMiedo').html('');
 				$('#textoMiedo').html('Miedo');
+				$('#imagenMiedo').append(imgMiedo); 
 			}
 			else {
-				$("#miedo").html('');
-				$("#miedoF").html('');
 				$('#textoMiedo').html('');
+				$('#imagenMiedo').html('');
 			}
 			if(alegria != 0){
-				$("#alegria").html('');
-				$("#alegriaF").html('');
-				$("#alegria").html(alegria); /*Aquí mostrará el porcentaje de alegría */
-				var imgAlegria = $('<img src="img/alegria.jpg" alt="happy face" width="60" height="60"/>');
-				$('#alegriaF').append(imgAlegria); 
+				var imgAlegria = $('<img src="{% static "img/alegria.png" %}" alt="happy face" width="60" height="60"/>');
+				$('#textoAlegria').html('');
+				$('#imagenAlegria').html('');
 				$('#textoAlegria').html('Alegria');
+				$('#imagenAlegria').append(imgAlegria); 
 			}
 			else {
-				$("#alegria").html('');
-				$("#alegriaF").html('');
 				$('#textoAlegria').html('');
+				$('#imagenAlegria').html('');
 			}
 			if(enfado != 0){
-				$("#enfado").html('');
-				$("#enfadoF").html('');
-				$("#enfado").html(enfado); /*Aquí mostrará el porcentaje de enfado */
-				var imgEnfado = $('<img src="img/enfado.jpg" alt="angry face" width="60" height="60"/>');
-				$('#enfadoF').append(imgEnfado); 
-				$('#textoEnfado').html('Enfado');
-			}
-			else {
-				$("#enfado").html('');
-				$("#enfadoF").html('');
+				var imgEnfado = $('<img src="{% static "img/enfado.png" %}" alt="angry face" width="60" height="60"/>');
 				$('#textoEnfado').html('');
-			}
-			if(sorpresa != 0){
-				$("#sorpresa").html('');
-				$("#sorpresaF").html('');
-				$("#sorpresa").html(sorpresa); /*Aquí mostrará el porcentaje de sorpresa */
-				var imgSorpresa = $('<img src="img/sorpresa.jpg" alt="surprise face" width="60" height="60"/>');
-				$('#sorpresaF').append(imgSorpresa); 
-				$('#textoSopresa').html('Sorpresa');
+				$('#imagenEnfado').html(''); 
+				$('#textoEnfado').html('Enfado');				
+				$('#imagenEnfado').append(imgEnfado); 
 			}
 			else {
-				$("#sorpresa").html('');
-				$("#sorpresaF").html('');
-				$('#textoSopresa').html('');
+				$('#textoEnfado').html('');
+				$('#imagenEnfado').html(''); 
+			}
+			if(asco != 0){
+				var imgAsco = $('<img src="{% static "img/asco.png" %}" alt="dislike face" width="60" height="60"/>');
+				$('#textoAsco').html('');
+				$('#imagenAsco').html('');
+				$('#textoAsco').html('Asco');
+				$('#imagenAsco').append(imgAsco); 
+			}
+			else {
+				$('#textoAsco').html('');
+				$('#imagenAsco').html(imgAsco); 
 			}
 			
 			var tristeza = "width:" + parseInt(porcentajes_array[0]) + "%";
 			var miedo = "width:" +  parseInt(porcentajes_array[1]) + "%";
 			var alegria = "width:" + parseInt(porcentajes_array[2]) + "%";
 			var enfado = "width:" + parseInt(porcentajes_array[3]) + "%";
-			var sorpresa = "width:" + parseInt(porcentajes_array[4]) + "%";
+			var asco = "width:" + parseInt(porcentajes_array[4]) + "%";
 			
 			document.getElementById("barritaTristeza").style = tristeza;
 			document.getElementById("barritaMiedo").style = miedo;
 			document.getElementById("barritaAlegria").style = alegria;
 			document.getElementById("barritaEnfado").style = enfado;
-			document.getElementById("barritaSorpresa").style = sorpresa;
+			document.getElementById("barritaAsco").style = asco;
 
 		},	
 		error: function(request, status, errorThrown) {

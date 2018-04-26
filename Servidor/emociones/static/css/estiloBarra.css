@@ -5,11 +5,10 @@
 	color: black;
 }
 .progress {
-	width: 99% !important; 
+	width: 100% !important; 
 	bottom:0px;
 	margin-top: 50px;
-	margin-left: 10px;
-    
+	height: 80px !important;
 }
 
 .bTristeza {
@@ -24,7 +23,7 @@
 .bEnfado {
 	background-color: red !important;
 }
-.bSorpresa{
+.bAsco {
 	background-color: green !important;
 }
 .progress-bar {
