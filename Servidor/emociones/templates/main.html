@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load static %}
 <!doctype html>
 <html lang="en">
 	<head>
@@ -116,15 +117,15 @@ $(document).ready(function(){
 		success: function(data){
 			
 			$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/   
-			var porcentajes = data.porcentajes;
-			var porcentajes_array = data.porcentajes.replace('[', ' ').replace(']', ' ').split(',');
-			var tristeza = porcentajes_array[0];
-			var miedo = porcentajes_array[1];
-			var alegria = porcentajes_array[2];
-			var enfado = porcentajes_array[3];
-			var asco = porcentajes_array[4];
+			var grados = data.grados;
+			var grados_array = data.grados.replace('[', ' ').replace(']', ' ').split(',');
+			var tristeza = grados_array[0];
+			var miedo = grados_array[1];
+			var alegria = grados_array[2];
+			var enfado = grados_array[3];
+			var asco = grados_array[4];
 			
-			if(tristeza != 0){
+			if(tristeza > 1){
 				var imgTristeza = $('<img src="{% static "img/tristeza.png" %}" alt="sad face" width="60" height="60"/>');
 				$('#textoTristeza').html('');
 				$('#imagenTristeza').html('');
@@ -137,7 +138,7 @@ $(document).ready(function(){
 				$('#imagenTristeza').html('');
 
 			}
-			if(miedo != 0){
+			if(miedo > 1){
 				var imgMiedo = $('<img src="{% static "img/miedo.png" %}" alt="scary face" width="60" height="60"/>');
 				$('#textoMiedo').html('');
 				$('#imagenMiedo').html('');
@@ -148,7 +149,7 @@ $(document).ready(function(){
 				$('#textoMiedo').html('');
 				$('#imagenMiedo').html('');
 			}
-			if(alegria != 0){
+			if(alegria > 1){
 				var imgAlegria = $('<img src="{% static "img/alegria.png" %}" alt="happy face" width="60" height="60"/>');
 				$('#textoAlegria').html('');
 				$('#imagenAlegria').html('');
@@ -159,7 +160,7 @@ $(document).ready(function(){
 				$('#textoAlegria').html('');
 				$('#imagenAlegria').html('');
 			}
-			if(enfado != 0){
+			if(enfado > 1){
 				var imgEnfado = $('<img src="{% static "img/enfado.png" %}" alt="angry face" width="60" height="60"/>');
 				$('#textoEnfado').html('');
 				$('#imagenEnfado').html(''); 
@@ -170,7 +171,7 @@ $(document).ready(function(){
 				$('#textoEnfado').html('');
 				$('#imagenEnfado').html(''); 
 			}
-			if(asco != 0){
+			if(asco > 1){
 				var imgAsco = $('<img src="{% static "img/asco.png" %}" alt="dislike face" width="60" height="60"/>');
 				$('#textoAsco').html('');
 				$('#imagenAsco').html('');
@@ -182,11 +183,11 @@ $(document).ready(function(){
 				$('#imagenAsco').html(imgAsco); 
 			}
 			
-			var tristeza = "width:" + parseInt(porcentajes_array[0]) + "%";
-			var miedo = "width:" +  parseInt(porcentajes_array[1]) + "%";
-			var alegria = "width:" + parseInt(porcentajes_array[2]) + "%";
-			var enfado = "width:" + parseInt(porcentajes_array[3]) + "%";
-			var asco = "width:" + parseInt(porcentajes_array[4]) + "%";
+			var tristeza = "width:" + parseInt(grados_array[0]-1) + "%";
+			var miedo = "width:" +  parseInt(grados_array[1]-1) + "%";
+			var alegria = "width:" + parseInt(grados_array[2]-1) + "%";
+			var enfado = "width:" + parseInt(grados_array[3]-1) + "%";
+			var asco = "width:" + parseInt(grados_array[4]-1) + "%";
 			
 			document.getElementById("barritaTristeza").style = tristeza;
 			document.getElementById("barritaMiedo").style = miedo;

@@ -78,7 +78,7 @@ class ObtenerGrados(APIView):
         numeros[4] = numeros[4].rstrip("]")
         respuesta = ""
         for i in range(5):
-            numeros[i] = int(numeros[i])/100
+            numeros[i] = float(numeros[i])/100
             respuesta = respuesta + emociones[i] + ":" + str(numeros[i])
             if i < 4:
                 respuesta = respuesta + " || "
