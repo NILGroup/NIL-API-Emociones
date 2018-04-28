@@ -57,7 +57,7 @@ class DetallePalabra(APIView):
         palabra.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-class ObtenerPorcentajes(APIView):
+class ObtenerGrados(APIView):
     """
     Muestra, actualiza o elimina una palabra concreta de la lista.
     """
@@ -71,22 +71,23 @@ class ObtenerPorcentajes(APIView):
             except Palabra.DoesNotExist:
                 raise Http404()
 
-    def get_percentages(self,numeros):
-        numeros = numeros.split(", ", 6)
+    def get_degrees(self,numeros):
+        emociones = ["Tristeza", "Miedo", "Alegría", "Ira", "Asco"]
+        numeros = numeros.split(",")
         numeros[0] = numeros[0].lstrip("[")
-        numeros[5] = numeros[5].rstrip("]")
-        return numeros
+        numeros[4] = numeros[4].rstrip("]")
+        respuesta = ""
+        for i in range(5):
+            numeros[i] = int(numeros[i])/100
+            respuesta = respuesta + emociones[i] + ":" + str(numeros[i])
+            if i < 4:
+                respuesta = respuesta + " || "
+        return numeros,respuesta
         
     def get(self,request,pk,format=None):
-        emociones = ["Tristeza", "Miedo", "Alegría", "Enfado", "Sorpresa", "Neutral"]
         palabra = self.get_object(pk)
-        porcentajes = palabra.porcentajes
-        numeros = self.get_percentages(porcentajes)
-        respuesta = ""
-        for i in range(6):
-            respuesta = respuesta + emociones[i] + ":" + str(numeros[i]) + "%"
-            if i < 5:
-                respuesta = respuesta + " || "
+        porcentajes = palabra.grados
+        numeros,respuesta = self.get_degrees(porcentajes)
         return Response(respuesta)
 
 class ObtenerConsensuada(APIView):
@@ -101,24 +102,15 @@ class ObtenerConsensuada(APIView):
                 raise Http404()
         
     def get(self,request,pk,format=None):
-        emociones = ["Tristeza", "Miedo", "Alegría", "Enfado", "Sorpresa", "Neutral"]
+        emociones = ["Tristeza", "Miedo", "Alegría", "Ira", "Asco"]
         palabra = self.get_object(pk)
-        porcentajes = palabra.porcentajes
-	numerosAux = ObtenerPorcentajes()
-        numeros = numerosAux.get_percentages(porcentajes)
-        respuesta = ""
-        entro = False
-        contador = 0
-        while entro == False and contador < 6:
-            if(100 == int(numeros[contador])):
-                entro = True;
-            else:
-                contador = contador + 1
-        if(entro):
-            respuesta = "Consensuada: " + emociones[contador]
-        else:  
-            respuesta = "No hay emoción consensuada"
-        return Response(respuesta)
+        porcentajes = palabra.grados
+        numerosAux = ObtenerGrados()
+        numeros,respuestaAux = numerosAux.get_degrees(porcentajes)
+        if "5.00" in numeros:
+            return Response("Consensuada" + emociones[numeros.index(5.00)])
+        else:
+            return Response("No hay emocion consensuada")
 
 class ObtenerMayoritaria(APIView):
 
@@ -132,26 +124,27 @@ class ObtenerMayoritaria(APIView):
                 raise Http404()
         
     def get(self,request,pk,format=None):
-        emociones = ["Tristeza", "Miedo", "Alegria", "Enfado", "Sorpresa", "Neutral"]
+        emociones = ["Tristeza", "Miedo", "Alegría", "Ira", "Asco"]
         palabra = self.get_object(pk)
-        porcentajes = palabra.porcentajes
-        numerosAux = ObtenerPorcentajes()
-	numeros = numerosAux.get_percentages(porcentajes)
+        porcentajes = palabra.grados
+        numerosAux = ObtenerGrados()
+        numeros,respuestaAux = numerosAux.get_degrees(porcentajes)
         respuesta = ""
         mayoritarias = [] 
         entro = False
         mayor = -1;
-        for i in range(6):
-            if(int(mayor) < int(numeros[i])):
-                mayor = numeros[i]
+        for i in range(5):
+            grado = float(numeros[i])
+            if(mayor < grado):
+                mayor = grado
                 mayoritarias = []
                 entro = False
                 mayoritarias.append(i)
-            elif (int(mayor) == int(numeros[i])):
+            elif (mayor == grado):
                 entro = True
                 mayoritarias.append(i)
         if(entro):
-            respuesta = "Mayoritarias: " +  emociones[mayoritarias[0]] + " y " +  emociones[mayoritarias[1]]  + " con un " + numeros[mayoritarias[0]] + "%"
+            respuesta = "Mayoritarias: " +  emociones[mayoritarias[0]] + " y " +  emociones[mayoritarias[1]]  + " con un grado " + str(mayor)
         else:
-            respuesta = "Mayoritaria: " + emociones[mayoritarias[0]] + " con un " + numeros[mayoritarias[0]] + "%"
+            respuesta = "Mayoritaria: " + emociones[mayoritarias[0]] + " con un grado " + str(mayor)
         return Response(respuesta)

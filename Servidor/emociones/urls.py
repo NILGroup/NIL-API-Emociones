@@ -6,7 +6,7 @@ urlpatterns = [
 	url(r'^traductor/$',views.index),
 	url(r'^emociones/$', views.ListaPalabras.as_view()),
 	url(r'^emociones/(?P<pk>\w+)/$', views.DetallePalabra.as_view()),
-	url(r'^emociones/(?P<pk>\w+)/porcentajes/$', views.ObtenerPorcentajes.as_view()),
+	url(r'^emociones/(?P<pk>\w+)/grados/$', views.ObtenerGrados.as_view()),
 	url(r'^emociones/(?P<pk>\w+)/consensuada/$', views.ObtenerConsensuada.as_view()),
 	url(r'^emociones/(?P<pk>\w+)/mayoritaria/$', views.ObtenerMayoritaria.as_view())
 ]

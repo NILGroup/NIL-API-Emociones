@@ -23,29 +23,23 @@ def leer_diccionario():
     fichero.readline() # ignoramos la primera linea 
     linea = fichero.readline()
     while linea != "":
-        frase = linea.split(';', 7) # se trocea la línea para obtener los datos
-        frase[7] = frase[7].strip("\n") # se elimina el salto de linea
-        nueva_palabra = frase[0] # se coge la nueva palabra 
+        frase = linea.split(";") # se trocea la línea para obtener los datos
+        frase[6] = frase[6].strip("\n") # se elimina el salto de linea
         emociones = []
-        for j in range(6): # para cada columna, se traduce el grado de certeza
-            emociones.append(parsear_emociones(frase[j+2]))
-        subida = Palabra(palabra=nueva_palabra, lexema=frase[1], porcentajes=emociones)
+        for i in range(5): # para cada columna, se traduce el grado de certeza
+            emociones.append(convertir_grado(frase[i+2]))
+        subida = Palabra(palabra=frase[0], lexema=frase[1], grados=emociones)
         subida.save()
         linea = fichero.readline() # se lee la siguiente palabra
     serializar_datos(subida)
     fichero.close()
 
-def parsear_emociones(porcentaje):
+def convertir_grado(grado):
     """
     Función que se encarga de transformar los datos numéricos sacados del
     CSV a porcentajes, que es lo que vamos a utilizar.
     """
-    if porcentaje == "0,00":
-        return 0
-    elif porcentaje != "1,00":
-        return int(porcentaje.lstrip("0,"))
-    else:
-        return 100
+    return int(float(grado.replace(",","."))*100)
     
 def serializar_datos(subida):
     """

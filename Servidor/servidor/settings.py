@@ -25,8 +25,10 @@ SECRET_KEY = '(-wf0n8(+fw894$q*0d!yrshkkvhc2#ft8z9l2))yd+7weez@z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#PARA EL SERVIDOR
 ALLOWED_HOSTS = ['sesat.fdi.ucm.es']
-
+#PARA LOCAL
+#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -121,4 +123,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'))
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'emociones/static'))
