@@ -5,18 +5,17 @@ def porcentajes(palabra):
 	Devuelve los porcentajes de emocion para una palabra.
 
 	>>> porcentajes("alegre")
-	Tristeza:0% || Miedo:0% || Alegría:100% || Enfado:0% || Sorpresa:0% || Neutral:0%
+	Tristeza:1.1 || Miedo:1.23 || Alegría:4.83 || Ira:1.1 || Asco:1.03
 	>>> porcentajes("araña")
-	Tristeza:0% || Miedo:67% || Alegría:0% || Enfado:0% || Sorpresa:0% || Neutral:33%
+	Tristeza:1.5 || Miedo:3.53 || Alegría:1.17 || Ira:2.33 || Asco:3.77
 	>>> porcentajes("corazón")
-	Tristeza:0% || Miedo:0% || Alegría:50% || Enfado:0% || Sorpresa:0% || Neutral:50%
+	Tristeza:1.73 || Miedo:1.57 || Alegría:3.43 || Ira:1.4 || Asco:1.37
 	>>> porcentajes("te")
 	{'detail': 'Not found.'}
 	"""
 	URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
-	sufijo = '/porcentajes/' # sufijo de la consulta
-	buscar = palabra
-	buscada = buscar.lower()
+	sufijo = '/grados/' # sufijo de la consulta
+	buscada = palabra.lower()
 	destino = URL+buscada+sufijo
 	respuesta = requests.get(destino)
 	porcentajes = respuesta.json()

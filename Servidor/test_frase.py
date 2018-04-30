@@ -2,91 +2,80 @@ import requests
 from interprete_frases import InterpreteFrases
 from salida import Salida
 
-def porcentajes(op,frase):
+def frases(frase):
 	"""
-	Devuelve los porcentajes de emocion para una palabra.
+	Devuelve los grados de emocion para una palabra.
 
-	>>> porcentajes(0,"Ana está triste y avergonzada")
-	Porcentaje de tristeza: 100.0%
-	Porcentaje de miedo: 0.0%
-	Porcentaje de alegria: 0.0%
-	Porcentaje de enfado: 0.0%
-	Porcentaje de sorpresa: 0.0%
-	Porcentaje de neutral: 0.0%
-	>>> porcentajes(0,"Llevaba una escopeta")
-	Porcentaje de tristeza: 0.0%
-	Porcentaje de miedo: 100.0%
-	Porcentaje de alegria: 0.0%
-	Porcentaje de enfado: 0.0%
-	Porcentaje de sorpresa: 0.0%
-	Porcentaje de neutral: 0.0%
-	>>> porcentajes(0,"Estoy alegre y feliz")
-	Porcentaje de tristeza: 0.0%
-	Porcentaje de miedo: 0.0%
-	Porcentaje de alegria: 100.0%
-	Porcentaje de enfado: 0.0%
-	Porcentaje de sorpresa: 0.0%
-	Porcentaje de neutral: 0.0%
-	>>> porcentajes(0,"Ese tipo es un arrogante")
-	Porcentaje de tristeza: 0.0%
-	Porcentaje de miedo: 0.0%
-	Porcentaje de alegria: 0.0%
-	Porcentaje de enfado: 100.0%
-	Porcentaje de sorpresa: 0.0%
-	Porcentaje de neutral: 0.0%
-	>>> porcentajes(0,"Me ha sorprendido su actitud")
-	Porcentaje de tristeza: 0.0%
-	Porcentaje de miedo: 0.0%
-	Porcentaje de alegria: 0.0%
-	Porcentaje de enfado: 0.0%
-	Porcentaje de sorpresa: 100.0%
-	Porcentaje de neutral: 0.0%
-	>>> porcentajes(0,"Pásame un tenedor")
-	Porcentaje de tristeza: 0.0%
-	Porcentaje de miedo: 0.0%
-	Porcentaje de alegria: 0.0%
-	Porcentaje de enfado: 0.0%
-	Porcentaje de sorpresa: 0.0%
-	Porcentaje de neutral: 100.0%
-	>>> porcentajes(0,"Me voy a dormir")
-	Porcentaje de tristeza: 0.0%
-	Porcentaje de miedo: 0.0%
-	Porcentaje de alegria: 50.0%
-	Porcentaje de enfado: 0.0%
-	Porcentaje de sorpresa: 0.0%
-	Porcentaje de neutral: 50.0%
-	>>> porcentajes(0,"Ana está triste porque se ha roto su ascensor")
-	Porcentaje de tristeza: 58.5%
-	Porcentaje de miedo: 0.0%
-	Porcentaje de alegria: 0.0%
-	Porcentaje de enfado: 16.5%
-	Porcentaje de sorpresa: 0.0%
-	Porcentaje de neutral: 25.0%
-	>>> porcentajes(1,"Ana está triste y avergonzada")
-	La mayoritaria es Tristeza con un 100.0%
-	>>> porcentajes(1,"Llevaba una escopeta")
-	La mayoritaria es Miedo con un 100.0%
-	>>> porcentajes(1,"Mañana es mi boda")
-	La mayoritaria es Alegría con un 100.0%
-	>>> porcentajes(1,"Ese tipo es un arrogante")
-	La mayoritaria es Enfado con un 100.0%
-	>>> porcentajes(1,"Me ha sorprendido su actitud")
-	La mayoritaria es Sorpresa con un 100.0%
-	>>> porcentajes(1,"Pásame un tenedor")
-	La mayoritaria es Neutral con un 100.0%
-	>>> porcentajes(1,"Me voy a dormir")
-	Hay dos emociones mayoritarias: Alegría y Neutral con un 50.0%
-	>>> porcentajes(1,"Ana está triste porque se ha roto su ascensor")
-	La mayoritaria es Tristeza con un 58.5%
+	>>> frases("Ana está triste y avergonzada")
+	Lista de palabras emocionales:
+	['triste', 'avergonzada']
+	Grado de tristeza: 3.75
+	Grado de miedo: 2.58
+	Grado de alegria: 1.11
+	Grado de ira: 2.2
+	Grado de asco: 1.55
+	La mayoritaria es Tristeza con un grado 3.75
+	>>> frases("Llevaba una escopeta")
+	Lista de palabras emocionales:
+	['Llevaba', 'escopeta']
+	Grado de tristeza: 2.33
+	Grado de miedo: 3.63
+	Grado de alegria: 1.23
+	Grado de ira: 2.8
+	Grado de asco: 2.06
+	La mayoritaria es Miedo con un grado 3.63
+	>>> frases("Estoy alegre y feliz")
+	Lista de palabras emocionales:
+	['alegre', 'feliz']
+	Grado de tristeza: 1.1
+	Grado de miedo: 1.21
+	Grado de alegria: 4.73
+	Grado de ira: 1.05
+	Grado de asco: 1.02
+	La mayoritaria es Alegría con un grado 4.73
+	>>> frases("Ese tipo es un arrogante")
+	Lista de palabras emocionales:
+	['tipo', 'arrogante']
+	Grado de tristeza: 2.27
+	Grado de miedo: 1.63
+	Grado de alegria: 1.0
+	Grado de ira: 3.27
+	Grado de asco: 3.03
+	La mayoritaria es Ira con un grado 3.27
+	>>> frases("Aquí hay muchos cotilleos")
+	Lista de palabras emocionales:
+	['cotilleos']
+	Grado de tristeza: 1.63
+	Grado de miedo: 1.63
+	Grado de alegria: 1.97
+	Grado de ira: 1.97
+	Grado de asco: 2.06
+	La mayoritaria es Asco con un grado 2.06
+	>>> frases("Hola Juan")
+	Lista de palabras emocionales:
+	[]
+	Grado de tristeza: 1
+	Grado de miedo: 1
+	Grado de alegria: 1
+	Grado de ira: 1
+	Grado de asco: 1
+	>>> frases("Ana está triste porque se ha roto su ascensor")
+	Lista de palabras emocionales:
+	['triste', 'roto', 'ascensor']
+	Grado de tristeza: 3.06
+	Grado de miedo: 2.16
+	Grado de alegria: 1.22
+	Grado de ira: 2.15
+	Grado de asco: 1.32
+	La mayoritaria es Tristeza con un grado 3.06
 	"""
 	interpreta = InterpreteFrases()
 	_salida = Salida()
-	if op == 0:
-		porcentajes,palabras = interpreta.emociones_frase(frase)
-		_salida.mostrar_porcentajes(porcentajes)
-	elif op == 1:
-		porcentajes,palabras = interpreta.emociones_frase(frase)
-		mayoritarias,porcentaje = interpreta.emocion_mayoritaria_frase(porcentajes)
+	grados,palabras = interpreta.emociones_frase(frase)
+	_salida.mostrar_palabras(palabras)
+	_salida.mostrar_grados(grados)
+	if len(palabras) > 0:
+		mayoritarias,porcentaje = interpreta.emocion_mayoritaria_frase(grados)
 		_salida.mostrar_mayoritaria(mayoritarias,porcentaje)
 
 if __name__ == "__main__":

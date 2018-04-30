@@ -10,36 +10,33 @@ _salida = Salida() # gestionar salida
 URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
 
 def interpretar_palabra(palabra):
-	servicios = ['/porcentajes/', '/consensuada/', '/mayoritaria/']
-	destinos = []
-	interpreta = InterpretePalabras()
+	interprete = InterpretePalabras()
 	palabra = palabra.lower()
-	for i in range(3):
-		dest = URL + palabra + servicios[i]
-		destinos.append(dest)
-	porcentajes = interpreta.interpretar_porcentajes(destinos[0])
-	_salida.mostrar_porcentajes(porcentajes)
-	if len(porcentajes) > 0:
-		consensuada = interpreta.interpretar_consensuada(destinos[1])
+	grados = interprete.interpretar_grados(palabra)
+	_salida.mostrar_grados(grados)
+	if len(grados) > 0:
+		consensuada = interprete.interpretar_consensuada(palabra)
 		_salida.mostrar_consensuada(consensuada)
-		mayoritarias, porcentaje = interpreta.interpretar_mayoritaria(destinos[2])
+		mayoritarias, porcentaje = interprete.interpretar_mayoritaria(palabra)
 		_salida.mostrar_mayoritaria(mayoritarias,porcentaje)
 
 def interpretar_frase(frase):
 	interpreta = InterpreteFrases()
-	porcentajes,palabras = interpreta.emociones_frase(frase)
+	grados,palabras = interpreta.emociones_frase(frase)
 	_salida.mostrar_palabras(palabras)
-	_salida.mostrar_porcentajes(porcentajes)
-	mayoritarias,porcentaje = interpreta.emocion_mayoritaria_frase(porcentajes)
-	_salida.mostrar_mayoritaria(mayoritarias,porcentaje)
+	_salida.mostrar_grados(grados)
+	if len(palabras) > 0:
+		mayoritarias,porcentaje = interpreta.emocion_mayoritaria_frase(grados)
+		_salida.mostrar_mayoritaria(mayoritarias,porcentaje)
 
 def interpretar_texto(texto):
 	interpreta = InterpreteTexto()
-	porcentajes,palabras = interpreta.emociones_texto(texto)
+	grados,palabras = interpreta.emociones_texto(texto)
 	_salida.mostrar_palabras(palabras)
-	_salida.mostrar_porcentajes(porcentajes)
-	mayoritarias,porcentaje = interpreta.emocion_mayoritaria_texto(porcentajes)
-	_salida.mostrar_mayoritaria(mayoritarias,porcentaje)
+	_salida.mostrar_grados(grados)
+	if len(palabras) > 0:
+		mayoritarias,porcentaje = interpreta.emocion_mayoritaria_texto(grados)
+		_salida.mostrar_mayoritaria(mayoritarias,porcentaje)
 
 def traducir(texto):
 	print("-----------------------------------------------------------")

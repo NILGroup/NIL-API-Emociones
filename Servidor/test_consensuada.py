@@ -5,9 +5,11 @@ def consensuada(palabra):
 	Devuelve la emocion consensuada para una palabra.
 
 	>>> consensuada("alegre")
-	Consensuada: Alegría
+	No hay emocion consensuada
+	>>> consensuada("araña")
+	No hay emocion consensuada
 	>>> consensuada("corazón")
-	No hay emoción consensuada
+	No hay emocion consensuada
 	>>> consensuada("te")
 	{'detail': 'Not found.'}
 	"""

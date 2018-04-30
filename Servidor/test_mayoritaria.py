@@ -5,11 +5,15 @@ def mayoritaria(palabra):
 	Devuelve la emocion consensuada para una palabra.
 
 	>>> mayoritaria("alegre")
-	Mayoritaria: Alegria con un 100%
-	>>> mayoritaria("corazón")
-	Mayoritarias: Alegria y Neutral con un 50%
-	>>> mayoritaria("diamante")
-	Mayoritaria: Alegria con un 83%
+	Mayoritaria: Alegría con un grado 4.83
+	>>> mayoritaria("abandonado")
+	Mayoritaria: Tristeza con un grado 4.3
+	>>> mayoritaria("abeja")
+	Mayoritaria: Miedo con un grado 3.53
+	>>> mayoritaria("estafador")
+	Mayoritaria: Ira con un grado 4.43
+	>>> mayoritaria("acoso")
+	Mayoritaria: Asco con un grado 4.07
 	>>> mayoritaria("te")
 	{'detail': 'Not found.'}
 	"""
