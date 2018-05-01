@@ -1,1 +1,10 @@
 -----------------------------------------------------------
+Lista de palabras emocionales:
+['amable', 'gentil', 'tenía', 'amigos', 'animales', 'bosque', 'amigos', 'pequeño', 'pajarito', 'amigo', 'príncipe', 'azul', 'amigo', 'enanitos', 'mejores', 'amigos']
+Grado de tristeza: 1.31
+Grado de miedo: 1.51
+Grado de alegria: 3.84
+Grado de ira: 1.2
+Grado de asco: 1.14
+La mayoritaria es Alegria con un grado 3.84
+-----------------------------------------------------------

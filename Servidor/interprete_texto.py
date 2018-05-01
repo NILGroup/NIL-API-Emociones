@@ -104,7 +104,7 @@ class InterpreteTexto():
 	def emocion_mayoritaria_texto(grados):
 		mayor = -1
 		indice = 0
-		for i in range(6):
+		for i in range(5):
 			if float(grados[i]) > mayor:
 				mayor = float(grados[i])
 				indice = i

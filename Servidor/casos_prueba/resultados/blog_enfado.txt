@@ -1,1 +1,10 @@
 -----------------------------------------------------------
+Lista de palabras emocionales:
+['conocéis', 'seguido', 'redes', 'sabréis', 'críticas', 'llevado', 'aguantado', 'obvio', 'agradable', 'leer', 'mentiras', 'semana', 'semana', 'hacer', 'oídos', 'sordos', 'seguir', 'trabajo', 'familia', 'amigos', 'personajes', 'públicos', 'tenemos', 'riesgo', 'rosa', 'exponemos', 'gente', 'hable', 'regular', 'quieran', 'existe', 'tipo', 'límite', 'pone', 'nochecita', 'prensa', 'visto', 'desde', 'existe', 'límite']
+Grado de tristeza: 1.31
+Grado de miedo: 1.4
+Grado de alegria: 1.99
+Grado de ira: 1.28
+Grado de asco: 1.23
+La mayoritaria es Alegria con un grado 1.99
+-----------------------------------------------------------

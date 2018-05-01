@@ -1,1 +1,10 @@
 -----------------------------------------------------------
+Lista de palabras emocionales:
+['vivía', 'pequeña', 'aldea', 'encantaba', 'leer', 'quería', 'padre', 'desapareció', 'salió', 'buscarlo', 'encontró', 'padre', 'castillo', 'aprendieron', 'amigos', 'enamoró', 'volvió', 'convertirse', 'príncipe']
+Grado de tristeza: 1.6
+Grado de miedo: 1.83
+Grado de alegria: 3.64
+Grado de ira: 1.38
+Grado de asco: 1.22
+La mayoritaria es Alegria con un grado 3.64
+-----------------------------------------------------------

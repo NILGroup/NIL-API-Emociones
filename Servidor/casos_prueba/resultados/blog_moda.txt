@@ -1,1 +1,10 @@
 -----------------------------------------------------------
+Lista de palabras emocionales:
+['dejo', 'outfit', 'entretiempo', 'blanco', 'negro', 'llevo', 'blusa', 'blanca', 'volantes', 'enseñado', 'vez', 'instagram', 'combiné', 'negro', 'zapatos', 'abrigo', 'línea', 'oversize', 'paño', 'fino', 'usando', 'días', 'frío', 'calor']
+Grado de tristeza: 1.45
+Grado de miedo: 1.37
+Grado de alegria: 1.84
+Grado de ira: 1.25
+Grado de asco: 1.17
+La mayoritaria es Alegria con un grado 1.84
+-----------------------------------------------------------

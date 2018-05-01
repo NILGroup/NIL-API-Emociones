@@ -1,12 +1,5 @@
 import Stemmer
 
-"""
-Obtiene el lema de una palabra para poder buscarla en nuestro diccionario.
-"""
-
-"""
-Para obtener los lexemas utilizamos el paquete en español de Stemmer.
-"""
 stemmer = Stemmer.Stemmer('spanish')
 
 lemas_repetidos = ['abandon', 'abej', 'abog', 'abraz', 'abuel', 'acogedor', 'acos', 'admir', 'ador', 'afect', 
@@ -20,21 +13,21 @@ lemas_repetidos = ['abandon', 'abej', 'abog', 'abraz', 'abuel', 'acogedor', 'aco
 'ejecut', 'ejempl', 'eleg', 'embaraz', 'emple', 'empresari', 'enamor', 'encant', 'energ', 'enfad', 'enfermer', 
 'enfurec', 'engañ', 'enterr', 'entusiasm', 'escritor', 'escultor', 'espant', 'espos', 'estacion', 
 'estaf', 'estall', 'estil', 'estimul', 'estudi', 'excit', 'explot', 'famos', 'fascin', 'figur', 'foc', 
-'fotograf', 'fracas', 'fusil', 'ganador', 'gener', 'genial', 'golp', 'gradu', 'gran', 'guant', 'guap', 'habit', 
+'fotograf', 'fracas', 'fusil', 'ganador', 'gener', 'genial', 'golp', 'gradu', 'guant', 'guap', 'habit', 
 'her', 'herman', 'hij', 'horror', 'human', 'humild', 'humill', 'ideal', 'igual', 'ilusion', 'imagin', 
-'impotent', 'incendi', 'inferior', 'inform', 'informat', 'ingres', 'injuri', 'inquiet', 'insegur', 'inspir', 'insult', 
-'investig', 'invit', 'irrit', 'jubil', 'jug', 'ladron', 'lament', 'lanz', 'lat', 'lecher', 'lesion', 'libr', 'liber', 
+'impotent', 'incendi', 'inferior', 'informat', 'ingres', 'injuri', 'inquiet', 'insegur', 'inspir', 'insult', 
+'investig', 'invit', 'irrit', 'jubil', 'jug', 'ladron', 'lament', 'lanz', 'lat', 'lecher', 'lesion', 'liber', 
 'licenci', 'lig', 'list', 'llam', 'logr', 'lumin', 'lun', 'maestr', 'maltrat', 'mang', 
 'maravill', 'marc', 'masaj', 'masturb', 'mat', 'mecan', 'mes', 'millonari', 'mim', 'ministr', 'monj', 
 'muert', 'muñec', 'mutil', 'music', 'nadador', 'niet', 'niñ', 'noved', 'novi', 'odi', 'olvid', 'orden', 
-'orgull', 'panader', 'pas', 'part', 'paus', 'pec', 'pein', 'peligr', 'peluquer', 'perfum', 'period', 'pes', 
-'pesim', 'pintor', 'pioj', 'pirop', 'premi', 'preocup', 'prepar', 'present', 'prim', 'profesor', 'program', 
+'orgull', 'panader', 'pas', 'paus', 'pec', 'pein', 'peligr', 'peluquer', 'perfum', 'period', 'pes', 
+'pesim', 'pintor', 'pioj', 'pirop', 'premi', 'preocup', 'prepar', 'present', 'profesor', 'program', 
 'prosper', 'proteg', 'public', 'puert', 'puñal', 'quer', 'rechaz', 'recompens', 'recuerd', 'refugi', 
 'regal', 'rein', 'relaj', 'repugn', 'rescat', 'respet', 'respir', 'revolv', 'rival', 'rotul', 'salt', 
 'salud', 'sangr', 'secretari', 'secuestr', 'sed', 'segur', 'soborn', 'socorr', 'sol', 'sorprend', 
 'sospech', 'susurr', 'tall', 'tem', 'terror', 'tiran', 'toler', 'tont', 'torc', 'torment', 'tortur', 
 'trabaj', 'traicion', 'tranquil', 'triunf', 'vel', 'venc', 'version', 'veterinari', 'victori', 'viud', 'viv',
- 'voluptu','calcul','medi','pres','gan','verd','facil','anim','lastim','bols','viaj','perd','pen','com']
+ 'voluptu']
 
 derivadas = ['abandonado', 'abejas', 'abogada', 'abrazar', 'abuela', 'acogedora', 'acosar', 'admirar', 
 'adorable', 'afectar', 'agresividad', 'ahogarse', 'alambrada', 'alarmar', 'alegre', 'alicatar', 'amenazado', 'amigable',
@@ -51,24 +44,24 @@ derivadas = ['abandonado', 'abejas', 'abogada', 'abrazar', 'abuela', 'acogedora'
 'enfermera', 'enfurecido', 'engañar', 'enterrador', 'entusiasmar', 'escritora', 'escultora', 
 'espantar', 'esposa', 'estacionar', 'estafa', 'estallar', 'estilista', 'estimulación', 'estudiar', 'excitado', 
 'explotación', 'famosa', 'fascinación', 'figurar', 'foca', 'fotógrafo', 'fracasado', 
-'fusil', 'ganador', 'generador', 'genial', 'golpe', 'graduada', 'grano', 'guante', 'guapa', 'habitación', 'herido', 
+'fusil', 'ganador', 'generador', 'genial', 'golpe', 'graduada', 'guante', 'guapa', 'habitación', 'herido', 
 'hermana', 'hija', 'horror', 'humanidad', 'humildad', 'humillación', 'ideal', 'igual', 'ilusionar', 
-'imaginación', 'impotencia', 'incendiar', 'inferior', 'información', 'informática', 'ingresar', 'injuria', 'inquietar', 'inseguridad', 
+'imaginación', 'impotencia', 'incendiar', 'inferior', 'informática', 'ingresar', 'injuria', 'inquietar', 'inseguridad', 
 'inspirado', 'insultado', 'investigador', 'invitación', 'irritación', 'jubilado', 'jugar', 'ladrona', 
-'lamentar', 'lanza', 'lata', 'lechera', 'lesionar', 'libre', 'liberación', 'licenciada', 'liga', 'lista', 
+'lamentar', 'lanza', 'lata', 'lechera', 'lesionar', 'liberación', 'licenciada', 'liga', 'lista', 
 'llamada', 'lograr', 'luminosidad', 'lunar', 'maestra', 'maltratar', 'manga', 'maravilla', 
 'marcar', 'masaje', 'masturbación', 'matar', 'mecanismo', 'mes', 'millonaria', 'mimado', 
 'ministra', 'monja', 'muerte', 'muñeca', 'mutilación', 'música', 'nadador', 'nieta', 'niña', 'novedad', 
-'novia', 'odiar', 'olvidar', 'ordenado', 'orgullo', 'panadera', 'pasear', 'parte', 'pausa', 'pecado', 'peinar', 'peligrar',
+'novia', 'odiar', 'olvidar', 'ordenado', 'orgullo', 'panadera', 'pasear', 'pausa', 'pecado', 'peinar', 'peligrar',
 'peluquera', 'perfumado', 'periodista', 'pesado', 'pesimismo', 'pintor', 'piojo', 'piropear', 'premiar', 
-'preocupación', 'preparado', 'presentador', 'primo', 'profesor', 'programa', 'prosperar', 'proteger', 
+'preocupación', 'preparado', 'presentador', 'profesor', 'programa', 'prosperar', 'proteger', 
 'publicidad', 'puerta', 'puñal', 'querida', 'rechazado', 'recompensa', 'recuerdo', 'refugiada', 
 'regalar', 'reina', 'relajación', 'repugnancia', 'rescatar', 'respetar', 'respiración', 'revolver', 
 'rivalidad', 'rotulador', 'salto', 'salud', 'sangrar', 'secretaria', 'secuestrador', 'sed', 
 'seguridad', 'sobornar', 'socorrer', 'sol', 'sorprender', 'sospecha', 'susurrar', 'talla', 'temer', 'terrorismo', 
 'tiranía', 'tolerancia', 'tontería', 'torcer', 'tormenta', 'tortura', 'trabajador', 
 'traicionar', 'tranquilidad', 'triunfar', 'vela', 'vencer', 'versionar', 'veterinaria', 'victoria', 'viuda', 
-'vivir', 'voluptuosidad','cálculo','medio','presa','ganar','verdad','fácil','animar','lastimar','bolsa','viajar','perder','pene','comida']
+'vivir', 'voluptuosidad']
 
 opciones = ['abandono', 'abeja', 'abogado', 'abrazo', 'abuelo', 'acogedor', 'acoso', 'admiración', 
 'adoración', 'afecto', 'agresivo', 'ahogar', 'alambre', 'alarma', 'alegría', 'alicates', 
@@ -84,48 +77,35 @@ opciones = ['abandono', 'abeja', 'abogado', 'abrazo', 'abuelo', 'acogedor', 'aco
 'enfadar', 'enfermero', 'enfurecer', 'engaño', 'enterrar', 'entusiasmo', 'escritor', 'escultor', 'espantoso', 'esposo', 
 'estación', 'estafador', 'estallido', 'estilo', 
 'estímulo', 'estudioso', 'excitar', 'explotador', 'famoso', 'fascinante', 'figura', 'foco', 
-'fotografía', 'fracaso', 'fusilar', 'ganadora', 'generoso', 'genialidad', 'golpear', 'graduado', 'granada',
+'fotografía', 'fracaso', 'fusilar', 'ganadora', 'generoso', 'genialidad', 'golpear', 'graduado', 
 'guantes', 'guapo', 'habitante', 'herir', 'hermano', 'hijo', 'horroroso', 'humanismo', 'humilde', 'humillar', 
-'idealismo', 'igualar', 'ilusión', 'imaginar', 'impotente', 'incendio', 'inferioridad', 'informe', 'informático', 
+'idealismo', 'igualar', 'ilusión', 'imaginar', 'impotente', 'incendio', 'inferioridad', 'informático', 
 'ingreso', 'injuriar', 'inquieto', 'inseguro', 'inspirar', 'insulto', 'investigadora', 'invitada', 'irritar',
-'jubiloso', 'jugo', 'ladrón', 'lamento', 'lanzar', 'latido', 'lechero', 'lesión', 'librería','liberar', 
+'jubiloso', 'jugo', 'ladrón', 'lamento', 'lanzar', 'latido', 'lechero', 'lesión', 'liberar', 
 'licenciado', 'ligar', 'listo', 'llama', 'logro', 'luminoso', 'luna', 'maestro', 
 'maltrato', 'mango', 'maravilloso', 'marco', 'masajista', 'masturbarse', 'mate', 'mecánica',
 'mesa', 'millonario', 'mimo', 'ministro', 'monje', 'muerto', 'muñeco', 'mutilar', 'músico', 'nadadora', 
-'nieto', 'niño', 'novedoso', 'novio', 'odio', 'olvido', 'ordenador', 'orgulloso', 'panadero', 'pase', 'parto', 'pausado', 
+'nieto', 'niño', 'novedoso', 'novio', 'odio', 'olvido', 'ordenador', 'orgulloso', 'panadero', 'pase', 'pausado', 
 'peca', 'peine', 'peligro', 'peluquero', 'perfume', 'periódico', 'pesar', 'pesimista', 
-'pintora', 'piojos', 'piropo', 'premio', 'preocupar', 'preparar', 'presente', 'prima', 'profesora', 'programar', 
+'pintora', 'piojos', 'piropo', 'premio', 'preocupar', 'preparar', 'presente', 'profesora', 'programar', 
 'prosperidad', 'protegido', 'publicista', 'puerto', 'puñalada', 'querido', 'rechazo', 'recompensar', 
 'recuerdos', 'refugiado', 'regalo', 'reinar', 'relajado', 'repugnante', 'rescate', 'respeto', 'respirar', 
 'revólver', 'rival', 'rotular', 'saltear', 'saludar', 'sangre', 'secretario', 'secuestro', 'seda', 
 'seguro', 'soborno', 'socorro', 'solar', 'sorprendido', 'sospechoso', 'susurro', 'talle', 'tema', 'terrorista', 'tirano',
 'tolerante', 'tonto', 'torcido', 'tormento', 'torturar', 'trabajar', 'traición', 'tranquilo',
-'triunfo', 'velas', 'vencido', 'versión', 'veterinario', 'victorioso', 'viudo', 'vivo', 'voluptuoso','calculadora','media','preso',
-'ganado','verde','facilidad','ánimo','lástima','bolso','viajes','perdido','pena','coma']
+'triunfo', 'velas', 'vencido', 'versión', 'veterinario', 'victorioso', 'viudo', 'vivo', 'voluptuoso']
 
-class Lematizador():
-
-	@staticmethod
-	def obtener_lema(palabra):
-		lema = stemmer.stemWord(palabra) #obtenemos el lexema de la palabra
-		"""
-		if lema in lemas_repetidos:
-			i = lemas_repetidos.index(lema)
-			if palabra == opciones[i]:
-				print("opciones")
-				return opciones[i]
-			else:
-				print("derivada")
-				return derivadas[i]
+for i in range(len(opciones)):
+	print("----------------------")
+	print(opciones[i])
+	lema = stemmer.stemWord(opciones[i])
+	if (lema == lemas_repetidos[i]):
+		print("OK")
+		if stemmer.stemWord(derivadas[i]) == lemas_repetidos[i]:
+			print("OK")
 		else:
-			return lema
-		"""
-		try:
-			i = lemas_repetidos.index(lema)
-			if palabra == opciones[i]:
-				return opciones[i]
-			else:
-				return derivadas[i]
-		except Exception:
-			return lema
-		
+			print(derivadas[i])
+	else:
+		print(lemas_repetidos[i])
+		print(derivadas[i])
+	print("----------------------")

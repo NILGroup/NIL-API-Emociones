@@ -1,1 +1,10 @@
 -----------------------------------------------------------
+Lista de palabras emocionales:
+['quería', 'llevar', 'honor', 'familia', 'veces', 'difícil', 'día', 'padre', 'enteró', 'tenía', 'ir', 'guerra', 'fingió', 'muchacho', 'unió', 'ejército', 'padre', 'tuviera', 'hacerlo', 'entrenó', 'Ayudó', 'ejército', 'chino', 'ganar', 'guerra', 'familia', 'sintió', 'orgullosa']
+Grado de tristeza: 1.62
+Grado de miedo: 1.6
+Grado de alegria: 2.17
+Grado de ira: 1.55
+Grado de asco: 1.3
+La mayoritaria es Alegria con un grado 2.17
+-----------------------------------------------------------

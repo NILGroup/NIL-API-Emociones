@@ -1,1 +1,10 @@
 -----------------------------------------------------------
+Lista de palabras emocionales:
+['vivía', 'castillo', 'encantado', 'dieron', 'bienvenida', 'esforzaron', 'sintiera', 'casa', 'disfrutaba', 'cenas', 'gran', 'comedor', 'castillo', 'sintió', 'feliz', 'castillo', 'hogar']
+Grado de tristeza: 1.28
+Grado de miedo: 1.36
+Grado de alegria: 3.16
+Grado de ira: 1.2
+Grado de asco: 1.15
+La mayoritaria es Alegria con un grado 3.16
+-----------------------------------------------------------

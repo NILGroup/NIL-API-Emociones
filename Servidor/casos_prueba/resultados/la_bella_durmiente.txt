@@ -1,1 +1,10 @@
 -----------------------------------------------------------
+Lista de palabras emocionales:
+['nació', 'princesa', 'hadas', 'buenas', 'hicieron', 'maravillosos', 'regalos', 'regalo', 'malvada', 'maldición', 'cumplir', 'años', 'princesa', 'pincharía', 'rueca', 'hadas', 'llevaron', 'vivir', 'bosque', 'Querían', 'protegerla', 'maldición', 'fuerte', 'Hizo', 'pinchara', 'dedo', 'durmiera', 'príncipe', 'rompió', 'hechizo', 'despertó']
+Grado de tristeza: 1.7
+Grado de miedo: 2.06
+Grado de alegria: 2.62
+Grado de ira: 1.74
+Grado de asco: 1.32
+La mayoritaria es Alegria con un grado 2.62
+-----------------------------------------------------------

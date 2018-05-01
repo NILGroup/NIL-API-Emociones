@@ -1,1 +1,10 @@
 -----------------------------------------------------------
+Lista de palabras emocionales:
+['año', 'enero', 'página', 'blanco', 'llena', 'palabras', 'brotan', 'interior', 'salpicadas', 'cosas', 'contar', 'escapan', 'entendimiento', 'año', 'pasado', 'mañana', 'fría', 'cuerpos', 'separaban', 'almas', 'conectadas', 'verte', 'escucharte', 'achucharte', 'embargo', 'sentirte', 'través', 'personas', 'llegando', 'través', 'través', 'historias', 'entremezclan', 'convierten', 'lágrimas', 'vida', 'besarte', 'olerte', 'achucharte', 'forman', 'parte', 'instante']
+Grado de tristeza: 1.97
+Grado de miedo: 1.84
+Grado de alegria: 2.38
+Grado de ira: 1.56
+Grado de asco: 1.38
+La mayoritaria es Alegria con un grado 2.38
+-----------------------------------------------------------

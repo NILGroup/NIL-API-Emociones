@@ -33,7 +33,6 @@ class InterpretePalabras():
 		"""
 		buscada = lematizador.obtener_lema(palabra)
 		destino = URL + buscada + "/grados/"
-		print(destino)
 		respuesta = requests.get(destino) # consulta al servicio web
 		numeros = []
 		if repr(respuesta) != "<Response [404]>": # si la encuentra interpreta la respuesta JSON

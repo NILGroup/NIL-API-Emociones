@@ -1,1 +1,10 @@
 -----------------------------------------------------------
+Lista de palabras emocionales:
+['trabajaba', 'día', 'noche', 'pesar', 'alegre', 'divertía', 'amigos', 'ratones', 'ponía', 'contenta', 'cantaba', 'creer', 'sueños', 'hacía', 'sentirse', 'feliz']
+Grado de tristeza: 1.55
+Grado de miedo: 1.61
+Grado de alegria: 3.61
+Grado de ira: 1.33
+Grado de asco: 1.27
+La mayoritaria es Alegria con un grado 3.61
+-----------------------------------------------------------

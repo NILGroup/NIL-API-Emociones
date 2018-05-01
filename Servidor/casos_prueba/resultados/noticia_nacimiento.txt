@@ -1,1 +1,10 @@
 -----------------------------------------------------------
+Lista de palabras emocionales:
+['madre', 'primer', 'hijo', 'sabemos', 'nombre', 'influencer', 'pronunciado', 'redes', 'sociales', 'medios', 'italianos', 'confirman', 'nacimiento', 'pequeño', 'fin', 'mamá', 'influencer', 'italiana', 'pronunciado', 'través', 'cotizadas', 'redes', 'sociales', 'portal', 'italiano', 'confirmado', 'noticia', 'italiano', 'anunciado', 'hijo', 'rapero', 'llegó', 'mundo', 'noche', 'marzo', 'italiana', 'dio', 'luz', 'hospital', 'dio', 'luz', 'través', 'parto', 'programado', 'millones', 'seguidores', 'influencer', 'apuntaban', 'últimas', 'horas', 'dando', 'luz', 'desaparición', 'redes', 'sociales', 'final', 'noticia', 'confirmaba', 'horas', 'apodando', 'redes', 'sociales', 'pequeño', 'baby', 'origen', 'padres', 'anunciaron', 'nombre', 'pequeño', 'medio', 'parto', 'adelantado', 'semanas', 'bebé', 'madre', 'encuentran', 'perfecto', 'estado', 'encargada', 'desvelar', 'sexo', 'nombre', 'primer', 'hijo', 'seguidores', 'considerada', 'influencer', 'poderosa', 'mundo', 'moda', 'dándose', 'conocer', 'gracias', 'web']
+Grado de tristeza: 1.7
+Grado de miedo: 1.85
+Grado de alegria: 2.82
+Grado de ira: 1.46
+Grado de asco: 1.38
+La mayoritaria es Alegria con un grado 2.82
+-----------------------------------------------------------
