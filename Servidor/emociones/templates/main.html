@@ -42,23 +42,23 @@
 			<br>
 			
 		<div class="progress" style="height:100px">
-					<div class="progress-bar progress-bar bTristeza" id="barritaTristeza" style="color:blue;"> 
+					<div class="progress-bar progress-bar bTristeza" id="barritaTristeza"> 
 						<span class="textoProgress textoCentrado" id="textoTristeza"></span>
 						<span class="textoProgress textoCentrado" id="imagenTristeza"></span>
 					</div>
-					<div class="progress-bar progress-bar bMiedo" id="barritaMiedo" style="color:purple;"> 
+					<div class="progress-bar progress-bar bMiedo" id="barritaMiedo"> 
 						<span class="textoProgress textoCentrado" id="textoMiedo"></span>
 						<span class="textoProgress textoCentrado" id="imagenMiedo"></span>
 					</div>
-					<div class="progress-bar progress-bar bAlegria" id="barritaAlegria" style="color:yellow;"> 
+					<div class="progress-bar progress-bar bAlegria" id="barritaAlegria"> 
 						<span class="textoProgress textoCentrado" id="textoAlegria"></span>
 						<span class="textoProgress textoCentrado" id="imagenAlegria"></span>
 					</div>
-					<div class="progress-bar progress-bar bEnfado" id="barritaEnfado" style="color:red;""> 
+					<div class="progress-bar progress-bar bEnfado" id="barritaEnfado"> 
 						<span class="textoProgress textoCentrado" id="textoEnfado"></span>
 						<span class="textoProgress textoCentrado" id="imagenEnfado"></span>
 					</div>
-					<div class="progress-bar progress-bar bAsco" id="barritaAsco" style="color:green;"> 
+					<div class="progress-bar progress-bar bAsco" id="barritaAsco"> 
 						<span class="textoProgress textoCentrado" id="textoAsco"></span>
 						<span class="textoProgress textoCentrado" id="imagenAsco"></span>
 					</div>
@@ -119,11 +119,11 @@ $(document).ready(function(){
 			$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/   
 			var grados = data.grados;
 			var grados_array = data.grados.replace('[', ' ').replace(']', ' ').split(',');
-			var tristeza = grados_array[0]/10;
-			var miedo = grados_array[1]/10;
-			var alegria = grados_array[2]/10;
-			var enfado = grados_array[3]/10;
-			var asco = grados_array[4]/10;
+			var tristeza = grados_array[0];
+			var miedo = grados_array[1];
+			var alegria = grados_array[2];
+			var enfado = grados_array[3];
+			var asco = grados_array[4];
 			
 			if(tristeza > 1){
 				var imgTristeza = $('<img src="{% static "img/tristeza.png" %}" alt="sad face" width="60" height="60"/>');
@@ -183,11 +183,11 @@ $(document).ready(function(){
 				$('#imagenAsco').html(imgAsco); 
 			}
 			
-			var tristeza = "width:" + parseInt(grados_array[0]-1) + "%";
-			var miedo = "width:" +  parseInt(grados_array[1]-1) + "%";
-			var alegria = "width:" + parseInt(grados_array[2]-1) + "%";
-			var enfado = "width:" + parseInt(grados_array[3]-1) + "%";
-			var asco = "width:" + parseInt(grados_array[4]-1) + "%";
+			var tristeza = "width:" + parseInt(grados_array[0]-1)/10 + "%; background-color: blue;";
+			var miedo = "width:" +  parseInt(grados_array[1]-1)/10 + "%; background-color: purple;";
+			var alegria = "width:" + parseInt(grados_array[2]-1)/10 + "%; background-color: yellow;";
+			var enfado = "width:" + parseInt(grados_array[3]-1)/10 + "%; background-color: red;";
+			var asco = "width:" + parseInt(grados_array[4]-1)/10 + "%; background-color: green;";
 			
 			document.getElementById("barritaTristeza").style = tristeza;
 			document.getElementById("barritaMiedo").style = miedo;
