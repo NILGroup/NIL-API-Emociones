@@ -10,7 +10,112 @@
 		<link rel="stylesheet" href="{% static 'css/estiloBotones.css' %}">
 		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" crossorigin="anonymous">
 		
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
+
+	<script type=text/javascript>
+	$(document).ready(function(){
+	    $("#enviarTexto").click(function(){	
+		var datos = $("#textArea").val();
 		
+	       $.ajax({
+			type: 'GET', /*Creo que por defecto es GET*/
+			url: 'http://sesat.fdi.ucm.es/emociones/'+datos+'/',
+			contentType: 'application/json',
+			dataType: 'json',
+			crossDomain: true,
+			success: function(data){
+				
+				$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/   
+				var grados = data.grados;
+				var grados_array = data.grados.replace('[', ' ').replace(']', ' ').split(',');
+				var tristeza = grados_array[0];;
+				var miedo = grados_array[1];
+				var alegria = grados_array[2];
+				var enfado = grados_array[3];
+				var asco = grados_array[4];
+				var totalGrados = 0;
+				if(tristeza > 250){
+					totalGrados += parseInt(tristeza);
+					var imgTristeza = $('<img  class="img" src="{% static "img/tristeza.png" %}" alt="sad face"/>');
+					$('#textoTristeza').html('');
+					$('#imagenTristeza').html('');
+					$('#textoTristeza').html("Tristeza");
+					$('#imagenTristeza').append(imgTristeza); 	
+					var tristezaEstilo = "width:" + parseInt(grados_array[0]*100)/totalGrados + "%; background-color: blue;";	
+				} else{
+					var tristezaEstilo = "width:" + 0 + "%; background-color: blue;";	
+				}
+				if(miedo > 250){
+					totalGrados += parseInt(miedo);
+					var imgMiedo = $('<img  class="img" src="{% static "img/miedo.png" %}" alt="scary face"/>');
+					$('#textoMiedo').html('');
+					$('#imagenMiedo').html('');
+					$('#textoMiedo').html('Miedo');
+					$('#imagenMiedo').append(imgMiedo); 
+					var miedoEstilo = "width:" +  parseInt(grados_array[1]*100)/totalGrados + "%; background-color: purple;";
+				}
+				else{
+					var miedoEstilo = "width:" + 0 + "%; background-color: purple;";	
+				} 
+				if(alegria > 250){
+					totalGrados += parseInt(alegria);
+					var imgAlegria = $('<img class="img" src="{% static "img/alegria.png" %}" alt="happy face"/>');
+					$('#textoAlegria').html('');
+					$('#imagenAlegria').html('');
+					$('#textoAlegria').html('Alegria');
+					$('#imagenAlegria').append(imgAlegria); 
+					var alegriaEstilo = "width:" + parseInt(grados_array[2]*100)/totalGrados + "%; background-color: yellow;";
+				} 
+				else{
+					var alegriaEstilo = "width:" + 0 + "%; background-color: yellow;";	
+				} 
+				if(enfado > 250){
+					totalGrados += parseInt(enfado);
+					var imgEnfado = $('<img class="img" src="{% static "img/enfado.png" %}" alt="angry face"/>');
+					$('#textoEnfado').html('');
+					$('#imagenEnfado').html(''); 
+					$('#textoEnfado').html('Enfado');				
+					$('#imagenEnfado').append(imgEnfado); 
+					var enfadoEstilo = "width:" + parseInt(grados_array[3]*100)/totalGrados + "%; background-color: red;";
+				} 
+				else{
+					var enfadoEstilo = "width:" + 0 + "%; background-color: red;";	
+				} 
+				if(asco > 250){
+					totalGrados += parseInt(asco);
+					var imgAsco = $('<img  class="img" src="{% static "img/asco.png" %}" alt="dislike face"/>');
+					$('#textoAsco').html('');
+					$('#imagenAsco').html('');
+					$('#textoAsco').html('Asco');
+					$('#imagenAsco').append(imgAsco); 
+					var ascoEstilo = "width:" + parseInt(grados_array[4]*100)/totalGrados + "%; background-color: green;";
+				}
+				else{
+					var ascoEstilo = "width:" + 0 + "%; background-color: green;";	
+				} 
+
+				
+				
+				document.getElementById("barritaTristeza").style = tristezaEstilo;
+				document.getElementById("barritaMiedo").style = miedoEstilo;
+				document.getElementById("barritaAlegria").style = alegriaEstilo;
+				document.getElementById("barritaEnfado").style = enfadoEstilo;
+				document.getElementById("barritaAsco").style = ascoEstilo;
+
+			},	
+			error: function(request, status, errorThrown) {
+	               		alert(request);
+				alert(status);
+	                	alert(errorThrown);
+
+	            	},
+		});
+	    });
+	});
+	</script>
 		<title> TRADUCTOR DE EMOCIONES </title> 
 	</head>
 	<body>
@@ -64,10 +169,7 @@
 					</div>
 				</div>
 		
-			</div>
-
-		
-<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -84,128 +186,18 @@
 				<div class="radio">
 				  	<label class="radio-inline"><input type="radio" name="optradio">Derecha</label>
 				</div>
-				<h6> ¿Qué emociones quieres ver? </h6>
-				<div class="radio">
-					<label class="radio-inline"><input type="radio" name="optradio">Todas</label>
-				</div>
-				<div class="radio">
-				  	<label class="radio-inline"><input type="radio" name="optradio">Solo las del texto</label>
-				</div>
-				<div>
-				  	<label class="radio-inline"><input type="radio" name="optradio">Solo mayoritaria</label>
-				</div>	
 			</div>
 		</div>
 	</div>
 </div>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
 
-<script type=text/javascript>
-$(document).ready(function(){
-    $("#enviarTexto").click(function(){	
-	var datos = $("#textArea").val();
-	
-       $.ajax({
-		type: 'GET', /*Creo que por defecto es GET*/
-		url: 'http://sesat.fdi.ucm.es/emociones/'+datos+'/',
-		contentType: 'application/json',
-		dataType: 'json',
-		crossDomain: true,
-		success: function(data){
-			
-			$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/   
-			var grados = data.grados;
-			var grados_array = data.grados.replace('[', ' ').replace(']', ' ').split(',');
-			var tristeza = grados_array[0];
-			var miedo = grados_array[1];
-			var alegria = grados_array[2];
-			var enfado = grados_array[3];
-			var asco = grados_array[4];
-			
-			if(tristeza > 1){
-				var imgTristeza = $('<img src="{% static "img/tristeza.png" %}" alt="sad face" width="60" height="60"/>');
-				$('#textoTristeza').html('');
-				$('#imagenTristeza').html('');
-				$('#textoTristeza').html("Tristeza");
-				$('#imagenTristeza').append(imgTristeza); 
+
+
+	</div>
+
 		
-			}
-			else {
-				$('#textoTristeza').html('');
-				$('#imagenTristeza').html('');
 
-			}
-			if(miedo > 1){
-				var imgMiedo = $('<img src="{% static "img/miedo.png" %}" alt="scary face" width="60" height="60"/>');
-				$('#textoMiedo').html('');
-				$('#imagenMiedo').html('');
-				$('#textoMiedo').html('Miedo');
-				$('#imagenMiedo').append(imgMiedo); 
-			}
-			else {
-				$('#textoMiedo').html('');
-				$('#imagenMiedo').html('');
-			}
-			if(alegria > 1){
-				var imgAlegria = $('<img src="{% static "img/alegria.png" %}" alt="happy face" width="60" height="60"/>');
-				$('#textoAlegria').html('');
-				$('#imagenAlegria').html('');
-				$('#textoAlegria').html('Alegria');
-				$('#imagenAlegria').append(imgAlegria); 
-			}
-			else {
-				$('#textoAlegria').html('');
-				$('#imagenAlegria').html('');
-			}
-			if(enfado > 1){
-				var imgEnfado = $('<img src="{% static "img/enfado.png" %}" alt="angry face" width="60" height="60"/>');
-				$('#textoEnfado').html('');
-				$('#imagenEnfado').html(''); 
-				$('#textoEnfado').html('Enfado');				
-				$('#imagenEnfado').append(imgEnfado); 
-			}
-			else {
-				$('#textoEnfado').html('');
-				$('#imagenEnfado').html(''); 
-			}
-			if(asco > 1){
-				var imgAsco = $('<img src="{% static "img/asco.png" %}" alt="dislike face" width="60" height="60"/>');
-				$('#textoAsco').html('');
-				$('#imagenAsco').html('');
-				$('#textoAsco').html('Asco');
-				$('#imagenAsco').append(imgAsco); 
-			}
-			else {
-				$('#textoAsco').html('');
-				$('#imagenAsco').html(imgAsco); 
-			}
-			
-			var tristeza = "width:" + parseInt(grados_array[0]-1)/10 + "%; background-color: blue;";
-			var miedo = "width:" +  parseInt(grados_array[1]-1)/10 + "%; background-color: purple;";
-			var alegria = "width:" + parseInt(grados_array[2]-1)/10 + "%; background-color: yellow;";
-			var enfado = "width:" + parseInt(grados_array[3]-1)/10 + "%; background-color: red;";
-			var asco = "width:" + parseInt(grados_array[4]-1)/10 + "%; background-color: green;";
-			
-			document.getElementById("barritaTristeza").style = tristeza;
-			document.getElementById("barritaMiedo").style = miedo;
-			document.getElementById("barritaAlegria").style = alegria;
-			document.getElementById("barritaEnfado").style = enfado;
-			document.getElementById("barritaAsco").style = asco;
-
-		},	
-		error: function(request, status, errorThrown) {
-               		alert(request);
-			alert(status);
-                	alert(errorThrown);
-
-            	},
-	});
-    });
-});
-</script>
+	
 	</body>
 </html>
 

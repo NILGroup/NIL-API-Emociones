@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(-wf0n8(+fw894$q*0d!yrshkkvhc2#ft8z9l2))yd+7weez@z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #PARA EL SERVIDOR
 ALLOWED_HOSTS = ['sesat.fdi.ucm.es']
@@ -121,12 +121,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_ROOT = '/static/'
+STATIC_ROOT = '/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/'
 
-#STATIC_URL = '/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/'
-STATIC_URL = '/static/'
+STATIC_URL = '/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/'
 
 STATICFILES_DIRS = [
-	os.path.join(BASE_DIR, "static"), '/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/',
-
+	("css", "/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/css/"),
+	("fonts", "/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/fonts/"),
+	("img", "/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/img/"),
+	("js", "/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/js/"),
 ]

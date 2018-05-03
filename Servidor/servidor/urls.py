@@ -26,5 +26,4 @@ urlpatterns = [
     url(r'^', include('emociones.urls')),
 #    path('', RedirectView.as_view(url='/emociones/', permanent=True)),
 #    url('', RedirectView.as_view(url='/emociones', permanent=False)),
-    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT),
-]
+ ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
