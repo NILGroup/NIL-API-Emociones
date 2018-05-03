@@ -37,28 +37,33 @@
 				var enfado = grados_array[3];
 				var asco = grados_array[4];
 				var totalGrados = 0;
+				for(var i = 0; i<5; i++){
+					if(grados_array[i] > 250){
+						totalGrados += parseInt(grados_array[i]);
+					}
+				}
 				if(tristeza > 250){
-					totalGrados += parseInt(tristeza);
+					//totalGrados += parseInt(tristeza);
 					var imgTristeza = $('<img  class="img" src="{% static "img/tristeza.png" %}" alt="sad face"/>');
 					$('#textoTristeza').html('');
 					$('#imagenTristeza').html('');
 					$('#textoTristeza').html("Tristeza");
 					$('#imagenTristeza').append(imgTristeza); 	
-					var tristezaEstilo = "width:" + parseInt(grados_array[0]*100)/totalGrados + "%; background-color: blue;";	
+					var tristezaEstilo = "width:" + parseInt(grados_array[0]*100)/totalGrados + "%;";
 				} else{
-					var tristezaEstilo = "width:" + 0 + "%; background-color: blue;";	
+					var tristezaEstilo = "width:" + 0 + "%;";	
 				}
 				if(miedo > 250){
-					totalGrados += parseInt(miedo);
+					//totalGrados += parseInt(miedo);
 					var imgMiedo = $('<img  class="img" src="{% static "img/miedo.png" %}" alt="scary face"/>');
 					$('#textoMiedo').html('');
 					$('#imagenMiedo').html('');
 					$('#textoMiedo').html('Miedo');
 					$('#imagenMiedo').append(imgMiedo); 
-					var miedoEstilo = "width:" +  parseInt(grados_array[1]*100)/totalGrados + "%; background-color: purple;";
+					var miedoEstilo = "width:" +  parseInt(grados_array[1]*100)/totalGrados + "%;";
 				}
 				else{
-					var miedoEstilo = "width:" + 0 + "%; background-color: purple;";	
+					var miedoEstilo = "width:" + 0 + "%;";	
 				} 
 				if(alegria > 250){
 					totalGrados += parseInt(alegria);
@@ -67,34 +72,34 @@
 					$('#imagenAlegria').html('');
 					$('#textoAlegria').html('Alegria');
 					$('#imagenAlegria').append(imgAlegria); 
-					var alegriaEstilo = "width:" + parseInt(grados_array[2]*100)/totalGrados + "%; background-color: yellow;";
+					var alegriaEstilo = "width:" + parseInt(grados_array[2]*100)/totalGrados + "%;";
 				} 
 				else{
-					var alegriaEstilo = "width:" + 0 + "%; background-color: yellow;";	
+					var alegriaEstilo = "width:" + 0 + "%;";	
 				} 
 				if(enfado > 250){
-					totalGrados += parseInt(enfado);
+					//totalGrados += parseInt(enfado);
 					var imgEnfado = $('<img class="img" src="{% static "img/enfado.png" %}" alt="angry face"/>');
 					$('#textoEnfado').html('');
 					$('#imagenEnfado').html(''); 
 					$('#textoEnfado').html('Enfado');				
 					$('#imagenEnfado').append(imgEnfado); 
-					var enfadoEstilo = "width:" + parseInt(grados_array[3]*100)/totalGrados + "%; background-color: red;";
+					var enfadoEstilo = "width:" + parseInt(grados_array[3]*100)/totalGrados + "%;";
 				} 
 				else{
-					var enfadoEstilo = "width:" + 0 + "%; background-color: red;";	
+					var enfadoEstilo = "width:" + 0 + "%;";	
 				} 
 				if(asco > 250){
-					totalGrados += parseInt(asco);
+					//totalGrados += parseInt(asco);
 					var imgAsco = $('<img  class="img" src="{% static "img/asco.png" %}" alt="dislike face"/>');
 					$('#textoAsco').html('');
 					$('#imagenAsco').html('');
 					$('#textoAsco').html('Asco');
 					$('#imagenAsco').append(imgAsco); 
-					var ascoEstilo = "width:" + parseInt(grados_array[4]*100)/totalGrados + "%; background-color: green;";
+					var ascoEstilo = "width:" + parseInt(grados_array[4]*100)/totalGrados + "%;";
 				}
 				else{
-					var ascoEstilo = "width:" + 0 + "%; background-color: green;";	
+					var ascoEstilo = "width:" + 0 + "%;";	
 				} 
 
 				
@@ -139,8 +144,7 @@
 				
 			</center>
 			
-	
-		
+			
 			<div id="salida"></div>
 			<div id="hola" style= "display:none;"></div>
 
@@ -179,7 +183,31 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<h6> Posición de las emociones</h6>
+				<h6> Color de las emociones:</h6>
+				<table>
+					<tr>
+						<th> <label>Tristeza:</label> </th>
+						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input name="color" type="color" value="#0000ff"></th>
+					</tr>
+					<tr>
+						<th> <label>Miedo:</label> </th>
+						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input name="color" type="color" value="#800080"></th>
+					</tr>
+					<tr>
+						<th> <label>Alegría:</label> </th>
+						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input name="color" type="color" value="#ffff00"></th>
+					</tr>
+					<tr>
+						<th> <label>Enfado:</label> </th>
+						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input name="color" type="color" value="#ff0000"></th>
+					</tr>
+					<tr>
+						<th> <label>Asco:</label> </th>
+						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input name="color" type="color" value="#008000"></th>
+					</tr>
+				</table>
+				<hr>
+				<h6> Posición de las emociones: </h6>
 				<div class="radio">
 					<label class="radio-inline"><input type="radio" name="optradio">Abajo</label>
 				</div>
