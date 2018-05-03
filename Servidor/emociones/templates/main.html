@@ -16,6 +16,24 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
 
 	<script type=text/javascript>
+	function cambiarcolor(){
+		let colorTriste = document.getElementById("colorTriste").value;
+		let colorMiedo = document.getElementById("colorMiedo").value;
+		let colorAlegre = document.getElementById("colorAlegre").value;
+		let colorEnfado = document.getElementById("colorEnfado").value;
+		let colorAsco = document.getElementById("colorAsco").value;
+		document.getElementById('barritaTristeza').style.backgroundColor = colorTriste;
+		document.getElementById('barritaMiedo').style.backgroundColor = colorMiedo;
+		document.getElementById('barritaAlegria').style.backgroundColor = colorAlegre;
+		document.getElementById('barritaEnfado').style.backgroundColor = colorEnfado;
+		document.getElementById('barritaAsco').style.backgroundColor = colorAsco;
+		
+		document.getElementById('modalPersonalizado').style.backgroundColor = colorTriste;
+
+		document.getElementById('miModal').modal("hide");
+
+
+	} 
 	$(document).ready(function(){
 	    $("#enviarTexto").click(function(){	
 		var datos = $("#textArea").val();
@@ -60,19 +78,22 @@
 					$('#imagenMiedo').html('');
 					$('#textoMiedo').html('Miedo');
 					$('#imagenMiedo').append(imgMiedo); 
+
 					var miedoEstilo = "width:" +  parseInt(grados_array[1]*100)/totalGrados + "%;";
 				}
 				else{
 					var miedoEstilo = "width:" + 0 + "%;";	
 				} 
 				if(alegria > 250){
-					totalGrados += parseInt(alegria);
+					//totalGrados += parseInt(alegria);
 					var imgAlegria = $('<img class="img" src="{% static "img/alegria.png" %}" alt="happy face"/>');
 					$('#textoAlegria').html('');
 					$('#imagenAlegria').html('');
 					$('#textoAlegria').html('Alegria');
 					$('#imagenAlegria').append(imgAlegria); 
-					var alegriaEstilo = "width:" + parseInt(grados_array[2]*100)/totalGrados + "%;";
+
+					var alegriaEstilo = "width:" + parseInt(alegria*100)/totalGrados + "%;";
+
 				} 
 				else{
 					var alegriaEstilo = "width:" + 0 + "%;";	
@@ -101,8 +122,6 @@
 				else{
 					var ascoEstilo = "width:" + 0 + "%;";	
 				} 
-
-				
 				
 				document.getElementById("barritaTristeza").style = tristezaEstilo;
 				document.getElementById("barritaMiedo").style = miedoEstilo;
@@ -128,7 +147,7 @@
 			<br>
 			<div class="row">
 				<div class="col-sm-9">
-					<h2 style="text-align: left;"> TRADUCTOR DE EMOCIONES </h2>
+					<h2> TRADUCTOR DE EMOCIONES </h2>
 				</div>
 				<div class="col-sm-3">
 					<button type="button" class="btn btn-default botonGlyphicon" data-toggle="modal" data-target="#miModal"> <span class="glyphicon glyphicon-wrench"> </span> </button>
@@ -150,7 +169,7 @@
 
 			<br>
 			
-		<div class="progress" style="height:100px">
+		<div class="progress">
 					<div class="progress-bar progress-bar bTristeza" id="barritaTristeza"> 
 						<span class="textoProgress textoCentrado" id="textoTristeza"></span>
 						<span class="textoProgress textoCentrado" id="imagenTristeza"></span>
@@ -175,46 +194,53 @@
 		
 	<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content" id="modalPersonalizado">
 			<div class="modal-header">
 				<h4 class="modal-title" id="myModalLabel">Ajustes</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<div class="modal-body">
-				<h6> Color de las emociones:</h6>
+			 <!-- Modal Body -->
+            <div class="modal-body">
+                
+                    <h6> Color de las emociones:</h6>
 				<table>
 					<tr>
 						<th> <label>Tristeza:</label> </th>
-						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input name="color" type="color" value="#0000ff"></th>
+						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorTriste" name="colorTriste" type="color" value="#0000ff"></th>
 					</tr>
 					<tr>
 						<th> <label>Miedo:</label> </th>
-						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input name="color" type="color" value="#800080"></th>
+						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorMiedo" name="colorMiedo" type="color" value="#800080"></th>
 					</tr>
 					<tr>
 						<th> <label>Alegría:</label> </th>
-						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input name="color" type="color" value="#ffff00"></th>
+						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorAlegre" name="colorAlegre" type="color" value="#ffff00"></th>
 					</tr>
 					<tr>
 						<th> <label>Enfado:</label> </th>
-						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input name="color" type="color" value="#ff0000"></th>
+						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorEnfado" name="colorEnfado" type="color" value="#ff0000"></th>
 					</tr>
 					<tr>
 						<th> <label>Asco:</label> </th>
-						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input name="color" type="color" value="#008000"></th>
+						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorAsco" name="colorAsco" type="color" value="#008000"></th>
 					</tr>
 				</table>
 				<hr>
 				<h6> Posición de las emociones: </h6>
 				<div class="radio">
-					<label class="radio-inline"><input type="radio" name="optradio">Abajo</label>
+					<label class="radio-inline"><input type="radio" name="optradio"> Abajo</label>
 				</div>
 				<div class="radio">
-				  	<label class="radio-inline"><input type="radio" name="optradio">Derecha</label>
+				  	<label class="radio-inline"><input type="radio" name="optradio"> Derecha</label>
 				</div>
-			</div>
+ 
+                <div id="salidaModal"></div>
+           
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary submitBtn" onclick="cambiarcolor()">Aceptar</button>
+            </div>
 		</div>
 	</div>
 </div>
@@ -228,7 +254,3 @@
 	
 	</body>
 </html>
-
-
-
-
