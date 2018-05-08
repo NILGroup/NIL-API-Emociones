@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 INTERROGATIVA = 1
 ENUNCIATIVA = 2
 EXCLAMATIVA = 4
@@ -40,7 +43,7 @@ def extraer_mitad(subfrases,tipos,frase,tam,ini,fin,tipo):
 	return frase,longitud
 
 def obtener_subfrases2(frase):
-	frase = frase.replace("Â","")
+	#frase = frase.replace("Â","")
 	frase = frase.replace("- ","")
 	frase = frase.replace(" -", "")
 	if "?" not in frase and "!" not in frase:

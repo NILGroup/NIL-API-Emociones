@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(-wf0n8(+fw894$q*0d!yrshkkvhc2#ft8z9l2))yd+7weez@z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #PARA EL SERVIDOR
 ALLOWED_HOSTS = ['sesat.fdi.ucm.es']

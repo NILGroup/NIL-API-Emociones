@@ -1,8 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import requests
 from lematizador import Lematizador
 
 """
-Programa que se encarga de buscar una palabra en el servicio web y devolver la información que tiene sobre ella.
+Programa que se encarga de buscar una palabra en el servicio web y devolver la informacion que tiene sobre ella.
 """
 URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
 
@@ -12,8 +15,8 @@ lematizador = Lematizador() # lematizador que utilizamos para buscar palabra
 
 def coger_grados(grados):
 	"""
-	Función que traduce la cadena de grados que devuelve el servicio web a una lista
-	de 5 strings que representan los grados (uno por cada emoción).
+	Funcion que traduce la cadena de grados que devuelve el servicio web a una lista
+	de 5 strings que representan los grados (uno por cada emocion).
 	"""
 	tokens = grados.split(" || ")
 	numeros = []
@@ -28,8 +31,8 @@ class InterpretePalabras():
 	@staticmethod
 	def interpretar_grados(palabra):
 		"""
-		Función que dada una URL del servicio web correspondiente a los grados de una palabra
-		busca la palabra y devuelve una lista con sus grados (o una lista vacía si no la encuentra).
+		Funcion que dada una URL del servicio web correspondiente a los grados de una palabra
+		busca la palabra y devuelve una lista con sus grados (o una lista vacia si no la encuentra).
 		"""
 		buscada = lematizador.obtener_lema(palabra)
 		destino = URL + buscada + "/grados/"
@@ -43,9 +46,9 @@ class InterpretePalabras():
 	@staticmethod
 	def interpretar_consensuada(palabra):
 		"""
-		Función que dada una URL del servicio web correspondiente a la emoción consensuada de una palabra
-		busca la palabra y devuelve la emoción, si es que hay emoción consensuada. Si no encuentra la palabra
-		o esta no tiene emoción consensuada devuelve un mensaje informativo.
+		Funcion que dada una URL del servicio web correspondiente a la emocion consensuada de una palabra
+		busca la palabra y devuelve la emocion, si es que hay emocion consensuada. Si no encuentra la palabra
+		o esta no tiene emocion consensuada devuelve un mensaje informativo.
 		"""
 		buscada = lematizador.obtener_lema(palabra)
 		destino = URL + buscada + "/consensuada/"
@@ -63,9 +66,9 @@ class InterpretePalabras():
 	@staticmethod
 	def interpretar_mayoritaria(palabra):
 		"""
-		Función que dada una URL del servicio web correspondiente a la emoción mayoritaria de una palabra
-		busca la palabra y devuelve dicha emoción, o dos si hay empate. Además de una lista con las emociones 
-		mayoritaria	devuelve el grado que tienen. Si no encuentra la palabra devuelve una lista vacía y un cero.
+		Funcion que dada una URL del servicio web correspondiente a la emocion mayoritaria de una palabra
+		busca la palabra y devuelve dicha emocion, o dos si hay empate. Ademas de una lista con las emociones 
+		mayoritaria	devuelve el grado que tienen. Si no encuentra la palabra devuelve una lista vacaa y un cero.
 		"""
 		buscada = lematizador.obtener_lema(palabra)
 		destino = URL + buscada + "/mayoritaria/"

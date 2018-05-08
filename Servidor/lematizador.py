@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import Stemmer
 
 """
@@ -5,7 +7,7 @@ Obtiene el lema de una palabra para poder buscarla en nuestro diccionario.
 """
 
 """
-Para obtener los lexemas utilizamos el paquete en español de Stemmer.
+Para obtener los lexemas utilizamos el paquete en espaniol de Stemmer.
 """
 stemmer = Stemmer.Stemmer('spanish')
 

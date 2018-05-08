@@ -1,19 +1,22 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from interprete_frases import InterpreteFrases
 from seccionador import SeccionadorFrases
 """
 Programa que se encarga de procesar un texto, dividiendolo en frases para procesar
-cada una de ellas, y devolver la información que tiene sobre ella.
+cada una de ellas, y devolver la informacion que tiene sobre ella.
 """
 
-interpreta = InterpreteFrases() # nos permitirá interpretar las frases
-secciona = SeccionadorFrases() # nos permitirá seccionar las frases en subfrases y obtener sus tipos
+interpreta = InterpreteFrases() # nos permitira interpretar las frases
+secciona = SeccionadorFrases() # nos permitira seccionar las frases en subfrases y obtener sus tipos
 
-emociones = ["Tristeza", "Miedo", "Alegria", "Ira", "Sorpresa"] # lista de emociones con las que trabajamos
+emociones = ["Tristeza", "Miedo", "Alegria", "Ira", "Asco"] # lista de emociones con las que trabajamos
 
 def obtener_medias(grados,num_frases):
 	"""
-	Función que dada una lista de grados y un número de frases a partir
-	de las que se han obtenido, haya las medias para cada emoción. Devuelve una
+	Funcion que dada una lista de grados y un numero de frases a partir
+	de las que se han obtenido, haya las medias para cada emocion. Devuelve una
 	lista con los grados medios.
 	"""
 	if num_frases > 0:
@@ -62,7 +65,7 @@ class InterpreteTexto():
 	@staticmethod
 	def emociones_texto(texto):
 		"""
-		Función que dado un texto lo divide en frases y procesa cada una de ellas.
+		Funcion que dado un texto lo divide en frases y procesa cada una de ellas.
 		Devuelve los grados y las palabras que permiten llegar a ellos.
 		"""
 		frases,tipos = secciona.seccionar_texto(texto)
@@ -98,7 +101,7 @@ class InterpreteTexto():
 			j = ind[1]
 			return [emociones[i],emociones[j]],porcent/2
 		else: # si no hay palabras emocionales, la frase es mayormente neutral
-			return ["Neutral"],"100"
+			return [],"1"
 
 	@staticmethod
 	def emocion_mayoritaria_texto(grados):

@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import requests
 from interprete_palabras import InterpretePalabras
 from interprete_frases import InterpreteFrases

@@ -10,11 +10,15 @@
 		<link rel="stylesheet" href="{% static 'css/estiloBotones.css' %}">
 		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" crossorigin="anonymous">
 		
-			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
-
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
+		<!--<script src="{% static 'js/jquery-3.1.1.min.js' %}"> </script>-->
+		<script src="{% static 'js/DjangoAjax.js' %}"></script>
 	<script type=text/javascript>
 	function cambiarcolor(){
 		let colorTriste = document.getElementById("colorTriste").value;
@@ -22,122 +26,226 @@
 		let colorAlegre = document.getElementById("colorAlegre").value;
 		let colorEnfado = document.getElementById("colorEnfado").value;
 		let colorAsco = document.getElementById("colorAsco").value;
-		document.getElementById('barritaTristeza').style.backgroundColor = colorTriste;
-		document.getElementById('barritaMiedo').style.backgroundColor = colorMiedo;
-		document.getElementById('barritaAlegria').style.backgroundColor = colorAlegre;
-		document.getElementById('barritaEnfado').style.backgroundColor = colorEnfado;
-		document.getElementById('barritaAsco').style.backgroundColor = colorAsco;
-
+		document.getElementById("barritaTristeza").style.backgroundColor = colorTriste;
+		document.getElementById("barritaMiedo").style.backgroundColor = colorMiedo;
+		document.getElementById("barritaAlegria").style.backgroundColor = colorAlegre;
+		document.getElementById("barritaEnfado").style.backgroundColor = colorEnfado;
+		document.getElementById("barritaAsco").style.backgroundColor = colorAsco;
+		alert("Estoy aqui");
 		$('#miModal').hide();
 		$('.modal-backdrop').hide();
 
 
-	} 
-	$(document).ready(function(){
-	    $("#enviarTexto").click(function(){	
-		var datos = $("#textArea").val();
-		
-	       $.ajax({
-			type: 'GET', /*Creo que por defecto es GET*/
-			url: 'http://sesat.fdi.ucm.es/emociones/'+datos+'/',
-			contentType: 'application/json',
-			dataType: 'json',
-			crossDomain: true,
-			success: function(data){
-				
-				$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/   
-				var grados = data.grados;
-				var grados_array = data.grados.replace('[', ' ').replace(']', ' ').split(',');
-				var tristeza = grados_array[0];;
-				var miedo = grados_array[1];
-				var alegria = grados_array[2];
-				var enfado = grados_array[3];
-				var asco = grados_array[4];
-				var totalGrados = 0;
-				for(var i = 0; i<5; i++){
-					if(grados_array[i] > 250){
-						totalGrados += parseInt(grados_array[i]);
-					}
-				}
-				if(tristeza > 250){
-					//totalGrados += parseInt(tristeza);
-					var imgTristeza = $('<img  class="img" src="{% static "img/tristeza.png" %}" alt="sad face"/>');
-					$('#textoTristeza').html('');
-					$('#imagenTristeza').html('');
-					$('#textoTristeza').html("Tristeza");
-					$('#imagenTristeza').append(imgTristeza); 	
-					var tristezaEstilo = "width:" + parseInt(grados_array[0]*100)/totalGrados + "%;";
-				} else{
-					var tristezaEstilo = "width:" + 0 + "%;";	
-				}
-				if(miedo > 250){
-					//totalGrados += parseInt(miedo);
-					var imgMiedo = $('<img  class="img" src="{% static "img/miedo.png" %}" alt="scary face"/>');
-					$('#textoMiedo').html('');
-					$('#imagenMiedo').html('');
-					$('#textoMiedo').html('Miedo');
-					$('#imagenMiedo').append(imgMiedo); 
+	}
+	$(document).ready(function() {
+                $('#btn2').click(function() {
+                        console.log("clickBTN2");
+                        var a=$('#textArea').val();
+                        console.log(a);
+                        $.ajax({
+                                url:"http://sesat.fdi.ucm.es/textosGuay/",
+                                method: "POST",
+                                headers: {'X-CSRFToken': '{{ csrf_token }}'},
+                                data: {
+                                        a: a
+                                },
+                                success: function(data,status){
+					alert("Data: " + data + "\nStatus: " + status);
+					$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/
+	                                var grados = data
+        	                        var grados_array = grados.split(' ');
+                	                var tristeza = grados_array[0];
+                        	        var miedo = grados_array[1];
+                               		var alegria = grados_array[2];
+                               		var enfado = grados_array[3];
+                                	var asco = grados_array[4];
+                                	var totalGrados = 0;
+                                	for(var i = 0; i < 5; i++){
+                                        	if(grados_array[i] > 2.50){
+                                               		totalGrados += parseInt(grados_array[i]);
+                                        	}
+                                	}
+					if(tristeza > 2.50){
+                                        	var imgTristeza = $('<img  class="img" src="{% static "img/tristeza.png" %}" alt="sad face"/>');
+                                        	$('#textoTristeza').html('');
+                                        	$('#imagenTristeza').html('');
+                                        	$('#textoTristeza').html("Tristeza");
+                                        	$('#imagenTristeza').append(imgTristeza);
+                                        	var tristezaEstilo = "width:" + parseInt(grados_array[0]*100)/totalGrados + "%;";
+                                	} else{
+                                        	var tristezaEstilo = "width:" + 0 + "%;";
+                                	}
+                                	if(miedo > 2.50){
+                                        	var imgMiedo = $('<img  class="img" src="{% static "img/miedo.png" %}" alt="scary face"/>');
+                                        	$('#textoMiedo').html('');
+                                        	$('#imagenMiedo').html('');
+                                        	$('#textoMiedo').html('Miedo');
+                                        	$('#imagenMiedo').append(imgMiedo);
 
-					var miedoEstilo = "width:" +  parseInt(grados_array[1]*100)/totalGrados + "%;";
-				}
-				else{
-					var miedoEstilo = "width:" + 0 + "%;";	
-				} 
-				if(alegria > 250){
-					//totalGrados += parseInt(alegria);
-					var imgAlegria = $('<img class="img" src="{% static "img/alegria.png" %}" alt="happy face"/>');
-					$('#textoAlegria').html('');
-					$('#imagenAlegria').html('');
-					$('#textoAlegria').html('Alegria');
-					$('#imagenAlegria').append(imgAlegria); 
+                                        	var miedoEstilo = "width:" +  parseInt(grados_array[1]*100)/totalGrados + "%;";
+                                	}
+                                	else{
+                                        	var miedoEstilo = "width:" + 0 + "%;";
+                                	}
+					if(alegria > 2.50){
+                                        	var imgAlegria = $('<img class="img" src="{% static "img/alegria.png" %}" alt="happy face"/>');
+                                        	$('#textoAlegria').html('');
+                                        	$('#imagenAlegria').html('');
+                                        	$('#textoAlegria').html('Alegria');
+                                        	$('#imagenAlegria').append(imgAlegria);
 
-					var alegriaEstilo = "width:" + parseInt(alegria*100)/totalGrados + "%;";
+                                        	var alegriaEstilo = "width:" + parseInt(alegria*100)/totalGrados + "%;";
 
-				} 
-				else{
-					var alegriaEstilo = "width:" + 0 + "%;";	
-				} 
-				if(enfado > 250){
-					//totalGrados += parseInt(enfado);
-					var imgEnfado = $('<img class="img" src="{% static "img/enfado.png" %}" alt="angry face"/>');
-					$('#textoEnfado').html('');
-					$('#imagenEnfado').html(''); 
-					$('#textoEnfado').html('Enfado');				
-					$('#imagenEnfado').append(imgEnfado); 
-					var enfadoEstilo = "width:" + parseInt(grados_array[3]*100)/totalGrados + "%;";
-				} 
-				else{
-					var enfadoEstilo = "width:" + 0 + "%;";	
-				} 
-				if(asco > 250){
-					//totalGrados += parseInt(asco);
-					var imgAsco = $('<img  class="img" src="{% static "img/asco.png" %}" alt="dislike face"/>');
-					$('#textoAsco').html('');
-					$('#imagenAsco').html('');
-					$('#textoAsco').html('Asco');
-					$('#imagenAsco').append(imgAsco); 
-					var ascoEstilo = "width:" + parseInt(grados_array[4]*100)/totalGrados + "%;";
-				}
-				else{
-					var ascoEstilo = "width:" + 0 + "%;";	
-				} 
-				
-				document.getElementById("barritaTristeza").style = tristezaEstilo;
-				document.getElementById("barritaMiedo").style = miedoEstilo;
-				document.getElementById("barritaAlegria").style = alegriaEstilo;
-				document.getElementById("barritaEnfado").style = enfadoEstilo;
-				document.getElementById("barritaAsco").style = ascoEstilo;
+                                	}
+                                	else{
+                                        	var alegriaEstilo = "width:" + 0 + "%;";
+                                	}	
+                                	if(enfado > 2.50){
+                                        	var imgEnfado = $('<img class="img" src="{% static "img/enfado.png" %}" alt="angry face"/>');
+                                        	$('#textoEnfado').html('');
+                                        	$('#imagenEnfado').html('');
+                                        	$('#textoEnfado').html('Enfado');
+                                        	$('#imagenEnfado').append(imgEnfado);
+                                        	var enfadoEstilo = "width:" + parseInt(enfado*100)/totalGrados + "%;";
+                                	}
+                                	else{
+                                        	var enfadoEstilo = "width:" + 0 + "%;";
+                                	}
+					if(asco > 2.50){
+                                       		var imgAsco = $('<img  class="img" src="{% static "img/asco.png" %}" alt="dislike face"/>');
+                                        	$('#textoAsco').html('');
+                                        	$('#imagenAsco').html('');
+                                        	$('#textoAsco').html('Asco');
+                                        	$('#imagenAsco').append(imgAsco);
+                                        	var ascoEstilo = "width:" + parseInt(asco*100)/totalGrados + "%;";
+                                	}
+                                	else{
+                                        	var ascoEstilo = "width:" + 0 + "%;";
+                                	}
 
-			},	
-			error: function(request, status, errorThrown) {
-	               		alert(request);
-				alert(status);
-	                	alert(errorThrown);
+                                	document.getElementById("barritaTristeza").style = tristezaEstilo;
+                                	document.getElementById("barritaMiedo").style = miedoEstilo;
+                                	document.getElementById("barritaAlegria").style = alegriaEstilo;
+                                	document.getElementById("barritaEnfado").style = enfadoEstilo;
+                                	document.getElementById("barritaAsco").style = ascoEstilo;
 
-	            	},
+                        	},
+                        	error: function(request, status, errorThrown) {
+                                	alert(request);
+									alert(request.responseText);
+                                	alert(status);
+                                	alert(errorThrown);
+				},
+                        });
 		});
-	    });
 	});
+
+ 
+	//$(document).ready(function(){
+	<!--    $("#enviarTexto").click(function(){
+	//	var datos = $("#textArea").val();
+	//	
+	//       $.ajax({
+	//		type: 'GET', /*Creo que por defecto es GET*/
+	//		url: 'http://sesat.fdi.ucm.es/emociones/'+datos+'/',
+	//		contentType: 'application/json',
+	//		dataType: 'json',
+	//		crossDomain: true,
+	//		success: function(data){
+	//			
+	//			$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/   
+	//			var grados = data.grados;
+	//			var grados_array = data.grados.replace('[', ' ').replace(']', ' ').split(',');
+	//			var tristeza = grados_array[0];;
+	//			var miedo = grados_array[1];
+	//			var alegria = grados_array[2];
+	//			var enfado = grados_array[3];
+	//			var asco = grados_array[4];
+	//			var totalGrados = 0;
+	//			for(var i = 0; i<5; i++){
+	//				if(grados_array[i] > 250){
+	//					totalGrados += parseInt(grados_array[i]);
+	//				}
+	//			}
+	//			if(tristeza > 250){
+	//				//totalGrados += parseInt(tristeza);
+	//				var imgTristeza = $('<img  class="img" src="{% static "img/tristeza.png" %}" alt="sad face"/>');
+	//				$('#textoTristeza').html('');
+	//				$('#imagenTristeza').html('');
+	//				$('#textoTristeza').html("Tristeza");
+	//				$('#imagenTristeza').append(imgTristeza); 	
+	//				var tristezaEstilo = "width:" + parseInt(grados_array[0]*100)/totalGrados + "%;";
+	//			} else{
+	//				var tristezaEstilo = "width:" + 0 + "%;";	
+	//			}
+	//			if(miedo > 250){
+	//				//totalGrados += parseInt(miedo);
+	//				var imgMiedo = $('<img  class="img" src="{% static "img/miedo.png" %}" alt="scary face"/>');
+	//				$('#textoMiedo').html('');
+	//				$('#imagenMiedo').html('');
+	//				$('#textoMiedo').html('Miedo');
+	//				$('#imagenMiedo').append(imgMiedo); 
+    //
+	//				var miedoEstilo = "width:" +  parseInt(grados_array[1]*100)/totalGrados + "%;";
+	//			}
+	//			else{
+	//				var miedoEstilo = "width:" + 0 + "%;";	
+	//			} 
+	//			if(alegria > 250){
+	//				//totalGrados += parseInt(alegria);
+	//				var imgAlegria = $('<img class="img" src="{% static "img/alegria.png" %}" alt="happy face"/>');
+	//				$('#textoAlegria').html('');
+	//				$('#imagenAlegria').html('');
+	//				$('#textoAlegria').html('Alegria');
+	//				$('#imagenAlegria').append(imgAlegria); 
+    //
+	//				var alegriaEstilo = "width:" + parseInt(alegria*100)/totalGrados + "%;";
+    //
+	//			} 
+	//			else{
+	//				var alegriaEstilo = "width:" + 0 + "%;";	
+	//			} 
+	//			if(enfado > 250){
+	//				//totalGrados += parseInt(enfado);
+	//				var imgEnfado = $('<img class="img" src="{% static "img/enfado.png" %}" alt="angry face"/>');
+	//				$('#textoEnfado').html('');
+	//				$('#imagenEnfado').html(''); 
+	//				$('#textoEnfado').html('Enfado');				
+	//				$('#imagenEnfado').append(imgEnfado); 
+	//				var enfadoEstilo = "width:" + parseInt(enfado*100)/totalGrados + "%;";
+	//			} 
+	//			else{
+	//				var enfadoEstilo = "width:" + 0 + "%;";	
+	//			} 
+	//			if(asco > 250){
+	//				//totalGrados += parseInt(asco);
+	//				var imgAsco = $('<img  class="img" src="{% static "img/asco.png" %}" alt="dislike face"/>');
+	//				$('#textoAsco').html('');
+	//				$('#imagenAsco').html('');
+	//				$('#textoAsco').html('Asco');
+	//				$('#imagenAsco').append(imgAsco); 
+	//				var ascoEstilo = "width:" + parseInt(asco*100)/totalGrados + "%;";
+	//			}
+	//			else{
+	//				var ascoEstilo = "width:" + 0 + "%;";	
+	//			} 
+	//			
+	//			document.getElementById("barritaTristeza").style = tristezaEstilo;
+	//			document.getElementById("barritaMiedo").style = miedoEstilo;
+	//			document.getElementById("barritaAlegria").style = alegriaEstilo;
+	//			document.getElementById("barritaEnfado").style = enfadoEstilo;
+	//			document.getElementById("barritaAsco").style = ascoEstilo;
+    //
+	//		},	
+	//		error: function(request, status, errorThrown) {
+	//               		alert(request);
+	//			alert(status);
+	//                	alert(errorThrown);
+    //
+	//            	},
+	//	});
+	//    });
+	//});-->
 	</script>
 		<title> TRADUCTOR DE EMOCIONES </title> 
 	</head>
@@ -157,7 +265,8 @@
 			</div>
 			<br>
 			<center>
-				
+					<button type="button" class="btn btn-dafult" id="enviarTexto">Enviar nuevo </button>	
+					<button type="button" class="btn btn-dafult" id="btn2">Enviar nuevo </button>	
 					<button type="button" class="btn btn-default" id="enviarTexto">Traducir</button>
 				
 			</center>
@@ -167,7 +276,7 @@
 			<div id="hola" style= "display:none;"></div>
 
 			<br>
-			
+		
 		<div class="progress">
 					<div class="progress-bar progress-bar bTristeza" id="barritaTristeza"> 
 						<span class="textoProgress textoCentrado" id="textoTristeza"></span>
@@ -238,7 +347,7 @@
                 <div id="salidaModal"></div>
            
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary submitBtn" onclick="cambiarcolor()">Aceptar</button>
+                <button type="button" class="btn btn-primary submitBtn"  data-dismiss="modal" onclick="cambiarcolor()">Aceptar</button>
             </div>
 		</div>
 	</div>

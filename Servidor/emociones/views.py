@@ -3,14 +3,47 @@ from rest_framework import status
 from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.request import Request
 from rest_framework.renderers import JSONRenderer
 from emociones.models import Palabra
 from emociones.serializers import PalabraSerializer
 from django.shortcuts import render
+from interprete_texto import InterpreteTexto
+from emoTraductor import Traductor
+
+from django.http import HttpResponse
+from django.http import HttpRequest
+
+def vista_texto(request):
+	if request.method=='POST':
+		texto = request.POST['a']
+		grados, palabras = traducirTexto(texto)
+		return HttpResponse(grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] )
+	else:
+		return HttpResponse("Peticion no valida")
+
+def vista_sumar(request):
+	if request.method=='POST':
+		a = request.POST['a']
+		b = request.POST['b']
+		c = sumar(a,b)
+		return HttpResponse(c)
+	else:
+		return HttpResponse("Peticion no valida")
+#	return HttpResponse(request);
+
+def sumar(a,b):
+	return a,b
+
+def traducirTexto(texto):
+	return Traductor.traducir(texto)
+
+
 
 def index(request):
     num_palabras = Palabra.objects.all().count()
     return render(request,'main.html',context={'num_palabras':num_palabras},)
+	
     
 class ListaPalabras(APIView):
     """
@@ -148,3 +181,4 @@ class ObtenerMayoritaria(APIView):
         else:
             respuesta = "Mayoritaria: " + emociones[mayoritarias[0]] + " con un grado " + str(mayor)
         return Response(respuesta)
+

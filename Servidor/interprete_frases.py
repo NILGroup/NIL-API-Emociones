@@ -1,22 +1,25 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from interprete_palabras import InterpretePalabras
 from seleccionador import Seleccionador
 
 """
 Programa que se encarga de procesar una frase, buscando las palabras emocionales de esta
-en el servicio web, y devolver la información que tiene sobre ella.
+en el servicio web, y devolver la informacion que tiene sobre ella.
 """
 
-interprete = InterpretePalabras() # nos permitirá interpretar las palabras emocionales
-seleccionador_emocional = Seleccionador() # nos permitirá encontrar las palabras emocionales
+interprete = InterpretePalabras() # nos permitira interpretar las palabras emocionales
+seleccionador_emocional = Seleccionador() # nos permitira encontrar las palabras emocionales
 
 URL = 'http://sesat.fdi.ucm.es/emociones/' # URL base del servicio web
 
-emociones = ["Tristeza", "Miedo", "Alegría", "Ira", "Asco"] # lista de emociones con las que trabajamos
+emociones = ["Tristeza", "Miedo", "Alegria", "Ira", "Asco"] # lista de emociones con las que trabajamos
 
 def obtener_medias(grados,num_palabras):
 	"""
-	Función que dada una lista de grados y un número de palabras a partir
-	de las que se han obtenido, haya las medias para cada emoción. Devuelve una
+	Funcion que dada una lista de grados y un numero de palabras a partir
+	de las que se han obtenido, haya las medias para cada emocion. Devuelve una
 	lista con los grados medios.
 	"""
 	if num_palabras > 0:
@@ -53,8 +56,8 @@ class InterpreteFrases():
 	@staticmethod
 	def emociones_frase(frase):
 		"""
-		Función que dada una frase obtiene las palabras emocionales que contiene e interpreta
-		los grados de cada emoción. Devuelve los grados y las palabras que permiten
+		Funcion que dada una frase obtiene las palabras emocionales que contiene e interpreta
+		los grados de cada emocion. Devuelve los grados y las palabras que permiten
 		llegar a ellos.
 		"""
 		lista_palabras,tipos = seleccionador_emocional.seleccionar_palabras(frase) # lista de palabras emocionales
@@ -75,9 +78,9 @@ class InterpreteFrases():
 	@staticmethod
 	def emociones_mayoritaria_frase(frase):
 		"""
-		Función que dada una frase obtiene las palabras emocionales que contiene e interpreta
-		la emoción mayoritaria para cada una. Lleva un contador con el número de apariciones
-		de cada emoción como mayoritarias. Devuelve la lista de mayoritarias y su porcentaje.
+		Funcion que dada una frase obtiene las palabras emocionales que contiene e interpreta
+		la emocion mayoritaria para cada una. Lleva un contador con el numero de apariciones
+		de cada emocion como mayoritarias. Devuelve la lista de mayoritarias y su porcentaje.
 		"""
 		palabras_dicc,palabras = procesador.procesar_frase(frase) # lista de palabras emocionales
 		contadores = [0,0,0,0,0] # lista de contadores
@@ -87,7 +90,7 @@ class InterpreteFrases():
 		for palabra in palabras:
 			destino = obtener_url_mayoritaria(palabra) # obtenemos URL para realizar la consulta
 			mayoritarias,porcentaje = interpreta.interpretar_mayoritaria(destino) # obtenemos los resultados
-			# actualizamos la información según si la palabra tiene una o dos emociones mayoritarias
+			# actualizamos la informacion segun si la palabra tiene una o dos emociones mayoritarias
 			if len(mayoritarias) == 1:
 				actualizar_grados(mayoritarias[0],contadores,grados,porcentaje)
 			elif len(mayoritarias) == 2:
@@ -104,7 +107,7 @@ class InterpreteFrases():
 			j = ind[1]
 			return [emociones[i],emociones[j]],porcent/2
 		else: # si no hay palabras emocionales, la frase es mayormente neutral
-			return ["Neutral"],"100"
+			return [],"1"
 
 	@staticmethod
 	def emocion_mayoritaria_frase(grados):
@@ -138,4 +141,4 @@ class InterpreteFrases():
 			i = indices[0]
 			return [emociones[i]],pocentaje_frase
 		else:
-			return ["Neutral"],"100"
+			return [],"1"
