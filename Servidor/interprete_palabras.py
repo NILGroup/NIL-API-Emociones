@@ -41,6 +41,8 @@ class InterpretePalabras():
 		if repr(respuesta) != "<Response [404]>": # si la encuentra interpreta la respuesta JSON
 			grados = respuesta.json()
 			numeros = coger_grados(grados)
+		else:
+			numeros=["0","0","0","0","0"]
 		return numeros
 
 	@staticmethod

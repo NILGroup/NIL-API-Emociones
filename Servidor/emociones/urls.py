@@ -9,8 +9,8 @@ urlpatterns = [
 	url(r'^emociones/(?P<pk>\w+)/grados/$', views.ObtenerGrados.as_view()),
 	url(r'^emociones/(?P<pk>\w+)/consensuada/$', views.ObtenerConsensuada.as_view()),
 	url(r'^emociones/(?P<pk>\w+)/mayoritaria/$', views.ObtenerMayoritaria.as_view()),
-	url(r'^suma/$', views.vista_sumar),
 	url(r'^textosGuay/$', views.vista_texto),
+	url(r'^porcentajesPalabras/$', views.vista_porcentaje),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

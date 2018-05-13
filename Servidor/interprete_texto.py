@@ -45,12 +45,12 @@ def calcular_mayoritaria(contadores,grados):
 	return indices,mayor
 
 def analizar_grados_frase(frase, grados, lista_palabras, peso, num_frases):
-	emociones,aux = interpreta.emociones_frase(frase)
+	emociones,aux,mayoritarias = interpreta.emociones_frase(frase)
 	lista_palabras = lista_palabras + aux
 	for j in range(5):
 		grados[j] = grados[j] + (float(emociones[j]) * peso)
 	num_frases = num_frases + peso
-	return grados, lista_palabras, num_frases
+	return grados, lista_palabras, num_frases, mayoritarias
 
 def analizar_mayoritarias(frase, grados, contadores):
 	mayoritarias,grado = interpreta.emociones_mayoritaria_frase(frases)
@@ -74,9 +74,9 @@ class InterpreteTexto():
 		grados = [0,0,0,0,0]
 		palabras = []
 		for i in range(n):
-			grados,palabras,num_frases = analizar_grados_frase(frases[i],grados,palabras,tipos[i],num_frases)
+			grados,palabras,num_frases,mayoritarias = analizar_grados_frase(frases[i],grados,palabras,tipos[i],num_frases)
 		resultado = obtener_medias(grados,num_frases)
-		return resultado,palabras
+		return resultado,palabras,mayoritarias
 
 	@staticmethod
 	def emociones_mayoritarias_texto(texto):

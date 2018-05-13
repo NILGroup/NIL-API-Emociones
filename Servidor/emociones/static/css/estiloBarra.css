@@ -16,20 +16,23 @@
 	height: 60px;
 }
 .bTristeza {
-	background-color: blue !important;
+	background-color: blue;
 }
 .bMiedo {
-	background-color: purple !important;
+	background-color: purple ;
 }
 .bAlegria {
-	background-color: yellow !important;
+	background-color: yellow ;
 }
 .bEnfado {
-	background-color: red !important;
+	background-color: red ;
 }
 .bAsco {
-	background-color: green !important;
+	background-color: green ;
 }
+.bTranquilo{
+	background-color: #f5f5f5 !important;
+} 
 .progress-bar {
 	text-align: left;
 	white-space: nowrap;

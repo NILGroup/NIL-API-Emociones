@@ -14,12 +14,12 @@ def interpretar_palabra(palabra):
 
 def interpretar_frase(frase):
 	interpreta = InterpreteFrases()
-	grados,palabras = interpreta.emociones_frase(frase)
+	grados,palabras,mayoritarias = interpreta.emociones_frase(frase)
 	return grados,palabras
 
 def interpretar_texto(texto):
 	interpreta = InterpreteTexto()
-	grados,palabras = interpreta.emociones_texto(texto)
+	grados,palabras,mayoritarias = interpreta.emociones_texto(texto)
 	return grados,palabras
 
 class Traductor():
