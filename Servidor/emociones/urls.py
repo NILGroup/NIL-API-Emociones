@@ -11,6 +11,7 @@ urlpatterns = [
 	url(r'^emociones/(?P<pk>\w+)/mayoritaria/$', views.ObtenerMayoritaria.as_view()),
 	url(r'^textosGuay/$', views.vista_texto),
 	url(r'^porcentajesPalabras/$', views.vista_porcentaje),
+	url(r'^api/$', views.api),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

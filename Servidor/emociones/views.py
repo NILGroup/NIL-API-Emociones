@@ -72,7 +72,10 @@ def index(request):
     num_palabras = Palabra.objects.all().count()
     return render(request,'main.html',context={'num_palabras':num_palabras},)
 	
-    
+def api(request):
+    num_palabras = Palabra.objects.all().count()
+    return render(request, 'api.html', context={'num_palabras':num_palabras},)
+
 class ListaPalabras(APIView):
     """
     Muestra la lista de palabras o aniade una nueva.
