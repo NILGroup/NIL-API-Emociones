@@ -1,0 +1,134 @@
+{% load staticfiles %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="{% static 'css/estiloApi.css' %}">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<!--<link rel="stylesheet" href="static/css/estiloApi.css">-->
+		
+			
+		<title> API Traductor Emociones </title> 
+	</head>
+	<body>
+		<div class="container">
+
+			<h1 class="titulo"> API </h1>
+
+			<hr>
+
+			<div class="row">
+			    <div class="col-sm-4">
+            		<div class="bs-component">
+              			<div class="card text-white bg-primary mb-3 bloques">
+                			<div class="card-header">Servicios para una palabra</div>
+            				<div class="card-body">
+              					<h4 class="card-title">Emoción mayoritaria</h4>
+              					<p class="card-text">Devuelve la emoción con más grado dada una palabra. <a href="#palabraMayor"> (ver más)</a></p>
+              					<hr>
+
+              					<h4 class="card-title">Emoción consensuada</h4>
+              					<p class="card-text">Devuelve, si existe, la única emoción marcada dada una palabra. <a href="#palabraConsensuada"> (ver más)</a></p>
+              					<hr>
+
+              					<h4 class="card-title">Grados emocionales</h4>
+              					<p class="card-text">Devuelve los valores para cada emoción. <a href="#palabra"> (ver más)</a></p>
+
+            				</div>
+          				</div>
+          			</div>
+          		</div>
+			    <div class="col-sm-4">
+            		<div class="bs-component">
+              			<div class="card text-white bg-info mb-3 bloques">
+                			<div class="card-header">Servicios para una frase</div>
+            				<div class="card-body">
+              					<h4 class="card-title">Primary card title</h4>
+              					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            				</div>
+          				</div>
+          			</div>
+          		</div>
+			    <div class="col-sm-4">
+            		<div class="bs-component">
+              			<div class="card text-white bg-success mb-3 bloques">
+                			<div class="card-header">Servicios para un texto</div>
+            				<div class="card-body">
+              					<h4 class="card-title">Primary card title</h4>
+              					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            				</div>
+          				</div>
+          			</div>
+          		</div>
+		  	</div>
+
+		  	<div>
+		  		<div class="jumbotron" id="palabraMayor">
+  					<h1 class="display-5">Palabra - Emoción mayoritaria</h1>
+					<p class="lead">Devuelve la emoción con mayor grado, junto con el grado, dada una palabra. Si la palabra no existe en el diccionario afectivo, lo indica.</p>
+
+					<hr class="my-4">
+
+					<label> <strong> URL</strong></label>
+  					<p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/mayorEmo/ </cursive></p>
+
+  					<hr class="my-4">
+
+  					<label> <strong> Información de la respuesta</strong></label>
+  					<p>Se obtiene la respuesta en JSON</p>
+
+  					<hr class="my-4">
+
+  					<label> <strong> Parámetros </strong> </label>
+  					<table class="table table-hover">
+  						<thead>
+							<tr>
+						    	<th scope="col">Nombre</th>
+						    	<th scope="col">Requerido</th>
+						   		<th scope="col">Descripcion</th>
+						    	<th scope="col">Valor por defecto</th>
+						   	</tr>
+						</thead>
+						<tbody>
+						    <tr class="table-primary">
+						    	<th scope="row">NI (No importa)</th>
+						      	<td>Sí</td>
+						      	<td>Es la palabra que queremos buscar</td>
+						      	<td>No tiene valor por defecto</td>
+						    </tr>
+					  </tbody>
+					</table>
+
+					<hr class="my-4"> 
+  					
+  					<label> <strong> Ejemplo petición </strong> </label>
+
+  					<p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/mayorEmo/abejas/ </cursive></p>
+
+  					<hr class="my-4">
+
+  					<label> <strong> Ejemplo de respuesta </strong> </label>
+
+  					<p> En caso de ser una palabra que aparezca en el diccionario: </p>
+  					
+  						{
+						  "grado": 3.47,
+						  "emociones": "Miedo"
+						}
+					<br><br>
+					<p> En caso de no aparecer en el diccionario </p>
+
+						{
+						  "detail": "Not found."
+						}
+					
+
+
+
+				</div>      		
+        </div>
+	</body>
+</html>

@@ -12,6 +12,7 @@ urlpatterns = [
 	url(r'^textosGuay/$', views.vista_texto),
 	url(r'^porcentajesPalabras/$', views.vista_porcentaje),
 	url(r'^emociones/palabra/mayorEmo/(?P<pk>\w+)', views.Mayoritaria.as_view()),
+	url(r'^api/$', views.api),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
