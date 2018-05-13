@@ -210,3 +210,45 @@ class ObtenerMayoritaria(APIView):
             respuesta = "Mayoritaria: " + emociones[mayoritarias[0]] + " con un grado " + str(mayor)
         return Response(respuesta)
 
+class Mayoritaria(APIView):
+
+	def get_object(self,pk):
+        	try:
+            		return Palabra.objects.get(palabra=pk)
+        	except Palabra.DoesNotExist:
+            		try:
+                		return Palabra.objects.get(lexema=pk)
+            		except Palabra.DoesNotExist:
+                		raise Http404()
+	def get(self,request,pk,format=None):
+	        emociones = ["Tristeza", "Miedo", "Alegría", "Ira", "Asco"]
+        	palabra = self.get_object(pk)
+        	porcentajes = palabra.grados
+		numerosAux = ObtenerGrados()
+        	numeros,respuestaAux = numerosAux.get_degrees(porcentajes)
+        	respuesta = ""
+        	mayoritarias = []
+        	entro = False
+        	mayor = -1;
+        	for i in range(5):
+            		grado = float(numeros[i])
+            		if(mayor < grado):
+                		mayor = grado
+                		mayoritarias = []
+                		entro = False
+                		mayoritarias.append(i)
+            		elif (mayor == grado):
+                		entro = True
+                		mayoritarias.append(i)
+        	if(entro):
+            		respuesta = {
+					'emociones': emociones[mayoritarias],
+					'grado': mayor
+			}
+        	else:
+            		respuesta = {
+					'emociones': emociones[mayoritarias[0]],
+					'grado': mayor
+			}
+        	return Response(respuesta)
+
