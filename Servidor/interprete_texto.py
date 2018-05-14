@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from interprete_frases import InterpreteFrases
+from interprete_palabras import InterpretePalabras
 from seccionador import SeccionadorFrases
 """
 Programa que se encarga de procesar un texto, dividiendolo en frases para procesar
@@ -10,6 +11,7 @@ cada una de ellas, y devolver la informacion que tiene sobre ella.
 
 interpreta = InterpreteFrases() # nos permitira interpretar las frases
 secciona = SeccionadorFrases() # nos permitira seccionar las frases en subfrases y obtener sus tipos
+interpretaPalabra = InterpretePalabras()
 
 emociones = ["Tristeza", "Miedo", "Alegria", "Ira", "Asco"] # lista de emociones con las que trabajamos
 
@@ -45,12 +47,16 @@ def calcular_mayoritaria(contadores,grados):
 	return indices,mayor
 
 def analizar_grados_frase(frase, grados, lista_palabras, peso, num_frases):
-	emociones,aux,mayoritarias = interpreta.emociones_frase(frase)
+	emociones,aux,mayoritariasFinales = interpreta.emociones_frase(frase)
 	lista_palabras = lista_palabras + aux
+	mayoritariasFinales = []
+	for i in range (len(lista_palabras)):
+		mayoritariasFinales.append(interpretaPalabra.interpretar_grados(lista_palabras[i]))
+
 	for j in range(5):
 		grados[j] = grados[j] + (float(emociones[j]) * peso)
 	num_frases = num_frases + peso
-	return grados, lista_palabras, num_frases, mayoritarias
+	return grados, lista_palabras, num_frases, mayoritariasFinales
 
 def analizar_mayoritarias(frase, grados, contadores):
 	mayoritarias,grado = interpreta.emociones_mayoritaria_frase(frases)
@@ -74,9 +80,9 @@ class InterpreteTexto():
 		grados = [0,0,0,0,0]
 		palabras = []
 		for i in range(n):
-			grados,palabras,num_frases,mayoritarias = analizar_grados_frase(frases[i],grados,palabras,tipos[i],num_frases)
+			grados,palabras,num_frases,mayoritariasFinales = analizar_grados_frase(frases[i],grados,palabras,tipos[i],num_frases)
 		resultado = obtener_medias(grados,num_frases)
-		return resultado,palabras,mayoritarias
+		return resultado,palabras,mayoritariasFinales
 
 	@staticmethod
 	def emociones_mayoritarias_texto(texto):

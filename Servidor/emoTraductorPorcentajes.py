@@ -48,10 +48,9 @@ def interpretar_texto(texto):
 	grados,palabras,mayoritarias = interpreta.emociones_texto(texto)
 	num_palabras = len(palabras)
 	solucion = []
-
 	for i in range(num_palabras):
 		solucion.append(palabras[i])
-		mayoritaria,pos =obtener_mayoritaria(mayoritarias[i])
+		mayoritaria,pos  = obtener_mayoritaria(mayoritarias[i])
 		solucion.append(pos)
 
 	return solucion

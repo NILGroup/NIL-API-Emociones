@@ -36,7 +36,7 @@ lemas_repetidos = ['abandon', 'abej', 'abog', 'abraz', 'abuel', 'acogedor', 'aco
 'salud', 'sangr', 'secretari', 'secuestr', 'sed', 'segur', 'soborn', 'socorr', 'sol', 'sorprend', 
 'sospech', 'susurr', 'tall', 'tem', 'terror', 'tiran', 'toler', 'tont', 'torc', 'torment', 'tortur', 
 'trabaj', 'traicion', 'tranquil', 'triunf', 'vel', 'venc', 'version', 'veterinari', 'victori', 'viud', 'viv',
- 'voluptu','calcul','medi','pres','gan','verd','facil','anim','lastim','bols','viaj','perd','pen','com']
+ 'voluptu','calcul','medi','pres','gan','verd','facil','anim','lastim','bols','viaj','perd','pen','com','enferm']
 
 derivadas = ['abandonado', 'abejas', 'abogada', 'abrazar', 'abuela', 'acogedora', 'acosar', 'admirar', 
 'adorable', 'afectar', 'agresividad', 'ahogarse', 'alambrada', 'alarmar', 'alegre', 'alicatar', 'amenazado', 'amigable',
@@ -70,7 +70,7 @@ derivadas = ['abandonado', 'abejas', 'abogada', 'abrazar', 'abuela', 'acogedora'
 'seguridad', 'sobornar', 'socorrer', 'sol', 'sorprender', 'sospecha', 'susurrar', 'talla', 'temer', 'terrorismo', 
 'tiranía', 'tolerancia', 'tontería', 'torcer', 'tormenta', 'tortura', 'trabajador', 
 'traicionar', 'tranquilidad', 'triunfar', 'vela', 'vencer', 'versionar', 'veterinaria', 'victoria', 'viuda', 
-'vivir', 'voluptuosidad','cálculo','medio','presa','ganar','verdad','fácil','animar','lastimar','bolsa','viajar','perder','pene','comida']
+'vivir', 'voluptuosidad','cálculo','medio','presa','ganar','verdad','fácil','animar','lastimar','bolsa','viajar','perder','pene','comida','enfermo']
 
 opciones = ['abandono', 'abeja', 'abogado', 'abrazo', 'abuelo', 'acogedor', 'acoso', 'admiración', 
 'adoración', 'afecto', 'agresivo', 'ahogar', 'alambre', 'alarma', 'alegría', 'alicates', 
@@ -103,7 +103,7 @@ opciones = ['abandono', 'abeja', 'abogado', 'abrazo', 'abuelo', 'acogedor', 'aco
 'seguro', 'soborno', 'socorro', 'solar', 'sorprendido', 'sospechoso', 'susurro', 'talle', 'tema', 'terrorista', 'tirano',
 'tolerante', 'tonto', 'torcido', 'tormento', 'torturar', 'trabajar', 'traición', 'tranquilo',
 'triunfo', 'velas', 'vencido', 'versión', 'veterinario', 'victorioso', 'viudo', 'vivo', 'voluptuoso','calculadora','media','preso',
-'ganado','verde','facilidad','ánimo','lástima','bolso','viajes','perdido','pena','coma']
+'ganado','verde','facilidad','ánimo','lástima','bolso','viajes','perdido','pena','coma','enfermar']
 
 class Lematizador():
 

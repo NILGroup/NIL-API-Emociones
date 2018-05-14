@@ -70,8 +70,7 @@ class InterpreteFrases():
 			num_validas = 0
 			for i in range(num_palabras):
 				grados = interprete.interpretar_grados(lista_palabras[i])
-				mayoritaria = interprete.interpretar_grados(lista_palabras[i])
-				mayoritarias.append(mayoritaria)
+				mayoritarias.append(grados)
 				if len(grados) > 0:
 					actualizar_grados_frase(emociones_frase,grados,tipos[i])
 					num_validas = num_validas + tipos[i]
