@@ -64,7 +64,7 @@ class InterpreteFrases():
 		num_palabras = len(lista_palabras)
 		mayoritarias = []
 		if num_palabras == 0: # si no hay ninguna, la frase es 100% neutral
-			return ["1","1","1","1","1"], []
+			return ["0","0","0","0","0"], [], []
 		else:
 			emociones_frase = [0,0,0,0,0]
 			num_validas = 0
@@ -75,7 +75,7 @@ class InterpreteFrases():
 					actualizar_grados_frase(emociones_frase,grados,tipos[i])
 					num_validas = num_validas + tipos[i]
 			emociones = obtener_medias(emociones_frase,num_validas)
-			return emociones,lista_palabras
+			return emociones,lista_palabras,mayoritarias
 
 	@staticmethod
 	def emociones_mayoritaria_frase(frase):

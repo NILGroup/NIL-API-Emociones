@@ -56,7 +56,7 @@ def analizar_grados_frase(frase, grados, lista_palabras, peso, num_frases):
 	for j in range(5):
 		grados[j] = grados[j] + (float(emociones[j]) * peso)
 	num_frases = num_frases + peso
-	return grados, lista_palabras, num_frases, mayoritariasFinales
+	return grados,lista_palabras,num_frases,mayoritariasFinales
 
 def analizar_mayoritarias(frase, grados, contadores):
 	mayoritarias,grado = interpreta.emociones_mayoritaria_frase(frases)

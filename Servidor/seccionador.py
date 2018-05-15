@@ -61,9 +61,10 @@ def obtener_subfrases2(frase):
 			tipos.append(ENUNCIATIVA)
 			break;
 
-		if "¿" in frase and "?" in frase:
-			ini_i = frase.index("¿")
-			fin_i = frase.index("?")
+		if "¿" in frase.encode('utf-8'):
+			if "?" in frase:
+				ini_i = frase.index("¿")
+				fin_i = frase.index("?")
 		if "¡" in frase and "!" in frase:
 			ini_e = frase.index("¡")
 			fin_e = frase.index("!")
@@ -93,8 +94,9 @@ def quitar_espacios(frase):
 			frase = frase[1:n]
 		if frase[0] == "\n":
 			frase = frase[1:n]
-		if frase[len(frase)-1] == "\n":
-			frase = frase[1:(n-1)]
+		if(len(frase) >= 1):
+			if frase[len(frase)-1] == "\n":
+				frase = frase[1:(n-1)]
 		if "\n" in frase:
 			i = frase.index("\n")
 			frase = frase[0:i] + frase[(i+1):n]

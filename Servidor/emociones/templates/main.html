@@ -1,5 +1,5 @@
-
-
+{% load staticfiles %}
+{% load static %}
 <!doctype html>
 <html lang="en">
 	<head>
@@ -51,7 +51,7 @@
 		let colorAsco = document.getElementById("colorAsco").value;
 		
 		
-		alert("Alegre: " + colorAlegre + "\nTriste: " + colorTriste + "\nMiedo: " + colorMiedo + "\nEnfado: " + colorEnfado + "\nAsco: " + colorAsco);
+		//alert("Alegre: " + colorAlegre + "\nTriste: " + colorTriste + "\nMiedo: " + colorMiedo + "\nEnfado: " + colorEnfado + "\nAsco: " + colorAsco);
 		
 		document.getElementById("barritaTristeza").style.backgroundColor = colorTriste;
 		document.getElementById("barritaMiedo").style.backgroundColor = colorMiedo;
@@ -77,7 +77,7 @@
                     a: a
                 },
                 success: function(data,status){
-                  	alert("Data: " +JSON.stringify( data) + "\nStatus: " + status);
+                  	//alert("Data: " +JSON.stringify( data) + "\nStatus: " + status);
 					/*$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/
     	            var tristeza = data['emociones'][0];
             	    var miedo = data['emociones'][1];
@@ -172,7 +172,7 @@
 	            	document.getElementById("barritaAsco").style = ascoEstilo;
 					document.getElementById("barritaTranquilo").style = tranquiloEstilo;
 
-					escribirResultado(data['palabras'])
+					escribirResultado()
 				},
 				error: function(request, status, errorThrown){
 					alert(request);
@@ -184,155 +184,113 @@
 		});
 	});
 
-	function escribirResultado(datos){
+	function replaceAll( text, busca, reemplaza ){
+		while (text.toString().indexOf(busca) != -1)
+      		text = text.toString().replace(busca,reemplaza);
+  		return text;
+  	}
+
+	function escribirResultado(){
+		let colorTriste = document.getElementById("colorTriste").value;
+		let colorMiedo = document.getElementById("colorMiedo").value;
+		let colorAlegre = document.getElementById("colorAlegre").value;
+		let colorEnfado = document.getElementById("colorEnfado").value;
+		let colorAsco = document.getElementById("colorAsco").value;
 		var a=$('#textArea').val();
+		var texto = a.toLowerCase();
+		var array_texto = texto.split(" ");
+		var textoFinal = "";
 		
-		for(var i = 0; i < datos.length; i++){
-
-			$.ajax({
-            	method: "GET",
-            	url:"http://sesat.fdi.ucm.es/emociones/palabra/mayoritariaEmo",
-                //headers: {'X-CSRFToken': '{{ csrf_token }}'},
-                data: {
-                        palabra: datos[i]
-                },
-                success: function(data,status){
-                	alert("Data: " +JSON.stringify( data) + "\nStatus: " + status);
-					
-            	},
-            	error: function(request, status, errorThrown) {
-                    	alert(request);
-						alert(request.responseText);
-                    	alert(status);
-                    	alert(errorThrown);
-				},
-        	});
-
-			    /*success: function(data,status){
-			        alert("Data: " +JSON.stringify(data) + "\nStatus: " + status);
-
-			        var texto = a;
-			        texto = texto.toLowerCase()
-			        var array_texto = texto.split(" ");
-			        var textoFinal = "";
-			        for(var o = 0; o < array_texto.length; o++){
-			            var j = 0;
-			            var encontrado = 0;
-			            while(encontrado != 1 && j < data['solucion'].length){
-			                if(array_texto[o] == data['solucion'][j]){
-			                    encontrado = 1;
-			                    colorAPoner = data['solucion'][j+1];
-			                    if(colorAPoner == 0){
-			                        encontrado = 0;
-			                    }
-			                }
-			            j = j+2;
-			            }
-			            if(encontrado == 1){
-
-			                if(colorAPoner == 1){
-			                    var id = "Tristeza";
-			                    colorAPoner= colorTriste;
-			                }
-			                else if(colorAPoner == 2){
-			                    var id = "Miedo";
-			                    colorAPoner = colorMiedo;
-			                }
-			                else if(colorAPoner == 3){
-			                    var id = "Alegria";
-			                    colorAPoner = colorAlegre;
-			                }
-			                else if(colorAPoner == 4){
-			                    var id = "Enfado";
-			                    colorAPoner = colorEnfado;
-			                }
-			                else if(colorAPoner == 5){
-			                    var id = "Asco";
-			                    colorAPoner = colorAsco;
-			                }
-			                textoFinal = textoFinal + " <strong style='color: "+ colorAPoner +"' onmouseover=(alert(\""+ id + "\"))>" + array_texto[o] + "</strong>";
-			            }
-			            else {
-			                textoFinal = textoFinal +  " " + array_texto[o];
-			            }
-			        }
-
-			        $("#resultadoTexto").html(textoFinal);
-			    },
-			    error: function(request, status, errorThrown) {
-			        alert(request);
-			        alert(request.responseText);
-			        alert(status);
-			        alert(errorThrown);
-			    },
-			});*/
-		}
-		/*
 		$.ajax({
-		    url:"http://sesat.fdi.ucm.es/porcentajesPalabras/",
-		    method: "POST",
-		    headers: {'X-CSRFToken': '{{ csrf_token }}'},
-		    data: {
-		            porcentajes: a
-		    },
-		    success: function(data,status){
-		        alert("Data: " +JSON.stringify(data) + "\nStatus: " + status);
+									
+			url:"http://sesat.fdi.ucm.es/porcentajesPalabras/",
+            method: "POST",
+            headers: {'X-CSRFToken': '{{ csrf_token }}'},
+            data: {
+                    porcentajes: a
+            },
+    		success: function(data,status){
+    			//alert("Data: " +JSON.stringify(data) + "\nStatus: " + status);
+		
+				var info = document.getElementById("textArea").value;
+			    var texto = replaceAll(info, ".", "");
+			    texto = replaceAll(texto, ",", "");
+			    texto = replaceAll(texto, "¡", "");
+			    texto = replaceAll(texto, "!", "");
+			    texto = replaceAll(texto, "¿", "");
+			    texto = replaceAll(texto, "?", "");
 
-		        var texto = document.getElementById("textArea").value;
-		        texto = texto.toLowerCase()
-		        var array_texto = texto.split(" ");
-		        var textoFinal = "";
-		        for(var o = 0; o < array_texto.length; o++){
-		            var j = 0;
-		            var encontrado = 0;
-		            while(encontrado != 1 && j < data['solucion'].length){
-		                if(array_texto[o] == data['solucion'][j]){
-		                    encontrado = 1;
-		                    colorAPoner = data['solucion'][j+1];
-		                    if(colorAPoner == 0){
-		                        encontrado = 0;
-		                    }
-		                }
-		            j = j+2;
-		            }
-		            if(encontrado == 1){
+			    var array_info = info.split(" ");
 
-		                if(colorAPoner == 1){
-		                    var id = "Tristeza";
-		                    colorAPoner= colorTriste;
-		                }
-		                else if(colorAPoner == 2){
-		                    var id = "Miedo";
-		                    colorAPoner = colorMiedo;
-		                }
-		                else if(colorAPoner == 3){
-		                    var id = "Alegria";
-		                    colorAPoner = colorAlegre;
-		                }
-		                else if(colorAPoner == 4){
-		                    var id = "Enfado";
-		                    colorAPoner = colorEnfado;
-		                }
-		                else if(colorAPoner == 5){
-		                    var id = "Asco";
-		                    colorAPoner = colorAsco;
-		                }
-		                textoFinal = textoFinal + " <strong style='color: "+ colorAPoner +"' onmouseover=(alert(\""+ id + "\"))>" + array_texto[o] + "</strong>";
-		            }
-		            else {
-		                textoFinal = textoFinal +  " " + array_texto[o];
-		            }
-		        }
+				var array_texto = texto.split(" ");
+				var textoFinal = "";
+				for(var o = 0; o < array_texto.length; o++){
+					var j = 0;
+					var encontrado = 0;
+					while(encontrado != 1 && j < data['solucion'].length){
+						if(array_texto[o] == data['solucion'][j]){
+							encontrado = 1;
+							colorAPoner = data['solucion'][j+2];
+							emociones = data['solucion'][j+1];
+						}
+						j = j+3;
+					}
+		
+					if(encontrado == 1 && colorAPoner != 0){
 
-		        $("#resultadoTexto").html(textoFinal);
-		    },
-		    error: function(request, status, errorThrown) {
-		        alert(request);
-		        alert(request.responseText);
-		        alert(status);
-		        alert(errorThrown);
-		    },
-		});*/
+						if(colorAPoner == 1){
+							var id = "Tristeza";
+							colorAPoner= colorTriste;
+						}
+						else if(colorAPoner == 2){
+							var id = "Miedo";
+							colorAPoner = colorMiedo;
+						}
+						else if(colorAPoner == 3){
+							var id = "Alegria";
+							colorAPoner = colorAlegre;
+						}
+						else if(colorAPoner == 4){
+							var id = "Enfado";
+							colorAPoner = colorEnfado;
+						}
+						else if(colorAPoner == 5){
+							var id = "Asco";
+							colorAPoner = colorAsco;
+						}
+
+						
+						/*mostrar = "alert('Tristeza: " + emociones[0] + "\nMiedo: " + emociones[1] + "\nAlegría: " + emociones[2] + "\nEnfado: " + emociones[3] + "\nAsco: " + emociones[4] + "')";*/
+
+						/*var mostrar = "Tristeza: \"" + emociones[0] + "\nMiedo: " + emociones[1] + "\nAlegría: " + emociones[2] + "\nEnfado: " + emociones[3] + "\nAsco: " + emociones[4];*/
+
+						/*textoFinal = textoFinal + " <strong style='color: "+ colorAPoner +"' onmouseover=(alert(\""+ mostrar + "\"))>" + array_texto[o] + "</strong>";*/
+
+						textoFinal = textoFinal + " <strong style='color: "+ colorAPoner +"' onmouseover=(alert(\""+ id + "\"))>" + array_info[o] + "</strong>";
+						
+						//alert(mostrar);
+            		}
+					else {
+						textoFinal = textoFinal +  " " + array_info[o];
+					}
+				}							
+
+		
+				$("#resultadoTexto").html(textoFinal);
+       
+		
+
+    		},
+	    	error: function(request, status, errorThrown) {
+	            	alert(request);
+					alert(request.responseText);
+	            	alert(status);
+	            	alert(errorThrown);
+			},
+		});
+		
+
+       	
 	}
 
 	var recognition;

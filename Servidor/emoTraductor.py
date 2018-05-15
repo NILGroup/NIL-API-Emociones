@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import requests
 import sys
 from interprete_palabras import InterpretePalabras
@@ -14,12 +17,12 @@ def interpretar_palabra(palabra):
 
 def interpretar_frase(frase):
 	interpreta = InterpreteFrases()
-	grados,palabras = interpreta.emociones_frase(frase)
+	grados,palabras,mayoritariasFinales = interpreta.emociones_frase(frase)
 	return grados,palabras
 
 def interpretar_texto(texto):
 	interpreta = InterpreteTexto()
-	grados,palabras = interpreta.emociones_texto(texto)
+	grados,palabras,mayoritariasFinales = interpreta.emociones_texto(texto)
 	return grados,palabras
 
 class Traductor():

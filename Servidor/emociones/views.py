@@ -66,18 +66,24 @@ def vista_texto(request):
 		#return HttpResponse(grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] + ";" + palabras.toString())
 		#+ grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] )
 		return HttpResponse("Peticion no valida")
+        
 def traducirTexto(texto):
 	return Traductor.traducir(texto)
 
-
-
+# Declaración de la vista del index
 def index(request):
     num_palabras = Palabra.objects.all().count()
     return render(request,'main.html',context={'num_palabras':num_palabras},)
-	
+
+# Declaración de la API
 def api(request):
     return render(request, 'api.html', context={})
 
+"""
+--------------------------------------------------------------------------------
+Estas son las clases que usábamos desde el principio para los servicios básicos.
+--------------------------------------------------------------------------------
+"""
 class ListaPalabras(APIView):
     """
     Muestra la lista de palabras o aniade una nueva.
@@ -215,10 +221,13 @@ class ObtenerMayoritaria(APIView):
             respuesta = "Mayoritaria: " + emociones[mayoritarias[0]] + " con un grado " + str(mayor)
         return Response(respuesta)
 
-# Estos son los servicios web del tipo ?palabra=""
-
+"""
+------------------------------------------------
+Estos son los servicios web del tipo ?palabra=""
+------------------------------------------------
+"""
 @api_view(['GET','POST', ])
-def GradosEmocionales(request):
+def PalabraGrados(request):
 
         if request.method=='GET':
 
@@ -238,7 +247,7 @@ def GradosEmocionales(request):
                 return Response("No válida")
 
 @api_view(['GET','POST', ])
-def ConsensuadaEmocion(request):
+def PalabraConsensuada(request):
 
         if request.method=='GET':
 
@@ -271,75 +280,15 @@ def PalabraMayoritaria(request):
 	else:
 		return Response("No válida")
 
-class PalabraConsensuada(APIView):
-
-    def get_object(self,pk):
-        try:
-            return Palabra.objects.get(palabra=pk)
-        except Palabra.DoesNotExist:
-            try:
-                return Palabra.objects.get(lexema=pk)
-            except Palabra.DoesNotExist:
-                raise Http404()
-        
-    def get(self,request,pk,format=None):
-        emociones = ["Tristeza", "Miedo", "Alegría", "Ira", "Asco"]
-        palabra = self.get_object(pk)
-        porcentajes = palabra.grados
-        numerosAux = ObtenerGrados()
-        numeros,respuestaAux = numerosAux.get_degrees(porcentajes)
-        if "5.00" in numeros:
-            respuesta = {
-                    'consensuada': emociones[numeros.index(5.00)]
-                     }
-            return Response(respuesta)
-        else:
-            respuesta = {
-                    'consensuada': "No hay emocion consensuada"
-                     }
-            return Response(respuesta)
-
-class PalabraGrados(APIView):
-    
-
-    def get_object(self,pk):
-        try:
-            return Palabra.objects.get(palabra=pk)
-        except Palabra.DoesNotExist:
-            try:
-                return Palabra.objects.get(lexema=pk)
-            except Palabra.DoesNotExist:
-                raise Http404()
-
-    def get_degrees(self,numeros):
-        emociones = ["Tristeza", "Miedo", "Alegría", "Ira", "Asco"]
-        numeros = numeros.split(",")
-        numeros[0] = numeros[0].lstrip("[")
-        numeros[4] = numeros[4].rstrip("]")
-        respuesta = ""
-        for i in range(5):
-            numeros[i] = float(numeros[i])/100
-            
-        
-	respuesta = {
-			emociones[0] : numeros[0],
-			emociones[1] : numeros[1],
-			emociones[2] : numeros[2],
-			emociones[3] : numeros[3],
-			emociones[4] : numeros[4]
-	}
-	return numeros,respuesta
-        
-    def get(self,request,pk,format=None):
-        palabra = self.get_object(pk)
-        porcentajes = palabra.grados
-        numeros,respuesta = self.get_degrees(porcentajes)
-        return Response(respuesta)
-
+"""
+--------------------------------------------
+Estos son los servicios web para las frases.
+--------------------------------------------
+"""
 def FraseMayoritaria(request):
     if request.method=='POST':
         frase = request.POST['frase']
-        grados, palabras, mayoritarias = traducirFrase(frase)
+        grados,palabras,mayoritarias = traducirFrase(frase)
         data = {
         #   'tristeza': grados[0],
         #   'miedo' : grados[1],
@@ -360,3 +309,4 @@ def FraseMayoritaria(request):
 
 def traducirFrase(frase):
     return InterpreteFrase.emociones_frase(frase)
+

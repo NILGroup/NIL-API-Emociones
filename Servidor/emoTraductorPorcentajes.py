@@ -31,6 +31,7 @@ def interpretar_palabra(palabra):
 	solucion = []
 	mayoritaria, pos = obtener_mayoritaria(grados)
 	solucion.append(palabra)
+	solucion.append(grados)
 	solucion.append(pos)
 	
 	return solucion
@@ -43,6 +44,7 @@ def interpretar_frase(frase):
 	for i in range(num_palabras):
 		solucion.append(palabras[i])
 		mayoritaria,pos  =obtener_mayoritaria(mayoritarias[i])
+		solucion.append(mayoritarias[i])
 		solucion.append(pos)
 
 	return solucion
@@ -55,6 +57,7 @@ def interpretar_texto(texto):
 	for i in range(num_palabras):
 		solucion.append(palabras[i])
 		mayoritaria,pos  = obtener_mayoritaria(mayoritarias[i])
+		solucion.append(mayoritarias[i])
 		solucion.append(pos)
 
 	return solucion
