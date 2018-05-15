@@ -2,7 +2,6 @@
 import sys
 from rest_framework import status
 from django.http import Http404
-from rest_framework.decorators import api_view
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.request import Request
@@ -13,7 +12,6 @@ from django.shortcuts import render
 from interprete_texto import InterpreteTexto
 from emoTraductorPorcentajes import TraductorPorcentajes
 from emoTraductor import Traductor
-from interprete_palabras import InterpretePalabras
 #from interprete_frase import InterpreteFrase
 
 
@@ -78,6 +76,8 @@ def index(request):
 def api(request):
     return render(request, 'api.html', context={})
 
+def PalabraMayoritaria(request):
+	
 class ListaPalabras(APIView):
     """
     Muestra la lista de palabras o aniade una nueva.
@@ -215,61 +215,47 @@ class ObtenerMayoritaria(APIView):
             respuesta = "Mayoritaria: " + emociones[mayoritarias[0]] + " con un grado " + str(mayor)
         return Response(respuesta)
 
-# Estos son los servicios web del tipo ?palabra=""
+class PalabraMayoritaria(APIView):
 
-@api_view(['GET','POST', ])
-def GradosEmocionales(request):
-
-        if request.method=='GET':
-
-                palabra = request.GET['palabra']
-
-                grados = InterpretePalabras.interpretar_grados(palabra)
-
-                respuesta = {
-                                'Tristeza': grados[0],
-				'Miedo': grados[1],
-				'Alegria': grados[2],
-				'Ira': grados[3],
-				'Asco': grados[4]
-                        }
-                return Response(respuesta)
-        else:
-                return Response("No válida")
-
-@api_view(['GET','POST', ])
-def ConsensuadaEmocion(request):
-
-        if request.method=='GET':
-
-                palabra = request.GET['palabra']
-
-                consensuada = InterpretePalabras.interpretar_consensuada(palabra)
-
-                respuesta = {
-                                'consensuada': consensuada,
-                        }
-                return Response(respuesta)
-        else:
-                return Response("No válida")
-
-@api_view(['GET','POST', ])
-def PalabraMayoritaria(request):
-
-	if request.method=='GET':
-	        
-        	palabra = request.GET['palabra']
-        	
-		mayoritarias, grado = InterpretePalabras.interpretar_mayoritaria(palabra)
-        	
-		
-		respuesta = {
-				'emociones': mayoritarias,
-				'grado': grado
+	def get_object(self,pk):
+        	try:
+            		return Palabra.objects.get(palabra=pk)
+        	except Palabra.DoesNotExist:
+            		try:
+                		return Palabra.objects.get(lexema=pk)
+            		except Palabra.DoesNotExist:
+                		raise Http404()
+	def get(self,request,pk,format=None):
+	        emociones = ["Tristeza", "Miedo", "Alegría", "Ira", "Asco"]
+        	palabra = self.get_object(pk)
+        	porcentajes = palabra.grados
+		numerosAux = ObtenerGrados()
+        	numeros,respuestaAux = numerosAux.get_degrees(porcentajes)
+        	respuesta = ""
+        	mayoritarias = []
+        	entro = False
+        	mayor = -1;
+        	for i in range(5):
+            		grado = float(numeros[i])
+            		if(mayor < grado):
+                		mayor = grado
+                		mayoritarias = []
+                		entro = False
+                		mayoritarias.append(i)
+            		elif (mayor == grado):
+                		entro = True
+                		mayoritarias.append(i)
+        	if(entro):
+            		respuesta = {
+					'emociones': emociones[mayoritarias],
+					'grado': mayor
+			}
+        	else:
+            		respuesta = {
+					'emociones': emociones[mayoritarias[0]],
+					'grado': mayor
 			}
         	return Response(respuesta)
-	else:
-		return Response("No válida")
 
 class PalabraConsensuada(APIView):
 

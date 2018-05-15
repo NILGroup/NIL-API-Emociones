@@ -109,15 +109,16 @@ class Lematizador():
 
 	@staticmethod
 	def obtener_lema(palabra):
+		palabra = palabra.lower()
 		lema = stemmer.stemWord(palabra) #obtenemos el lexema de la palabra
 		"""
 		if lema in lemas_repetidos:
 			i = lemas_repetidos.index(lema)
 			if palabra == opciones[i]:
-				print("opciones")
+				#print("opciones")
 				return opciones[i]
 			else:
-				print("derivada")
+				#print("derivada")
 				return derivadas[i]
 		else:
 			return lema

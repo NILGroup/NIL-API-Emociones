@@ -1,36 +1,36 @@
-{% load staticfiles %}
-{% load static %}
+
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="{% static 'css/estiloBarra.css' %}">
-		<link rel="stylesheet" href="{% static 'css/estiloBotones.css' %}">
-		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" crossorigin="anonymous">
-		<link rel="stylesheet" href="{% static 'css/estiloTeclado.css' %}">
+		<link rel="stylesheet" href="/static/css/estiloBarra.css">
+		<link rel="stylesheet" href="/static/css/estiloBotones.css">
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/static/css/estiloTeclado.css">
 		
 
 
-		<!--<script src="{% static 'js/jquery.min.js' %}"></script>
-		<script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
-		<script src="{% static 'js/popper.min.js' %}"></script>
-		<script src="{% static 'js/bootstrap.min.js' %}"></script>
-		<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>-->
+		<!--<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/jquery-3.2.1.slim.min.js"></script>
+		<script src="/static/js/popper.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/jquery-3.1.1.min.js"></script>-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
-		<!--<script src="{% static 'js/jquery-3.1.1.min.js' %}"> </script>-->
-		<script src="{% static 'js/DjangoAjax.js' %}"></script>
+		<!--<script src="/static/js/jquery-3.1.1.min.js"> </script>-->
+		<script src="/static/js/DjangoAjax.js"></script>
 		
 		
-		<!--<script src="{% static 'js/jquery-1.2.6.min.js' %}"></script>-->
-		<!--<script src="{% static 'js/jquery-ui-personalized-1.5.2.min.js' %}"></script>-->
-		<!--<script src="{% static 'js/jquery-fieldselection.js' %}"></script>-->
-		<!--<script src="{% static 'js/vkeyboard.js' %}"></script>-->
+		<!--<script src="/static/js/jquery-1.2.6.min.js"></script>-->
+		<!--<script src="/static/js/jquery-ui-personalized-1.5.2.min.js"></script>-->
+		<!--<script src="/static/js/jquery-fieldselection.js"></script>-->
+		<!--<script src="/static/js/vkeyboard.js"></script>-->
 
 	<script type=text/javascript>
 
@@ -62,205 +62,326 @@
 		
 		$('#miModal').hide();
 		$('.modal-backdrop').hide();
-
-
 	}
 	
 	$(document).ready(function() {
 		$('#enviarTexto').click(function() {
-				console.log("enviarTexto");
-                var a=$('#textArea').val();
-                console.log(a);
-                $.ajax({
-                	url:"http://sesat.fdi.ucm.es/textosGuay/",
-                    method: "POST",
-                    headers: {'X-CSRFToken': '{{ csrf_token }}'},
-                    data: {
-                            a: a
-                    },
-                    success: function(data,status){
-                    	alert("Data: " +JSON.stringify( data) + "\nStatus: " + status);
-						/*$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/
-    	                var tristeza = data['emociones'][0];
-            	        var miedo = data['emociones'][1];
-                   		var alegria = data['emociones'][2];
-                   		var enfado = data['emociones'][3];
-                    	var asco = data['emociones'][4];
-                    	var totalGrados = 0;
-						let colorTriste = document.getElementById("colorTriste").value;
-						let colorMiedo = document.getElementById("colorMiedo").value;
-						let colorAlegre = document.getElementById("colorAlegre").value;
-						let colorEnfado = document.getElementById("colorEnfado").value;
-						let colorAsco = document.getElementById("colorAsco").value;
-                    	for(var i = 0; i < data['emociones'].length; i++){
-                            	if(data['emociones'][i] > 2.50){
-                                   		totalGrados += parseInt(data['emociones'][i]);
-                            	}
-                    	}
-						if(tristeza > 2.50){
-                        	var imgTristeza = $('<img  class="img" src="{% static "img/tristeza.png" %}" alt="sad face"/>');
-                        	$('#textoTristeza').html('');
-                        	$('#imagenTristeza').html('');
-                        	$('#textoTristeza').html("Tristeza");
-                        	$('#imagenTristeza').append(imgTristeza);
-                        	var tristezaEstilo = "width:" + parseInt(tristeza*100)/totalGrados + "%; background-color:" + colorTriste +";";
-                        } else{
-                            var tristezaEstilo = "width:" + 0 + "%; background-color:" + colorTriste + ";";
-						}
-                    	if(miedo > 2.50){
-                            	var imgMiedo = $('<img  class="img" src="{% static "img/miedo.png" %}" alt="scary face"/>');
-                            	$('#textoMiedo').html('');
-                            	$('#imagenMiedo').html('');
-                            	$('#textoMiedo').html('Miedo');
-                            	$('#imagenMiedo').append(imgMiedo);
-                                var miedoEstilo = "width:" +  parseInt(miedo*100)/totalGrados + "%; background-color:" + colorMiedo + ";";
+			console.log("enviarTexto");
+            var a=$('#textArea').val();
+            console.log(a);
+            $.ajax({
+              	url:"http://sesat.fdi.ucm.es/textosGuay/",
+                method: "POST",
+                headers: {'X-CSRFToken': 'YQJxmqdS1v6Ou05cxNYrs8WUQFeuj2yCPaGJStlgMEO3g9r65ryHRgnCW5m8ITrs'},
+                data: {
+                    a: a
+                },
+                success: function(data,status){
+                  	alert("Data: " +JSON.stringify( data) + "\nStatus: " + status);
+					/*$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/
+    	            var tristeza = data['emociones'][0];
+            	    var miedo = data['emociones'][1];
+                	var alegria = data['emociones'][2];
+                	var enfado = data['emociones'][3];
+                  	var asco = data['emociones'][4];
+                   	var totalGrados = 0;
+					let colorTriste = document.getElementById("colorTriste").value;
+					let colorMiedo = document.getElementById("colorMiedo").value;
+					let colorAlegre = document.getElementById("colorAlegre").value;
+					let colorEnfado = document.getElementById("colorEnfado").value;
+					let colorAsco = document.getElementById("colorAsco").value;
+                   	for(var i = 0; i < data['emociones'].length; i++){
+                       	if(data['emociones'][i] > 2.50){
+                            totalGrados += parseInt(data['emociones'][i]);
                         }
-                    	else{
-                            var miedoEstilo = "width:" + 0 + "%; backgroung-color:" + colorMiedo + ";";
-                		}
+                    }
+					if(tristeza > 2.50){
+                       	var imgTristeza = $('<img  class="img" src="/static/img/tristeza.png" alt="sad face"/>');
+                       	$('#textoTristeza').html('');
+                       	$('#imagenTristeza').html('');
+                       	$('#textoTristeza').html("Tristeza");
+                       	$('#imagenTristeza').append(imgTristeza);
+                       	var tristezaEstilo = "width:" + parseInt(tristeza*100)/totalGrados + "%; background-color:" + colorTriste +";";
+                    } else{
+                        var tristezaEstilo = "width:" + 0 + "%; background-color:" + colorTriste + ";";
+					}
 
-						if(alegria > 2.50){
-                        	var imgAlegria = $('<img class="img" src="{% static "img/alegria.png" %}" alt="happy face"/>');
-                        	$('#textoAlegria').html('');
-                        	$('#imagenAlegria').html('');
-                        	$('#textoAlegria').html('Alegria');
-                        	$('#imagenAlegria').append(imgAlegria);
+                    if(miedo > 2.50){
+                       	var imgMiedo = $('<img  class="img" src="/static/img/miedo.png" alt="scary face"/>');
+                       	$('#textoMiedo').html('');
+                       	$('#imagenMiedo').html('');
+                       	$('#textoMiedo').html('Miedo');
+                       	$('#imagenMiedo').append(imgMiedo);
+                        var miedoEstilo = "width:" +  parseInt(miedo*100)/totalGrados + "%; background-color:" + colorMiedo + ";";
+                    }
+                    else{
+                        var miedoEstilo = "width:" + 0 + "%; backgroung-color:" + colorMiedo + ";";
+                	}
 
-                        	var alegriaEstilo = "width:" + parseInt(alegria*100)/totalGrados + "%; background-color:" + colorAlegre + ";";
+					if(alegria > 2.50){
+                       	var imgAlegria = $('<img class="img" src="/static/img/alegria.png" alt="happy face"/>');
+                      	$('#textoAlegria').html('');
+                       	$('#imagenAlegria').html('');
+                       	$('#textoAlegria').html('Alegria');
+                       	$('#imagenAlegria').append(imgAlegria);
+                       	var alegriaEstilo = "width:" + parseInt(alegria*100)/totalGrados + "%; background-color:" + colorAlegre + ";";
+                    }
+                    else{
+                        var alegriaEstilo = "width:" + 0 + "%; background-color:" + colorAlegre + ";";
+                    }
 
-                        }
-                    	else{
-                            var alegriaEstilo = "width:" + 0 + "%; background-color:" + colorAlegre + ";";
-                    	}	
-                    	if(enfado > 2.50){
-                        	var imgEnfado = $('<img class="img" src="{% static "img/enfado.png" %}" alt="angry face"/>');
-                        	$('#textoEnfado').html('');
-                        	$('#imagenEnfado').html('');
-                        	$('#textoEnfado').html('Enfado');
-                        	$('#imagenEnfado').append(imgEnfado);
-                        	var enfadoEstilo = "width:" + parseInt(enfado*100)/totalGrados + "%; background-color:" + colorEnfado + ";";
-                    	}
-                    	else{
-                        	var enfadoEstilo = "width:" + 0 + "%; background-color:" + colorEnfado + ";";
-                    	}
-						if(asco > 2.50){
-                           		var imgAsco = $('<img  class="img" src="{% static "img/asco.png" %}" alt="dislike face"/>');
-                            	$('#textoAsco').html('');
-                            	$('#imagenAsco').html('');
-                            	$('#textoAsco').html('Asco');
-                            	$('#imagenAsco').append(imgAsco);
-                            	var ascoEstilo = "width:" + parseInt(asco*100)/totalGrados + "%; background-color:" + colorAsco + ";";
-                    	}
-                    	else{
-                            	var ascoEstilo = "width:" + 0 + "%; background-color:" + colorAsco + ";";
-                    	}
+                    if(enfado > 2.50){
+                       	var imgEnfado = $('<img class="img" src="/static/img/enfado.png" alt="angry face"/>');
+                       	$('#textoEnfado').html('');
+                       	$('#imagenEnfado').html('');
+                       	$('#textoEnfado').html('Enfado');
+                       	$('#imagenEnfado').append(imgEnfado);
+                       	var enfadoEstilo = "width:" + parseInt(enfado*100)/totalGrados + "%; background-color:" + colorEnfado + ";";
+                    }
+                    else{
+                       	var enfadoEstilo = "width:" + 0 + "%; background-color:" + colorEnfado + ";";
+                    }
+					if(asco > 2.50){
+                      	var imgAsco = $('<img  class="img" src="/static/img/asco.png" alt="dislike face"/>');
+                    	$('#textoAsco').html('');
+                    	$('#imagenAsco').html('');
+                    	$('#textoAsco').html('Asco');
+                    	$('#imagenAsco').append(imgAsco);
+                    	var ascoEstilo = "width:" + parseInt(asco*100)/totalGrados + "%; background-color:" + colorAsco + ";";
+                	}
+                	else{
+                    	var ascoEstilo = "width:" + 0 + "%; background-color:" + colorAsco + ";";
+                	}
 
-                    	if(tristeza <= 2.5 && miedo <= 2.5 && alegria <= 2.5 && enfado <= 2.5 && asco <= 2.5){
-                    		var imgTranquilo = $('<img class="img" src="{% static "img/tranquilo.png" %}" alt "normal-face"/>');
-	                        $('#textoTranquilo').html('');
-							$('#imagenTranquilo').html('');
-							$('#textoTranquilo').html('Vaya.. parece que esta frase no tiene emociones');
-							$('#imagenTranquilo').append(imgTranquilo);
-							var tranquiloEstilo = "width:100%";
-						}	
-						else {
-							var tranquiloEstilo = "width:0%";
-						}
+                	if(tristeza <= 2.5 && miedo <= 2.5 && alegria <= 2.5 && enfado <= 2.5 && asco <= 2.5){
+            			var imgTranquilo = $('<img class="img" src="/static/img/tranquilo.png" alt "normal-face"/>');
+                        $('#textoTranquilo').html('');
+						$('#imagenTranquilo').html('');
+						$('#textoTranquilo').html('Vaya.. parece que esta frase no tiene emociones');
+						$('#imagenTranquilo').append(imgTranquilo);
+						var tranquiloEstilo = "width:100%";
+					}	
+					else {
+						var tranquiloEstilo = "width:0%";
+					}
 				
-		            	document.getElementById("barritaTristeza").style = tristezaEstilo;
-		            	document.getElementById("barritaMiedo").style = miedoEstilo;
-		            	document.getElementById("barritaAlegria").style = alegriaEstilo;
-		            	document.getElementById("barritaEnfado").style = enfadoEstilo;
-		            	document.getElementById("barritaAsco").style = ascoEstilo;
-						document.getElementById("barritaTranquilo").style = tranquiloEstilo;
+	            	document.getElementById("barritaTristeza").style = tristezaEstilo;
+	            	document.getElementById("barritaMiedo").style = miedoEstilo;
+	            	document.getElementById("barritaAlegria").style = alegriaEstilo;
+	            	document.getElementById("barritaEnfado").style = enfadoEstilo;
+	            	document.getElementById("barritaAsco").style = ascoEstilo;
+					document.getElementById("barritaTranquilo").style = tranquiloEstilo;
 
-
-							$.ajax({
-									
-                					url:"http://sesat.fdi.ucm.es/porcentajesPalabras/",
-				                    method: "POST",
-				                    headers: {'X-CSRFToken': '{{ csrf_token }}'},
-				                    data: {
-				                            porcentajes: a
-				                    },
-				                    success: function(data,status){
-				                    	alert("Data: " +JSON.stringify(data) + "\nStatus: " + status);
-										
-										var texto = document.getElementById("textArea").value;
-										var array_texto = texto.split(" ");
-										var textoFinal = "";
-										for(var o = 0; o < array_texto.length; o++){
-											var j = 0;
-											var encontrado = 0;
-											while(encontrado != 1 && j < data['solucion'].length){
-												if(array_texto[o] == data['solucion'][j]){
-													encontrado = 1;
-													colorAPoner = data['solucion'][j+1];
-												}
-												j = j+2;
-											}
-										
-											if(encontrado == 1){
-
-												if(colorAPoner == 1){
-													var id = "Tristeza";
-													colorAPoner= colorTriste;
-												}
-												else if(colorAPoner == 2){
-													var id = "Miedo";
-													colorAPoner = colorMiedo;
-												}
-												else if(colorAPoner == 3){
-													var id = "Alegria";
-													colorAPoner = colorAlegre;
-												}
-												else if(colorAPoner == 4){
-													var id = "Enfado";
-													colorAPoner = colorEnfado;
-												}
-												else if(colorAPoner == 5){
-													var id = "Asco";
-													colorAPoner = colorAsco;
-												}
-												textoFinal = textoFinal + " <strong style='color: "+ colorAPoner +"' onmouseover=(alert(\""+ id + "\"))>" + array_texto[o] + "</strong>";
-												
-											}
-											else {
-												textoFinal = textoFinal +  " " + array_texto[o];
-											}
-										}							
-								
-										
-										$("#resultadoTexto").html(textoFinal);
-				    	               
-										
-
-				                    	},
-				                    	error: function(request, status, errorThrown) {
-				                            	alert(request);
-												alert(request.responseText);
-				                            	alert(status);
-				                            	alert(errorThrown);
-										},
-				            });	
-
-
-                    	},
-                    	error: function(request, status, errorThrown) {
-                            	alert(request);
-								alert(request.responseText);
-                            	alert(status);
-                            	alert(errorThrown);
-						},
-            });
+					escribirResultado(data['palabras'])
+				},
+				error: function(request, status, errorThrown){
+					alert(request);
+                    alert(request.responseText);
+                    alert(status);
+                    alert(errorThrown);
+                },
+           	});
 		});
 	});
 
+	function escribirResultado(datos){
+		var a=$('#textArea').val();
+		
+		for(var i = 0; i < datos.length; i++){
 
+			$.ajax({
+            	method: "GET",
+            	url:"http://sesat.fdi.ucm.es/emociones/palabra/mayoritariaEmo",
+                //headers: {'X-CSRFToken': '{{ csrf_token }}'},
+                data: {
+                        palabra: datos[i]
+                },
+                success: function(data,status){
+                	alert("Data: " +JSON.stringify( data) + "\nStatus: " + status);
+					
+            	},
+            	error: function(request, status, errorThrown) {
+                    	alert(request);
+						alert(request.responseText);
+                    	alert(status);
+                    	alert(errorThrown);
+				},
+        	});
 
+			    /*success: function(data,status){
+			        alert("Data: " +JSON.stringify(data) + "\nStatus: " + status);
 
+			        var texto = a;
+			        texto = texto.toLowerCase()
+			        var array_texto = texto.split(" ");
+			        var textoFinal = "";
+			        for(var o = 0; o < array_texto.length; o++){
+			            var j = 0;
+			            var encontrado = 0;
+			            while(encontrado != 1 && j < data['solucion'].length){
+			                if(array_texto[o] == data['solucion'][j]){
+			                    encontrado = 1;
+			                    colorAPoner = data['solucion'][j+1];
+			                    if(colorAPoner == 0){
+			                        encontrado = 0;
+			                    }
+			                }
+			            j = j+2;
+			            }
+			            if(encontrado == 1){
 
-	
+			                if(colorAPoner == 1){
+			                    var id = "Tristeza";
+			                    colorAPoner= colorTriste;
+			                }
+			                else if(colorAPoner == 2){
+			                    var id = "Miedo";
+			                    colorAPoner = colorMiedo;
+			                }
+			                else if(colorAPoner == 3){
+			                    var id = "Alegria";
+			                    colorAPoner = colorAlegre;
+			                }
+			                else if(colorAPoner == 4){
+			                    var id = "Enfado";
+			                    colorAPoner = colorEnfado;
+			                }
+			                else if(colorAPoner == 5){
+			                    var id = "Asco";
+			                    colorAPoner = colorAsco;
+			                }
+			                textoFinal = textoFinal + " <strong style='color: "+ colorAPoner +"' onmouseover=(alert(\""+ id + "\"))>" + array_texto[o] + "</strong>";
+			            }
+			            else {
+			                textoFinal = textoFinal +  " " + array_texto[o];
+			            }
+			        }
+
+			        $("#resultadoTexto").html(textoFinal);
+			    },
+			    error: function(request, status, errorThrown) {
+			        alert(request);
+			        alert(request.responseText);
+			        alert(status);
+			        alert(errorThrown);
+			    },
+			});*/
+		}
+		/*
+		$.ajax({
+		    url:"http://sesat.fdi.ucm.es/porcentajesPalabras/",
+		    method: "POST",
+		    headers: {'X-CSRFToken': '{{ csrf_token }}'},
+		    data: {
+		            porcentajes: a
+		    },
+		    success: function(data,status){
+		        alert("Data: " +JSON.stringify(data) + "\nStatus: " + status);
+
+		        var texto = document.getElementById("textArea").value;
+		        texto = texto.toLowerCase()
+		        var array_texto = texto.split(" ");
+		        var textoFinal = "";
+		        for(var o = 0; o < array_texto.length; o++){
+		            var j = 0;
+		            var encontrado = 0;
+		            while(encontrado != 1 && j < data['solucion'].length){
+		                if(array_texto[o] == data['solucion'][j]){
+		                    encontrado = 1;
+		                    colorAPoner = data['solucion'][j+1];
+		                    if(colorAPoner == 0){
+		                        encontrado = 0;
+		                    }
+		                }
+		            j = j+2;
+		            }
+		            if(encontrado == 1){
+
+		                if(colorAPoner == 1){
+		                    var id = "Tristeza";
+		                    colorAPoner= colorTriste;
+		                }
+		                else if(colorAPoner == 2){
+		                    var id = "Miedo";
+		                    colorAPoner = colorMiedo;
+		                }
+		                else if(colorAPoner == 3){
+		                    var id = "Alegria";
+		                    colorAPoner = colorAlegre;
+		                }
+		                else if(colorAPoner == 4){
+		                    var id = "Enfado";
+		                    colorAPoner = colorEnfado;
+		                }
+		                else if(colorAPoner == 5){
+		                    var id = "Asco";
+		                    colorAPoner = colorAsco;
+		                }
+		                textoFinal = textoFinal + " <strong style='color: "+ colorAPoner +"' onmouseover=(alert(\""+ id + "\"))>" + array_texto[o] + "</strong>";
+		            }
+		            else {
+		                textoFinal = textoFinal +  " " + array_texto[o];
+		            }
+		        }
+
+		        $("#resultadoTexto").html(textoFinal);
+		    },
+		    error: function(request, status, errorThrown) {
+		        alert(request);
+		        alert(request.responseText);
+		        alert(status);
+		        alert(errorThrown);
+		    },
+		});*/
+	}
+
+	var recognition;
+	var recognizing = false;
+	if (!('webkitSpeechRecognition' in window)) {
+		alert("¡API no soportada!");
+	} else {
+
+		recognition = new webkitSpeechRecognition();
+		recognition.lang = "es-VE";
+		recognition.continuous = true;
+		recognition.interimResults = true;
+
+		recognition.onstart = function() {
+			recognizing = true;
+			console.log("empezando a eschucar");
+		}
+		recognition.onresult = function(event) {
+
+		 for (var i = event.resultIndex; i < event.results.length; i++) {
+			if(event.results[i].isFinal)
+				document.getElementById("texto").value += event.results[i][0].transcript;
+		    }
+			
+			//texto
+		}
+		recognition.onerror = function(event) {
+		}
+		recognition.onend = function() {
+			recognizing = false;
+			document.getElementById("procesar").innerHTML = "Escuchar";
+			console.log("terminó de eschucar, llegó a su fin");
+
+		}
+
+	}
+
+	function procesar() {
+
+		if (recognizing == false) {
+			recognition.start();
+			recognizing = true;
+			document.getElementById("procesar").innerHTML = "Detener";
+		} else {
+			recognition.stop();
+			recognizing = false;
+			document.getElementById("procesar").innerHTML = "Escuchar";
+		}
+	}
 	</script>
 
 		<title> TRADUCTOR DE EMOCIONES </title> 
@@ -284,8 +405,8 @@
 						<textarea class="textAreaEstilo" rows="8" id="textArea" placeholder="Introduzca aquí su texto..." maxlength="5000" onKeyUp="numCaracteres()"></textarea>
 						<div class="row">
 							<div class="col-sm-3" style="text-align: right;">
-								<button type="button" class="btn btn-default" id="showkeyboard" onclick="javascript:mostrar()"><img style="height:16px; width:18px;" src="{% static "img/teclado.png" %}" alt="teclado"/></button>
-								<button type="button" class="btn btn-default" id="microfono"><img style="height:16px; width:18px;" src="{% static "img/microfono.png" %}" alt="microfono"/> </button>
+								<button type="button" class="btn btn-default" id="showkeyboard" onclick="javascript:mostrar()"><img style="height:16px; width:18px;" src="/static/img/teclado.png" alt="teclado"/></button>
+								<button type="button" class="btn btn-default" id="microfono"><img style="height:16px; width:18px;" src="/static/img/microfono.png" alt="microfono"/> </button>
 							</div>
 							<div id="numCaracteres" class="col-sm-8" style="text-align: right">
 							</div>
@@ -315,7 +436,10 @@
 				</div>
 			</div>
 			
-			
+			<div class="example">
+			<textarea id="texto"></textarea>
+			<button onclick="procesar()" id="procesar">Escuchar</button>
+		</div>
 			
 			<div id="salida"></div>
 
@@ -488,3 +612,4 @@
 
 	</script>
 </html>
+

@@ -7,16 +7,20 @@ from interprete_texto import InterpreteTexto
 URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
 
 def obtener_mayoritaria(grados):
-	mayor = 0;
+	mayor = 0
 	for i in range(5):
-		if(grados[i] > mayor):
+		if(grados[i] > mayor and grados[i] >= "2.5"):
 			mayor = grados[i]
-			posicion = i
-	return mayor, posicion+1
+			posicion = i+1
+
+	if(mayor == 0):
+		posicion = 0
+
+	return mayor, posicion
 
 def obtener_emociones(grados):
 	for i in range(5):
-		if(grados[i] >= 2.5):
+		if(grados[i] >= "2.5"):
 			solucion.append(i)
 	return solucion
 

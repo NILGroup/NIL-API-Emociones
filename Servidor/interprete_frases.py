@@ -75,7 +75,7 @@ class InterpreteFrases():
 					actualizar_grados_frase(emociones_frase,grados,tipos[i])
 					num_validas = num_validas + tipos[i]
 			emociones = obtener_medias(emociones_frase,num_validas)
-			return emociones,lista_palabras,mayoritarias
+			return emociones,lista_palabras
 
 	@staticmethod
 	def emociones_mayoritaria_frase(frase):
