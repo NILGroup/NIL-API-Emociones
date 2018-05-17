@@ -26,7 +26,7 @@ def obtener_medias(grados,num_frases):
 			grados[i] = str(round(grados[i] / num_frases,2))
 		return grados
 	else:
-		return ["1","1","1","1","1"]
+		return ["0","0","0","0","0"]
 
 def actualizar_grados(emocion,contadores,grados,grado):
 	i = emociones.index(emocion)
@@ -80,7 +80,8 @@ class InterpreteTexto():
 		grados = [0,0,0,0,0]
 		palabras = []
 		for i in range(n):
-			grados,palabras,num_frases,mayoritariasFinales = analizar_grados_frase(frases[i],grados,palabras,tipos[i],num_frases)
+			if len(frases[i]) > 0:
+				grados,palabras,num_frases,mayoritariasFinales = analizar_grados_frase(frases[i],grados,palabras,tipos[i],num_frases)
 		resultado = obtener_medias(grados,num_frases)
 		return resultado,palabras,mayoritariasFinales
 

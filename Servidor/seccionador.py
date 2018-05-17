@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 INTERROGATIVA = 1
@@ -46,6 +46,9 @@ def obtener_subfrases2(frase):
 	#frase = frase.replace("Â","")
 	frase = frase.replace("- ","")
 	frase = frase.replace(" -", "")
+	#frase = frase.encode('utf-8')
+	ie = '\xc2\xbf'
+	ee = 'xc2\xa1'
 	if "?" not in frase and "!" not in frase:
 		return [frase],[ENUNCIATIVA]
 	tam = len(frase)
@@ -61,12 +64,11 @@ def obtener_subfrases2(frase):
 			tipos.append(ENUNCIATIVA)
 			break;
 
-		if "¿" in frase.encode('utf-8'):
-			if "?" in frase:
-				ini_i = frase.index("¿")
+		if ie.decode("utf-8") in frase and "?" in frase:
+				ini_i = frase.index(ie.decode("utf-8"))
 				fin_i = frase.index("?")
-		if "¡" in frase and "!" in frase:
-			ini_e = frase.index("¡")
+		if "¡".decode("utf-8") in frase and "!" in frase:
+			ini_e = frase.index("¡".decode("utf-8"))
 			fin_e = frase.index("!")
 		if ini_i < ini_e:
 			if ini_i == 0:
@@ -107,6 +109,7 @@ class SeccionadorFrases():
 	@staticmethod
 	def seccionar_texto(texto):
 		frases = texto.split('.')
+		frases = frases[0:len(frases)-1]
 		num_frases = 0
 		n = len(frases)
 		subfrases = []

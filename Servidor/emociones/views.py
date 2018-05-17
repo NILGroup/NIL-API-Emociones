@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*
 import sys
 from rest_framework import status
@@ -14,7 +15,7 @@ from interprete_texto import InterpreteTexto
 from emoTraductorPorcentajes import TraductorPorcentajes
 from emoTraductor import Traductor
 from interprete_palabras import InterpretePalabras
-#from interprete_frase import InterpreteFrase
+from interprete_frases import InterpreteFrases
 
 
 from django.http import HttpResponse
@@ -22,6 +23,60 @@ from django.http import HttpRequest
 
 from django.http import JsonResponse
 
+def vista_fraseMayoritaria(request):
+	if request.method=='POST':
+        	frase = request.POST['frase']
+        	grados,palabras,mayoritarias = traducirFrase(frase)
+		tristeza = 0
+		miedo = 0
+		alegria = 0
+		enfado = 0
+		asco = 0
+		for x in range(0,len(mayoritarias)):
+			tristeza = tristeza + float(mayoritarias[x][0])
+			miedo = miedo + float(mayoritarias[x][1])
+			alegria = alegria + float(mayoritarias[x][2])
+			enfado = enfado + float(mayoritarias[x][3])
+			asco = asco + float(mayoritarias[x][4])
+		if tristeza > miedo and tristeza > alegria and tristeza > enfado and tristeza > asco:
+			mayor = 'Tristeza'
+			grado = tristeza
+		elif miedo > tristeza and miedo > alegria and miedo > enfado and miedo > asco:
+			mayor = 'Miedo'
+			grado = miedo
+		elif alegria > tristeza and alegria > miedo and alegria > enfado and alegria > asco:
+			mayor = 'Alegría'
+			grado = alegria
+		elif enfado > tristeza and enfado > miedo and enfado > alegria and enfado > asco:
+			mayor = 'Enfado'
+			grado = enfado
+		elif asco > tristeza and asco > miedo and asco > alegria and asco > enfado:
+			mayor = 'Asco'
+			grado = asco
+		else:
+			mayor = 'No hay una mayoritaria'
+			grado = 0
+		
+        	data = {
+        	#   'tristeza': grados[0],
+        	#   'miedo' : grados[1],
+        	#   'alegria': grados[2],
+        	#   'enfado' : grados[3],
+        	#   'asco' : grados[4],
+            	'emociones': mayor, #[{'tristeza': grados[0]}, {'miedo': grados[1]} , {'alegria': grados[2]}, {'enfado': grados[3]}, {'asco' : grados[4]}],
+            	'palabras': palabras,
+            	'grado' : grado
+        	}
+        	return JsonResponse(data)
+	else:
+        	#texto = request.GET['a']
+        	#grados, palabras = traducirTexto(texto)
+        	#return HttpResponse(grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] + ";" + palabras.toString())
+        	#+ grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] )
+        	return HttpResponse("Peticion no valida")
+
+def traducirFrase(frase):
+	return InterpreteFrases.emociones_frase(frase)
 
 def vista_porcentaje(request):
 	if request.method=='POST':
@@ -285,28 +340,4 @@ def PalabraMayoritaria(request):
 Estos son los servicios web para las frases.
 --------------------------------------------
 """
-def FraseMayoritaria(request):
-    if request.method=='POST':
-        frase = request.POST['frase']
-        grados,palabras,mayoritarias = traducirFrase(frase)
-        data = {
-        #   'tristeza': grados[0],
-        #   'miedo' : grados[1],
-        #   'alegria': grados[2],
-        #   'enfado' : grados[3],
-        #   'asco' : grados[4],
-            'emociones': grados, #[{'tristeza': grados[0]}, {'miedo': grados[1]} , {'alegria': grados[2]}, {'enfado': grados[3]}, {'asco' : grados[4]}],
-            'palabras': palabras,
-	    'mayoritarias': mayoritarias
-        }
-        return JsonResponse(data)
-    else:
-        #texto = request.GET['a']
-        #grados, palabras = traducirTexto(texto)
-        #return HttpResponse(grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] + ";" + palabras.toString())
-        #+ grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] )
-        return HttpResponse("Peticion no valida")
-
-def traducirFrase(frase):
-    return InterpreteFrase.emociones_frase(frase)
 

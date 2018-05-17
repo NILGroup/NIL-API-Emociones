@@ -27,7 +27,7 @@ def obtener_medias(grados,num_palabras):
 			grados[i] = str(round(grados[i] / num_palabras,2))
 		return grados
 	else: # si no hay ninguna palabra emocional en la frase entonces esta es neutral
-		return ["1","1","1","1","1"]
+		return ["0","0","0","0","0"]
 
 def actualizar_grados_frase(actuales,nuevos,peso):
 	for i in range(len(actuales)):

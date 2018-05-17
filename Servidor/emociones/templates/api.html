@@ -6,9 +6,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="{% static 'css/estiloApi.css' %}">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-		<!--<link rel="stylesheet" href="static/css/estiloApi.css">-->
+		<link rel="stylesheet" href="static/css/estiloApi.css">
 		
 			
 		<title> API Traductor Emociones </title> 
@@ -21,114 +21,771 @@
 			<hr>
 
 			<div class="row">
-			    <div class="col-sm-4">
-            		<div class="bs-component">
-              			<div class="card text-white bg-primary mb-3 bloques">
-                			<div class="card-header">Servicios para una palabra</div>
-            				<div class="card-body">
-              					<h4 class="card-title">Emoción mayoritaria</h4>
-              					<p class="card-text">Devuelve la emoción con más grado dada una palabra. <a href="#palabraMayor"> (ver más)</a></p>
-              					<hr>
+		    <div class="col-sm-4">
+       		<div class="bs-component" id="indice">
+       			<div class="card text-white bg-primary mb-3 bloques">
+         			<div class="card-header">Servicios para una palabra</div>
+       				<div class="card-body">
+       					<h4 class="card-title">Emoción mayoritaria</h4>
+       					<p class="card-text">Devuelve la emoción con más grado dada una palabra. <a href="#palabraMayor"> (ver más)</a></p>
+       					<hr>
 
-              					<h4 class="card-title">Emoción consensuada</h4>
-              					<p class="card-text">Devuelve, si existe, la única emoción marcada dada una palabra. <a href="#palabraConsensuada"> (ver más)</a></p>
-              					<hr>
+       					<h4 class="card-title">Emoción consensuada</h4>
+      					<p class="card-text">Devuelve, si existe, la única emoción marcada dada una palabra. <a href="#palabraConsensuada"> (ver más)</a></p>
+       					<hr>
 
-              					<h4 class="card-title">Grados emocionales</h4>
-              					<p class="card-text">Devuelve los valores para cada emoción. <a href="#palabra"> (ver más)</a></p>
+       					<h4 class="card-title">Grados emocionales</h4>
+       					<p class="card-text">Devuelve los valores para cada emoción. <a href="#palabraGrados"> (ver más)</a></p>
+        			</div>
+      			</div>
+      		</div>
+      	</div>
+			  <div class="col-sm-4">
+        	<div class="bs-component">
+        		<div class="card text-white bg-info mb-3 bloques">
+         			<div class="card-header">Servicios para una frase</div>
+        			<div class="card-body">
+                <h4 class="card-title">Emoción mayoritaria</h4>
+                <p class="card-text">Devuelve la emoción con más grado dada una palabra. <a href="#fraseMayor"> (ver más)</a></p>
+                <hr>
 
-            				</div>
-          				</div>
-          			</div>
-          		</div>
-			    <div class="col-sm-4">
-            		<div class="bs-component">
-              			<div class="card text-white bg-info mb-3 bloques">
-                			<div class="card-header">Servicios para una frase</div>
-            				<div class="card-body">
-              					<h4 class="card-title">Primary card title</h4>
-              					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            				</div>
-          				</div>
-          			</div>
-          		</div>
-			    <div class="col-sm-4">
-            		<div class="bs-component">
-              			<div class="card text-white bg-success mb-3 bloques">
-                			<div class="card-header">Servicios para un texto</div>
-            				<div class="card-body">
-              					<h4 class="card-title">Primary card title</h4>
-              					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            				</div>
-          				</div>
-          			</div>
-          		</div>
-		  	</div>
+                <h4 class="card-title">Emoción consensuada</h4>
+                <p class="card-text">Devuelve, si existe, la única emoción marcada dada una palabra. <a href="#fraseConsensuada"> (ver más)</a></p>
+                <hr>
 
-		  	<div>
-		  		<div class="jumbotron" id="palabraMayor">
-  					<h1 class="display-5">Palabra - Emoción mayoritaria</h1>
-					<p class="lead">Devuelve la emoción con mayor grado, junto con el grado, dada una palabra. Si la palabra no existe en el diccionario afectivo, lo indica.</p>
+                <h4 class="card-title">Grados emocionales</h4>
+                <p class="card-text">Devuelve los valores para cada emoción. <a href="#fraseGrados"> (ver más)</a></p>
+              </div>
+      			</div>
+      		</div>
+      	</div>
+			   <div class="col-sm-4">
+        	<div class="bs-component">
+        		<div class="card text-white bg-success mb-3 bloques">
+          		<div class="card-header">Servicios para un texto</div>
+      		    <div class="card-body">
+                <h4 class="card-title">Emoción mayoritaria</h4>
+                <p class="card-text">Devuelve la emoción con más grado dada una palabra. <a href="#textoMayor"> (ver más)</a></p>
+                <hr>
 
-					<hr class="my-4">
+                <h4 class="card-title">Emoción consensuada</h4>
+                <p class="card-text">Devuelve, si existe, la única emoción marcada dada una palabra. <a href="#textoConsensuada"> (ver más)</a></p>
+                <hr>
 
-					<label> <strong> URL</strong></label>
-  					<p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/mayorEmo/ </cursive></p>
-
-  					<hr class="my-4">
-
-  					<label> <strong> Información de la respuesta</strong></label>
-  					<p>Se obtiene la respuesta en JSON</p>
-
-  					<hr class="my-4">
-
-  					<label> <strong> Parámetros </strong> </label>
-  					<table class="table table-hover">
-  						<thead>
-							<tr>
-						    	<th scope="col">Nombre</th>
-						    	<th scope="col">Requerido</th>
-						   		<th scope="col">Descripcion</th>
-						    	<th scope="col">Valor por defecto</th>
-						   	</tr>
-						</thead>
-						<tbody>
-						    <tr class="table-primary">
-						    	<th scope="row">NI (No importa)</th>
-						      	<td>Sí</td>
-						      	<td>Es la palabra que queremos buscar</td>
-						      	<td>No tiene valor por defecto</td>
-						    </tr>
-					  </tbody>
-					</table>
-
-					<hr class="my-4"> 
-  					
-  					<label> <strong> Ejemplo petición </strong> </label>
-
-  					<p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/mayorEmo/abejas/ </cursive></p>
-
-  					<hr class="my-4">
-
-  					<label> <strong> Ejemplo de respuesta </strong> </label>
-
-  					<p> En caso de ser una palabra que aparezca en el diccionario: </p>
-  					
-  						{
-						  "grado": 3.47,
-						  "emociones": "Miedo"
-						}
-					<br><br>
-					<p> En caso de no aparecer en el diccionario </p>
-
-						{
-						  "detail": "Not found."
-						}
-					
-
-
-
-				</div>      		
+                <h4 class="card-title">Grados emocionales</h4>
+                <p class="card-text">Devuelve los valores para cada emoción. <a href="#textoGrados"> (ver más)</a></p>
+              </div>
+      			</div>
+      		</div>
         </div>
+		  </div>
+
+		  <div>
+		  	<div class="jumbotron servicioPalabra" id="palabraMayor">
+          <h1 class="display-5">Palabra - Emoción mayoritaria</h1>
+			    <p class="lead">Devuelve la emoción con mayor grado, junto con el grado, dada una palabra. Si la palabra no existe en el diccionario afectivo, devuelve una lista de emociones vacía y el grado como 0</p>
+            
+          <hr class="my-4">
+          <label> <strong> Tipo petición</strong></label>
+          <p> Petición de tipo GET </p>
+
+          <label> <strong> URL</strong></label>
+  				<p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/mayoritariaEmo </cursive></p>
+
+  				<hr class="my-4">
+
+  				<label> <strong> Información de la respuesta</strong></label>
+  				<p>Se obtiene la respuesta en JSON</p>
+
+  				<hr class="my-4">
+
+  				<label> <strong> Parámetros </strong> </label>
+  				<table class="table table-hover">
+            <thead>
+              <tr>
+			   	      <th scope="col">Nombre</th>
+					    	<th scope="col">Requerido</th>
+					   		<th scope="col">Descripcion</th>
+					    	<th scope="col">Valor por defecto</th>
+					   	</tr>
+					  </thead>
+				    <tbody>
+					    <tr class="table-primary">
+					    	<th scope="row">palabra</th>
+					    	<td>Sí</td>
+					     	<td>Es la palabra que queremos buscar</td>
+					     	<td>No tiene valor por defecto</td>
+					    </tr>
+			      </tbody>
+          </table>
+
+          <hr class="my-4"> 
+  					
+  				<label> <strong> Ejemplo petición </strong> </label>
+
+  				<p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/mayoritariaEmo?palabra=abejas </cursive></p>
+
+  				<hr class="my-4">
+
+  				<label> <strong> Ejemplo de respuesta </strong> </label>
+
+          <ul>
+            <li> En caso de ser una palabra que aparezca en el diccionario: 
+              <p>
+    					 
+      					<code>	{ </code><br>
+    						<code>  &nbsp;&nbsp;&nbsp;&nbsp;"grado": 3.47, </code><br>
+    						<code>  &nbsp;&nbsp;&nbsp;&nbsp;"emociones": [ "Miedo"] </code><br>
+    						<code>  } </code><br>
+              </p>
+            </li>
+
+            <li> En caso de no aparecer en el diccionario:
+              <p>
+
+                <code>  { </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"grado": 0, </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"emociones": [] </code><br>
+                <code>  } </code><br>
+              </p>
+            </li>
+
+            <li> En caso de tener más de una emoción mayoritaria, es decir que el grado de dos emociones sea el máximo<sup>1</sup>:
+            <p>
+              <code>  { </code><br>
+              <code>  &nbsp;&nbsp;&nbsp;&nbsp;"grado": 3.47, </code><br>
+              <code>  &nbsp;&nbsp;&nbsp;&nbsp;"emociones": [ "Miedo", "Alegría"] </code><br>
+              <code>  } </code><br>
+            </p>
+            <sup><small>1</small></sup><small>Este caso no existe en el diccionario.</small>
+            </li>
+          </ul>
+				</div>
+        <div class="jumbotron servicioPalabra" id="palabraConsensuada">
+          <h1 class="display-5">Palabra - Emoción consensuada</h1>
+          <p class="lead">Devuelve la emoción elegida por todos los evaluadores como emoción para la palabra. Solo devuelve emoción si todos los evaluadores están de acuerdo, por lo que devolverá una emoción si el grado del resto es 0. En caso de no existir la palabra en el diccionario lo indica.</p>
+            
+          <hr class="my-4">
+
+          <label> <strong> Tipo petición</strong></label>
+          <p> Petición de tipo GET </p>
+
+          <label> <strong> URL</strong></label>
+          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/consensuadaEmo </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Información de la respuesta</strong></label>
+          <p>Se obtiene la respuesta en JSON</p>
+
+          <hr class="my-4">
+
+          <label> <strong> Parámetros </strong> </label>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Requerido</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Valor por defecto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-primary">
+                <th scope="row">palabra</th>
+                <td>Sí</td>
+                <td>Es la palabra que queremos buscar</td>
+                <td>No tiene valor por defecto</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr class="my-4"> 
+            
+          <label> <strong> Ejemplo petición </strong> </label>
+
+          <p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/consensuadaEmo?palabra=abejas </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Ejemplo de respuesta </strong> </label>
+
+          <ul>
+            <li> En caso de ser una palabra que aparezca en el diccionario y tenga emoción consensuada<sup>2</sup>: 
+              <p>
+               
+                <code>  { </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"consensuada": "Alegría" </code><br>
+                <code>  } </code><br>
+
+              </p>
+            </li>
+
+            <li> En caso de ser una palabra que aparece en el diccionario y no tenga emoción consensuada:
+              <p>
+
+                <code>  { </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp; "consensuada": "No hay emocion consensuada." </code><br>
+                <code>  } </code><br>
+
+              </p>
+            </li>
+
+            <li> En caso de no existir la palabra en el diccionario:
+            <p>
+              <code>  { </code><br>
+              <code>  &nbsp;&nbsp;&nbsp;&nbsp;"consensuada": "No se ha encontrado la palabra. Asegurese de haberla escrito bien." </code><br>
+              <code>  } </code><br>
+            </p>
+            <sup><small>2</small></sup><small>Este caso no existe en el diccionario.</small>
+            </li>
+          </ul>
+        </div>
+        <div class="jumbotron servicioPalabra" id="palabraGrados">
+          <h1 class="display-5">Palabra - Grados emocionales de una palabra</h1>
+          <p class="lead">Devuelve la lista de emociones para una palabra con sus respectivos grados. Si la palabra no existe devuelve ceros para cada emoción.</p>
+            
+          <hr class="my-4">
+
+          <label> <strong> Tipo petición</strong></label>
+          <p> Petición de tipo GET </p>
+
+          <label> <strong> URL</strong></label>
+          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/gradosEmo </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Información de la respuesta</strong></label>
+          <p>Se obtiene la respuesta en JSON</p>
+
+          <hr class="my-4">
+
+          <label> <strong> Parámetros </strong> </label>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Requerido</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Valor por defecto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-primary">
+                <th scope="row">palabra</th>
+                <td>Sí</td>
+                <td>Es la palabra que queremos buscar</td>
+                <td>No tiene valor por defecto</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr class="my-4"> 
+            
+          <label> <strong> Ejemplo petición </strong> </label>
+
+          <p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/gradosEmo?palabra=abejas </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Ejemplo de respuesta </strong> </label>
+
+          <ul>
+            <li> En caso de ser una palabra que aparezca en el diccionario: 
+              <p>
+               
+                <code> { </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Tristeza": "1.17", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Miedo": "3.47", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Alegria": "1.37", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Asco": "2.2", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Ira": "2.0" </code><br>
+                <code> } </code><br>
+
+              </p>
+            </li>
+
+            <li> En caso de no existir la palabra en el diccionario:
+            <p>
+               <code> { </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Tristeza": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Miedo": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Alegria": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Asco": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Ira": "0" </code><br>
+                <code> } </code><br>
+            </p>
+            </li>
+          </ul>
+        </div>                     		
+      </div>
+
+      <!-----------------------------------------------------------------------------------------------
+                    SERVICIOS DE FRASES
+      ------------------------------------------------------------------------------------------------->
+      <div>
+        <div class="jumbotron servicioFrase" id="fraseMayor">
+          <h1 class="display-5">Frase - Emoción mayoritaria</h1>
+          <p class="lead">Devuelve la emoción con mayor grado, junto con el grado, dada una frase. También devuelve una lista de palabras para que sepamos de donde sale la mayoritaria. En caso de tener más de una mayoritaria, no devuelve ninguna, dando la lista de palabras emocionales, el grado a cero y un mensaje.</p>
+            
+          <hr class="my-4">
+          <label> <strong> PETICIÓN POST</strong></label>
+          <label> <strong> URL</strong></label>
+          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/frase/mayoritariaEmo </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Información de la respuesta</strong></label>
+          <p>Se obtiene la respuesta en JSON</p>
+
+          <hr class="my-4">
+
+          <label> <strong> Parámetros </strong> </label>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Requerido</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Valor por defecto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-info">
+                <th scope="row">frase</th>
+                <td>Sí</td>
+                <td>Es la frase de la que queremos la emoción mayoritaria</td>
+                <td>No tiene valor por defecto</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr class="my-4"> 
+            
+          <label> <strong> Ejemplo petición </strong> </label>
+
+          <p><cursive> http://sesat.fdi.ucm.es/emociones/frase/mayoritariaEmo </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Ejemplo de respuesta </strong> </label>
+
+          <ul>
+            <li> Frase: "Me gustan las naranjas"
+              <p>
+
+                <code>  { </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"palabras": ["gustan", "naranjas"], </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"grado":  4.43, </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"emociones": "Alegría"</code><br>
+                <code>  } </code><br>
+
+              </p>
+            </li>
+
+            <li> En caso de tener más de una emoción mayoritaria: "Me caes mal" </sup>:
+              <p>
+                {"palabras": ["mal"], "grado": 0, "emociones": "No hay una mayoritaria"}
+               <code>  { </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"palabras": ["mal"], </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"grado":  0, </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"emociones": "No hay una mayoritaria"</code><br>
+                <code>  } </code><br>
+
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="jumbotron servicioFrase" id="fraseConsensuada">
+          <h1 class="display-5">Palabra - Emoción consensuada</h1>
+          <p class="lead">Devuelve la emoción elegida por todos los evaluadores como emoción para la palabra. Solo devuelve emoción si todos los evaluadores están de acuerdo, por lo que devolverá una emoción si el grado del resto es 0. En caso de no existir la palabra en el diccionario lo indica.</p>
+            
+          <hr class="my-4">
+
+          <label> <strong> URL</strong></label>
+          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/consensuadaEmo </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Información de la respuesta</strong></label>
+          <p>Se obtiene la respuesta en JSON</p>
+
+          <hr class="my-4">
+
+          <label> <strong> Parámetros </strong> </label>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Requerido</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Valor por defecto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-info">
+                <th scope="row">palabra</th>
+                <td>Sí</td>
+                <td>Es la palabra que queremos buscar</td>
+                <td>No tiene valor por defecto</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr class="my-4"> 
+            
+          <label> <strong> Ejemplo petición </strong> </label>
+
+          <p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/consensuadaEmo?palabra=abejas </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Ejemplo de respuesta </strong> </label>
+
+          <ul>
+            <li> En caso de ser una palabra que aparezca en el diccionario y tenga emoción consensuada<sup>2</sup>: 
+              <p>
+               
+                <code>  { </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"consensuada": "Alegría" </code><br>
+                <code>  } </code><br>
+
+              </p>
+            </li>
+
+            <li> En caso de ser una palabra que aparece en el diccionario y no tenga emoción consensuada:
+              <p>
+
+                <code>  { </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp; "consensuada": "No hay emocion consensuada." </code><br>
+                <code>  } </code><br>
+
+              </p>
+            </li>
+
+            <li> En caso de no existir la palabra en el diccionario:
+            <p>
+              <code>  { </code><br>
+              <code>  &nbsp;&nbsp;&nbsp;&nbsp;"consensuada": "No se ha encontrado la palabra. Asegurese de haberla escrito bien." </code><br>
+              <code>  } </code><br>
+            </p>
+            <sup><small>2</small></sup><small>Este caso no existe en el diccionario.</small>
+            </li>
+          </ul>
+        </div>
+        <div class="jumbotron servicioFrase" id="fraseGrados">
+          <h1 class="display-5">Palabra - Grados emocionales de una palabra</h1>
+          <p class="lead">Devuelve la lista de emociones para una palabra con sus respectivos grados. Si la palabra no existe devuelve ceros para cada emoción.</p>
+            
+          <hr class="my-4">
+
+          <label> <strong> URL</strong></label>
+          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/gradosEmo </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Información de la respuesta</strong></label>
+          <p>Se obtiene la respuesta en JSON</p>
+
+          <hr class="my-4">
+
+          <label> <strong> Parámetros </strong> </label>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Requerido</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Valor por defecto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-info">
+                <th scope="row">palabra</th>
+                <td>Sí</td>
+                <td>Es la palabra que queremos buscar</td>
+                <td>No tiene valor por defecto</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr class="my-4"> 
+            
+          <label> <strong> Ejemplo petición </strong> </label>
+
+          <p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/gradosEmo?palabra=abejas </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Ejemplo de respuesta </strong> </label>
+
+          <ul>
+            <li> En caso de ser una palabra que aparezca en el diccionario: 
+              <p>
+               
+                <code> { </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Tristeza": "1.17", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Miedo": "3.47", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Alegria": "1.37", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Asco": "2.2", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Ira": "2.0" </code><br>
+                <code> } </code><br>
+
+              </p>
+            </li>
+
+            <li> En caso de no existir la palabra en el diccionario:
+            <p>
+               <code> { </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Tristeza": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Miedo": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Alegria": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Asco": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Ira": "0" </code><br>
+                <code> } </code><br>
+            </p>
+            </li>
+          </ul>
+        </div>                        
+      </div>
+
+       <!-----------------------------------------------------------------------------------------------
+                    SERVICIOS DE TEXTOS
+      ------------------------------------------------------------------------------------------------->
+
+      <div>
+        <div class="jumbotron servicioTexto" id="textoMayor">
+          <h1 class="display-5">Palabra - Emoción mayoritaria</h1>
+          <p class="lead">Devuelve la emoción con mayor grado, junto con el grado, dada una palabra. Si la palabra no existe en el diccionario afectivo, devuelve una lista de emociones vacía y el grado como 0</p>
+            
+          <hr class="my-4">
+          <label> <strong> PETICIÓN GET</strong></label>
+          <label> <strong> URL</strong></label>
+          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/mayoritariaEmo </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Información de la respuesta</strong></label>
+          <p>Se obtiene la respuesta en JSON</p>
+
+          <hr class="my-4">
+
+          <label> <strong> Parámetros </strong> </label>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Requerido</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Valor por defecto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-success">
+                <th scope="row">palabra</th>
+                <td>Sí</td>
+                <td>Es la palabra que queremos buscar</td>
+                <td>No tiene valor por defecto</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr class="my-4"> 
+            
+          <label> <strong> Ejemplo petición </strong> </label>
+
+          <p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/mayoritariaEmo?palabra=abejas </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Ejemplo de respuesta </strong> </label>
+
+          <ul>
+            <li> En caso de ser una palabra que aparezca en el diccionario: 
+              <p>
+               
+                <code>  { </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"grado": 3.47, </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"emociones": [ "Miedo"] </code><br>
+                <code>  } </code><br>
+              </p>
+            </li>
+
+            <li> En caso de no aparecer en el diccionario:
+              <p>
+
+                <code>  { </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"grado": 0, </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"emociones": [] </code><br>
+                <code>  } </code><br>
+              </p>
+            </li>
+
+            <li> En caso de tener más de una emoción mayoritaria, es decir que el grado de dos emociones sea el máximo<sup>1</sup>:
+            <p>
+              <code>  { </code><br>
+              <code>  &nbsp;&nbsp;&nbsp;&nbsp;"grado": 3.47, </code><br>
+              <code>  &nbsp;&nbsp;&nbsp;&nbsp;"emociones": [ "Miedo", "Alegría"] </code><br>
+              <code>  } </code><br>
+            </p>
+            <sup><small>1</small></sup><small>Este caso no existe en el diccionario.</small>
+            </li>
+          </ul>
+        </div>
+        <div class="jumbotron servicioTexto" id="textoConsensuada">
+          <h1 class="display-5">Palabra - Emoción consensuada</h1>
+          <p class="lead">Devuelve la emoción elegida por todos los evaluadores como emoción para la palabra. Solo devuelve emoción si todos los evaluadores están de acuerdo, por lo que devolverá una emoción si el grado del resto es 0. En caso de no existir la palabra en el diccionario lo indica.</p>
+            
+          <hr class="my-4">
+
+          <label> <strong> URL</strong></label>
+          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/consensuadaEmo </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Información de la respuesta</strong></label>
+          <p>Se obtiene la respuesta en JSON</p>
+
+          <hr class="my-4">
+
+          <label> <strong> Parámetros </strong> </label>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Requerido</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Valor por defecto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-success">
+                <th scope="row">palabra</th>
+                <td>Sí</td>
+                <td>Es la palabra que queremos buscar</td>
+                <td>No tiene valor por defecto</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr class="my-4"> 
+            
+          <label> <strong> Ejemplo petición </strong> </label>
+
+          <p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/consensuadaEmo?palabra=abejas </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Ejemplo de respuesta </strong> </label>
+
+          <ul>
+            <li> En caso de ser una palabra que aparezca en el diccionario y tenga emoción consensuada<sup>2</sup>: 
+              <p>
+               
+                <code>  { </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"consensuada": "Alegría" </code><br>
+                <code>  } </code><br>
+
+              </p>
+            </li>
+
+            <li> En caso de ser una palabra que aparece en el diccionario y no tenga emoción consensuada:
+              <p>
+
+                <code>  { </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp; "consensuada": "No hay emocion consensuada." </code><br>
+                <code>  } </code><br>
+
+              </p>
+            </li>
+
+            <li> En caso de no existir la palabra en el diccionario:
+            <p>
+              <code>  { </code><br>
+              <code>  &nbsp;&nbsp;&nbsp;&nbsp;"consensuada": "No se ha encontrado la palabra. Asegurese de haberla escrito bien." </code><br>
+              <code>  } </code><br>
+            </p>
+            <sup><small>2</small></sup><small>Este caso no existe en el diccionario.</small>
+            </li>
+          </ul>
+        </div>
+        <div class="jumbotron servicioTexto" id="textoGrados">
+          <h1 class="display-5">Palabra - Grados emocionales de una palabra</h1>
+          <p class="lead">Devuelve la lista de emociones para una palabra con sus respectivos grados. Si la palabra no existe devuelve ceros para cada emoción.</p>
+            
+          <hr class="my-4">
+
+          <label> <strong> URL</strong></label>
+          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/gradosEmo </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Información de la respuesta</strong></label>
+          <p>Se obtiene la respuesta en JSON</p>
+
+          <hr class="my-4">
+
+          <label> <strong> Parámetros </strong> </label>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Requerido</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Valor por defecto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-success">
+                <th scope="row">palabra</th>
+                <td>Sí</td>
+                <td>Es la palabra que queremos buscar</td>
+                <td>No tiene valor por defecto</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr class="my-4"> 
+            
+          <label> <strong> Ejemplo petición </strong> </label>
+
+          <p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/gradosEmo?palabra=abejas </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Ejemplo de respuesta </strong> </label>
+
+          <ul>
+            <li> En caso de ser una palabra que aparezca en el diccionario: 
+              <p>
+               
+                <code> { </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Tristeza": "1.17", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Miedo": "3.47", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Alegria": "1.37", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Asco": "2.2", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Ira": "2.0" </code><br>
+                <code> } </code><br>
+
+              </p>
+            </li>
+
+            <li> En caso de no existir la palabra en el diccionario:
+            <p>
+               <code> { </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Tristeza": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Miedo": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Alegria": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Asco": "0", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Ira": "0" </code><br>
+                <code> } </code><br>
+            </p>
+            </li>
+          </ul>
+        </div>                        
+      </div>
+
+    </div>
 	</body>
 </html>
+

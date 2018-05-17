@@ -1767,7 +1767,7 @@ pre code {
 .table-success,
 .table-success > th,
 .table-success > td {
-  background-color: #bdebcf;
+  background-color: #13b9551a;
 }
 
 .table-hover .table-success:hover {
@@ -1782,7 +1782,7 @@ pre code {
 .table-info,
 .table-info > th,
 .table-info > td {
-  background-color: #b8e3f5;
+  background-color: #008cdc1a;
 }
 
 .table-hover .table-info:hover {
@@ -6147,6 +6147,17 @@ button.close {
 
 .align-text-top {
   vertical-align: text-top !important;
+}
+
+.servicioPalabra {
+  background-color: #ded5ec !important;
+}
+
+.servicioFrase {
+  background-color: #d4e2ef !important;
+}
+.servicioTexto {
+  background-color: #baf3a3 !important;
 }
 
 .bg-primary {

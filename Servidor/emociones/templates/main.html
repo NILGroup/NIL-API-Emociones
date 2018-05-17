@@ -34,6 +34,12 @@
 
 	<script type=text/javascript>
 
+	function cambiarBorde(){
+		document.getElementById("contenedorTraductor").style.borderColor = "blue";
+	}
+	function cambiarBordeTransparente(){
+		document.getElementById("contenedorTraductor").style.borderColor = "#ccc";
+	}
 	
 	function numCaracteres(){
 		let cadena = document.getElementById("textArea").value;
@@ -72,7 +78,7 @@
             $.ajax({
               	url:"http://sesat.fdi.ucm.es/textosGuay/",
                 method: "POST",
-                headers: {'X-CSRFToken': 'YQJxmqdS1v6Ou05cxNYrs8WUQFeuj2yCPaGJStlgMEO3g9r65ryHRgnCW5m8ITrs'},
+                headers: {'X-CSRFToken': '{{ csrf_token }}'},
                 data: {
                     a: a
                 },
@@ -211,7 +217,7 @@
             },
     		success: function(data,status){
     			//alert("Data: " +JSON.stringify(data) + "\nStatus: " + status);
-		
+				
 				var info = document.getElementById("textArea").value;
 			    var texto = replaceAll(info, ".", "");
 			    texto = replaceAll(texto, ",", "");
@@ -219,58 +225,60 @@
 			    texto = replaceAll(texto, "!", "");
 			    texto = replaceAll(texto, "¿", "");
 			    texto = replaceAll(texto, "?", "");
-
+			    numEnters = info.split("\n").length
+			    texto = replaceAll(texto, "\n", " ");
 			    var array_info = info.split(" ");
-
 				var array_texto = texto.split(" ");
 				var textoFinal = "";
-				for(var o = 0; o < array_texto.length; o++){
+				var negrita = 0;
+				for(var o = 0; o <= array_texto.length - numEnters; o++){
+					negrita = 0;
 					var j = 0;
 					var encontrado = 0;
 					while(encontrado != 1 && j < data['solucion'].length){
-						if(array_texto[o] == data['solucion'][j]){
+						if(array_texto[o].toLowerCase() == data['solucion'][j].toLowerCase()){
 							encontrado = 1;
-							colorAPoner = data['solucion'][j+2];
 							emociones = data['solucion'][j+1];
 						}
 						j = j+3;
 					}
 		
-					if(encontrado == 1 && colorAPoner != 0){
+					if(encontrado == 1){
 
-						if(colorAPoner == 1){
-							var id = "Tristeza";
-							colorAPoner= colorTriste;
+						var mostrar = "";
+						if(emociones[0] >= 2.5){
+							mostrar += "\nTristeza";
+							negrita = 1;
 						}
-						else if(colorAPoner == 2){
-							var id = "Miedo";
-							colorAPoner = colorMiedo;
+						if(emociones[1] >= 2.5){
+							mostrar += "\nMiedo";
+							negrita = 1;
 						}
-						else if(colorAPoner == 3){
-							var id = "Alegria";
-							colorAPoner = colorAlegre;
+						if(emociones[2] >= 2.5){
+							mostrar += "\nAlegría";
+							negrita = 1;
 						}
-						else if(colorAPoner == 4){
-							var id = "Enfado";
-							colorAPoner = colorEnfado;
+						if(emociones[3] >= 2.5){
+							mostrar += "\nEnfado";
+							negrita = 1;
 						}
-						else if(colorAPoner == 5){
-							var id = "Asco";
-							colorAPoner = colorAsco;
+						if(emociones[4] >= 2.5){
+							mostrar += "\nAsco";
+							negrita = 1;
 						}
-
-						
-						/*mostrar = "alert('Tristeza: " + emociones[0] + "\nMiedo: " + emociones[1] + "\nAlegría: " + emociones[2] + "\nEnfado: " + emociones[3] + "\nAsco: " + emociones[4] + "')";*/
-
-						/*var mostrar = "Tristeza: \"" + emociones[0] + "\nMiedo: " + emociones[1] + "\nAlegría: " + emociones[2] + "\nEnfado: " + emociones[3] + "\nAsco: " + emociones[4];*/
-
-						/*textoFinal = textoFinal + " <strong style='color: "+ colorAPoner +"' onmouseover=(alert(\""+ mostrar + "\"))>" + array_texto[o] + "</strong>";*/
-
-						textoFinal = textoFinal + " <strong style='color: "+ colorAPoner +"' onmouseover=(alert(\""+ id + "\"))>" + array_info[o] + "</strong>";
-						
-						//alert(mostrar);
+						//var mostrar = "Tristeza:" + emociones[0] + "\\nMiedo:" + emociones[1] + "\\nAlegría:" + emociones[2] + "\\nEnfado:" + emociones[3] + "\\nAsco:" + emociones[4];
+						//textoFinal = textoFinal + "<strong class=\"tooltip\"> <span class=\"tooltiptext\">Tooltip text</span>" + array_texto[o] + "</strong>";
+						if(negrita == 1){
+							
+							textoFinal = textoFinal + "<strong> <span title=\"" + mostrar + "\">" + array_texto[o] +  "</span></strong>";
+						}
+						else {
+							
+							textoFinal = textoFinal +  " " + array_texto[o];
+						}
             		}
 					else {
+						
 						textoFinal = textoFinal +  " " + array_info[o];
 					}
 				}							
@@ -293,63 +301,16 @@
        	
 	}
 
-	var recognition;
-	var recognizing = false;
-	if (!('webkitSpeechRecognition' in window)) {
-		alert("¡API no soportada!");
-	} else {
-
-		recognition = new webkitSpeechRecognition();
-		recognition.lang = "es-VE";
-		recognition.continuous = true;
-		recognition.interimResults = true;
-
-		recognition.onstart = function() {
-			recognizing = true;
-			console.log("empezando a eschucar");
-		}
-		recognition.onresult = function(event) {
-
-		 for (var i = event.resultIndex; i < event.results.length; i++) {
-			if(event.results[i].isFinal)
-				document.getElementById("texto").value += event.results[i][0].transcript;
-		    }
-			
-			//texto
-		}
-		recognition.onerror = function(event) {
-		}
-		recognition.onend = function() {
-			recognizing = false;
-			document.getElementById("procesar").innerHTML = "Escuchar";
-			console.log("terminó de eschucar, llegó a su fin");
-
-		}
-
-	}
-
-	function procesar() {
-
-		if (recognizing == false) {
-			recognition.start();
-			recognizing = true;
-			document.getElementById("procesar").innerHTML = "Detener";
-		} else {
-			recognition.stop();
-			recognizing = false;
-			document.getElementById("procesar").innerHTML = "Escuchar";
-		}
-	}
 	</script>
 
-		<title> TRADUCTOR DE EMOCIONES </title> 
+		<title> EMOTRADUCTOR </title> 
 	</head>
 	<body>
 		<div class="container">
 			<br>
 			<div class="row">
 				<div class="col-sm-9">
-					<h2> TRADUCTOR DE EMOCIONES </h2>
+					<h2> EMOTRADUCTOR </h2>
 				</div>
 				<div class="col-sm-3">
 					<button type="button" class="btn btn-default botonGlyphicon" data-toggle="modal" data-target="#miModal"> <span class="glyphicon glyphicon-wrench"> </span> </button>
@@ -359,12 +320,11 @@
 				<div class="row">
 					
 					<div class="col-sm-6">
-						<div id="contenedorTraductor" class="contenedorTraductorEstilo">
+						<div id="contenedorTraductor" class="contenedorTraductorEstilo" onmouseover=cambiarBorde() onmouseout=cambiarBordeTransparente()>
 						<textarea class="textAreaEstilo" rows="8" id="textArea" placeholder="Introduzca aquí su texto..." maxlength="5000" onKeyUp="numCaracteres()"></textarea>
 						<div class="row">
-							<div class="col-sm-3" style="text-align: right;">
+							<div class="col-sm-3" style="text-align: left;">
 								<button type="button" class="btn btn-default" id="showkeyboard" onclick="javascript:mostrar()"><img style="height:16px; width:18px;" src="/static/img/teclado.png" alt="teclado"/></button>
-								<button type="button" class="btn btn-default" id="microfono"><img style="height:16px; width:18px;" src="/static/img/microfono.png" alt="microfono"/> </button>
 							</div>
 							<div id="numCaracteres" class="col-sm-8" style="text-align: right">
 							</div>
@@ -393,17 +353,11 @@
 					</center>
 				</div>
 			</div>
-			
-			<div class="example">
-			<textarea id="texto"></textarea>
-			<button onclick="procesar()" id="procesar">Escuchar</button>
-		</div>
-			
-			<div id="salida"></div>
 
 			<br>
-		
-		<div class="progress">
+			
+
+		<div style="margin-top: 18px" class="progress" >
 					<div class="progress-bar progress-bar bTristeza" id="barritaTristeza"> 
 						<span class="textoProgress textoCentrado" id="textoTristeza"></span>
 						<span class="textoProgress textoCentrado" id="imagenTristeza"></span>
@@ -428,8 +382,16 @@
 						<span class="textoProgress textoCentrado" id="textoTranquilo"></span>
 						<span class="textoProgress textoCentrado" id="imagenTranquilo"></span>
 					</div>
-				</div>
 		
+
+		</div>
+		
+		<div style="width: 100% !important; margin-top: -20px;">
+					<div style="width: 33.3% !important; text-align: left; font-weight: bolder;" class="col-sm-4"> 0 </div>
+					<div style="width: 33.3% !important; text-align: center; font-weight: bolder; " class="col-sm-4"> 50 </div>
+					<div style="width: 33.4% !important; text-align: right; font-weight: bolder;" class="col-sm-4"> 100 </div>
+				</div>	
+				
 		<!---------------------------------->
 		<div id="tecladoDiv" style="visibility: hidden; position: absolute; top: 320px; left: 100px;">
 			<div align=center id="filaNumeros" style="font:normal 8px/4px verdana;"></div>
@@ -440,7 +402,6 @@
 		</div>
 
 </div>
-		<!----------------------------------->
 		
 		
 		
@@ -450,7 +411,7 @@
 		
 	<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
-		<div class="modal-content" id="modalPersonalizado">
+		<div style="width:70%; text-align: center;" class="modal-content" id="modalPersonalizado">
 			<div class="modal-header">
 				<h4 class="modal-title" id="myModalLabel">Ajustes</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -458,31 +419,53 @@
 				</button>
 			</div>
 			 <!-- Modal Body -->
-            <div class="modal-body">
-                
-                    <h6> Color de las emociones:</h6>
-				<table>
-					<tr>
-						<th> <label>Tristeza:</label> </th>
-						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorTriste" name="colorTriste" type="color" value="#0000ff"></th>
-					</tr>
-					<tr>
-						<th> <label>Miedo:</label> </th>
-						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorMiedo" name="colorMiedo" type="color" value="#800080"></th>
-					</tr>
-					<tr>
-						<th> <label>Alegría:</label> </th>
-						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorAlegre" name="colorAlegre" type="color" value="#ffff00"></th>
-					</tr>
-					<tr>
-						<th> <label>Enfado:</label> </th>
-						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorEnfado" name="colorEnfado" type="color" value="#ff0000"></th>
-					</tr>
-					<tr>
-						<th> <label>Asco:</label> </th>
-						<th> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorAsco" name="colorAsco" type="color" value="#008000"></th>
-					</tr>
-				</table>
+            <div style="text-align:center;" class="modal-body">
+
+                <div  style="height: 21px; font-weight: bolder;">
+                	<h9> Color de las emociones:</h9>
+            	</div>	
+                <br>
+            	<center><table>
+            		<tr style="width: 150px">
+            			<td style="width: 80px;"> <label>Tristeza</label> </td>
+            		   	<td style="width: 50px;">
+            				<img  class="imgAjustes" src="/static/img/tristeza.png" alt="sad face"/>
+            			</td>
+            			<td style="width: 60px;"> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorTriste" name="colorTriste" type="color" value="#0000ff"></td>
+            		</tr>
+            		<tr>
+            			<td style="width: 80px;"> <label>Miedo</label> </th>
+            			<td style="width: 50px;">
+            				<img  class="imgAjustes" src="/static/img/miedo.png" alt="sad face"/>
+            			</td>
+            			<td style="width: 60px;"> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorMiedo" name="colorMiedo" type="color" value="#800080"></td>
+            			
+            		</tr>
+            		<tr>
+						<td style="width: 80px;"> <label>Alegría</label> </th>
+            			<td style="width: 50px;">
+            				<img  class="imgAjustes" src="/static/img/alegria.png" alt="sad face"/>
+            			</td>
+            			<td style="width: 60px;"> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorAlegre" name="colorAlegre" type="color" value="#ffff00"></td>
+            			
+            		</tr>
+            		<tr>
+            			<td style="width: 80px;"> <label>Enfado</label> </th>
+            			<td style="width: 50px;">
+            				<img  class="imgAjustes" src="/static/img/enfado.png" alt="sad face"/>
+            			</td>
+            			<td style="width: 60px;"> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorEnfado" name="colorEnfado" type="color" value="#ff0000"></td>
+            		</tr>
+            		<tr>
+            			<td style="width: 80px;"> <label>Asco</label> </th>
+            			<td style="width: 50px;">
+            				<img  class="imgAjustes" src="/static/img/asco.png" alt="sad face"/>
+            			</td>
+            			<td style="width: 60px;"> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorAsco" name="colorAsco" type="color" value="#008000"></td>
+            			
+            		</tr>
+            	</table></center>
+				
 				<hr>
 				<!--<h6> Posición de las emociones: </h6>
 				<div class="radio">
@@ -555,7 +538,7 @@
 		if(p==10 && i==0){
 			p=0;
 			i=1;
-			document.getElementById('filaNumeros').innerHTML=letras+"<input style='width:50px;height:50px;' alt='Borrar' type='Button' value=&laquo; onClick=aniadir('\b'); numCaracteres();>";
+			document.getElementById('filaNumeros').innerHTML=letras+"<input style='width:50px;height:50px;' alt='Borrar' type='Button' value=&laquo; onClick=aniadir('\b'); numCaracteres();>" + "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" onclick=mostrar()><span aria-hidden=\"true\">&times;</span>	</button>" ;
 			letras="";
 		}else if(p==10 && i != 0){
 			p=0;

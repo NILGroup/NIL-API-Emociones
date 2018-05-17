@@ -1,3 +1,4 @@
+
 from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
 from emociones import views
@@ -15,7 +16,7 @@ urlpatterns = [
 	url(r'^emociones/palabra/consensuadaEmo', views.PalabraConsensuada),
 	url(r'^emociones/palabra/mayoritariaEmo', views.PalabraMayoritaria),
 	url(r'^api/$', views.api),
-	#url(r'^/emociones/frase/mayoritariaEmo/$', views.FraseMayoritaria),
+	url(r'^emociones/frase/mayoritariaEmo', views.vista_fraseMayoritaria),
 	#url(r'^emociones/frase/consensuadaEmo/$', views.FraseConsensuada),
 	#url(r'^emociones/frase/gradosEmo/$', views.FraseGrados),
 ]
