@@ -9,7 +9,7 @@ Programa que se encarga de buscar una palabra en el servicio web y devolver la i
 """
 URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
 
-emocion = ["tristeza", "miedo", "alegria", "ira", "asco"] # lista de emociones con las que trabajamos
+emocion = ["Tristeza", "Miedo", "Alegria", "Enfado", "Asco"] # lista de emociones con las que trabajamos
 
 lematizador = Lematizador() # lematizador que utilizamos para buscar palabra
 
@@ -42,7 +42,7 @@ class InterpretePalabras():
 			grados = respuesta.json()
 			numeros = coger_grados(grados)
 		else:
-			numeros=["0","0","0","0","0"]
+			numeros=["1","1","1","1","1"]
 		return numeros
 
 	@staticmethod

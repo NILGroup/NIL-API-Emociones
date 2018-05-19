@@ -23,48 +23,77 @@ from django.http import HttpRequest
 
 from django.http import JsonResponse
 
+def vista_textoGrados(request):
+	if request.method=='POST':
+		texto = request.POST['texto']
+		grados, palabras = traducirTexto(texto)
+		data = {
+		'Tristeza' : grados[0],
+		'Miedo' : grados[1],
+		'Alegria': grados[2],
+		'Enfado' : grados[3],
+		'Asco' : grados[4]
+		}
+		return JsonResponse(data)
+	else:
+		return HttpResponse("Peticion no valida")
+
+def vista_textoConsensuada(request):
+	if request.method=='POST':
+		texto = request.POST['texto']
+		consensuada = consensuadaTexto(texto)
+		data = {
+		'consensuada' : consensuada
+		}
+		return JsonResponse(data)
+	else:
+		return HttpResponse("Peticion no valida")
+
+def vista_textoMayoritaria(request):
+	if request.method=='POST':
+		texto = request.POST['texto']
+		mayoritaria, grado = mayoritariaTexto(texto)
+		data = {
+		'emocion': mayoritaria,
+		'grado' : grado
+		}
+		return JsonResponse(data)
+	else:
+		return HttpResponse("Peticion no valida")
+
+def vista_fraseGrados(request):
+	if request.method=='POST':
+		frase = request.POST['frase']
+		grados, palabras, mayoritarias = gradosFrase(frase)
+		data = {
+		"Tristeza" : grados[0],
+		"Miedo": grados[1],
+		"Alegria": grados[2],
+		"Enfado": grados[3],
+		"Asco": grados[4]
+		}
+		return JsonResponse(data)
+	else:
+		return HttpResponse("Peticion no valida")
+
+def vista_fraseConsensuada(request):
+	if request.method=='POST':
+		frase = request.POST['frase']
+		consensuada = consensuadaFrase(frase)
+		data = {
+		'consensuada' : consensuada
+		}
+		return JsonResponse(data)
+	else:
+		return HttpResponse("Peticion no valida")
+
 def vista_fraseMayoritaria(request):
 	if request.method=='POST':
         	frase = request.POST['frase']
-        	grados,palabras,mayoritarias = traducirFrase(frase)
-		tristeza = 0
-		miedo = 0
-		alegria = 0
-		enfado = 0
-		asco = 0
-		for x in range(0,len(mayoritarias)):
-			tristeza = tristeza + float(mayoritarias[x][0])
-			miedo = miedo + float(mayoritarias[x][1])
-			alegria = alegria + float(mayoritarias[x][2])
-			enfado = enfado + float(mayoritarias[x][3])
-			asco = asco + float(mayoritarias[x][4])
-		if tristeza > miedo and tristeza > alegria and tristeza > enfado and tristeza > asco:
-			mayor = 'Tristeza'
-			grado = tristeza
-		elif miedo > tristeza and miedo > alegria and miedo > enfado and miedo > asco:
-			mayor = 'Miedo'
-			grado = miedo
-		elif alegria > tristeza and alegria > miedo and alegria > enfado and alegria > asco:
-			mayor = 'Alegría'
-			grado = alegria
-		elif enfado > tristeza and enfado > miedo and enfado > alegria and enfado > asco:
-			mayor = 'Enfado'
-			grado = enfado
-		elif asco > tristeza and asco > miedo and asco > alegria and asco > enfado:
-			mayor = 'Asco'
-			grado = asco
-		else:
-			mayor = 'No hay una mayoritaria'
-			grado = 0
-		
+        	mayoritaria,grado = mayoritariaFrase(frase)
+
         	data = {
-        	#   'tristeza': grados[0],
-        	#   'miedo' : grados[1],
-        	#   'alegria': grados[2],
-        	#   'enfado' : grados[3],
-        	#   'asco' : grados[4],
-            	'emociones': mayor, #[{'tristeza': grados[0]}, {'miedo': grados[1]} , {'alegria': grados[2]}, {'enfado': grados[3]}, {'asco' : grados[4]}],
-            	'palabras': palabras,
+        	'emocion': mayoritaria,
             	'grado' : grado
         	}
         	return JsonResponse(data)
@@ -75,7 +104,23 @@ def vista_fraseMayoritaria(request):
         	#+ grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] )
         	return HttpResponse("Peticion no valida")
 
-def traducirFrase(frase):
+def mayoritariaFrase(frase):
+	grados, palabras, mayoritarias = InterpreteFrases.emociones_frase(frase)
+	return InterpreteFrases.emocion_mayoritaria_frase(grados)
+
+def mayoritariaTexto(texto):
+	grados, palabras, mayoritarias = InterpreteTexto.emociones_texto(texto)
+	return InterpreteTexto.emocion_mayoritaria_texto(grados)
+
+def consensuadaFrase(frase):
+	grados, palabras, mayoritarias = InterpreteFrases.emociones_frase(frase)
+	return InterpreteFrases.emocion_consensuada_frases(grados)
+
+def consensuadaTexto(texto):
+	grados, palabras, mayoritarias = InterpreteTexto.emociones_texto(texto)
+	return InterpreteTexto.emocion_consensuada_texto(grados)
+
+def gradosFrase(frase):
 	return InterpreteFrases.emociones_frase(frase)
 
 def vista_porcentaje(request):
@@ -199,7 +244,7 @@ class ObtenerGrados(APIView):
                 raise Http404()
 
     def get_degrees(self,numeros):
-        emociones = ["Tristeza", "Miedo", "Alegría", "Ira", "Asco"]
+        emociones = ["Tristeza", "Miedo", "Alegría", "Enfado", "Asco"]
         numeros = numeros.split(",")
         numeros[0] = numeros[0].lstrip("[")
         numeros[4] = numeros[4].rstrip("]")
@@ -229,7 +274,7 @@ class ObtenerConsensuada(APIView):
                 raise Http404()
         
     def get(self,request,pk,format=None):
-        emociones = ["Tristeza", "Miedo", "Alegría", "Ira", "Asco"]
+        emociones = ["Tristeza", "Miedo", "Alegría", "Enfado", "Asco"]
         palabra = self.get_object(pk)
         porcentajes = palabra.grados
         numerosAux = ObtenerGrados()
@@ -251,7 +296,7 @@ class ObtenerMayoritaria(APIView):
                 raise Http404()
         
     def get(self,request,pk,format=None):
-        emociones = ["Tristeza", "Miedo", "Alegría", "Ira", "Asco"]
+        emociones = ["Tristeza", "Miedo", "Alegría", "Enfado", "Asco"]
         palabra = self.get_object(pk)
         porcentajes = palabra.grados
         numerosAux = ObtenerGrados()
@@ -294,7 +339,7 @@ def PalabraGrados(request):
                                 'Tristeza': grados[0],
 				'Miedo': grados[1],
 				'Alegria': grados[2],
-				'Ira': grados[3],
+				'Enfado': grados[3],
 				'Asco': grados[4]
                         }
                 return Response(respuesta)

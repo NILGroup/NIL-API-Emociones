@@ -217,7 +217,6 @@
             },
     		success: function(data,status){
     			//alert("Data: " +JSON.stringify(data) + "\nStatus: " + status);
-				
 				var info = document.getElementById("textArea").value;
 			    var texto = replaceAll(info, ".", "");
 			    texto = replaceAll(texto, ",", "");
@@ -232,12 +231,12 @@
 				var textoFinal = "";
 				var negrita = 0;
 				for(var o = 0; o <= array_texto.length - numEnters; o++){
-					negrita = 0;
 					var j = 0;
 					var encontrado = 0;
 					while(encontrado != 1 && j < data['solucion'].length){
 						if(array_texto[o].toLowerCase() == data['solucion'][j].toLowerCase()){
 							encontrado = 1;
+							negrita = 0;
 							emociones = data['solucion'][j+1];
 						}
 						j = j+3;
@@ -266,8 +265,7 @@
 							mostrar += "\nAsco";
 							negrita = 1;
 						}
-						//var mostrar = "Tristeza:" + emociones[0] + "\\nMiedo:" + emociones[1] + "\\nAlegría:" + emociones[2] + "\\nEnfado:" + emociones[3] + "\\nAsco:" + emociones[4];
-						//textoFinal = textoFinal + "<strong class=\"tooltip\"> <span class=\"tooltiptext\">Tooltip text</span>" + array_texto[o] + "</strong>";
+						
 						if(negrita == 1){
 							
 							textoFinal = textoFinal + "<strong> <span title=\"" + mostrar + "\">" + array_texto[o] +  "</span></strong>";
@@ -285,6 +283,7 @@
 
 		
 				$("#resultadoTexto").html(textoFinal);
+				$("#explicacionEmociones").html("Las palabras en <b>negrita</b> son las palabras emocionales. Sí posicionas el ratón sobre alguna de ellas conocerás las emociones asociadas a dicha palabra");
        
 		
 
@@ -303,14 +302,14 @@
 
 	</script>
 
-		<title> EMOTRADUCTOR </title> 
+		<title> EmoTraductor </title> 
 	</head>
 	<body>
 		<div class="container">
 			<br>
 			<div class="row">
 				<div class="col-sm-9">
-					<h2> EMOTRADUCTOR </h2>
+					<h2> EmoTraductor </h2>
 				</div>
 				<div class="col-sm-3">
 					<button type="button" class="btn btn-default botonGlyphicon" data-toggle="modal" data-target="#miModal"> <span class="glyphicon glyphicon-wrench"> </span> </button>
@@ -340,9 +339,12 @@
 				<div class="col-sm-6">
 						<p style="text-align: left">Escribe aquí el texto que desees traducir </p>
 				</div>
-				
+				<div class="col-sm-6">
+						<p id="explicacionEmociones" style="text-align: left"></p>
+				</div>
 			</div>
-			<div class="row">
+			
+			<div class="row" style="margin-top: -20px">
 				<div class="col-sm-6">
 					<br>
 					<center>
@@ -387,13 +389,14 @@
 		</div>
 		
 		<div style="width: 100% !important; margin-top: -20px;">
-					<div style="width: 33.3% !important; text-align: left; font-weight: bolder;" class="col-sm-4"> 0 </div>
-					<div style="width: 33.3% !important; text-align: center; font-weight: bolder; " class="col-sm-4"> 50 </div>
-					<div style="width: 33.4% !important; text-align: right; font-weight: bolder;" class="col-sm-4"> 100 </div>
+					<div style="width: 33.3% !important; text-align: left; font-weight: bolder; padding:0px; margin:0px;" class="col-sm-4"> 0 </div>
+					<div style="width: 33.3% !important; text-align: center; font-weight: bolder; padding:0px; margin:0px; " class="col-sm-4"> 50 </div>
+					<div style="width: 33.4% !important; text-align: right; font-weight: bolder; padding:0px; margin:0px;" class="col-sm-4"> 100 </div>
 				</div>	
 				
 		<!---------------------------------->
-		<div id="tecladoDiv" style="visibility: hidden; position: absolute; top: 320px; left: 100px;">
+		<div id="tecladoDiv" style="visibility: hidden; position: absolute; top: 65%; left: 55%;  transform: translate(-65%, -55%);
+    -webkit-transform: translate(-65%, -55%);">
 			<div align=center id="filaNumeros" style="font:normal 8px/4px verdana;"></div>
 			<div align=center id="fila1" style="font:normal 8px/4px verdana;"></div>
 			<div align=center id="fila2" style="font:normal 8px/4px verdana;"></div>
@@ -419,10 +422,10 @@
 				</button>
 			</div>
 			 <!-- Modal Body -->
-            <div style="text-align:center;" class="modal-body">
+            <div style="text-align:left;" class="modal-body">
 
                 <div  style="height: 21px; font-weight: bolder;">
-                	<h9> Color de las emociones:</h9>
+                	<h9> Personalizar el color de las emociones:</h9>
             	</div>	
                 <br>
             	<center><table>

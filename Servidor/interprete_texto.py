@@ -13,7 +13,7 @@ interpreta = InterpreteFrases() # nos permitira interpretar las frases
 secciona = SeccionadorFrases() # nos permitira seccionar las frases en subfrases y obtener sus tipos
 interpretaPalabra = InterpretePalabras()
 
-emociones = ["Tristeza", "Miedo", "Alegria", "Ira", "Asco"] # lista de emociones con las que trabajamos
+emociones = ["Tristeza", "Miedo", "Alegria", "Enfado", "Asco"] # lista de emociones con las que trabajamos
 
 def obtener_medias(grados,num_frases):
 	"""
@@ -26,7 +26,7 @@ def obtener_medias(grados,num_frases):
 			grados[i] = str(round(grados[i] / num_frases,2))
 		return grados
 	else:
-		return ["0","0","0","0","0"]
+		return ["1","1","1","1","1"]
 
 def actualizar_grados(emocion,contadores,grados,grado):
 	i = emociones.index(emocion)
@@ -108,7 +108,7 @@ class InterpreteTexto():
 			j = ind[1]
 			return [emociones[i],emociones[j]],porcent/2
 		else: # si no hay palabras emocionales, la frase es mayormente neutral
-			return [],"1"
+			return [],"0"
 
 	@staticmethod
 	def emocion_mayoritaria_texto(grados):
@@ -118,5 +118,8 @@ class InterpreteTexto():
 			if float(grados[i]) > mayor:
 				mayor = float(grados[i])
 				indice = i
-		return [emociones[indice]],str(mayor)
+		if mayor == 0:
+			return [], 0
+		else:
+			return [emociones[indice]],str(mayor)
 

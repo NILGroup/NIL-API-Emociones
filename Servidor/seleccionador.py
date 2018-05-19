@@ -63,7 +63,7 @@ class Seleccionador():
 			if (es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) == True):
 				palabras.append(palabra)
 				if (es_verbo(pos) == True):
-					tipos.append(2)
+					tipos.append(1)
 				else:
 					tipos.append(1)
 		return palabras,tipos

@@ -1,4 +1,4 @@
-/*!
+*!
  * Bootswatch v4.1.1
  * Homepage: https://bootswatch.com
  * Copyright 2012-2018 Thomas Park
@@ -6160,6 +6160,9 @@ button.close {
   background-color: #baf3a3 !important;
 }
 
+.servicioExtra {
+  background-color: #ec929a80 !important;
+}
 .bg-primary {
   background-color: #593196 !important;
 }

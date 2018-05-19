@@ -14,7 +14,7 @@ seleccionador_emocional = Seleccionador() # nos permitira encontrar las palabras
 
 URL = 'http://sesat.fdi.ucm.es/emociones/' # URL base del servicio web
 
-emociones = ["Tristeza", "Miedo", "Alegria", "Ira", "Asco"] # lista de emociones con las que trabajamos
+emociones = ["Tristeza", "Miedo", "Alegria", "Enfado", "Asco"] # lista de emociones con las que trabajamos
 
 def obtener_medias(grados,num_palabras):
 	"""
@@ -27,7 +27,7 @@ def obtener_medias(grados,num_palabras):
 			grados[i] = str(round(grados[i] / num_palabras,2))
 		return grados
 	else: # si no hay ninguna palabra emocional en la frase entonces esta es neutral
-		return ["0","0","0","0","0"]
+		return ["0","0","0","0","01"]
 
 def actualizar_grados_frase(actuales,nuevos,peso):
 	for i in range(len(actuales)):
@@ -75,7 +75,10 @@ class InterpreteFrases():
 					actualizar_grados_frase(emociones_frase,grados,tipos[i])
 					num_validas = num_validas + tipos[i]
 			emociones = obtener_medias(emociones_frase,num_validas)
-			return emociones,lista_palabras,mayoritarias
+			if emociones[0]== "1.0" and emociones[1]=="1.0" and emociones[2]=="1.0" and emociones[3]=="1.0" and emociones[4] =="1.0":
+				return ["0","0","0","0","0"], [],[]
+			else:
+				return emociones,lista_palabras,mayoritarias
 
 	@staticmethod
 	def emociones_mayoritaria_frase(frase):
@@ -84,7 +87,7 @@ class InterpreteFrases():
 		la emocion mayoritaria para cada una. Lleva un contador con el numero de apariciones
 		de cada emocion como mayoritarias. Devuelve la lista de mayoritarias y su porcentaje.
 		"""
-		palabras_dicc,palabras = procesador.procesar_frase(frase) # lista de palabras emocionales
+		palabras_dicc,palabras = seleccionador_emocional.seleccionar_palabras(frase) # lista de palabras emocionales
 		contadores = [0,0,0,0,0] # lista de contadores
 		grados = [0,0,0,0,0,0] # grados parciales
 		indices = [] # posiciones de la lista de emociones principal que se corresponden con las mayoritarias
@@ -113,6 +116,8 @@ class InterpreteFrases():
 
 	@staticmethod
 	def emocion_mayoritaria_frase(grados):
+		if grados[0] == 1:
+			return [],"1"
 		mayor = -1
 		indice = []
 		for i in range(5):
@@ -125,10 +130,12 @@ class InterpreteFrases():
 			return [emociones[indice[0]]],str(mayor)
 		elif len(indice) == 2:
 			return [emociones[indice[0]],emociones[indice[1]]],str(mayor)
+		else:
+			return [],"0"
 
 	@staticmethod
 	def emocion_consensuada_frase(frase):
-		palabras = procesador.procesar_frase(frase)
+		palabras = seleccionador_emocional.seleccionar_palabras(frase)
 		contadores = [0,0,0,0,0]
 		mayor = -1
 		pocentaje_frase = 0
@@ -144,3 +151,9 @@ class InterpreteFrases():
 			return [emociones[i]],pocentaje_frase
 		else:
 			return [],"1"
+	@staticmethod
+	def emocion_consensuada_frases(grados):
+		if "5" in grados:
+			return emociones[grados.index("5")]
+		else:
+			return "No hay consensuada"
