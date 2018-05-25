@@ -34,7 +34,7 @@ def interpretar_frase(frase):
 
 def interpretar_texto(texto):
 	interpreta = InterpreteTexto()
-	grados,palabras = interpreta.emociones_texto(texto)
+	grados,palabras,may = interpreta.emociones_texto(texto)
 	_salida.mostrar_palabras(palabras)
 	_salida.mostrar_grados(grados)
 	if len(palabras) > 0:

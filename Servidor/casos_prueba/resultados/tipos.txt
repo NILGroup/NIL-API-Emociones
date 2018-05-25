@@ -1,10 +1,10 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
-['ido', 'parque', 'mañana', 'ido', 'Sabes', 'visto', 'Vaya', 'sorpresa', 'sabía', 'estaría', 'quedado', 'flipando', 'Llevaba', 'verle', 'Buenos', 'días', 'dijo', 'genial']
-Grado de tristeza: 1.06
-Grado de miedo: 1.16
-Grado de alegria: 1.9
-Grado de ira: 1.04
-Grado de asco: 1.04
-La mayoritaria es Alegria con un grado 1.9
+['ido', 'parque', 'mañana', 'ido', 'Sabes', 'visto', 'Vaya', 'sorpresa', 'sabía', 'estaría', 'quedado', 'flipando', 'Llevaba', 'verle', 'Buenos', 'días', 'dijo']
+Grado de tristeza: 0.38
+Grado de miedo: 0.48
+Grado de alegria: 1.17
+Grado de ira: 0.35
+Grado de asco: 0.35
+La mayoritaria es Alegria con un grado 1.17
 -----------------------------------------------------------

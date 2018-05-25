@@ -1,10 +1,10 @@
 -----------------------------------------------------------
 Lista de palabras emocionales:
 ['Expertos', 'recomiendan', 'declarar', 'país', 'libre', 'malaria', 'grupo', 'expertos', 'recomendó', 'declarar', 'país', 'libre', 'malaria', 'verificar', 'situación', 'enfermedad', 'terreno', 'semanas', 'informó', 'domingo', 'cartera', 'sanitaria', 'explicó', 'través', 'comunicado', 'expertos', 'comprobaron', 'país', 'suramericano', 'registran', 'casos', 'transmisión', 'local', 'malaria', 'últimos', 'años', 'sistema', 'sanitario', 'prevenir', 'eventuales', 'casos', 'enfermedad', 'recomendación', 'cierra', 'esfuerzo', 'sistema', 'sanitario', 'paraguayo', 'últimos', 'años', '2012', 'registra', 'casos', 'autóctonos', 'enfermedad', 'gran', 'logro', 'nacional', 'posibilita', 'privilegiado', 'sitial', 'primer', 'país', 'sudamericano', 'erradicar', 'enfermedad', 'indicaron', 'malaria', 'pasó', 'historia', 'registros', 'médicos', 'país', '2011', 'último', 'caso', 'registrado', 'datos', 'presentados', 'septiembre', 'fundó', 'raíz', 'brote', 'malaria', 'sufrió', '1957', '90', 'personas', 'territorio', 'país', 'contrajeran', 'enfermedad', 'paludismo', 'malaria', 'enfermedad', 'letal', 'causada', 'parásitos', 'género', 'plasmodium', 'transmiten', 'ser', 'humano', 'picadura', 'mosquitos', 'infectados', 'paludismo', 'mantiene', 'presente', 'países', 'calcula', '2016', 'fallecidos', 'mundo', 'millones', 'casos', 'datos']
-Grado de tristeza: 2.53
-Grado de miedo: 2.59
-Grado de alegria: 2.28
-Grado de ira: 2.0
-Grado de asco: 1.84
-La mayoritaria es Miedo con un grado 2.59
+Grado de tristeza: 2.63
+Grado de miedo: 2.69
+Grado de alegria: 2.37
+Grado de ira: 2.02
+Grado de asco: 1.87
+La mayoritaria es Miedo con un grado 2.69
 -----------------------------------------------------------
