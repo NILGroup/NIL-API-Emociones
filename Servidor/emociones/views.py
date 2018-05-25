@@ -126,7 +126,7 @@ def gradosFrase(frase):
 def vista_porcentaje(request):
 	if request.method=='POST':
 		texto = request.POST['porcentajes']
-		solucion = traducirTextoAPorcentajes(texto)
+		solucion = traducirTextoAPorcentajes(texto.lower())
 		data = {
 		#	'tristeza': grados[0],
 		#	'miedo' : grados[1],
@@ -149,7 +149,7 @@ def traducirTextoAPorcentajes(texto):
 def vista_texto(request):
 	if request.method=='POST':
 		texto = request.POST['a']
-		grados, palabras = traducirTexto(texto)
+		grados, palabras = traducirTexto(texto.lower())
 		data = {
 		#	'tristeza': grados[0],
 		#	'miedo' : grados[1],

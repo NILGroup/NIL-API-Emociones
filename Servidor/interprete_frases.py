@@ -27,7 +27,7 @@ def obtener_medias(grados,num_palabras):
 			grados[i] = str(round(grados[i] / num_palabras,2))
 		return grados
 	else: # si no hay ninguna palabra emocional en la frase entonces esta es neutral
-		return ["0","0","0","0","01"]
+		return ["0","0","0","0","0"]
 
 def actualizar_grados_frase(actuales,nuevos,peso):
 	for i in range(len(actuales)):
@@ -51,6 +51,12 @@ def calcular_mayoritaria(contadores,grados):
 				indices.append(i)
 	return indices,mayor
 
+def es_emocional(grados):
+	for i in range(len(grados)):
+		if float(grados[i]) > 2.5:
+			return True
+	return False
+
 class InterpreteFrases():
 
 	@staticmethod
@@ -72,8 +78,9 @@ class InterpreteFrases():
 				grados = interprete.interpretar_grados(lista_palabras[i])
 				mayoritarias.append(grados)
 				if len(grados) > 0:
-					actualizar_grados_frase(emociones_frase,grados,tipos[i])
-					num_validas = num_validas + tipos[i]
+					if es_emocional(grados):
+						actualizar_grados_frase(emociones_frase,grados,tipos[i])
+						num_validas = num_validas + tipos[i]
 			emociones = obtener_medias(emociones_frase,num_validas)
 			if emociones[0]== "1.0" and emociones[1]=="1.0" and emociones[2]=="1.0" and emociones[3]=="1.0" and emociones[4] =="1.0":
 				return ["0","0","0","0","0"], [],[]

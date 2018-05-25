@@ -74,8 +74,6 @@
 		$('#enviarTexto').click(function() {
 			console.log("enviarTexto");
             var a=$('#textArea').val();
-			
-			a = replaceAll(a, "\n", " signoEnter ");
             console.log(a);
             $.ajax({
               	url:"http://sesat.fdi.ucm.es/textosGuay/",
@@ -103,7 +101,7 @@
                             totalGrados += parseInt(data['emociones'][i]);
                         }
                     }
-					if(tristeza >= 2.50){
+					if(tristeza > 2.50){
                        	var imgTristeza = $('<img  class="img" src="/static/img/tristeza.png" alt="sad face"/>');
                        	$('#textoTristeza').html('');
                        	$('#imagenTristeza').html('');
@@ -114,7 +112,7 @@
                         var tristezaEstilo = "width:" + 0 + "%; background-color:" + colorTriste + ";";
 					}
 
-                    if(miedo >= 2.50){
+                    if(miedo > 2.50){
                        	var imgMiedo = $('<img  class="img" src="/static/img/miedo.png" alt="scary face"/>');
                        	$('#textoMiedo').html('');
                        	$('#imagenMiedo').html('');
@@ -126,7 +124,7 @@
                         var miedoEstilo = "width:" + 0 + "%; backgroung-color:" + colorMiedo + ";";
                 	}
 
-					if(alegria >= 2.50){
+					if(alegria > 2.50){
                        	var imgAlegria = $('<img class="img" src="/static/img/alegria.png" alt="happy face"/>');
                       	$('#textoAlegria').html('');
                        	$('#imagenAlegria').html('');
@@ -138,7 +136,7 @@
                         var alegriaEstilo = "width:" + 0 + "%; background-color:" + colorAlegre + ";";
                     }
 
-                    if(enfado >= 2.50){
+                    if(enfado > 2.50){
                        	var imgEnfado = $('<img class="img" src="/static/img/enfado.png" alt="angry face"/>');
                        	$('#textoEnfado').html('');
                        	$('#imagenEnfado').html('');
@@ -149,7 +147,7 @@
                     else{
                        	var enfadoEstilo = "width:" + 0 + "%; background-color:" + colorEnfado + ";";
                     }
-					if(asco >= 2.50){
+					if(asco > 2.50){
                       	var imgAsco = $('<img  class="img" src="/static/img/asco.png" alt="dislike face"/>');
                     	$('#textoAsco').html('');
                     	$('#imagenAsco').html('');
@@ -180,7 +178,7 @@
 	            	document.getElementById("barritaAsco").style = ascoEstilo;
 					document.getElementById("barritaTranquilo").style = tranquiloEstilo;
 
-					escribirResultado(data['emociones'])
+					escribirResultado()
 				},
 				error: function(request, status, errorThrown){
 					alert(request);
@@ -206,7 +204,7 @@
 		return contador;
 	}
 
-	function escribirResultado(arrayEmociones){
+	function escribirResultado(){
 		let colorTriste = document.getElementById("colorTriste").value;
 		let colorMiedo = document.getElementById("colorMiedo").value;
 		let colorAlegre = document.getElementById("colorAlegre").value;
@@ -216,7 +214,7 @@
 		var texto = a.toLowerCase();
 		var array_texto = texto.split(" ");
 		var textoFinal = "";
-		a = replaceAll(a, "\n", " signoEnter ");
+		
 		$.ajax({
 									
 			url:"http://sesat.fdi.ucm.es/porcentajesPalabras/",
@@ -262,23 +260,23 @@
 					if(encontrado == 1){
 
 						var mostrar = "";
-						if(emociones[0] >= 2.5 && arrayEmociones[0]>= 2.5){
+						if(emociones[0] >= 2.5){
 							mostrar += "\nTristeza";
 							negrita = 1;
 						}
-						if(emociones[1] >= 2.5 && arrayEmociones[1]>= 2.5){
+						if(emociones[1] >= 2.5){
 							mostrar += "\nMiedo";
 							negrita = 1;
 						}
-						if(emociones[2] >= 2.5 && arrayEmociones[2]>= 2.5){
+						if(emociones[2] >= 2.5){
 							mostrar += "\nAlegría";
 							negrita = 1;
 						}
-						if(emociones[3] >= 2.5 && arrayEmociones[3]>= 2.5){
+						if(emociones[3] >= 2.5){
 							mostrar += "\nEnfado";
 							negrita = 1;
-						} 
-						if(emociones[4] >= 2.5 && arrayEmociones[4]>= 2.5){
+						}
+						if(emociones[4] >= 2.5){
 							mostrar += "\nAsco";
 							negrita = 1;
 						}
@@ -304,9 +302,9 @@
 			    textoAEscribir = replaceAll(textoAEscribir, " signoExclamacionCerrar", "!");
 			    textoAEscribir = replaceAll(textoAEscribir, "signoInterrogacionAbrir ", "¿");
 			    textoAEscribir = replaceAll(textoAEscribir, " signoInterrogacionCerrar", "?");
-				textoAEscribir = replaceAll(textoAEscribir, " signoEnter", "\n");
+				textoAEscribir = replaceAll(textoAEscribir, "signoEnter", "\n");
 				$("#resultadoTexto").html(textoAEscribir);
-				$("#explicacionEmociones").html("Las palabras en <b>negrita</b> son las que determinan las emociones del texto. Sí posicionas el ratón sobre alguna de ellas conocerás las emociones asociadas a dicha palabra");
+				$("#explicacionEmociones").html("Las palabras en <b>negrita</b> son las palabras emocionales. Sí posicionas el ratón sobre alguna de ellas conocerás las emociones asociadas a dicha palabra");
        
 		
 
@@ -418,8 +416,8 @@
 				</div>	
 				
 		<!---------------------------------->
-		<div id="tecladoDiv" style="visibility: hidden; position: absolute; top: 75%; left: 57%;  transform: translate(-65%, -55%);
-    -webkit-transform: translate(-65%, -55%); width: 50%;">
+		<div id="tecladoDiv" style="visibility: hidden; position: absolute; top: 75%; left: 63%;  transform: translate(-65%, -55%);
+    -webkit-transform: translate(-65%, -55%); width: 80%;">
 			<div align=center id="filaNumeros" style="font:normal 8px/4px verdana;"></div>
 			<div align=center id="fila1" style="font:normal 8px/4px verdana;"></div>
 			<div align=center id="fila2" style="font:normal 8px/4px verdana;"></div>
@@ -558,9 +556,8 @@
 	var letras="";
 	var p=0;
 	var i = 0;
-	for (a=0;a<=caracteres.length;a++){
-		if(a != caracteres.length)
-			letras=letras+"<input style='width:50px; height:50px;' type='Button' value="+caracteres[a]+" onclick=\"aniadir('"+caracteres[a]+"'); numCaracteres ();\">&nbsp;";
+	for (a=0;a<caracteres.length;a++){
+		letras=letras+"<input style='width:50px; height:50px;' type='Button' value="+caracteres[a]+" onclick=\"aniadir('"+caracteres[a]+"'); numCaracteres ();\">&nbsp;";
 		p=p+1;
 		if(p==10 && i==0){
 			p=0;
