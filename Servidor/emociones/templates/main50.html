@@ -1,0 +1,583 @@
+{% load staticfiles %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="/static/css/estiloBarra.css">
+		<link rel="stylesheet" href="/static/css/estiloBotones.css">
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/static/css/estiloTeclado.css">
+		
+
+
+		<!--<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/jquery-3.2.1.slim.min.js"></script>
+		<script src="/static/js/popper.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/jquery-3.1.1.min.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
+		<!--<script src="/static/js/jquery-3.1.1.min.js"> </script>-->
+		<script src="/static/js/DjangoAjax.js"></script>
+		
+		
+		<!--<script src="/static/js/jquery-1.2.6.min.js"></script>-->
+		<!--<script src="/static/js/jquery-ui-personalized-1.5.2.min.js"></script>-->
+		<!--<script src="/static/js/jquery-fieldselection.js"></script>-->
+		<!--<script src="/static/js/vkeyboard.js"></script>-->
+
+	<script type=text/javascript>
+
+	function cambiarBorde(){
+		document.getElementById("contenedorTraductor").style.borderColor = "blue";
+	}
+	function cambiarBordeTransparente(){
+		document.getElementById("contenedorTraductor").style.borderColor = "#ccc";
+	}
+	
+	function numCaracteres(){
+		let cadena = document.getElementById("textArea").value;
+		let caracteres = cadena.length;
+		$('#numCaracteres').html(caracteres);
+		$('#numCaracteres').append("/5000");
+		
+	}
+	
+	function cambiarcolor(){
+		let colorTriste = document.getElementById("colorTriste").value;
+		let colorMiedo = document.getElementById("colorMiedo").value;
+		let colorAlegre = document.getElementById("colorAlegre").value;
+		let colorEnfado = document.getElementById("colorEnfado").value;
+		let colorAsco = document.getElementById("colorAsco").value;
+		
+		
+		//alert("Alegre: " + colorAlegre + "\nTriste: " + colorTriste + "\nMiedo: " + colorMiedo + "\nEnfado: " + colorEnfado + "\nAsco: " + colorAsco);
+		
+		document.getElementById("barritaTristeza").style.backgroundColor = colorTriste;
+		document.getElementById("barritaMiedo").style.backgroundColor = colorMiedo;
+		document.getElementById("barritaAlegria").style.backgroundColor = colorAlegre;
+		document.getElementById("barritaEnfado").style.backgroundColor = colorEnfado;
+		document.getElementById("barritaAsco").style.backgroundColor = colorAsco;
+
+		
+		$('#miModal').hide();
+		$('.modal-backdrop').hide();
+	}
+	
+	$(document).ready(function() {
+		$('#enviarTexto').click(function() {
+			console.log("enviarTexto");
+            var a=$('#textArea').val();
+			
+			a = replaceAll(a, "\n", " signoEnter ");
+            console.log(a);
+            $.ajax({
+              	url:"http://sesat.fdi.ucm.es/textosGuay/",
+                method: "POST",
+                headers: {'X-CSRFToken': '{{ csrf_token }}'},
+                data: {
+                    a: a
+                },
+                success: function(data,status){
+                  	//alert("Data: " +JSON.stringify( data) + "\nStatus: " + status);
+					/*$("#salida").html(JSON.stringify(data));  /*Esto mostrará todos los datos*/
+    	            var tristeza = data['emociones'][0];
+            	    var miedo = data['emociones'][1];
+                	var alegria = data['emociones'][2];
+                	var enfado = data['emociones'][3];
+                  	var asco = data['emociones'][4];
+                   	var totalGrados = 0;
+					let colorTriste = document.getElementById("colorTriste").value;
+					let colorMiedo = document.getElementById("colorMiedo").value;
+					let colorAlegre = document.getElementById("colorAlegre").value;
+					let colorEnfado = document.getElementById("colorEnfado").value;
+					let colorAsco = document.getElementById("colorAsco").value;
+                   	for(var i = 0; i < data['emociones'].length; i++){
+                       	if(data['emociones'][i] > 2.50){
+                            totalGrados += parseInt(data['emociones'][i]);
+                        }
+                    }
+					if(tristeza >= 2.50){
+                       	var imgTristeza = $('<img  class="img" src="/static/img/tristeza.png" alt="sad face"/>');
+                       	$('#textoTristeza').html('');
+                       	$('#imagenTristeza').html('');
+                       	$('#textoTristeza').html("Tristeza");
+                       	$('#imagenTristeza').append(imgTristeza);
+                       	var tristezaEstilo = "width:" + parseInt(tristeza*100)/totalGrados + "%; background-color:" + colorTriste +";";
+                    } else{
+                        var tristezaEstilo = "width:" + 0 + "%; background-color:" + colorTriste + ";";
+					}
+
+                    if(miedo >= 2.50){
+                       	var imgMiedo = $('<img  class="img" src="/static/img/miedo.png" alt="scary face"/>');
+                       	$('#textoMiedo').html('');
+                       	$('#imagenMiedo').html('');
+                       	$('#textoMiedo').html('Miedo');
+                       	$('#imagenMiedo').append(imgMiedo);
+                        var miedoEstilo = "width:" +  parseInt(miedo*100)/totalGrados + "%; background-color:" + colorMiedo + ";";
+                    }
+                    else{
+                        var miedoEstilo = "width:" + 0 + "%; backgroung-color:" + colorMiedo + ";";
+                	}
+
+					if(alegria >= 2.50){
+                       	var imgAlegria = $('<img class="img" src="/static/img/alegria.png" alt="happy face"/>');
+                      	$('#textoAlegria').html('');
+                       	$('#imagenAlegria').html('');
+                       	$('#textoAlegria').html('Alegria');
+                       	$('#imagenAlegria').append(imgAlegria);
+                       	var alegriaEstilo = "width:" + parseInt(alegria*100)/totalGrados + "%; background-color:" + colorAlegre + ";";
+                    }
+                    else{
+                        var alegriaEstilo = "width:" + 0 + "%; background-color:" + colorAlegre + ";";
+                    }
+
+                    if(enfado >= 2.50){
+                       	var imgEnfado = $('<img class="img" src="/static/img/enfado.png" alt="angry face"/>');
+                       	$('#textoEnfado').html('');
+                       	$('#imagenEnfado').html('');
+                       	$('#textoEnfado').html('Enfado');
+                       	$('#imagenEnfado').append(imgEnfado);
+                       	var enfadoEstilo = "width:" + parseInt(enfado*100)/totalGrados + "%; background-color:" + colorEnfado + ";";
+                    }
+                    else{
+                       	var enfadoEstilo = "width:" + 0 + "%; background-color:" + colorEnfado + ";";
+                    }
+					if(asco >= 2.50){
+                      	var imgAsco = $('<img  class="img" src="/static/img/asco.png" alt="dislike face"/>');
+                    	$('#textoAsco').html('');
+                    	$('#imagenAsco').html('');
+                    	$('#textoAsco').html('Asco');
+                    	$('#imagenAsco').append(imgAsco);
+                    	var ascoEstilo = "width:" + parseInt(asco*100)/totalGrados + "%; background-color:" + colorAsco + ";";
+                	}
+                	else{
+                    	var ascoEstilo = "width:" + 0 + "%; background-color:" + colorAsco + ";";
+                	}
+
+                	if(tristeza <= 2.5 && miedo <= 2.5 && alegria <= 2.5 && enfado <= 2.5 && asco <= 2.5){
+            			var imgTranquilo = $('<img class="img" src="/static/img/tranquilo.png" alt "normal-face"/>');
+                        $('#textoTranquilo').html('');
+						$('#imagenTranquilo').html('');
+						$('#textoTranquilo').html('Vaya.. parece que esta frase no tiene emociones');
+						$('#imagenTranquilo').append(imgTranquilo);
+						var tranquiloEstilo = "width:100%";
+					}	
+					else {
+						var tranquiloEstilo = "width:0%";
+					}
+				
+	            	document.getElementById("barritaTristeza").style = tristezaEstilo;
+	            	document.getElementById("barritaMiedo").style = miedoEstilo;
+	            	document.getElementById("barritaAlegria").style = alegriaEstilo;
+	            	document.getElementById("barritaEnfado").style = enfadoEstilo;
+	            	document.getElementById("barritaAsco").style = ascoEstilo;
+					document.getElementById("barritaTranquilo").style = tranquiloEstilo;
+
+					escribirResultado(data['emociones'])
+				},
+				error: function(request, status, errorThrown){
+					alert(request);
+                    alert(request.responseText);
+                    alert(status);
+                    alert(errorThrown);
+                },
+           	});
+		});
+	});
+
+	function replaceAll( text, busca, reemplaza ){
+		while (text.toString().indexOf(busca) != -1)
+      		text = text.toString().replace(busca,reemplaza);
+  		return text;
+  	}
+	
+	function cuantasVecesAparece(cadena, caracter){
+		var contador = 0;
+			for(var i = 0; i < cadena.length; i++) {
+				if (cadena[i].toLowerCase() === caracter) contador++;
+		}
+		return contador;
+	}
+
+	function escribirResultado(arrayEmociones){
+		let colorTriste = document.getElementById("colorTriste").value;
+		let colorMiedo = document.getElementById("colorMiedo").value;
+		let colorAlegre = document.getElementById("colorAlegre").value;
+		let colorEnfado = document.getElementById("colorEnfado").value;
+		let colorAsco = document.getElementById("colorAsco").value;
+		var a=$('#textArea').val();
+		var texto = a.toLowerCase();
+		var array_texto = texto.split(" ");
+		var textoFinal = "";
+		a = replaceAll(a, "\n", " signoEnter ");
+		$.ajax({
+									
+			url:"http://sesat.fdi.ucm.es/porcentajesPalabras/",
+            method: "POST",
+            headers: {'X-CSRFToken': '{{ csrf_token }}'},
+            data: {
+                    porcentajes: a
+            },
+    		success: function(data,status){
+    			//alert("Data: " +JSON.stringify(data) + "\nStatus: " + status);
+				var info = document.getElementById("textArea").value;
+				var contarCaracteres = 0;
+				contarCaracteres += cuantasVecesAparece(info, ".");
+				contarCaracteres += cuantasVecesAparece(info, ",");
+				contarCaracteres += cuantasVecesAparece(info, "¡");
+				contarCaracteres += cuantasVecesAparece(info, "!");
+				contarCaracteres += cuantasVecesAparece(info, "¿");
+				contarCaracteres += cuantasVecesAparece(info, "?");
+				contarCaracteres += cuantasVecesAparece(info, "\n");
+			    var texto = replaceAll(info, ".", " signoPunto");
+			    texto = replaceAll(texto, ",", " signoComa ");
+			    texto = replaceAll(texto, "¡", " signoExclamacionAbrir ");
+			    texto = replaceAll(texto, "!", " signoExclamacionCerrar ");
+			    texto = replaceAll(texto, "¿", " signoInterrogacionAbrir ");
+			    texto = replaceAll(texto, "?", " signoInterrogacionCerrar ");
+				texto = replaceAll(texto, "\n", " signoEnter ");
+				var array_texto = texto.split(" ");
+				var textoFinal = "";
+				var negrita = 0;
+				for(var o = 0; o < array_texto.length; o++){
+					var j = 0;
+					var encontrado = 0;
+					while(encontrado != 1 && j < data['solucion'].length){
+						if(array_texto[o].toLowerCase() == data['solucion'][j].toLowerCase()){
+							
+							encontrado = 1;
+							negrita = 0;
+							emociones = data['solucion'][j+1];
+						}
+						j = j+3;
+					}
+		
+					if(encontrado == 1){
+
+						var mostrar = "";
+						if(emociones[0] >= 2.5 && arrayEmociones[0]>= 2.5){
+							mostrar += "\nTristeza";
+							negrita = 1;
+						}
+						if(emociones[1] >= 2.5 && arrayEmociones[1]>= 2.5){
+							mostrar += "\nMiedo";
+							negrita = 1;
+						}
+						if(emociones[2] >= 2.5 && arrayEmociones[2]>= 2.5){
+							mostrar += "\nAlegría";
+							negrita = 1;
+						}
+						if(emociones[3] >= 2.5 && arrayEmociones[3]>= 2.5){
+							mostrar += "\nEnfado";
+							negrita = 1;
+						} 
+						if(emociones[4] >= 2.5 && arrayEmociones[4]>= 2.5){
+							mostrar += "\nAsco";
+							negrita = 1;
+						}
+						
+						if(negrita == 1){
+							
+							textoFinal = textoFinal + "<strong> <span title=\"" + mostrar + "\">" + array_texto[o] +  "</span></strong>";
+						}
+						else {
+							
+							textoFinal = textoFinal +  " " + array_texto[o];
+						}
+            		}
+					else {
+						
+						textoFinal = textoFinal +  " " + array_texto[o];
+					}
+				}							
+
+				var textoAEscribir = replaceAll(textoFinal, " signoPunto", ".");
+			    textoAEscribir = replaceAll(textoAEscribir, " signoComa", ",");
+			    textoAEscribir = replaceAll(textoAEscribir, "signoExclamacionAbrir ", "¡");
+			    textoAEscribir = replaceAll(textoAEscribir, " signoExclamacionCerrar", "!");
+			    textoAEscribir = replaceAll(textoAEscribir, "signoInterrogacionAbrir ", "¿");
+			    textoAEscribir = replaceAll(textoAEscribir, " signoInterrogacionCerrar", "?");
+				textoAEscribir = replaceAll(textoAEscribir, " signoEnter", "\n");
+				$("#resultadoTexto").html(textoAEscribir);
+				$("#explicacionEmociones").html("Las palabras en <b>negrita</b> son las que determinan las emociones del texto. Sí posicionas el ratón sobre alguna de ellas conocerás las emociones asociadas a dicha palabra");
+       
+		
+
+    		},
+	    	error: function(request, status, errorThrown) {
+	            	alert(request);
+					alert(request.responseText);
+	            	alert(status);
+	            	alert(errorThrown);
+			},
+		});
+		
+
+       	
+	}
+
+	</script>
+
+		<title> EmoTraductor </title> 
+	</head>
+	<body>
+		<div class="container">
+			<br>
+			<div class="row">
+				<div class="col-sm-9">
+					<h2> EmoTraductor </h2>
+				</div>
+				<div class="col-sm-3">
+					<button type="button" class="btn btn-default botonGlyphicon" data-toggle="modal" data-target="#miModal"> <span class="glyphicon glyphicon-wrench"> </span> </button>
+				</div>
+			</div>
+			
+				<div class="row">
+					
+					<div class="col-sm-6">
+						<div id="contenedorTraductor" class="contenedorTraductorEstilo" onmouseover=cambiarBorde() onmouseout=cambiarBordeTransparente()>
+						<textarea class="textAreaEstilo" rows="8" id="textArea" placeholder="Introduzca aquí su texto..." maxlength="5000" onKeyUp="numCaracteres()"></textarea>
+						<div class="row">
+							<div class="col-sm-3" style="text-align: left;">
+								<button type="button" class="btn btn-default" id="showkeyboard" onclick="javascript:mostrar()"><img style="height:16px; width:18px;" src="/static/img/teclado.png" alt="teclado"/></button>
+							</div>
+							<div id="numCaracteres" class="col-sm-8" style="text-align: right">
+							</div>
+						</div>
+					</div>
+				</div>
+					<div class="col-sm-6">
+						<div class="divRespuesta" id="resultadoTexto" disabled="true"> </div>
+						<br>
+					</div>
+				</div>
+			<div class="row" style="margin-top: -20px">
+				<div class="col-sm-6">
+						<p style="text-align: left">Escribe aquí el texto que desees traducir </p>
+				</div>
+				<div class="col-sm-6">
+						<p id="explicacionEmociones" style="text-align: left"></p>
+				</div>
+			</div>
+			
+			<div class="row" style="margin-top: -20px">
+				<div class="col-sm-6">
+					<br>
+					<center>
+							<!--<button type="button" class="btn btn-dafult" id="enviarTexto">Enviar nuevo </button>	
+							<button type="button" class="btn btn-dafult" id="btn2">Enviar nuevo </button>	-->
+							<button type="button" class="btn btn-default" id="enviarTexto">Traducir</button>
+						
+					</center>
+				</div>
+			</div>
+
+			<br>
+			
+
+		<div style="margin-top: 18px" class="progress" >
+					<div class="progress-bar progress-bar bTristeza" id="barritaTristeza"> 
+						<span class="textoProgress textoCentrado" id="textoTristeza"></span>
+						<span class="textoProgress textoCentrado" id="imagenTristeza"></span>
+					</div>
+					<div class="progress-bar progress-bar bMiedo" id="barritaMiedo"> 
+						<span class="textoProgress textoCentrado" id="textoMiedo"></span>
+						<span class="textoProgress textoCentrado" id="imagenMiedo"></span>
+					</div>
+					<div class="progress-bar progress-bar bAlegria" id="barritaAlegria"> 
+						<span class="textoProgress textoCentrado" id="textoAlegria"></span>
+						<span class="textoProgress textoCentrado" id="imagenAlegria"></span>
+					</div>
+					<div class="progress-bar progress-bar bEnfado" id="barritaEnfado"> 
+						<span class="textoProgress textoCentrado" id="textoEnfado"></span>
+						<span class="textoProgress textoCentrado" id="imagenEnfado"></span>
+					</div>
+					<div class="progress-bar progress-bar bAsco" id="barritaAsco"> 
+						<span class="textoProgress textoCentrado" id="textoAsco"></span>
+						<span class="textoProgress textoCentrado" id="imagenAsco"></span>
+					</div>
+					<div class="progress-bar progress-bar bTranquilo" id="barritaTranquilo">
+						<span class="textoProgress textoCentrado" id="textoTranquilo"></span>
+						<span class="textoProgress textoCentrado" id="imagenTranquilo"></span>
+					</div>
+		
+
+		</div>
+		
+		<div style="width: 100% !important; margin-top: -20px;">
+					<div style="width: 33.3% !important; text-align: left; font-weight: bolder; padding:0px; margin:0px;" class="col-sm-4"> 0 </div>
+					<div style="width: 33.3% !important; text-align: center; font-weight: bolder; padding:0px; margin:0px; " class="col-sm-4"> 50 </div>
+					<div style="width: 33.4% !important; text-align: right; font-weight: bolder; padding:0px; margin:0px;" class="col-sm-4"> 100 </div>
+				</div>	
+				
+		<!---------------------------------->
+		<div id="tecladoDiv" style="visibility: hidden; position: absolute; top: 75%; left: 57%;  transform: translate(-65%, -55%);
+    -webkit-transform: translate(-65%, -55%); width: 50%;">
+			<div align=center id="filaNumeros" style="font:normal 8px/4px verdana;"></div>
+			<div align=center id="fila1" style="font:normal 8px/4px verdana;"></div>
+			<div align=center id="fila2" style="font:normal 8px/4px verdana;"></div>
+			<div align=center id="fila3" style="font:normal 8px/4px verdana;"></div>
+			<div align=center id="fila4" style="font:normal 8px/4px verdana;"></div>
+		</div>
+
+</div>
+		
+		
+		
+		
+		
+		
+		
+	<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div style="width:70%; text-align: center;" class="modal-content" id="modalPersonalizado">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">Ajustes</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			 <!-- Modal Body -->
+            <div style="text-align:left;" class="modal-body">
+
+                <div  style="height: 21px; font-weight: bolder;">
+                	<h9> Personalizar el color de las emociones:</h9>
+            	</div>	
+                <br>
+            	<center><table>
+            		<tr style="width: 150px">
+            			<td style="width: 80px;"> <label>Tristeza</label> </td>
+            		   	<td style="width: 50px;">
+            				<img  class="imgAjustes" src="/static/img/tristeza.png" alt="sad face"/>
+            			</td>
+            			<td style="width: 60px;"> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorTriste" name="colorTriste" type="color" value="#0000ff"></td>
+            		</tr>
+            		<tr>
+            			<td style="width: 80px;"> <label>Miedo</label> </th>
+            			<td style="width: 50px;">
+            				<img  class="imgAjustes" src="/static/img/miedo.png" alt="sad face"/>
+            			</td>
+            			<td style="width: 60px;"> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorMiedo" name="colorMiedo" type="color" value="#800080"></td>
+            			
+            		</tr>
+            		<tr>
+						<td style="width: 80px;"> <label>Alegría</label> </th>
+            			<td style="width: 50px;">
+            				<img  class="imgAjustes" src="/static/img/alegria.png" alt="sad face"/>
+            			</td>
+            			<td style="width: 60px;"> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorAlegre" name="colorAlegre" type="color" value="#ffff00"></td>
+            			
+            		</tr>
+            		<tr>
+            			<td style="width: 80px;"> <label>Enfado</label> </th>
+            			<td style="width: 50px;">
+            				<img  class="imgAjustes" src="/static/img/enfado.png" alt="sad face"/>
+            			</td>
+            			<td style="width: 60px;"> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorEnfado" name="colorEnfado" type="color" value="#ff0000"></td>
+            		</tr>
+            		<tr>
+            			<td style="width: 80px;"> <label>Asco</label> </th>
+            			<td style="width: 50px;">
+            				<img  class="imgAjustes" src="/static/img/asco.png" alt="sad face"/>
+            			</td>
+            			<td style="width: 60px;"> &nbsp;&nbsp;&nbsp;&nbsp;<input id="colorAsco" name="colorAsco" type="color" value="#008000"></td>
+            			
+            		</tr>
+            	</table></center>
+				
+				<hr>
+				<!--<h6> Posición de las emociones: </h6>
+				<div class="radio">
+					<label class="radio-inline"><input type="radio" name="optradio"> Abajo</label>
+				</div>
+				<div class="radio">
+				  	<label class="radio-inline"><input type="radio" name="optradio"> Derecha</label>
+				</div>
+ 
+                <div id="salidaModal"></div>-->
+           
+                <button type="button" class="btn btn-primary submitBtn"  data-dismiss="modal" onclick="cambiarcolor()">Aceptar</button>
+            </div>
+		</div>
+	</div>
+</div>
+
+
+
+	</div>
+
+		
+
+	
+	</body>
+
+
+	
+
+<script>
+//autor: karlankas -Actualizado por panino5001-
+	texto="";
+	var caracteres =new Array ("1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Ñ","Z","X","C","V","B","N","M",",",".");
+	var z=0;
+	var mayus=true
+	function aniadir(letra){
+		texto=document.getElementById("textArea").value;
+		if(letra=="\b"){
+			numeroLetras=texto.length-1
+			texto=texto.substring(0,numeroLetras);
+		}
+		else{
+		if(!mayus){letra=letra.toLowerCase()}
+			texto=texto+letra;
+		}
+		document.getElementById("textArea").value=texto;
+	}
+
+	function mostrar(){
+		if (z==0){
+			z=1;
+			document.getElementById('tecladoDiv').style.visibility="visible";
+		}
+		else {
+			z=0;
+			document.getElementById('tecladoDiv').style.visibility="hidden";
+		}
+	 }
+	 function cambiomayus(aqui){
+	 	if(aqui.checked){mayus=true}
+		else{mayus=false}
+	 }
+
+	var letras="";
+	var p=0;
+	var i = 0;
+	for (a=0;a<=caracteres.length;a++){
+		if(a != caracteres.length)
+			letras=letras+"<input style='width:50px; height:50px;' type='Button' value="+caracteres[a]+" onclick=\"aniadir('"+caracteres[a]+"'); numCaracteres ();\">&nbsp;";
+		p=p+1;
+		if(p==10 && i==0){
+			p=0;
+			i=1;
+			document.getElementById('filaNumeros').innerHTML=letras+"<input style='width:50px;height:50px;' alt='Borrar' type='Button' value=&laquo; onClick=aniadir('\b'); numCaracteres();>" + "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" onclick=mostrar()><span aria-hidden=\"true\">&times;</span>	</button>" ;
+			letras="";
+		}else if(p==10 && i != 0){
+			p=0;
+			if(a == 19) document.getElementById('fila1').innerHTML=letras;
+			else if (a==29) document.getElementById('fila2').innerHTML=letras;
+			else if (a==39) document.getElementById('fila3').innerHTML=letras;
+			letras="";
+		}
+	}
+	
+	document.getElementById('fila4').innerHTML="<input style='width:205px;height:50px;' type='Button' value='espacio' onclick=aniadir('&#160'); numCaracteres()><br><input type=checkbox name=mayusculas onclick='cambiomayus(this)' checked><font style='font:10px'>Mayusculas</font>";
+
+	</script>
+</html>
+
