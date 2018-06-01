@@ -66,7 +66,6 @@ class InterpreteFrases():
 		los grados de cada emocion. Devuelve los grados y las palabras que permiten
 		llegar a ellos.
 		"""
-		print(frase)
 		lista_palabras,tipos = seleccionador_emocional.seleccionar_palabras(frase) # lista de palabras emocionales
 		num_palabras = len(lista_palabras)
 		mayoritarias = []

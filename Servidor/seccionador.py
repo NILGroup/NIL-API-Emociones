@@ -65,7 +65,7 @@ def obtener_subfrases2(frase):
 			break;
 
 		if ie.decode("utf-8") in frase and "?" in frase:
-				ini_i = frase.index(ie.decode("utf-8"))
+			ini_i = frase.index(ie.decode("utf-8"))
 		#if "¿" in frase and "?" in frase:
 		#	ini_i = frase.index("¿")		
 			fin_i = frase.index("?")

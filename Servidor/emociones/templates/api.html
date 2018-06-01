@@ -86,6 +86,10 @@
                 <h4 class="card-title">Servicio útil</h4>
                 <p class="card-text">Devuelve palabras con sus grados y su emoción mayoritaria <a href="#servicioUtil"> (ver más)</a></p>
                 <hr>
+
+            		<h4 class="card-title">Servicio empleado</h4>
+            		<p class="card-text">Devuelve las emociones de un texto junto con una lista de palabras emocionales <a href="#servicioGuay"> (ver más) </a></p>
+
               </div>
             </div>
           </div>
@@ -544,11 +548,11 @@
               <p>
 
                 <code> { </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Tristeza": "1.08", </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Miedo": "1.3", </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Alegria": "2.71", </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Enfado": "1.1", </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Asco": "1.08" </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Tristeza": "1.17", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Miedo": "1.6", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Alegria": "4.43", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Enfado": "1.2", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Asco": "1.17" </code><br>
                 <code> } </code><br>
 
               </p>
@@ -628,7 +632,7 @@
               <p>
                
                 <code>  { </code><br>
-                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"grado": 3.88, </code><br>
+                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"grado": "4.39", </code><br>
                 <code>  &nbsp;&nbsp;&nbsp;&nbsp;"emociones": [ "Alegría"] </code><br>
                 <code>  } </code><br>
               </p>
@@ -663,7 +667,7 @@
           <hr class="my-4">
 
           <label> <strong> URL</strong></label>
-          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/gradosEmo </cursive></p>
+          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/texto/gradosEmo </cursive></p>
 
           <hr class="my-4">
 
@@ -704,15 +708,15 @@
           <label> <strong> Ejemplo de respuesta </strong> </label>
 
           <ul>
-            <li> En caso de tener emociones: "Salir a la calle es divertido. El circo también es divertido."
+            <li> En caso de tener emociones: "Salir a la calle es divertido. Ir al circo  es divertido."
               <p>
 
                 <code> { </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Tristeza": "1.32", </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Miedo": "1.48", </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Alegria": "3.737", </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Enfado": "1.1" </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Asco": "1.23", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Tristeza": "1.34", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Miedo": "1.41", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Alegria": "4.05", </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Enfado": "1.11" </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;"Asco": "1.18", </code><br>
                 
                 <code> } </code><br>
 
@@ -736,7 +740,7 @@
         <div class="jumbotron servicioExtra" id="servicioUtil">
           <h1 class="display-5">Servicio útil</h1>
           <p class="lead">Devuelve las palabras emocionales de un texto junto con sus grados y su emocion mayoritaria </p>
-            
+
           <hr class="my-4">
 
           <label> <strong> URL</strong></label>
@@ -746,7 +750,7 @@
 
           <label> <strong> Información de la respuesta</strong></label>
           <p>Se obtiene la respuesta en JSON</p>
-          <p>Devuelve en el JSON un único campo "solucion" con mucha información. "solucion" contiene una lista, agrupada por cada 3 posiciones. En la primera posición de cada trio aparece una palabra emocional del texto, en la segunda posicion del trío aparecen los grados de dicha palabra y en la tercera posición aparece indicado cuál es la mayoritaria de la palabra expresada del 0 al 4. (0: Tristeza, 1: Miedo, 2: Alegría, 3: Enfado y 4: Asco.</p>
+          <p>Devuelve en el JSON un único campo "solucion" con mucha información. "solucion" contiene una lista, agrupada por cada 3 posiciones. En la prime$
 
           <hr class="my-4">
 
@@ -770,14 +774,13 @@
             </tbody>
           </table>
 
-          <hr class="my-4"> 
-            
+          <hr class="my-4">
+
           <label> <strong> Ejemplo petición </strong> </label>
 
           <p><cursive> http://sesat.fdi.ucm.es/porcentajesPalabras </cursive></p>
 
           <hr class="my-4">
-
           <label> <strong> Ejemplo de respuesta </strong> </label>
 
           <ul>
@@ -785,7 +788,7 @@
               <p>
                 <code> { </code><br>
                 <code> &nbsp;&nbsp;&nbsp;&nbsp;"solucion": ["gusta", ["1.17", "1.6", "4.43·, "1.2", "1.17"], 3, </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "paseo", ["1.17", "1.47", "1.83", "1.23", "1.12"], 0] </code><br>               
+                <code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "paseo", ["1.17", "1.47", "1.83", "1.23", "1.12"], 0 </code><br>
                 <code> } </code><br>
 
               </p>
@@ -799,11 +802,74 @@
             </p>
             </li>
           </ul>
-        </div>                      
+        </div>
+
+        <div class="jumbotron servicioExtra" id="servicioGuay">
+          <h1 class="display-5">Servicio empleado</h1>
+          <p class="lead">Dado un texto devuleve los grados de este junto con una lista de palabras emocionales </p>
+            
+          <hr class="my-4">
+
+          <label> <strong> URL</strong></label>
+          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/textosGuay/</cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Información de la respuesta</strong></label>
+          <p>Se obtiene la respuesta en JSON</p>
+          <p>Devuelve en el JSON con dos campos "emociones" que representa los grados emocionales del texto introducido y "palabras" que es una lista con todas las palabras 'emocionales' del texto; todas aquellas que se encuentran en la stoplist del servicio aunque no tenga grados asignados.</p>
+
+          <hr class="my-4">
+
+          <label> <strong> Parámetros </strong> </label>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Requerido</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Valor por defecto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-danger">
+                <th scope="row">a</th>
+                <td>Sí</td>
+                <td>Es un texto, frase o palabra a evaluar </td>
+                <td>No tiene valor por defecto</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr class="my-4"> 
+            
+          <label> <strong> Ejemplo petición </strong> </label>
+
+          <p><cursive> http://sesat.fdi.ucm.es/textosGuay/ </cursive></p>
+
+          <hr class="my-4">
+
+          <label> <strong> Ejemplo de respuesta </strong> </label>
+
+          <ul>
+            <li> "El pequeño cocodrilo para aprender sus cantares usa las aguas del Nilo con sus notas musicales."
+              <p>
+                <code> { </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp; "emociones": ["1.42", "2.38", "2.74", "1.28", "1.41"] </code><br>
+                <code> &nbsp;&nbsp;&nbsp;&nbsp; "palabras": ["pequeño", "cocodrilo", "entonar", "cantares", "usa", "aguas", "nilo", "notas", "musicales"]</code><br>           
+                <code> } </code><br>
+
+              </p>
+            </li>
+          </ul>
+        </div>
+
+           
       </div>
 
     </div>
 	</body>
 </html>
+
 
 
