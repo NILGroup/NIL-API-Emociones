@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['estancamiento', 'político', 'agobia', 'meses', 'llegar', 'fin', 'espera', 'parlamento', 'apruebe', 'gobierno', 'liderado', 'presidente', 'interino', 'necesitaba', 'mayoría', 'parlamento', 'escaños', 'primera', 'votación', 'realizada', 'jueves', 'logró', 'sábado', 'realiza', 'segunda', 'votación', 'necesita', 'votos', 'favor', 'contra', 'Cuenta', 'apoyo', 'legisladores', 'partido', 'centroderechista', 'dependerá', 'accedido', 'abstenerse', 'votación', 'sábado', 'diputados', 'dicho', 'votarán', 'contra', 'elegido', 'juramentado', 'rey', 'domingo', 'lunes', 'gobierno', 'convocará', 'tercera', 'elección']
+Grado de tristeza: 1.44
+Grado de miedo: 1.33
+Grado de alegria: 1.94
+Grado de ira: 1.39
+Grado de asco: 1.17
+La mayoritaria es Alegria con un grado 1.94
+-----------------------------------------------------------

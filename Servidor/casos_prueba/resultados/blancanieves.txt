@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['vez', 'princesa', 'dulce', 'gentil', 'llamada', 'malvada', 'reina', 'celosa', 'belleza', 'tuvo', 'huir', 'refugió', 'casa', 'enanitos', 'reina', 'engañó', 'manzana', 'envenenada', 'llegó', 'príncipe', 'despertó', 'beso', 'vivieron', 'felices']
+Grado de tristeza: 1.9
+Grado de miedo: 2.02
+Grado de alegria: 3.02
+Grado de ira: 1.81
+Grado de asco: 1.51
+La mayoritaria es Alegria con un grado 3.02
+-----------------------------------------------------------

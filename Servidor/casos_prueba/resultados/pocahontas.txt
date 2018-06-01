@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['Pocahontas', 'indígena', 'Amaba', 'naturaleza', 'día', 'barco', 'llegó', 'ingleses', 'codiciosos', 'malvados', 'bondadoso', 'amable', 'tribu', 'quería', 'ingleses', 'fueran', 'ingleses', 'fueron', 'barco', 'olvidarían']
+Grado de tristeza: 1.55
+Grado de miedo: 1.54
+Grado de alegria: 2.07
+Grado de ira: 1.16
+Grado de asco: 0.99
+La mayoritaria es Alegria con un grado 2.07
+-----------------------------------------------------------

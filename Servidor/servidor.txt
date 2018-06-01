@@ -1,0 +1,215 @@
+STARTING TESTS
+-----------------------PERCENTAGES TEST-----------------------
+-----------------------AGREED_EMOTION TEST-----------------------
+-----------------------MAIN_EMOTION TEST-----------------------
+-----------------------WORDS TEST-----------------------
+Trying:
+    porcentajes(0,"http://sesat.fdi.ucm.es/emociones/alegre/porcentajes/")
+Expecting:
+    Porcentaje de tristeza: 0%
+    Porcentaje de miedo: 0%
+    Porcentaje de alegria: 100%
+    Porcentaje de enfado: 0%
+    Porcentaje de sorpresa: 0%
+    Porcentaje de neutral: 0%
+ok
+Trying:
+    porcentajes(0,"http://sesat.fdi.ucm.es/emociones/araña/porcentajes/")
+Expecting:
+    Porcentaje de tristeza: 0%
+    Porcentaje de miedo: 67%
+    Porcentaje de alegria: 0%
+    Porcentaje de enfado: 0%
+    Porcentaje de sorpresa: 0%
+    Porcentaje de neutral: 33%
+ok
+Trying:
+    porcentajes(0,"http://sesat.fdi.ucm.es/emociones/corazón/porcentajes/")
+Expecting:
+    Porcentaje de tristeza: 0%
+    Porcentaje de miedo: 0%
+    Porcentaje de alegria: 50%
+    Porcentaje de enfado: 0%
+    Porcentaje de sorpresa: 0%
+    Porcentaje de neutral: 50%
+ok
+Trying:
+    porcentajes(0,"http://sesat.fdi.ucm.es/emociones/te/porcentajes/")
+Expecting:
+    No se ha encontrado la palabra. Asegurese de haberla escrito bien.
+ok
+Trying:
+    porcentajes(1,"http://sesat.fdi.ucm.es/emociones/mesa/consensuada/")
+Expecting:
+    La emocion consensuada es Neutral
+ok
+Trying:
+    porcentajes(1,"http://sesat.fdi.ucm.es/emociones/araña/consensuada/")
+Expecting:
+    No hay emocion consensuada.
+ok
+Trying:
+    porcentajes(1,"http://sesat.fdi.ucm.es/emociones/corazón/consensuada/")
+Expecting:
+    No hay emocion consensuada.
+ok
+Trying:
+    porcentajes(1,"http://sesat.fdi.ucm.es/emociones/te/consensuada/")
+Expecting:
+    No se ha encontrado la palabra. Asegurese de haberla escrito bien.
+ok
+Trying:
+    porcentajes(2,"http://sesat.fdi.ucm.es/emociones/mesa/mayoritaria/")
+Expecting:
+    La mayoritaria es Neutral con un 100%
+ok
+Trying:
+    porcentajes(2,"http://sesat.fdi.ucm.es/emociones/araña/mayoritaria/")
+Expecting:
+    La mayoritaria es Miedo con un 67%
+ok
+Trying:
+    porcentajes(2,"http://sesat.fdi.ucm.es/emociones/corazón/mayoritaria/")
+Expecting:
+    Hay dos emociones mayoritarias: Alegria y Neutral con un 50%
+ok
+Trying:
+    porcentajes(2,"http://sesat.fdi.ucm.es/emociones/te/mayoritaria/")
+Expecting:
+    No se ha encontrado la palabra. Asegurese de haberla escrito bien.
+ok
+1 items had no tests:
+    __main__
+1 items passed all tests:
+  12 tests in __main__.porcentajes
+12 tests in 2 items.
+12 passed and 0 failed.
+Test passed.
+-----------------------SENTENCES TEST-----------------------
+Trying:
+    porcentajes(0,"Ana está triste y avergonzada")
+Expecting:
+    Porcentaje de tristeza: 100.0%
+    Porcentaje de miedo: 0.0%
+    Porcentaje de alegria: 0.0%
+    Porcentaje de enfado: 0.0%
+    Porcentaje de sorpresa: 0.0%
+    Porcentaje de neutral: 0.0%
+ok
+Trying:
+    porcentajes(0,"Llevaba una escopeta")
+Expecting:
+    Porcentaje de tristeza: 0.0%
+    Porcentaje de miedo: 100.0%
+    Porcentaje de alegria: 0.0%
+    Porcentaje de enfado: 0.0%
+    Porcentaje de sorpresa: 0.0%
+    Porcentaje de neutral: 0.0%
+ok
+Trying:
+    porcentajes(0,"Estoy alegre y feliz")
+Expecting:
+    Porcentaje de tristeza: 0.0%
+    Porcentaje de miedo: 0.0%
+    Porcentaje de alegria: 100.0%
+    Porcentaje de enfado: 0.0%
+    Porcentaje de sorpresa: 0.0%
+    Porcentaje de neutral: 0.0%
+ok
+Trying:
+    porcentajes(0,"Ese tipo es un arrogante")
+Expecting:
+    Porcentaje de tristeza: 0.0%
+    Porcentaje de miedo: 0.0%
+    Porcentaje de alegria: 0.0%
+    Porcentaje de enfado: 100.0%
+    Porcentaje de sorpresa: 0.0%
+    Porcentaje de neutral: 0.0%
+ok
+Trying:
+    porcentajes(0,"Me ha sorprendido su actitud")
+Expecting:
+    Porcentaje de tristeza: 0.0%
+    Porcentaje de miedo: 0.0%
+    Porcentaje de alegria: 0.0%
+    Porcentaje de enfado: 0.0%
+    Porcentaje de sorpresa: 100.0%
+    Porcentaje de neutral: 0.0%
+ok
+Trying:
+    porcentajes(0,"Pásame un tenedor")
+Expecting:
+    Porcentaje de tristeza: 0.0%
+    Porcentaje de miedo: 0.0%
+    Porcentaje de alegria: 0.0%
+    Porcentaje de enfado: 0.0%
+    Porcentaje de sorpresa: 0.0%
+    Porcentaje de neutral: 100.0%
+ok
+Trying:
+    porcentajes(0,"Me voy a dormir")
+Expecting:
+    Porcentaje de tristeza: 0.0%
+    Porcentaje de miedo: 0.0%
+    Porcentaje de alegria: 50.0%
+    Porcentaje de enfado: 0.0%
+    Porcentaje de sorpresa: 0.0%
+    Porcentaje de neutral: 50.0%
+ok
+Trying:
+    porcentajes(0,"Ana está triste porque se ha roto su ascensor")
+Expecting:
+    Porcentaje de tristeza: 58.5%
+    Porcentaje de miedo: 0.0%
+    Porcentaje de alegria: 0.0%
+    Porcentaje de enfado: 16.5%
+    Porcentaje de sorpresa: 0.0%
+    Porcentaje de neutral: 25.0%
+ok
+Trying:
+    porcentajes(1,"Ana está triste y avergonzada")
+Expecting:
+    La mayoritaria es Tristeza con un 100.0%
+ok
+Trying:
+    porcentajes(1,"Llevaba una escopeta")
+Expecting:
+    La mayoritaria es Miedo con un 100.0%
+ok
+Trying:
+    porcentajes(1,"Mañana es mi boda")
+Expecting:
+    La mayoritaria es Alegría con un 100.0%
+ok
+Trying:
+    porcentajes(1,"Ese tipo es un arrogante")
+Expecting:
+    La mayoritaria es Enfado con un 100.0%
+ok
+Trying:
+    porcentajes(1,"Me ha sorprendido su actitud")
+Expecting:
+    La mayoritaria es Sorpresa con un 100.0%
+ok
+Trying:
+    porcentajes(1,"Pásame un tenedor")
+Expecting:
+    La mayoritaria es Neutral con un 100.0%
+ok
+Trying:
+    porcentajes(1,"Me voy a dormir")
+Expecting:
+    Hay dos emociones mayoritarias: Alegría y Neutral con un 50.0%
+ok
+Trying:
+    porcentajes(1,"Ana está triste porque se ha roto su ascensor")
+Expecting:
+    La mayoritaria es Tristeza con un 58.5%
+ok
+1 items had no tests:
+    __main__
+1 items passed all tests:
+  16 tests in __main__.porcentajes
+16 tests in 2 items.
+16 passed and 0 failed.
+Test passed.

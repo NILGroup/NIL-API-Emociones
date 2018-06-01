@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['princesa', 'vivía', 'palacio', 'real', 'padre', 'quería', 'casar', 'enamorada', 'escapó', 'palacio', 'Deseaba', 'libre', 'conoció', 'bazar', 'ayuda', 'enamoraron']
+Grado de tristeza: 1.47
+Grado de miedo: 1.71
+Grado de alegria: 3.81
+Grado de ira: 1.26
+Grado de asco: 1.14
+La mayoritaria es Alegria con un grado 3.81
+-----------------------------------------------------------
