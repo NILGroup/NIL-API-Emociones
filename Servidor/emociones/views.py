@@ -179,6 +179,9 @@ def index(request):
 def api(request):
     return render(request, 'api.html', context={})
 
+# Declaración de la vista de pruebas de servicios
+def pruebas(request):
+    return render(request, 'pruebas.html', context={})
 """
 --------------------------------------------------------------------------------
 Estas son las clases que usábamos desde el principio para los servicios básicos.

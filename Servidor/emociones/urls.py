@@ -15,13 +15,14 @@ urlpatterns = [
 	url(r'^emociones/palabra/gradosEmo', views.PalabraGrados),
 	url(r'^emociones/palabra/consensuadaEmo', views.PalabraConsensuada),
 	url(r'^emociones/palabra/mayoritariaEmo', views.PalabraMayoritaria),
-	url(r'^api/$', views.api),
+	url(r'^apiEmoTraductor/$', views.api),
 	url(r'^emociones/frase/mayoritariaEmo', views.vista_fraseMayoritaria),
 	url(r'^emociones/frase/consensuadaEmo', views.vista_fraseConsensuada),
 	url(r'^emociones/frase/gradosEmo', views.vista_fraseGrados),
 	url(r'^emociones/texto/mayoritariaEmo', views.vista_textoMayoritaria),
 	#url(r'^emociones/texto/consensuadaEmo', views.vista_textoConsensuada),
 	url(r'^emociones/texto/gradosEmo', views.vista_textoGrados),
+	url(r'^pruebas/$', views.pruebas),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
