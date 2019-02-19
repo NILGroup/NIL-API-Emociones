@@ -25,10 +25,7 @@ SECRET_KEY = '(-wf0n8(+fw894$q*0d!yrshkkvhc2#ft8z9l2))yd+7weez@z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-#PARA EL SERVIDOR
-ALLOWED_HOSTS = ['sesat.fdi.ucm.es']
-#PARA LOCAL
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -124,10 +121,6 @@ USE_TZ = True
 
 STATIC_ROOT = '/static/'
 
-#STATIC_URL = '/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/'
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"), '/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/',
-
-]
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, "static") ];
