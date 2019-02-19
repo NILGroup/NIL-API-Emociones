@@ -9,7 +9,7 @@ from emociones.serializers import PalabraSerializer
 
 def main():
     """
-    La función de este programa es leer el archivo CSV en el que se encuentra el 
+    La función de este programa es leer el archivo CSV en el que se encuentra el
     diccionario afectivo que vamos a utilizar y subir las palabras que este contiene,
     junto a la información sobre ellas.
     """
@@ -40,11 +40,11 @@ def convertir_grado(grado):
     CSV a porcentajes, que es lo que vamos a utilizar.
     """
     return int(float(grado.replace(",","."))*100)
-    
+
 def serializar_datos(subida):
     """
     Función que se encarga de serializar los datos obtenidos del CSV.
-    """   
+    """
     serializador = PalabraSerializer(Palabra.objects.all(), many=True)
 
 main()

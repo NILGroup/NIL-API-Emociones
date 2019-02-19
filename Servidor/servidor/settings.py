@@ -128,6 +128,6 @@ STATIC_ROOT = '/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-	os.path.join(BASE_DIR, "static"), '/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/',
+    os.path.join(BASE_DIR, "static"), '/home/tfgvr1718/TFG-1718-Emociones/Servidor/emociones/static/',
 
 ]

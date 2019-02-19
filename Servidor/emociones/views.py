@@ -24,151 +24,151 @@ from django.http import HttpRequest
 from django.http import JsonResponse
 
 def vista_textoGrados(request):
-	if request.method=='POST':
-		texto = request.POST['texto']
-		grados, palabras = traducirTexto(texto)
-		data = {
-		'Tristeza' : grados[0],
-		'Miedo' : grados[1],
-		'Alegria': grados[2],
-		'Enfado' : grados[3],
-		'Asco' : grados[4]
-		}
-		return JsonResponse(data)
-	else:
-		return HttpResponse("Peticion no valida")
+    if request.method=='POST':
+        texto = request.POST['texto']
+        grados, palabras = traducirTexto(texto)
+        data = {
+        'Tristeza' : grados[0],
+        'Miedo' : grados[1],
+        'Alegria': grados[2],
+        'Enfado' : grados[3],
+        'Asco' : grados[4]
+        }
+        return JsonResponse(data)
+    else:
+        return HttpResponse("Peticion no valida")
 
 def vista_textoConsensuada(request):
-	if request.method=='POST':
-		texto = request.POST['texto']
-		consensuada = consensuadaTexto(texto)
-		data = {
-		'consensuada' : consensuada
-		}
-		return JsonResponse(data)
-	else:
-		return HttpResponse("Peticion no valida")
+    if request.method=='POST':
+        texto = request.POST['texto']
+        consensuada = consensuadaTexto(texto)
+        data = {
+        'consensuada' : consensuada
+        }
+        return JsonResponse(data)
+    else:
+        return HttpResponse("Peticion no valida")
 
 def vista_textoMayoritaria(request):
-	if request.method=='POST':
-		texto = request.POST['texto']
-		mayoritaria, grado = mayoritariaTexto(texto)
-		data = {
-		'emocion': mayoritaria,
-		'grado' : grado
-		}
-		return JsonResponse(data)
-	else:
-		return HttpResponse("Peticion no valida")
+    if request.method=='POST':
+        texto = request.POST['texto']
+        mayoritaria, grado = mayoritariaTexto(texto)
+        data = {
+        'emocion': mayoritaria,
+        'grado' : grado
+        }
+        return JsonResponse(data)
+    else:
+        return HttpResponse("Peticion no valida")
 
 def vista_fraseGrados(request):
-	if request.method=='POST':
-		frase = request.POST['frase']
-		grados, palabras, mayoritarias = gradosFrase(frase)
-		data = {
-		"Tristeza" : grados[0],
-		"Miedo": grados[1],
-		"Alegria": grados[2],
-		"Enfado": grados[3],
-		"Asco": grados[4]
-		}
-		return JsonResponse(data)
-	else:
-		return HttpResponse("Peticion no valida")
+    if request.method=='POST':
+        frase = request.POST['frase']
+        grados, palabras, mayoritarias = gradosFrase(frase)
+        data = {
+        "Tristeza" : grados[0],
+        "Miedo": grados[1],
+        "Alegria": grados[2],
+        "Enfado": grados[3],
+        "Asco": grados[4]
+        }
+        return JsonResponse(data)
+    else:
+        return HttpResponse("Peticion no valida")
 
 def vista_fraseConsensuada(request):
-	if request.method=='POST':
-		frase = request.POST['frase']
-		consensuada = consensuadaFrase(frase)
-		data = {
-		'consensuada' : consensuada
-		}
-		return JsonResponse(data)
-	else:
-		return HttpResponse("Peticion no valida")
+    if request.method=='POST':
+        frase = request.POST['frase']
+        consensuada = consensuadaFrase(frase)
+        data = {
+        'consensuada' : consensuada
+        }
+        return JsonResponse(data)
+    else:
+        return HttpResponse("Peticion no valida")
 
 def vista_fraseMayoritaria(request):
-	if request.method=='POST':
-        	frase = request.POST['frase']
-        	mayoritaria,grado = mayoritariaFrase(frase)
+    if request.method=='POST':
+            frase = request.POST['frase']
+            mayoritaria,grado = mayoritariaFrase(frase)
 
-        	data = {
-        	'emocion': mayoritaria,
-            	'grado' : grado
-        	}
-        	return JsonResponse(data)
-	else:
-        	#texto = request.GET['a']
-        	#grados, palabras = traducirTexto(texto)
-        	#return HttpResponse(grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] + ";" + palabras.toString())
-        	#+ grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] )
-        	return HttpResponse("Peticion no valida")
+            data = {
+            'emocion': mayoritaria,
+                'grado' : grado
+            }
+            return JsonResponse(data)
+    else:
+            #texto = request.GET['a']
+            #grados, palabras = traducirTexto(texto)
+            #return HttpResponse(grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] + ";" + palabras.toString())
+            #+ grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] )
+            return HttpResponse("Peticion no valida")
 
 def mayoritariaFrase(frase):
-	grados, palabras, mayoritarias = InterpreteFrases.emociones_frase(frase)
-	return InterpreteFrases.emocion_mayoritaria_frase(grados)
+    grados, palabras, mayoritarias = InterpreteFrases.emociones_frase(frase)
+    return InterpreteFrases.emocion_mayoritaria_frase(grados)
 
 def mayoritariaTexto(texto):
-	grados, palabras, mayoritarias = InterpreteTexto.emociones_texto(texto)
-	return InterpreteTexto.emocion_mayoritaria_texto(grados)
+    grados, palabras, mayoritarias = InterpreteTexto.emociones_texto(texto)
+    return InterpreteTexto.emocion_mayoritaria_texto(grados)
 
 def consensuadaFrase(frase):
-	grados, palabras, mayoritarias = InterpreteFrases.emociones_frase(frase)
-	return InterpreteFrases.emocion_consensuada_frases(grados)
+    grados, palabras, mayoritarias = InterpreteFrases.emociones_frase(frase)
+    return InterpreteFrases.emocion_consensuada_frases(grados)
 
 def consensuadaTexto(texto):
-	grados, palabras, mayoritarias = InterpreteTexto.emociones_texto(texto)
-	return InterpreteTexto.emocion_consensuada_texto(grados)
+    grados, palabras, mayoritarias = InterpreteTexto.emociones_texto(texto)
+    return InterpreteTexto.emocion_consensuada_texto(grados)
 
 def gradosFrase(frase):
-	return InterpreteFrases.emociones_frase(frase)
+    return InterpreteFrases.emociones_frase(frase)
 
 def vista_porcentaje(request):
-	if request.method=='POST':
-		texto = request.POST['porcentajes']
-		solucion = traducirTextoAPorcentajes(texto.lower())
-		data = {
-		#	'tristeza': grados[0],
-		#	'miedo' : grados[1],
-		#	'alegria': grados[2],
-		#	'enfado' : grados[3],
-		#	'asco' : grados[4],
-			'solucion': solucion
-		}
-		return JsonResponse(data)
-	else:
-		#texto = request.GET['a']
-		#grados, palabras = traducirTexto(texto)
-		#return HttpResponse(grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] + ";" + palabras.toString())
-		#+ grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] )
-		return HttpResponse("Peticion no valida")
+    if request.method=='POST':
+        texto = request.POST['porcentajes']
+        solucion = traducirTextoAPorcentajes(texto.lower())
+        data = {
+        #       'tristeza': grados[0],
+        #       'miedo' : grados[1],
+        #       'alegria': grados[2],
+        #       'enfado' : grados[3],
+        #       'asco' : grados[4],
+                'solucion': solucion
+        }
+        return JsonResponse(data)
+    else:
+        #texto = request.GET['a']
+        #grados, palabras = traducirTexto(texto)
+        #return HttpResponse(grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] + ";" + palabras.toString())
+        #+ grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] )
+        return HttpResponse("Peticion no valida")
 
 def traducirTextoAPorcentajes(texto):
-	return TraductorPorcentajes.traducir(texto)
+    return TraductorPorcentajes.traducir(texto)
 
 def vista_texto(request):
-	if request.method=='POST':
-		texto = request.POST['a']
-		grados, palabras = traducirTexto(texto.lower())
-		data = {
-		#	'tristeza': grados[0],
-		#	'miedo' : grados[1],
-		#	'alegria': grados[2],
-		#	'enfado' : grados[3],
-		#	'asco' : grados[4],
-			'emociones': grados, #[{'tristeza': grados[0]}, {'miedo': grados[1]} , {'alegria': grados[2]}, {'enfado': grados[3]}, {'asco' : grados[4]}],
-			'palabras': palabras
-		}
-		return JsonResponse(data)
-	else:
-		#texto = request.GET['a']
-		#grados, palabras = traducirTexto(texto)
-		#return HttpResponse(grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] + ";" + palabras.toString())
-		#+ grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] )
-		return HttpResponse("Peticion no valida")
+    if request.method=='POST':
+        texto = request.POST['a']
+        grados, palabras = traducirTexto(texto.lower())
+        data = {
+        #       'tristeza': grados[0],
+        #       'miedo' : grados[1],
+        #       'alegria': grados[2],
+        #       'enfado' : grados[3],
+        #       'asco' : grados[4],
+                'emociones': grados, #[{'tristeza': grados[0]}, {'miedo': grados[1]} , {'alegria': grados[2]}, {'enfado': grados[3]}, {'asco' : grados[4]}],
+                'palabras': palabras
+        }
+        return JsonResponse(data)
+    else:
+        #texto = request.GET['a']
+        #grados, palabras = traducirTexto(texto)
+        #return HttpResponse(grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] + ";" + palabras.toString())
+        #+ grados[0] + " " + grados[1] + " " + grados[2] + " " + grados[3] + " " + grados[4] )
+        return HttpResponse("Peticion no valida")
         
 def traducirTexto(texto):
-	return Traductor.traducir(texto)
+    return Traductor.traducir(texto)
 
 # Declaración de la vista del index
 def index(request):
@@ -340,10 +340,10 @@ def PalabraGrados(request):
 
                 respuesta = {
                                 'Tristeza': grados[0],
-				'Miedo': grados[1],
-				'Alegria': grados[2],
-				'Enfado': grados[3],
-				'Asco': grados[4]
+                        'Miedo': grados[1],
+                        'Alegria': grados[2],
+                        'Enfado': grados[3],
+                        'Asco': grados[4]
                         }
                 return Response(respuesta)
         else:
@@ -368,20 +368,16 @@ def PalabraConsensuada(request):
 @api_view(['GET','POST', ])
 def PalabraMayoritaria(request):
 
-	if request.method=='GET':
-	        
-        	palabra = request.GET['palabra']
-        	
-		mayoritarias, grado = InterpretePalabras.interpretar_mayoritaria(palabra)
-        	
-		
-		respuesta = {
-				'emociones': mayoritarias,
-				'grado': grado
-			}
-        	return Response(respuesta)
-	else:
-		return Response("No válida")
+    if request.method=='GET':
+        palabra = request.GET['palabra']
+        mayoritarias, grado = InterpretePalabras.interpretar_mayoritaria(palabra)
+        respuesta = {
+            'emociones': mayoritarias,
+            'grado': grado
+        }
+        return Response(respuesta)
+    else:
+        return Response("No válida")
 
 """
 --------------------------------------------

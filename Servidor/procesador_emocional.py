@@ -31,103 +31,103 @@ alternativas_plural = ["bebés","penes","chicas","calles","curas","géneros","mu
 buscar_no_derivables = ["bebida","pena","chico","callado","curar","generoso","muerte","ordenado","orgulloso","sol","tonto","victim","vivo"]
 
 def es_verbo(pos):
-	"""
-	Comprueba si la palabra es un verbo.
-	"""
-	return pos == "VERB"
+        """
+        Comprueba si la palabra es un verbo.
+        """
+        return pos == "VERB"
 
 def es_adjetivo(pos):
-	"""
-	Comprueba si la palabra es un adjetivo.
-	"""
-	return pos == "ADJ"
+        """
+        Comprueba si la palabra es un adjetivo.
+        """
+        return pos == "ADJ"
 
 def es_sustantivo(pos):
-	"""
-	Comprueba si la palabra es un sustantivo.
-	"""
-	return pos == "NOUN"
+        """
+        Comprueba si la palabra es un sustantivo.
+        """
+        return pos == "NOUN"
 
 def casos_especiales(palabra):
-	"""
-	Si la palabra cumple alguna de las siguientes características la función
-	devuelve True para que la palabra sea considera emocional. Se especifica
-	como debe buscarse la palabra en el return.
-	"""
-	if "trist" in palabra:
-		return True,"trist"
-	else:
-		return False,""
+        """
+        Si la palabra cumple alguna de las siguientes características la función
+        devuelve True para que la palabra sea considera emocional. Se especifica
+        como debe buscarse la palabra en el return.
+        """
+        if "trist" in palabra:
+                return True,"trist"
+        else:
+                return False,""
 
 def limpiar_palabra(palabra):
-	if palabra[0] == "-":
-		return palabra.lstrip('-')
-	if '-' in palabra:
-		return palabra[0:palabra.index("-")]
-	if palabra[0] == '"':
-		return palabra.lstrip('"')
-	if palabra[len(palabra)-1] == '"':
-		return palabra.rstrip('"')
-	if palabra[len(palabra)-1] == ',':
-		return palabra.rstrip(',')
-	return palabra
-	
+        if palabra[0] == "-":
+                return palabra.lstrip('-')
+        if '-' in palabra:
+                return palabra[0:palabra.index("-")]
+        if palabra[0] == '"':
+                return palabra.lstrip('"')
+        if palabra[len(palabra)-1] == '"':
+                return palabra.rstrip('"')
+        if palabra[len(palabra)-1] == ',':
+                return palabra.rstrip(',')
+        return palabra
+
 def descartar_palabras(doc):
-	"""
-	Descarta todas las palabras que no son emocionales y obtiene los lexemas de las que sí lo son.
-	Recibe el documento creado por Spacy para la frase y devuelve la lista de palabras y la de lexemas.
-	"""
-	palabras = [] # lista de las palabras emocionales
-	lexemas = [] # lista con los lexemas de las palabras emocionales
-	for token in (doc):
-		pos = token.pos_ # part of speach de la palabra
-		palabra = limpiar_palabra(token.text)
-		lexema = stemmer.stemWord(palabra) # lexema de la palabra
-		if (es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) == True):
-			palabras.append(palabra)
-			especial,buscar = casos_especiales(lexema.lower())
-			if especial == True:
-				lexemas.append(buscar)
-				if es_verbo(pos) == True:
-					lexemas.append(buscar)
-			else:
-				procesada = procesar_palabra(palabra.lower(),lexema.lower())
-				lexemas.append(procesada)
-				if es_verbo(pos) == True:
-					lexemas.append(procesada)
-	return palabras,lexemas
+        """
+        Descarta todas las palabras que no son emocionales y obtiene los lexemas de las que sí lo son.
+        Recibe el documento creado por Spacy para la frase y devuelve la lista de palabras y la de lexemas.
+        """
+        palabras = [] # lista de las palabras emocionales
+        lexemas = [] # lista con los lexemas de las palabras emocionales
+        for token in (doc):
+                pos = token.pos_ # part of speach de la palabra
+                palabra = limpiar_palabra(token.text)
+                lexema = stemmer.stemWord(palabra) # lexema de la palabra
+                if (es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) == True):
+                        palabras.append(palabra)
+                        especial,buscar = casos_especiales(lexema.lower())
+                        if especial == True:
+                                lexemas.append(buscar)
+                                if es_verbo(pos) == True:
+                                        lexemas.append(buscar)
+                        else:
+                                procesada = procesar_palabra(palabra.lower(),lexema.lower())
+                                lexemas.append(procesada)
+                                if es_verbo(pos) == True:
+                                        lexemas.append(procesada)
+        return palabras,lexemas
 
 def procesar_palabra(palabra,lexema):
-	"""
-	Función que se encarga de comprobar si el lexema pertenece al grupo de palabras que comparten
-	lexema y si es así especifica cómo debe buscarse la palabra para que no haya conflictos.
-	"""
-	if lexema in iguales:
-		i = iguales.index(lexema)
-		return buscar_iguales[i]
-	elif lexema in no_derivables:
-		i = no_derivables.index(lexema)
-		if alternativas[i] == palabra or alternativas_plural[i] == palabra:
-			return palabra
-		else:
-			return buscar_no_derivables[i]
-	elif lexema in derivables:
-		i = derivables.index(lexema)
-		if palabra in derivadas[i]:
-			return derivadas[i][0]
-		else:
-			return buscar_derivables[i]
-	else:
-		return lexema
+        """
+        Función que se encarga de comprobar si el lexema pertenece al grupo de palabras que comparten
+        lexema y si es así especifica cómo debe buscarse la palabra para que no haya conflictos.
+        """
+        if lexema in iguales:
+                i = iguales.index(lexema)
+                return buscar_iguales[i]
+        elif lexema in no_derivables:
+                i = no_derivables.index(lexema)
+                if alternativas[i] == palabra or alternativas_plural[i] == palabra:
+                        return palabra
+                else:
+                        return buscar_no_derivables[i]
+        elif lexema in derivables:
+                i = derivables.index(lexema)
+                if palabra in derivadas[i]:
+                        return derivadas[i][0]
+                else:
+                        return buscar_derivables[i]
+        else:
+                return lexema
 
 class PalabrasEmocionales():
 
-	@staticmethod
-	def procesar_frase(frase):
-		"""
-		Función que recibe una frase y crea un documento Spacy a partir de ella para poder procesarla.
-		Devuelve una lista de las palabras emocionales que contiene y otra con sus lexemas.
-		"""
-		doc = nlp(frase)
-		palabras,lexemas = descartar_palabras(doc)
-		return palabras,lexemas
+        @staticmethod
+        def procesar_frase(frase):
+                """
+                Función que recibe una frase y crea un documento Spacy a partir de ella para poder procesarla.
+                Devuelve una lista de las palabras emocionales que contiene y otra con sus lexemas.
+                """
+                doc = nlp(frase)
+                palabras,lexemas = descartar_palabras(doc)
+                return palabras,lexemas
