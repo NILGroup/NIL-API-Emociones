@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pip3 install django \
+            djangorestframework \
+            requests \
+            cython \
+            pystemmer \
+            spacy
+
+python3 -m spacy download es

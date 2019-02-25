@@ -1,0 +1,11 @@
+[Distribution]
+Distribution=debian
+Release=testing
+Mirror=http://ftp.es.debian.org/debian/
+
+[Output]
+Format=directory
+
+[Packages]
+Packages=python3 python3-pip python3-setuptools
+WithNetwork=yes
