@@ -49,10 +49,6 @@
                 <p class="card-text">Devuelve la emoción con más grado dada una frase. <a href="#fraseMayor"> (ver más)</a></p>
                 <hr>
 
-                <!--<h4 class="card-title">Emoción consensuada</h4>
-                <p class="card-text">Devuelve, si existe, la única emoción marcada para una frase. <a href="#fraseConsensuada"> (ver más)</a></p>
-                <hr>-->
-
                 <h4 class="card-title">Grados emocionales</h4>
                 <p class="card-text">Devuelve los valores para cada emoción de una frase. <a href="#fraseGrados"> (ver más)</a></p>
               </div>
@@ -68,10 +64,6 @@
                 <p class="card-text">Devuelve la emoción con más grado dada un texto. <a href="#textoMayor"> (ver más)</a></p>
                 <hr>
 
-                <!--<h4 class="card-title">Emoción consensuada</h4>
-                <p class="card-text">Devuelve, si existe, la única emoción marcada en un texto. <a href="#textoConsensuada"> (ver más)</a></p>
-                <hr>-->
-
                 <h4 class="card-title">Grados emocionales</h4>
                 <p class="card-text">Devuelve los valores para cada emoción de un texto. <a href="#textoGrados"> (ver más)</a></p>
 				<hr>
@@ -83,22 +75,6 @@
       			</div>
       		</div>
         </div>
-        <!--<div class="col-sm-3">
-          <div class="bs-component">
-            <div class="card text-white bg-danger mb-3 bloques">
-              <div class="card-header">Servicios extra</div>
-              <div class="card-body">
-                <h4 class="card-title">Servicio útil</h4>
-                <p class="card-text">Devuelve palabras con sus grados y su emoción mayoritaria <a href="#servicioUtil"> (ver más)</a></p>
-                <hr>
-
-            		<h4 class="card-title">Servicio empleado</h4>
-            		<p class="card-text">Devuelve las emociones de un texto junto con una lista de palabras emocionales <a href="#servicioGuay"> (ver más) </a></p>
-
-              </div>
-            </div>
-          </div>
-        </div>-->
 		  </div>
 
 		  <div>
@@ -111,7 +87,7 @@
           <p> Petición de tipo GET </p>
 
           <label> <strong> URL</strong></label>
-  				<p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/mayoritariaEmo </cursive></p>
+          <p>La URL de la petición es: <cursive>{{site_url}}/emociones/palabra/mayoritariaEmo</cursive></p>
 
   				<hr class="my-4">
 
@@ -145,7 +121,7 @@
   					
   				<label> <strong> Ejemplo petición </strong> </label>
 
-  				<p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/mayoritariaEmo?palabra=abejas </cursive></p>
+  				<p><cursive> {{site_url}}/emociones/palabra/mayoritariaEmo?palabra=abejas </cursive></p>
 
   				<hr class="my-4">
 
@@ -194,7 +170,7 @@
           <p> Petición de tipo GET </p>
 
           <label> <strong> URL</strong></label>
-          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/consensuadaEmo </cursive></p>
+          <p>La URL de la petición es: <cursive> {{site_url}}/emociones/palabra/consensuadaEmo </cursive></p>
 
           <hr class="my-4">
 
@@ -228,7 +204,7 @@
             
           <label> <strong> Ejemplo petición </strong> </label>
 
-          <p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/consensuadaEmo?palabra=abejas </cursive></p>
+          <p><cursive> {{site_url}}/emociones/palabra/consensuadaEmo?palabra=abejas </cursive></p>
 
           <hr class="my-4">
 
@@ -275,7 +251,7 @@
           <p> Petición de tipo GET </p>
 
           <label> <strong> URL</strong></label>
-          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/gradosEmo </cursive></p>
+          <p>La URL de la petición es: <cursive> {{site_url}}/emociones/palabra/gradosEmo </cursive></p>
 
           <hr class="my-4">
 
@@ -309,7 +285,7 @@
             
           <label> <strong> Ejemplo petición </strong> </label>
 
-          <p><cursive> http://sesat.fdi.ucm.es/emociones/palabra/gradosEmo?palabra=abejas </cursive></p>
+          <p><cursive> {{site_url}}/emociones/palabra/gradosEmo?palabra=abejas </cursive></p>
 
           <hr class="my-4">
 
@@ -356,7 +332,7 @@
           <hr class="my-4">
           <label> <strong> PETICIÓN POST</strong></label>
           <label> <strong> URL</strong></label>
-          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/frase/mayoritariaEmo </cursive></p>
+          <p>La URL de la petición es: <cursive> {{site_url}}/emociones/frase/mayoritariaEmo </cursive></p>
 
           <hr class="my-4">
 
@@ -390,7 +366,7 @@
             
           <label> <strong> Ejemplo petición </strong> </label>
 
-          <p><cursive> http://sesat.fdi.ucm.es/emociones/frase/mayoritariaEmo </cursive></p>
+          <p><cursive> {{site_url}}/emociones/frase/mayoritariaEmo </cursive></p>
 
           <hr class="my-4">
 
@@ -432,77 +408,7 @@
             </li>
           </ul>
         </div>
-	<!--
-        <div class="jumbotron servicioFrase" id="fraseConsensuada">
-          <h1 class="display-5">Frase - Emoción consensuada</h1>
-          <p class="lead">Devuelve, en caso de que exista, la emoción consensuada de la frase.</p>
-            
-          <hr class="my-4">
 
-          <label> <strong> URL</strong></label>
-          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/palabra/consensuadaEmo </cursive></p>
-
-          <hr class="my-4">
-
-          <label> <strong> Información de la respuesta</strong></label>
-          <p>Se obtiene la respuesta en JSON</p>
-          <p>Devuelve en el JSON un valor: "consensuada" con la emoción correspondiente. En caso de no existir aparecerá un mensaje.</p>
-
-          <hr class="my-4">
-
-          <label> <strong> Parámetros </strong> </label>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Requerido</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Valor por defecto</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="table-info">
-                <th scope="row">frase</th>
-                <td>Sí</td>
-                <td>Es la frase de la que queremos la emoción consensuada</td>
-                <td>No tiene valor por defecto</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <hr class="my-4"> 
-            
-          <label> <strong> Ejemplo petición </strong> </label>
-
-          <p><cursive> http://sesat.fdi.ucm.es/emociones/frase/consensuadaEmo </cursive></p>
-
-          <hr class="my-4">
-
-          <label> <strong> Ejemplo de respuesta </strong> </label>
-
-          <ul>
-            <li> En caso de tener emoción consensuada: 
-              <p>
-               
-                <code>  { </code><br>
-                <code>  &nbsp;&nbsp;&nbsp;&nbsp;"consensuada": "Alegría" </code><br>
-                <code>  } </code><br>
-
-              </p>
-            </li>
-
-            <li> En caso de no tener emoción consensuada:
-              <p>
-
-                <code>  { </code><br>
-                <code>  &nbsp;&nbsp;&nbsp;&nbsp; "consensuada": "No hay consensuada." </code><br>
-                <code>  } </code><br>
-
-              </p>
-            </li>
-          </ul>
-        </div>
-	-->
         <div class="jumbotron servicioFrase" id="fraseGrados">
           <h1 class="display-5">Frase - Grados emocionales de una frase</h1>
           <p class="lead">Devuelve la lista de emociones para una frase con sus respectivos grados.</p>
@@ -510,7 +416,7 @@
           <hr class="my-4">
 
           <label> <strong> URL</strong></label>
-          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/frase/gradosEmo </cursive></p>
+          <p>La URL de la petición es: <cursive> {{site_url}}/emociones/frase/gradosEmo </cursive></p>
 
           <hr class="my-4">
 
@@ -544,7 +450,7 @@
             
           <label> <strong> Ejemplo petición </strong> </label>
 
-          <p><cursive> http://sesat.fdi.ucm.es/emociones/frase/gradosEmo </cursive></p>
+          <p><cursive> {{site_url}}/emociones/frase/gradosEmo </cursive></p>
 
           <hr class="my-4">
 
@@ -594,7 +500,7 @@
           <hr class="my-4">
           <label> <strong> PETICIÓN POST</strong></label>
           <label> <strong> URL</strong></label>
-          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/texto/mayoritariaEmo </cursive></p>
+          <p>La URL de la petición es: <cursive> {{site_url}}/emociones/texto/mayoritariaEmo </cursive></p>
 
           <hr class="my-4">
 
@@ -628,7 +534,7 @@
             
           <label> <strong> Ejemplo petición </strong> </label>
 
-          <p><cursive> http://sesat.fdi.ucm.es/emociones/texto/mayoritariaEmo </cursive></p>
+          <p><cursive> {{site_url}}/emociones/texto/mayoritariaEmo </cursive></p>
 
           <hr class="my-4">
 
@@ -674,7 +580,7 @@
           <hr class="my-4">
 
           <label> <strong> URL</strong></label>
-          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/emociones/texto/gradosEmo </cursive></p>
+          <p>La URL de la petición es: <cursive> {{site_url}}/emociones/texto/gradosEmo </cursive></p>
 
           <hr class="my-4">
 
@@ -708,7 +614,7 @@
             
           <label> <strong> Ejemplo petición </strong> </label>
 
-          <p><cursive> http://sesat.fdi.ucm.es/emociones/texto/gradosEmo </cursive></p>
+          <p><cursive> {{site_url}}/emociones/texto/gradosEmo </cursive></p>
 
           <hr class="my-4">
 
@@ -744,73 +650,6 @@
           </ul>
         </div> 
 
-        <!--<div class="jumbotron servicioExtra" id="servicioUtil">
-          <h1 class="display-5">Servicio útil</h1>
-          <p class="lead">Devuelve las palabras emocionales de un texto junto con sus grados y su emocion mayoritaria </p>
-
-          <hr class="my-4">
-
-          <label> <strong> URL</strong></label>
-          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/porcentajesPalabras/</cursive></p>
-
-          <hr class="my-4">
-
-          <label> <strong> Información de la respuesta</strong></label>
-          <p>Se obtiene la respuesta en JSON</p>
-          <p>Devuelve en el JSON un único campo "solucion" con mucha información. "solucion" contiene una lista, agrupada por cada 3 posiciones. En la prime$
-
-          <hr class="my-4">
-
-          <label> <strong> Parámetros </strong> </label>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Requerido</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Valor por defecto</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="table-danger">
-                <th scope="row">porcentajes</th>
-                <td>Sí</td>
-                <td>Es un texto, frase o palabra a evaluar </td>
-                <td>No tiene valor por defecto</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <hr class="my-4">
-
-          <label> <strong> Ejemplo petición </strong> </label>
-
-          <p><cursive> http://sesat.fdi.ucm.es/porcentajesPalabras </cursive></p>
-
-          <hr class="my-4">
-          <label> <strong> Ejemplo de respuesta </strong> </label>
-
-          <ul>
-            <li> En caso de tener emociones: "Me gusta ir de paseo."
-              <p>
-                <code> { </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"solucion": ["gusta", ["1.17", "1.6", "4.43·, "1.2", "1.17"], 3, </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "paseo", ["1.17", "1.47", "1.83", "1.23", "1.12"], 0 </code><br>
-                <code> } </code><br>
-
-              </p>
-            </li>
-
-            <li> En caso de no tener emociones: "No tengo nada. Nada de nada."
-            <p>
-                <code> { </code><br>
-                <code> &nbsp;&nbsp;&nbsp;&nbsp;"solucion": []</code><br>
-                <code> } </code><br>
-            </p>
-            </li>
-          </ul>
-        </div>-->
-
         <div class="jumbotron servicioTexto" id="textoPalabras">
           <h1 class="display-5">Palabras emocionales</h1>
           <p class="lead">Dado un texto devuleve los grados de este junto con una lista de palabras emocionales </p>
@@ -818,7 +657,7 @@
           <hr class="my-4">
 
           <label> <strong> URL</strong></label>
-          <p>La URL de la petición es: <cursive> http://sesat.fdi.ucm.es/textosGuay/</cursive></p>
+          <p>La URL de la petición es: <cursive> {{site_url}}/textosGuay/</cursive></p>
 
           <hr class="my-4">
 
@@ -852,7 +691,7 @@
             
           <label> <strong> Ejemplo petición </strong> </label>
 
-          <p><cursive> http://sesat.fdi.ucm.es/textosGuay/ </cursive></p>
+          <p><cursive> {{site_url}}/textosGuay/ </cursive></p>
 
           <hr class="my-4">
 

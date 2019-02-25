@@ -12,8 +12,6 @@ en el servicio web, y devolver la informacion que tiene sobre ella.
 interprete = InterpretePalabras() # nos permitira interpretar las palabras emocionales
 seleccionador_emocional = Seleccionador() # nos permitira encontrar las palabras emocionales
 
-URL = 'http://sesat.fdi.ucm.es/emociones/' # URL base del servicio web
-
 emociones = ["Tristeza", "Miedo", "Alegria", "Enfado", "Asco"] # lista de emociones con las que trabajamos
 
 def obtener_medias(grados,num_palabras):

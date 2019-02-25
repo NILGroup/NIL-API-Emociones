@@ -4,8 +4,6 @@ from interprete_palabras import InterpretePalabras
 from interprete_frases import InterpreteFrases
 from interprete_texto import InterpreteTexto
 
-URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
-
 def obtener_mayoritaria(grados):
         mayor = 0
         for i in range(5):

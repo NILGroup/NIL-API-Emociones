@@ -1,4 +1,5 @@
 import requests
+from django.conf import settings
 
 def mayoritaria(palabra):
         """
@@ -17,7 +18,7 @@ def mayoritaria(palabra):
         >>> mayoritaria("te")
         {'detail': 'Not found.'}
         """
-        URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
+        URL = settings.SITE_URL+'/emociones/' # URL del servidor
         sufijo = '/mayoritaria/' # sufijo de la consulta
         buscar = palabra
         buscada = buscar.lower()

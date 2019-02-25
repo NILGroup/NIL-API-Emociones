@@ -1,4 +1,5 @@
 import requests
+from django.conf import settings
 
 def consensuada(palabra):
         """
@@ -13,7 +14,7 @@ def consensuada(palabra):
         >>> consensuada("te")
         {'detail': 'Not found.'}
         """
-        URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
+        URL = settings.SITE_URL+'/emociones/' # URL del servidor
         sufijo = '/consensuada/' # sufijo de la consulta
         buscar = palabra
         buscada = buscar.lower()

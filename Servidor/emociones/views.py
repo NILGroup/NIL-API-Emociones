@@ -23,6 +23,8 @@ from django.http import HttpRequest
 
 from django.http import JsonResponse
 
+from django.conf import settings
+
 def vista_textoGrados(request):
     if request.method=='POST':
         texto = request.POST['texto']
@@ -173,15 +175,18 @@ def traducirTexto(texto):
 # Declaración de la vista del index
 def index(request):
     num_palabras = Palabra.objects.all().count()
-    return render(request,'main.html',context={'num_palabras':num_palabras},)
+    return render(request,'main.html',context={
+        'num_palabras':num_palabras,
+        'site_url':settings.SITE_URL
+    },)
 
 # Declaración de la API
 def api(request):
-    return render(request, 'api.html', context={})
+    return render(request, 'api.html', context={'site_url':settings.SITE_URL})
 
 # Declaración de la vista de pruebas de servicios
 def pruebas(request):
-    return render(request, 'pruebas.html', context={})
+    return render(request, 'pruebas.html', context={'site_url':settings.SITE_URL})
 """
 --------------------------------------------------------------------------------
 Estas son las clases que usábamos desde el principio para los servicios básicos.

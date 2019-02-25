@@ -78,7 +78,7 @@
 			a = replaceAll(a, "\n", " signoEnter ");
             console.log(a);
             $.ajax({
-              	url:"http://sesat.fdi.ucm.es/textosGuay/",
+              	url:"{{site_url}}/textosGuay/",
                 method: "POST",
                 headers: {'X-CSRFToken': '{{ csrf_token }}'},
                 data: {
@@ -219,7 +219,7 @@
 		a = replaceAll(a, "\n", " signoEnter ");
 		$.ajax({
 									
-			url:"http://sesat.fdi.ucm.es/porcentajesPalabras/",
+			url:"{{site_url}}/porcentajesPalabras/",
             method: "POST",
             headers: {'X-CSRFToken': '{{ csrf_token }}'},
             data: {

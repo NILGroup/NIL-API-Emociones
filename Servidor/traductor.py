@@ -10,7 +10,6 @@ from salida import Salida
 
 
 _salida = Salida() # gestionar salida
-URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
 
 def interpretar_palabra(palabra):
         interprete = InterpretePalabras()

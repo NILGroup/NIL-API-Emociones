@@ -7,8 +7,6 @@ from interprete_palabras import InterpretePalabras
 from interprete_frases import InterpreteFrases
 from interprete_texto import InterpreteTexto
 
-URL = 'http://sesat.fdi.ucm.es/emociones/' # URL del servidor
-
 def interpretar_palabra(palabra):
         interprete = InterpretePalabras()
         palabra = palabra.lower()
