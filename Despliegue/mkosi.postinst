@@ -8,3 +8,5 @@ pip3 install django \
             spacy
 
 python3 -m spacy download es
+
+systemctl enable nginx emociones systemd-networkd systemd-resolved

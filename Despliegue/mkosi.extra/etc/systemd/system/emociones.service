@@ -1,0 +1,10 @@
+[Unit]
+Description=Servidor de emociones
+
+[Service]
+WorkingDirectory=/Servidor
+ExecStart=/Servidor/arrancar.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
