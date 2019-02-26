@@ -10,3 +10,6 @@ pip3 install django \
 python3 -m spacy download es
 
 systemctl enable nginx emociones systemd-networkd systemd-resolved
+
+rm -f /etc/nginx/sites-enabled/*
+ln -s /etc/nginx/sites-available/emociones /etc/nginx/sites-enabled/emociones
