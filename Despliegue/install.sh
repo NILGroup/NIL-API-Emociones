@@ -1,4 +1,10 @@
 #!/bin/bash
+# Script que instala las dependencias del proyecto
+
+# Instalar dependencias de aptitude
+apt install -y python3 python3-pip python3-setuptools \
+    python3-wheel build-essential python3-dev \
+    nginx
 
 # Instalar dependencias python
 pip3 install django \

@@ -3,4 +3,4 @@ __pycache__
 Servidor/static
 Servidor/db.sqlite3
 Despliegue/emociones-contenedor
-Despliegue/mkosi.extra/Servidor
+Despliegue/extra/Servidor
