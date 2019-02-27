@@ -1,6 +1,6 @@
 #!/bin/bash
 
+rm -rf ./mkosi.extra/Servidor
 mkdir -p ./mkosi.extra/Servidor
-mount -o bind,ro ../Servidor ./mkosi.extra/Servidor
+git --work-tree=./mkosi.extra/ checkout HEAD -- Servidor
 mkosi -f
-umount mkosi.extra/Servidor

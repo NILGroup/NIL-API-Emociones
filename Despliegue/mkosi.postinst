@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Instalar dependencias python
 pip3 install django \
             djangorestframework \
             requests \
@@ -7,9 +8,16 @@ pip3 install django \
             pystemmer \
             spacy
 
+# Descargar el modelo de spacy
 python3 -m spacy download es
 
-systemctl enable nginx emociones systemd-networkd systemd-resolved
-
+# Instalar la configuración para nginx
 rm -f /etc/nginx/sites-enabled/*
 ln -s /etc/nginx/sites-available/emociones /etc/nginx/sites-enabled/emociones
+
+# Ejecutar migraciones de django
+cd /Servidor
+python3 manage.py migrate
+
+# Activar los servicios necesarios para que arranquen con el contenedor
+systemctl enable nginx emociones systemd-networkd systemd-resolved
