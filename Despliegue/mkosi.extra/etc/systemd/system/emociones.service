@@ -3,7 +3,7 @@ Description=Servidor de emociones
 
 [Service]
 WorkingDirectory=/Servidor
-ExecStart=/Servidor/arrancar.sh
+ExecStart=/usr/bin/python3 manage.py runserver
 Restart=always
 
 [Install]

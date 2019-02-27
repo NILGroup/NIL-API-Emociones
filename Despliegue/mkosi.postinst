@@ -15,9 +15,10 @@ python3 -m spacy download es
 rm -f /etc/nginx/sites-enabled/*
 ln -s /etc/nginx/sites-available/emociones /etc/nginx/sites-enabled/emociones
 
-# Ejecutar migraciones de django
+# Ejecutar migraciones de django y preparar los estáticos
 cd /Servidor
 python3 manage.py migrate
+python3 manage.py collectstatic
 
 # Activar los servicios necesarios para que arranquen con el contenedor
 systemctl enable nginx emociones systemd-networkd systemd-resolved
