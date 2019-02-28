@@ -46,10 +46,12 @@ $PIP install $PAQUETES_PIP
 # Descargar el modelo de spacy
 $PYTHON -m spacy download es
 
-# Ejecutar migraciones de django y preparar los estáticos
+# Ejecutar migraciones de django, preparar los estáticos, cargar palabras en la
+# base de datos
 pushd $PATH_SERVIDOR
 $PYTHON manage.py migrate
 $PYTHON manage.py collectstatic --clear --noinput
+$PYTHON fichero.py
 popd
 
 if [ "$COMO_ROOT" -ne 1 ]; then exit 0; fi
