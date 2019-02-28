@@ -2,5 +2,3 @@
 __pycache__
 Servidor/static
 Servidor/db.sqlite3
-Despliegue/emociones-contenedor
-Despliegue/extra/Servidor
