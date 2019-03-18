@@ -8,7 +8,7 @@ from lematizador import Lematizador
 Programa que se encarga de buscar una palabra en el servicio web y devolver la informacion que tiene sobre ella.
 """
 from django.conf import settings
-URL = settings.SITE_URL+'/emociones/' # URL del servidor
+URL = settings.SELF_URL+'/emociones/' # URL del servidor
 
 emocion = ["Tristeza", "Miedo", "Alegria", "Enfado", "Asco"] # lista de emociones con las que trabajamos
 

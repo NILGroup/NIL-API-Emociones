@@ -125,3 +125,5 @@ STATICFILES_DIRS = ( os.path.join(BASE_DIR, "emociones/static"), )
 
 # World-facing URL where the app is running (custom setting)
 SITE_URL = 'http://localhost:8000'
+# URL to call self API methods (same as SITE_URL, except behind a proxy)
+SELF_URL = 'http://localhost:8000'

@@ -14,7 +14,7 @@ def porcentajes(palabra):
         >>> porcentajes("te")
         {'detail': 'Not found.'}
         """
-        URL = settings.SITE_URL+'/emociones/' # URL del servidor
+        URL = settings.SELF_URL+'/emociones/' # URL del servidor
         sufijo = '/grados/' # sufijo de la consulta
         buscada = palabra.lower()
         destino = URL+buscada+sufijo

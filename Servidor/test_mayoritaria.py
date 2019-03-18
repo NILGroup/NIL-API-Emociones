@@ -18,7 +18,7 @@ def mayoritaria(palabra):
         >>> mayoritaria("te")
         {'detail': 'Not found.'}
         """
-        URL = settings.SITE_URL+'/emociones/' # URL del servidor
+        URL = settings.SELF_URL+'/emociones/' # URL del servidor
         sufijo = '/mayoritaria/' # sufijo de la consulta
         buscar = palabra
         buscada = buscar.lower()
