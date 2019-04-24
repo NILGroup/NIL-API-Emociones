@@ -51,6 +51,7 @@ $PYTHON -m spacy download es
 pushd $PATH_SERVIDOR
 $PYTHON manage.py migrate
 $PYTHON manage.py collectstatic --clear --noinput
+echo "Cargando base de datos de emociones..."
 $PYTHON fichero.py
 popd
 
@@ -65,4 +66,4 @@ ln -s /etc/nginx/sites-available/emociones.nginx /etc/nginx/sites-enabled/emocio
 cp Despliegue/emociones.service /etc/systemd/system/emociones.service
 
 # Activar los servicios necesarios para que arranquen con el contenedor
-systemctl enable nginx emociones systemd-networkd systemd-resolved
+systemctl enable --now nginx emociones

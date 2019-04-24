@@ -8,7 +8,10 @@ Servidor y API de análisis emocional del lenguaje natural.
 - `Despliegue`: Ficheros necesarios para el despliegue e instalación.
 - `README.md`: Este fichero.
  
-## Uso
+## Instalación
+
+Antes de instalar, puede ser necesario configurar el fichero
+`Servidor/servidor/settings.py`.
 
 ### Como proceso local
 
@@ -30,20 +33,20 @@ $ cd Servidor && ./arrancar.sh
 
 **Nota**: Para este uso, mejor utilizar `DEBUG=True` en `settings.py`.
 
-### Como contenedor
+### Como root
 
-Para crear un contenedor con el servidor de manera automática, instalar la
-herramienta `mkosi` y ejecutar en este directorio:
+Recomendado para ejecución en un contenedor, por ejemplo creado con `mkosi` y
+gestionado con `systemd-nspawn`. Instala todas las dependencias a nivel de
+sistema, despliega en el path absoluto `"/Servidor"`, prepara un servidor nginx
+y habilita los servicios `systemd` necesarios para que la api se arranque
+automáticamente con el servidor.
+
+Tras crear el contenedor, copiar el repositorio a la raíz de éste. Desde dentro
+del contenedor:
 
 ```sh
-$ sudo mkosi -f --default=Despliegue/mkosi.default
-```
-
-El contenedor se crea por defecto en `/var/lib/machines`, por lo que se puede
-lanzar usando:
-
-```sh
-$ sudo systemd-nspawn -nb -M emociones-contenedor
+# cd /
+# /Despliegue/install.sh
 ```
 
 ## Créditos
