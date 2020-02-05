@@ -3,6 +3,7 @@
 
 from interprete_palabras import InterpretePalabras
 from seleccionador import Seleccionador
+from datetime import datetime
 
 """
 Programa que se encarga de procesar una frase, buscando las palabras emocionales de esta
@@ -17,7 +18,7 @@ emociones = ["Tristeza", "Miedo", "Alegria", "Enfado", "Asco"] # lista de emocio
 def obtener_medias(grados,num_palabras):
         """
         Funcion que dada una lista de grados y un numero de palabras a partir
-        de las que se han obtenido, haya las medias para cada emocion. Devuelve una
+        de las que se han obtenido, halla las medias para cada emocion. Devuelve una
         lista con los grados medios.
         """
         if num_palabras > 0:
@@ -25,7 +26,7 @@ def obtener_medias(grados,num_palabras):
                         grados[i] = str(round(grados[i] / num_palabras,2))
                 return grados
         else: # si no hay ninguna palabra emocional en la frase entonces esta es neutral
-                return ["0","0","0","0","0"]
+                return ["1","1","1","1","1"]
 
 def actualizar_grados_frase(actuales,nuevos,peso):
         for i in range(len(actuales)):
@@ -51,7 +52,8 @@ def calcular_mayoritaria(contadores,grados):
 
 def es_emocional(grados):
         for i in range(len(grados)):
-                if float(grados[i]) > 2.5:
+                #if float(grados[i]) > 2.5:
+                if float(grados[i]) > 1.0:
                         return True
         return False
 
@@ -68,7 +70,7 @@ class InterpreteFrases():
                 num_palabras = len(lista_palabras)
                 mayoritarias = []
                 if num_palabras == 0: # si no hay ninguna, la frase es 100% neutral
-                        return ["0","0","0","0","0"], [], []
+                        return ["1","1","1","1","1"], [], []
                 else:
                         emociones_frase = [0,0,0,0,0]
                         num_validas = 0
@@ -78,11 +80,23 @@ class InterpreteFrases():
                                 if len(grados) > 0:
                                         if es_emocional(grados):
                                                 actualizar_grados_frase(emociones_frase,grados,tipos[i])
-                                                num_validas = num_validas + tipos[i]
+                                                num_validas = num_validas + tipos[i]#esto debe cambiar si empezamos a ponderar con tipos
                         emociones = obtener_medias(emociones_frase,num_validas)
                         if emociones[0]== "1.0" and emociones[1]=="1.0" and emociones[2]=="1.0" and emociones[3]=="1.0" and emociones[4] =="1.0":
-                                return ["0","0","0","0","0"], [],[]
+                                #fichero = open("fichero.txt", "a")
+                                #fichero.write(str(datetime.now()))
+                                #fichero.write(" -- ")
+                                #fichero.write("'" + frase + "';")
+                                #fichero.write("grados:[1,1,1,1,1];palabrasEmo:[];mayoritarias:[]\n")
+                                #fichero.close()
+                                return ["1","1","1","1","1"], [],[]
                         else:
+                                #fichero = open("fichero.txt", "a")
+                                #fichero.write(str(datetime.now()))
+                                #fichero.write(" -- ")
+                                #fichero.write("'" + frase + "';")
+                                #fichero.write("grados:" + str(emociones) + ";palabrasEmo:" + str(lista_palabras) + ";mayoritarias:" + str(mayoritarias) + "\n")
+                                #fichero.close()
                                 return emociones,lista_palabras,mayoritarias
 
         @staticmethod

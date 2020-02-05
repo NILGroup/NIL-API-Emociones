@@ -54,6 +54,10 @@ class Seleccionador():
 
         @staticmethod
         def seleccionar_palabras(frase):
+                #fichero = open("fichero.txt", "a")
+                #fichero.write("seleccionador_palabras\n")
+                #fichero.write(frase)
+                #fichero.write("\n")
                 doc = nlp(frase)
                 palabras = []
                 tipos = []
@@ -66,4 +70,13 @@ class Seleccionador():
                                         tipos.append(1)
                                 else:
                                         tipos.append(1)
+                #fichero.write("palabras:")
+                #for palabra in palabras:
+                        #fichero.write(palabra)
+                        #fichero.write("\n")
+                #fichero.write("tipos:")
+                #for tipo in tipos:
+                        #fichero.write(str(tipo))
+                        #fichero.write("\n")
+                #fichero.close()
                 return palabras,tipos

@@ -3,11 +3,14 @@
 
 import requests
 from lematizador import Lematizador
+from datetime import datetime
+from corrector import *
 
 """
 Programa que se encarga de buscar una palabra en el servicio web y devolver la informacion que tiene sobre ella.
 """
 from django.conf import settings
+
 URL = settings.SELF_URL+'/emociones/' # URL del servidor
 
 emocion = ["Tristeza", "Miedo", "Alegria", "Enfado", "Asco"] # lista de emociones con las que trabajamos
@@ -35,15 +38,49 @@ class InterpretePalabras():
                 Funcion que dada una URL del servicio web correspondiente a los grados de una palabra
                 busca la palabra y devuelve una lista con sus grados (o una lista vacia si no la encuentra).
                 """
-                buscada = lematizador.obtener_lema(palabra)
-                destino = URL + buscada + "/grados/"
+                #fichero = open("fichero.txt", "a")
+                #fichero.write(str(datetime.now()))
+                #fichero.write(" -- ")
+                #fichero.write("interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)\n")
+                #fichero.write("	La palabra recibida es: " + palabra + "\n")
+                buscada = traducir(palabra)
+                #buscada = palabra -- AQUI NO QUITA LAS TILDES
+                #destino = URL + buscada + "/grados/"
+                destino = URL + palabra + "/grados/"
+                #fichero.write(" -------------" + buscada + "\n")
+                #fichero.write("	-------------Petición " + destino + "\n")
                 respuesta = requests.get(destino) # consulta al servicio web
                 numeros = []
-                if repr(respuesta) != "<Response [404]>": # si la encuentra interpreta la respuesta JSON
+                if repr(respuesta) != "<Response [404]>": # si la encuentra interpreta la  JSON
                         grados = respuesta.json()
                         numeros = coger_grados(grados)
                 else:
                         numeros=["1","1","1","1","1"]
+                        #El servicio de grados ya busca por lexema y tipo de palabra
+                        """
+                        buscada = lematizador.obtener_lema(palabra)
+                        destino  = URL + buscada + "/grados/"
+                        fichero.write("	Ha fallado la petición, ahora vamos a buscar por lexema: " + buscada + "\n")
+                        fichero.write("	Petición " + destino + "\n")
+                        respuesta = requests.get(destino) #consulta al servicio web
+                        try:
+                        
+                                if repr(respuesta) != "<Response [404]>": # si la encuentra interpreta la respuesta JSON
+                                        grados = respuesta.json()
+                                        numeros = coger_grados(grados)
+                                else:
+                                        numeros=["1","1","1","1","1"]
+				
+                                
+                        
+                        except:
+                                if repr(respuesta) != "<Response [404]>": # si la encuentra interpreta la respuesta JSON
+                                        grados = respuesta.json()
+                                        numeros = coger_grados(grados)
+                                else:
+                                        numeros=["1","1","1","1","1"]	
+                       """
+
                 return numeros
 
         @staticmethod

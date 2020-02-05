@@ -16,6 +16,10 @@ from emoTraductorPorcentajes import TraductorPorcentajes
 from emoTraductor import Traductor
 from interprete_palabras import InterpretePalabras
 from interprete_frases import InterpreteFrases
+from datetime import datetime
+import spacy
+import Stemmer
+from corrector import *
 
 
 from django.http import HttpResponse
@@ -126,8 +130,12 @@ def gradosFrase(frase):
     return InterpreteFrases.emociones_frase(frase)
 
 def vista_porcentaje(request):
+    #fichero = open("fichero.txt", "a")
+    #fichero.write(str(datetime.now()))
+    #fichero.write(" -- vista_porcentaje\n")
     if request.method=='POST':
         texto = request.POST['porcentajes']
+        #fichero.write(" Va a traducir el texto: " + texto.lower() + " \n")
         solucion = traducirTextoAPorcentajes(texto.lower())
         data = {
         #       'tristeza': grados[0],
@@ -137,6 +145,13 @@ def vista_porcentaje(request):
         #       'asco' : grados[4],
                 'solucion': solucion
         }
+        fichero = open("fichero.txt", "a")
+        fichero.write(str(datetime.now()))
+        fichero.write(" -- ")
+        fichero.write("'" + texto.lower() + "';")
+        #fichero.write(str(solucion) + "\n")
+        fichero.write(str(data) + "\n")
+        fichero.close()
         return JsonResponse(data)
     else:
         #texto = request.GET['a']
@@ -149,8 +164,13 @@ def traducirTextoAPorcentajes(texto):
     return TraductorPorcentajes.traducir(texto)
 
 def vista_texto(request):
+    #fichero = open("fichero.txt", "a")
+    #fichero.write(str(datetime.now()))
+    #fichero.write(" -- ")
+    #fichero.write("Views.py -- vista_texto\n")
     if request.method=='POST':
         texto = request.POST['a']
+        #fichero.close()
         grados, palabras = traducirTexto(texto.lower())
         data = {
         #       'tristeza': grados[0],
@@ -161,6 +181,13 @@ def vista_texto(request):
                 'emociones': grados, #[{'tristeza': grados[0]}, {'miedo': grados[1]} , {'alegria': grados[2]}, {'enfado': grados[3]}, {'asco' : grados[4]}],
                 'palabras': palabras
         }
+        fichero = open("fichero.txt", "a")
+        fichero.write(str(datetime.now()))
+        fichero.write(" -- ")
+        fichero.write("'" + texto.lower() + "';")
+        #fichero.write(str(solucion) + "\n")
+        fichero.write(str(data) + "\n")
+        fichero.close()
         return JsonResponse(data)
     else:
         #texto = request.GET['a']
@@ -170,6 +197,13 @@ def vista_texto(request):
         return HttpResponse("Peticion no valida")
         
 def traducirTexto(texto):
+    #fichero = open("fichero.txt", "a")
+    #fichero.write(str(datetime.now()))
+    #fichero.write(" -- ")
+    #fichero.write("Views.py -- traducirTexto\n")
+    #fichero.write("	Parametro texto: " + texto)
+    #fichero.write("\n")
+    #fichero.close()
     return Traductor.traducir(texto)
 
 # Declaración de la vista del index
@@ -244,12 +278,58 @@ class ObtenerGrados(APIView):
 
     def get_object(self,pk):
         try:
-            return Palabra.objects.get(palabra=pk)
-        except Palabra.DoesNotExist:
+            #fichero = open("fichero.txt", "a")
+            #fichero.write(str(datetime.now()))
+            #fichero.write(" -- ObtenerGrados\n")
+            #fichero.write("Usamos " + pk + "\n")
+            nlp = spacy.load('es')
+            doc = nlp(pk)
+            stemmer = Stemmer.Stemmer('spanish')
+            generonumero = ""
+            for token in doc:
+                   pos = token.pos_
+                   generonumero = token.tag_
+            tipo = pos
+            lex = stemmer.stemWord(pk)
+            #fichero.write(" ATENCIÓN: la palabra es: " + pk + "\n")
+            #fichero.write(" ATENCIÓN: la palabra es del tipo: " + tipo+ "\n")
+            #fichero.write(" ATENCIÓN: su lexema es: " + lex + "\n")
+            #fichero.write(" ATENCIÓN: tiene generonumero: " + generonumero + "\n")
+            #quitamos las tildes
+            pk = traducir(pk)
+            #fichero.write(" ATENCIÓN: le hemos quitado las posibles tildes y se queda como: " + pk + "\n")
+            return Palabra.objects.get(palabra=pk) #buscamos la palabra tal cual
+        except Palabra.DoesNotExist: #si falla entonces vemos si es plural o singular.
             try:
-                return Palabra.objects.get(lexema=pk)
-            except Palabra.DoesNotExist:
-                raise Http404()
+                #fichero.write("VAMOS A VER SI ES PLURAL\n")
+                numero_ini = generonumero.find("Number")
+                if numero_ini != -1:
+                   numero = generonumero[numero_ini + 7]
+                   if numero == 'S':
+                      #fichero.write(" ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra\n")
+                      return Palabra.objects.get(lexema=lex, tipoPalabra = tipo)
+                   else:
+                      #Es plural vamos a quitarle el plural
+                      #fichero.write(" ATENCIÓN:es plural vamos a quitar el plural de la palabra: "+ pk + "\n")
+                      longitudPK = len(pk)
+                      if pk[longitudPK-1] == 's':
+                         if pk[longitudPK-2] == 'e':
+                            p = pk[0:longitudPK-2]
+                            #fichero.write(" ATENCIÓN: la palabra acaba en -es, la dejamos como: " + p + "\n")
+                            return Palabra.objects.get(palabra = p)
+                         else:
+                            p = pk[0:longitudPK-1]
+                            #fichero.write(" ATENCIÓN: la palabar acaba en -s, la dejamos como: " + p + "\n")
+                            return Palabra.objects.get(palabra = p)
+                      else:
+                         #fichero.write("ATENCIÓN: es plural pero sin s por lo que vamos a buscar por lexema y tipo de palabra por si es verbo\n")
+                         return Palabra.objects.get(lexema = lex, tipoPalabra = tipo)
+                else: #no tiene numero
+                    #fichero.write("ATENCIÓN: sin numero\n")
+                    return Palabra.objects.get(lexema=lex, tipoPalabra = tipo)
+            except:
+               #fichero.write("ATENCIÓN: Excepción pa mi\n")
+               raise Http404()
 
     def get_degrees(self,numeros):
         emociones = ["Tristeza", "Miedo", "Alegría", "Enfado", "Asco"]

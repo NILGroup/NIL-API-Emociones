@@ -76,6 +76,7 @@
             var a=$('#textArea').val();
 			
 			a = replaceAll(a, "\n", " signoEnter ");
+            console.log("main.html");
             console.log(a);
             $.ajax({
               	url:"{{site_url}}/textosGuay/",
@@ -183,7 +184,7 @@
 					escribirResultado(data['emociones'])
 				},
 				error: function(request, status, errorThrown){
-					alert(request);
+					alert('Paloma');
                     alert(request.responseText);
                     alert(status);
                     alert(errorThrown);
@@ -298,13 +299,13 @@
 					}
 				}							
 
-				var textoAEscribir = replaceAll(textoFinal, " signoPunto", ".");
-			    textoAEscribir = replaceAll(textoAEscribir, " signoComa", ",");
-			    textoAEscribir = replaceAll(textoAEscribir, "signoExclamacionAbrir ", "¡");
-			    textoAEscribir = replaceAll(textoAEscribir, " signoExclamacionCerrar", "!");
-			    textoAEscribir = replaceAll(textoAEscribir, "signoInterrogacionAbrir ", "¿");
-			    textoAEscribir = replaceAll(textoAEscribir, " signoInterrogacionCerrar", "?");
-				textoAEscribir = replaceAll(textoAEscribir, " signoEnter", "\n");
+				var textoAEscribir = replaceAll(textoFinal, " signoPunto ", ".");
+			    textoAEscribir = replaceAll(textoAEscribir, " signoComa ", ",");
+			    textoAEscribir = replaceAll(textoAEscribir, " signoExclamacionAbrir ", "¡");
+			    textoAEscribir = replaceAll(textoAEscribir, " signoExclamacionCerrar ", "!");
+			    textoAEscribir = replaceAll(textoAEscribir, " signoInterrogacionAbrir ", "¿");
+			    textoAEscribir = replaceAll(textoAEscribir, " signoInterrogacionCerrar ", "?");
+				textoAEscribir = replaceAll(textoAEscribir, " signoEnter ", "\n");
 				$("#resultadoTexto").html(textoAEscribir);
 				$("#explicacionEmociones").html("Las palabras en <b>negrita</b> son las que determinan las emociones del texto. Sí posicionas el ratón sobre alguna de ellas conocerás las emociones asociadas a dicha palabra");
        
@@ -313,9 +314,10 @@
     		},
 	    	error: function(request, status, errorThrown) {
 	            	alert(request);
-					alert(request.responseText);
+			alert(request.responseText);
 	            	alert(status);
 	            	alert(errorThrown);
+			alert("FALLÉ");
 			},
 		});
 		

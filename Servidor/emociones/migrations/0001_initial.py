@@ -20,6 +20,9 @@ class Migration(migrations.Migration):
                 ('palabra', models.CharField(max_length=30)),
                 ('lexema', models.CharField(max_length=30)),
                 ('grados', models.CharField(max_length=500, validators=[django.core.validators.RegexValidator(re.compile('^\\d+(?:\\,\\d+)*\\Z'), code='invalid', message='Enter only digits separated by commas.')])),
+                ('tipoPalabra', models.CharField(max_length=30)),
+                ('genero', models.CharField(max_length=2)),
+                ('numero', models.CharField(max_length=2)),
             ],
             options={
                 'ordering': ('palabra',),

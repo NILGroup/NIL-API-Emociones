@@ -59,20 +59,26 @@ def obtener_subfrases2(frase):
         tipos = []
         i = 0
         while i < n-1:
+                #fichero = open("fichero.txt", "a")
+                #fichero.write(" -- ")
+                #fichero.write("ESTA AQUIÍIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII\n")
+                #fichero.write("	SIGUE AQUIIII\n")
+                #fichero.write("La frase es: " + frase + "\n")
+                #fichero.write("¿\n")
                 if "?" not in frase and "!" not in frase:
                         subfrases.append(frase[0:tam])
                         tipos.append(ENUNCIATIVA)
                         break;
 
-                if ie.decode("utf-8") in frase and "?" in frase:
-                        ini_i = frase.index(ie.decode("utf-8"))
-                #if "¿" in frase and "?" in frase:
-                #       ini_i = frase.index("¿")                
+                #if ie.decode("utf-8") in frase and "?" in frase:      
+                #        ini_i = frase.index(ie.decode("utf-8"))
+                if "¿" in frase and "?" in frase:
+                        ini_i = frase.index("¿")                
                         fin_i = frase.index("?")
-                if "¡".decode("utf-8") in frase and "!" in frase:
-                        ini_e = frase.index("¡".decode("utf-8"))
-                #if "¡" in frase and "!" in frase:
-                #       ini_e = frase.index("¡")                
+                #if "¡".decode("utf-8") in frase and "!" in frase:
+                #        ini_e = frase.index("¡".decode("utf-8"))
+                if "¡" in frase and "!" in frase:
+                        ini_e = frase.index("¡")                
                         fin_e = frase.index("!")
                 if ini_i < ini_e:
                         if ini_i == 0:

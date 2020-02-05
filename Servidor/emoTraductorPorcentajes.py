@@ -3,9 +3,11 @@ import sys
 from interprete_palabras import InterpretePalabras
 from interprete_frases import InterpreteFrases
 from interprete_texto import InterpreteTexto
+from datetime import datetime
 
 def obtener_mayoritaria(grados):
-        mayor = 0
+        mayor = "0"
+        posicion = 0;
         for i in range(5):
                 if(grados[i] > mayor and grados[i] >= "2.5"):
                         mayor = grados[i]
@@ -64,12 +66,31 @@ class TraductorPorcentajes():
 
         @staticmethod
         def traducir(texto):
+                #fichero = open("fichero.txt", "a")
+                #fichero.write(str(datetime.now()))
+                #fichero.write(" -- ")
+                #fichero.write("emoTraductor.Traductor.traducir(texto)\n")
+                #fichero.write(texto)
+                #fichero.write("\n")
+                #fichero.write("Ahí va\n")
+                #fichero.write(str(len(texto.split(" "))))
+                #fichero.write("\n")
+                #fichero.write(str(len(texto.split("."))))
+                #fichero.write("\n")
                 if len(texto.split(" ")) == 1:
                         if texto[len(texto)-1] == '.':
                                 texto = texto.rstrip('.')
+                        #fichero.write("Va a palabra\n")
+                        #fichero.close()
                         return interpretar_palabra(texto)
                 elif len(texto.split('.')) <= 2:
-                        return interpretar_frase(texto)
+                        #fichero.write("Va a frase\n")
+                        #fichero.close()
+                        resultado = interpretar_frase(texto)
+                        #fichero.write("RESULTADO: " + str(resultado) + "\n")
+                        return resultado
                 else:
+                        #fichero.write("Va a texto\n")
+                        #fichero.close()
                         return interpretar_texto(texto)
 

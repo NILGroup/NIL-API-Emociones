@@ -16,6 +16,7 @@ def traducir(palabra):
                 palabra = sustituir(palabra,'ó', "o")
         elif 'ú' in palabra:
                 palabra = sustituir(palabra,'ú', "u")
-        if 'ñ' in palabra:
+        """if 'ñ' in palabra:
                 palabra = sustituir(palabra,'ñ', "ny")
+        """
         return palabra

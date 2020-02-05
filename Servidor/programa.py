@@ -8,7 +8,7 @@ Programa que le pide al usuario que introduzca una palabra para buscarla en el
 servidor y devolver el grado de cada emoción que tiene.
 """
 def lista_emociones():
-        emocion = ["tristeza", "miedo", "alegria", "enfado", "sorpresa", "neutral"]
+        emocion = ["tristeza", "miedo", "alegria", "enfado", "asco", "neutral"]
         return emocion
 
 def coger_porcentajes(porcentajes):

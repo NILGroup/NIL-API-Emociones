@@ -1,10 +1,10 @@
 -----------------------------------------------------------
+http://localhost:8000/textosGuay/
 Lista de palabras emocionales:
-['vez', 'gracias', 'vez', 'dejáis', 'palabras', 'hacéis', 'merezca', 'pena', 'verdad', 'gracias', 'regalo', 'muñeca', 'especial', 'Significa', 'estáis', 'apoyáis', 'sabéis', 'ganas', 'comerme', 'mundo', 'siento', 'Os', 'dejo', 'fotos', 'paso', 'paso', 'veáis', 'detalles', 'cuidado', 'Menudo', 'trabajazo', 'solo', 'marca', 'hecho', 'vuestro', 'calor', 'Gracias', 'vosotros', 'PedrocheCampanadas', 'tienen', 'sentido', 'adoro']
-Grado de tristeza: 1.29
-Grado de miedo: 1.21
-Grado de alegria: 2.77
-Grado de ira: 1.04
-Grado de asco: 0.95
-La mayoritaria es Alegria con un grado 2.77
+['vez', 'gracias', 'vez', 'dejáis', 'palabras', 'hacéis', 'merezca', 'pena', 'verdad', 'gracias', 'regalo', 'muñeca', 'especial', 'significa', 'estáis', 'apoyáis', 'sabéis', 'ganas', 'comerme', 'mundo', 'siento', 'dejo', 'fotos', 'paso', 'paso', 'veáis', 'detalles', 'súper', 'cuidado', 'menudo', 'trabajazo', 'gracias', 'solo', 'marca', 'hecho', 'vuestro', 'calor', 'gracias', 'vosotros', 'pedrochecampanadas', 'tienen', 'sentido', 'adoro']
+Grado de tristeza: 1.55
+Grado de miedo: 1.44
+Grado de alegria: 3.02
+Grado de ira: 1.41
+Grado de asco: 1.27
 -----------------------------------------------------------
