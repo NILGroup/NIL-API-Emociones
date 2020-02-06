@@ -1,0 +1,1263 @@
+2020-02-05 19:27:54.903171 -- Views.py -- traducirTexto
+	Parametro texto: os dejo fotos del paso a paso para que veáis todos los detalles y cómo está todo súper cuidado. ¡menudo trabajazo! signoenter gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor.
+2020-02-05 19:27:54.902991 -- Views.py -- vista_texto
+2020-02-05 19:27:54.903237 -- emoTraductor.py -- Traductor.traducir(texto)
+	Recibe el texto: os dejo fotos del paso a paso para que veáis todos los detalles y cómo está todo súper cuidado. ¡menudo trabajazo! signoenter gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor.
+
+	Es un texto
+ -- ESTA AQUIÍIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+	SIGUE AQUIIII
+La frase es: ¡menudo trabajazo! signoenter gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor
+¿
+2020-02-05 19:29:48.092221 -- Views.py -- traducirTexto
+	Parametro texto: os dejo fotos del paso a paso para que veáis todos los detalles y cómo está todo súper cuidado. ¡menudo trabajazo! signoenter gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor.
+ -- ESTA AQUIÍIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+	SIGUE AQUIIII
+La frase es: ¡menudo trabajazo! signoenter gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor
+¿
+ -- ESTA AQUIÍIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+	SIGUE AQUIIII
+La frase es: signoenter gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor
+¿
+2020-02-05 19:29:48.166020 -- ObtenerGrados
+Usamos dejo
+ ATENCIÓN: la palabra es: dejo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: dej
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: dejo
+2020-02-05 19:29:48.126073 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: dejo
+ -------------dejo
+	-------------Petición http://localhost:8000/emociones/dejo/grados/
+2020-02-05 19:29:51.397721 -- ObtenerGrados
+Usamos fotos
+ ATENCIÓN: la palabra es: fotos
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: fot
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: fotos
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: fotos
+ ATENCIÓN: la palabar acaba en -s, la dejamos como: foto
+2020-02-05 19:29:51.380753 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: fotos
+ -------------fotos
+	-------------Petición http://localhost:8000/emociones/fotos/grados/
+2020-02-05 19:29:54.323467 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:29:54.318583 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:29:57.318572 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:29:57.309586 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:30:00.085545 -- ObtenerGrados
+Usamos veáis
+ ATENCIÓN: la palabra es: veáis
+ ATENCIÓN: la palabra es del tipo: VERB
+ ATENCIÓN: su lexema es: veais
+ ATENCIÓN: tiene generonumero: VERB__Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: veais
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:30:00.081115 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: veáis
+ -------------veais
+	-------------Petición http://localhost:8000/emociones/veáis/grados/
+2020-02-05 19:30:02.943581 -- ObtenerGrados
+Usamos detalles
+ ATENCIÓN: la palabra es: detalles
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: detall
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: detalles
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: detalles
+ ATENCIÓN: la palabra acaba en -es, la dejamos como: detall
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:30:02.927518 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: detalles
+ -------------detalles
+	-------------Petición http://localhost:8000/emociones/detalles/grados/
+2020-02-05 19:30:06.598927 -- ObtenerGrados
+Usamos súper
+ ATENCIÓN: la palabra es: súper
+ ATENCIÓN: la palabra es del tipo: PROPN
+ ATENCIÓN: su lexema es: sup
+ ATENCIÓN: tiene generonumero: PROPN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: super
+2020-02-05 19:30:06.594575 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: súper
+ -------------super
+	-------------Petición http://localhost:8000/emociones/súper/grados/
+2020-02-05 19:30:10.041245 -- ObtenerGrados
+Usamos cuidado
+ ATENCIÓN: la palabra es: cuidado
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: cuid
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: cuidado
+2020-02-05 19:30:10.034781 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: cuidado
+ -------------cuidado
+	-------------Petición http://localhost:8000/emociones/cuidado/grados/
+2020-02-05 19:30:13.827907 -- ObtenerGrados
+Usamos dejo
+ ATENCIÓN: la palabra es: dejo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: dej
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: dejo
+2020-02-05 19:30:13.823688 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: dejo
+ -------------dejo
+	-------------Petición http://localhost:8000/emociones/dejo/grados/
+2020-02-05 19:30:17.299419 -- ObtenerGrados
+Usamos fotos
+ ATENCIÓN: la palabra es: fotos
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: fot
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: fotos
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: fotos
+ ATENCIÓN: la palabar acaba en -s, la dejamos como: foto
+2020-02-05 19:30:17.291283 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: fotos
+ -------------fotos
+	-------------Petición http://localhost:8000/emociones/fotos/grados/
+2020-02-05 19:30:22.227288 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:30:22.223059 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:30:25.694671 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:30:25.683845 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:30:30.100071 -- ObtenerGrados
+Usamos veáis
+ ATENCIÓN: la palabra es: veáis
+ ATENCIÓN: la palabra es del tipo: VERB
+ ATENCIÓN: su lexema es: veais
+ ATENCIÓN: tiene generonumero: VERB__Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: veais
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:30:30.095772 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: veáis
+ -------------veais
+	-------------Petición http://localhost:8000/emociones/veáis/grados/
+2020-02-05 19:30:33.624166 -- ObtenerGrados
+Usamos detalles
+ ATENCIÓN: la palabra es: detalles
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: detall
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: detalles
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: detalles
+ ATENCIÓN: la palabra acaba en -es, la dejamos como: detall
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:30:33.616187 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: detalles
+ -------------detalles
+	-------------Petición http://localhost:8000/emociones/detalles/grados/
+2020-02-05 19:30:37.169792 -- ObtenerGrados
+Usamos súper
+ ATENCIÓN: la palabra es: súper
+ ATENCIÓN: la palabra es del tipo: PROPN
+ ATENCIÓN: su lexema es: sup
+ ATENCIÓN: tiene generonumero: PROPN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: super
+2020-02-05 19:30:37.165689 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: súper
+ -------------super
+	-------------Petición http://localhost:8000/emociones/súper/grados/
+2020-02-05 19:30:40.028534 -- ObtenerGrados
+Usamos cuidado
+ ATENCIÓN: la palabra es: cuidado
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: cuid
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: cuidado
+2020-02-05 19:30:40.023281 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: cuidado
+ -------------cuidado
+	-------------Petición http://localhost:8000/emociones/cuidado/grados/
+2020-02-05 19:30:42.952507 -- ObtenerGrados
+Usamos menudo
+ ATENCIÓN: la palabra es: menudo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: menud
+ ATENCIÓN: tiene generonumero: NOUN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: menudo
+2020-02-05 19:30:42.948991 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: menudo
+ -------------menudo
+	-------------Petición http://localhost:8000/emociones/menudo/grados/
+2020-02-05 19:30:45.766171 -- ObtenerGrados
+Usamos trabajazo
+ ATENCIÓN: la palabra es: trabajazo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: trabajaz
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: trabajazo
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:30:45.759697 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: trabajazo
+ -------------trabajazo
+	-------------Petición http://localhost:8000/emociones/trabajazo/grados/
+2020-02-05 19:30:48.549487 -- ObtenerGrados
+Usamos dejo
+ ATENCIÓN: la palabra es: dejo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: dej
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: dejo
+2020-02-05 19:30:48.545089 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: dejo
+ -------------dejo
+	-------------Petición http://localhost:8000/emociones/dejo/grados/
+2020-02-05 19:30:51.299844 -- ObtenerGrados
+Usamos fotos
+ ATENCIÓN: la palabra es: fotos
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: fot
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: fotos
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: fotos
+ ATENCIÓN: la palabar acaba en -s, la dejamos como: foto
+2020-02-05 19:30:51.295532 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: fotos
+ -------------fotos
+	-------------Petición http://localhost:8000/emociones/fotos/grados/
+2020-02-05 19:30:55.069691 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:30:55.061015 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:30:58.613925 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:30:58.595181 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:31:01.903890 -- ObtenerGrados
+Usamos veáis
+ ATENCIÓN: la palabra es: veáis
+ ATENCIÓN: la palabra es del tipo: VERB
+ ATENCIÓN: su lexema es: veais
+ ATENCIÓN: tiene generonumero: VERB__Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: veais
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:31:01.897167 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: veáis
+ -------------veais
+	-------------Petición http://localhost:8000/emociones/veáis/grados/
+2020-02-05 19:31:05.931121 -- ObtenerGrados
+Usamos detalles
+ ATENCIÓN: la palabra es: detalles
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: detall
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: detalles
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: detalles
+ ATENCIÓN: la palabra acaba en -es, la dejamos como: detall
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:31:05.917288 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: detalles
+ -------------detalles
+	-------------Petición http://localhost:8000/emociones/detalles/grados/
+2020-02-05 19:31:10.016783 -- ObtenerGrados
+Usamos súper
+ ATENCIÓN: la palabra es: súper
+ ATENCIÓN: la palabra es del tipo: PROPN
+ ATENCIÓN: su lexema es: sup
+ ATENCIÓN: tiene generonumero: PROPN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: super
+2020-02-05 19:31:10.012106 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: súper
+ -------------super
+	-------------Petición http://localhost:8000/emociones/súper/grados/
+2020-02-05 19:31:12.956510 -- ObtenerGrados
+Usamos cuidado
+ ATENCIÓN: la palabra es: cuidado
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: cuid
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: cuidado
+2020-02-05 19:31:12.952164 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: cuidado
+ -------------cuidado
+	-------------Petición http://localhost:8000/emociones/cuidado/grados/
+2020-02-05 19:31:15.796243 -- ObtenerGrados
+Usamos menudo
+ ATENCIÓN: la palabra es: menudo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: menud
+ ATENCIÓN: tiene generonumero: NOUN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: menudo
+2020-02-05 19:31:15.791824 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: menudo
+ -------------menudo
+	-------------Petición http://localhost:8000/emociones/menudo/grados/
+2020-02-05 19:31:18.608465 -- ObtenerGrados
+Usamos trabajazo
+ ATENCIÓN: la palabra es: trabajazo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: trabajaz
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: trabajazo
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:31:18.604126 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: trabajazo
+ -------------trabajazo
+	-------------Petición http://localhost:8000/emociones/trabajazo/grados/
+2020-02-05 19:31:21.237581 -- ObtenerGrados
+Usamos gracias
+ ATENCIÓN: la palabra es: gracias
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: graci
+ ATENCIÓN: tiene generonumero: NOUN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: gracias
+VAMOS A VER SI ES PLURAL
+ATENCIÓN: sin numero
+2020-02-05 19:31:21.231289 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: gracias
+ -------------gracias
+	-------------Petición http://localhost:8000/emociones/gracias/grados/
+2020-02-05 19:31:23.834801 -- ObtenerGrados
+Usamos solo
+ ATENCIÓN: la palabra es: solo
+ ATENCIÓN: la palabra es del tipo: ADV
+ ATENCIÓN: su lexema es: sol
+ ATENCIÓN: tiene generonumero: ADV___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: solo
+2020-02-05 19:31:23.830362 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: solo
+ -------------solo
+	-------------Petición http://localhost:8000/emociones/solo/grados/
+2020-02-05 19:31:26.447710 -- ObtenerGrados
+Usamos marca
+ ATENCIÓN: la palabra es: marca
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: marc
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: marca
+2020-02-05 19:31:26.443455 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: marca
+ -------------marca
+	-------------Petición http://localhost:8000/emociones/marca/grados/
+2020-02-05 19:31:29.251059 -- ObtenerGrados
+Usamos hecho
+ ATENCIÓN: la palabra es: hecho
+ ATENCIÓN: la palabra es del tipo: ADJ
+ ATENCIÓN: su lexema es: hech
+ ATENCIÓN: tiene generonumero: ADJ__Gender=Masc|Number=Sing|VerbForm=Part
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: hecho
+2020-02-05 19:31:29.242852 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: hecho
+ -------------hecho
+	-------------Petición http://localhost:8000/emociones/hecho/grados/
+2020-02-05 19:31:31.978835 -- ObtenerGrados
+Usamos vuestro
+ ATENCIÓN: la palabra es: vuestro
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: vuestr
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: vuestro
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:31:31.969695 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: vuestro
+ -------------vuestro
+	-------------Petición http://localhost:8000/emociones/vuestro/grados/
+2020-02-05 19:31:34.782030 -- ObtenerGrados
+Usamos calor
+ ATENCIÓN: la palabra es: calor
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: calor
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: calor
+2020-02-05 19:31:34.777910 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: calor
+ -------------calor
+	-------------Petición http://localhost:8000/emociones/calor/grados/
+2020-02-05 19:31:37.619450 -- ObtenerGrados
+Usamos dejo
+ ATENCIÓN: la palabra es: dejo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: dej
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: dejo
+2020-02-05 19:31:37.615202 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: dejo
+ -------------dejo
+	-------------Petición http://localhost:8000/emociones/dejo/grados/
+2020-02-05 19:31:40.246472 -- ObtenerGrados
+Usamos fotos
+ ATENCIÓN: la palabra es: fotos
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: fot
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: fotos
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: fotos
+ ATENCIÓN: la palabar acaba en -s, la dejamos como: foto
+2020-02-05 19:31:40.241326 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: fotos
+ -------------fotos
+	-------------Petición http://localhost:8000/emociones/fotos/grados/
+2020-02-05 19:31:42.953991 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:31:42.949274 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:31:45.817862 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:31:45.808634 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:31:48.582219 -- ObtenerGrados
+Usamos veáis
+ ATENCIÓN: la palabra es: veáis
+ ATENCIÓN: la palabra es del tipo: VERB
+ ATENCIÓN: su lexema es: veais
+ ATENCIÓN: tiene generonumero: VERB__Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: veais
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:31:48.577791 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: veáis
+ -------------veais
+	-------------Petición http://localhost:8000/emociones/veáis/grados/
+2020-02-05 19:31:52.517451 -- ObtenerGrados
+Usamos detalles
+ ATENCIÓN: la palabra es: detalles
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: detall
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: detalles
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: detalles
+ ATENCIÓN: la palabra acaba en -es, la dejamos como: detall
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:31:52.513138 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: detalles
+ -------------detalles
+	-------------Petición http://localhost:8000/emociones/detalles/grados/
+2020-02-05 19:31:55.121032 -- ObtenerGrados
+Usamos súper
+ ATENCIÓN: la palabra es: súper
+ ATENCIÓN: la palabra es del tipo: PROPN
+ ATENCIÓN: su lexema es: sup
+ ATENCIÓN: tiene generonumero: PROPN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: super
+2020-02-05 19:31:55.116908 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: súper
+ -------------super
+	-------------Petición http://localhost:8000/emociones/súper/grados/
+2020-02-05 19:31:58.142976 -- ObtenerGrados
+Usamos cuidado
+ ATENCIÓN: la palabra es: cuidado
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: cuid
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: cuidado
+2020-02-05 19:31:58.131284 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: cuidado
+ -------------cuidado
+	-------------Petición http://localhost:8000/emociones/cuidado/grados/
+2020-02-05 19:32:00.930472 -- ObtenerGrados
+Usamos menudo
+ ATENCIÓN: la palabra es: menudo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: menud
+ ATENCIÓN: tiene generonumero: NOUN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: menudo
+2020-02-05 19:32:00.925735 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: menudo
+ -------------menudo
+	-------------Petición http://localhost:8000/emociones/menudo/grados/
+2020-02-05 19:32:03.729234 -- ObtenerGrados
+Usamos trabajazo
+ ATENCIÓN: la palabra es: trabajazo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: trabajaz
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: trabajazo
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:32:03.724968 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: trabajazo
+ -------------trabajazo
+	-------------Petición http://localhost:8000/emociones/trabajazo/grados/
+2020-02-05 19:32:06.416783 -- ObtenerGrados
+Usamos gracias
+ ATENCIÓN: la palabra es: gracias
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: graci
+ ATENCIÓN: tiene generonumero: NOUN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: gracias
+VAMOS A VER SI ES PLURAL
+ATENCIÓN: sin numero
+2020-02-05 19:32:06.412568 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: gracias
+ -------------gracias
+	-------------Petición http://localhost:8000/emociones/gracias/grados/
+2020-02-05 19:32:09.628519 -- ObtenerGrados
+Usamos solo
+ ATENCIÓN: la palabra es: solo
+ ATENCIÓN: la palabra es del tipo: ADV
+ ATENCIÓN: su lexema es: sol
+ ATENCIÓN: tiene generonumero: ADV___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: solo
+2020-02-05 19:32:09.624379 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: solo
+ -------------solo
+	-------------Petición http://localhost:8000/emociones/solo/grados/
+2020-02-05 19:32:12.467286 -- ObtenerGrados
+Usamos marca
+ ATENCIÓN: la palabra es: marca
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: marc
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: marca
+2020-02-05 19:32:12.462784 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: marca
+ -------------marca
+	-------------Petición http://localhost:8000/emociones/marca/grados/
+2020-02-05 19:32:15.118160 -- ObtenerGrados
+Usamos hecho
+ ATENCIÓN: la palabra es: hecho
+ ATENCIÓN: la palabra es del tipo: ADJ
+ ATENCIÓN: su lexema es: hech
+ ATENCIÓN: tiene generonumero: ADJ__Gender=Masc|Number=Sing|VerbForm=Part
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: hecho
+2020-02-05 19:32:15.113922 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: hecho
+ -------------hecho
+	-------------Petición http://localhost:8000/emociones/hecho/grados/
+2020-02-05 19:32:17.861427 -- ObtenerGrados
+Usamos vuestro
+ ATENCIÓN: la palabra es: vuestro
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: vuestr
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: vuestro
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:32:17.853398 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: vuestro
+ -------------vuestro
+	-------------Petición http://localhost:8000/emociones/vuestro/grados/
+2020-02-05 19:32:20.437780 -- ObtenerGrados
+Usamos calor
+ ATENCIÓN: la palabra es: calor
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: calor
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: calor
+2020-02-05 19:32:20.432659 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: calor
+ -------------calor
+	-------------Petición http://localhost:8000/emociones/calor/grados/
+2020-02-05 19:29:48.092971 -- emoTraductor.py -- Traductor.traducir(texto)
+	Recibe el texto: os dejo fotos del paso a paso para que veáis todos los detalles y cómo está todo súper cuidado. ¡menudo trabajazo! signoenter gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor.
+
+	Es un texto
+2020-02-05 19:29:48.091398 -- Views.py -- vista_texto
+2020-02-05 19:32:23.132030 -- 'os dejo fotos del paso a paso para que veáis todos los detalles y cómo está todo súper cuidado. ¡menudo trabajazo! signoenter gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor.';{'emociones': ['1.54', '1.37', '2.34', '1.41', '1.26'], 'palabras': ['dejo', 'fotos', 'paso', 'paso', 'veáis', 'detalles', 'súper', 'cuidado', 'menudo', 'trabajazo', 'gracias', 'solo', 'marca', 'hecho', 'vuestro', 'calor']}
+ -- ESTA AQUIÍIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+	SIGUE AQUIIII
+La frase es: ¡menudo trabajazo! signoenter gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor
+¿
+ -- ESTA AQUIÍIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+	SIGUE AQUIIII
+La frase es: signoenter gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor
+¿
+2020-02-05 19:32:23.333957 -- ObtenerGrados
+Usamos dejo
+ ATENCIÓN: la palabra es: dejo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: dej
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: dejo
+2020-02-05 19:32:23.330502 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: dejo
+ -------------dejo
+	-------------Petición http://localhost:8000/emociones/dejo/grados/
+2020-02-05 19:32:26.090042 -- ObtenerGrados
+Usamos fotos
+ ATENCIÓN: la palabra es: fotos
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: fot
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: fotos
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: fotos
+ ATENCIÓN: la palabar acaba en -s, la dejamos como: foto
+2020-02-05 19:32:26.082551 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: fotos
+ -------------fotos
+	-------------Petición http://localhost:8000/emociones/fotos/grados/
+2020-02-05 19:32:28.886701 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:32:28.882176 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:32:31.465857 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:32:31.461668 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:32:34.359190 -- ObtenerGrados
+Usamos veáis
+ ATENCIÓN: la palabra es: veáis
+ ATENCIÓN: la palabra es del tipo: VERB
+ ATENCIÓN: su lexema es: veais
+ ATENCIÓN: tiene generonumero: VERB__Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: veais
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:32:34.354409 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: veáis
+ -------------veais
+	-------------Petición http://localhost:8000/emociones/veáis/grados/
+2020-02-05 19:32:36.987420 -- ObtenerGrados
+Usamos detalles
+ ATENCIÓN: la palabra es: detalles
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: detall
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: detalles
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: detalles
+ ATENCIÓN: la palabra acaba en -es, la dejamos como: detall
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:32:36.976858 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: detalles
+ -------------detalles
+	-------------Petición http://localhost:8000/emociones/detalles/grados/
+2020-02-05 19:32:39.852639 -- ObtenerGrados
+Usamos súper
+ ATENCIÓN: la palabra es: súper
+ ATENCIÓN: la palabra es del tipo: PROPN
+ ATENCIÓN: su lexema es: sup
+ ATENCIÓN: tiene generonumero: PROPN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: super
+2020-02-05 19:32:39.848528 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: súper
+ -------------super
+	-------------Petición http://localhost:8000/emociones/súper/grados/
+2020-02-05 19:32:42.460317 -- ObtenerGrados
+Usamos cuidado
+ ATENCIÓN: la palabra es: cuidado
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: cuid
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: cuidado
+2020-02-05 19:32:42.450982 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: cuidado
+ -------------cuidado
+	-------------Petición http://localhost:8000/emociones/cuidado/grados/
+2020-02-05 19:32:45.259194 -- ObtenerGrados
+Usamos dejo
+ ATENCIÓN: la palabra es: dejo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: dej
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: dejo
+2020-02-05 19:32:45.254977 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: dejo
+ -------------dejo
+	-------------Petición http://localhost:8000/emociones/dejo/grados/
+2020-02-05 19:32:47.941215 -- ObtenerGrados
+Usamos fotos
+ ATENCIÓN: la palabra es: fotos
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: fot
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: fotos
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: fotos
+ ATENCIÓN: la palabar acaba en -s, la dejamos como: foto
+2020-02-05 19:32:47.936880 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: fotos
+ -------------fotos
+	-------------Petición http://localhost:8000/emociones/fotos/grados/
+2020-02-05 19:32:50.724283 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:32:50.719995 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:32:53.412965 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:32:53.408909 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:32:56.102346 -- ObtenerGrados
+Usamos veáis
+ ATENCIÓN: la palabra es: veáis
+ ATENCIÓN: la palabra es del tipo: VERB
+ ATENCIÓN: su lexema es: veais
+ ATENCIÓN: tiene generonumero: VERB__Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: veais
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:32:56.098178 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: veáis
+ -------------veais
+	-------------Petición http://localhost:8000/emociones/veáis/grados/
+2020-02-05 19:32:58.632643 -- ObtenerGrados
+Usamos detalles
+ ATENCIÓN: la palabra es: detalles
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: detall
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: detalles
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: detalles
+ ATENCIÓN: la palabra acaba en -es, la dejamos como: detall
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:32:58.628470 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: detalles
+ -------------detalles
+	-------------Petición http://localhost:8000/emociones/detalles/grados/
+2020-02-05 19:33:01.545724 -- ObtenerGrados
+Usamos súper
+ ATENCIÓN: la palabra es: súper
+ ATENCIÓN: la palabra es del tipo: PROPN
+ ATENCIÓN: su lexema es: sup
+ ATENCIÓN: tiene generonumero: PROPN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: super
+2020-02-05 19:33:01.537110 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: súper
+ -------------super
+	-------------Petición http://localhost:8000/emociones/súper/grados/
+2020-02-05 19:33:04.257135 -- ObtenerGrados
+Usamos cuidado
+ ATENCIÓN: la palabra es: cuidado
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: cuid
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: cuidado
+2020-02-05 19:33:04.243426 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: cuidado
+ -------------cuidado
+	-------------Petición http://localhost:8000/emociones/cuidado/grados/
+2020-02-05 19:33:06.953954 -- ObtenerGrados
+Usamos menudo
+ ATENCIÓN: la palabra es: menudo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: menud
+ ATENCIÓN: tiene generonumero: NOUN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: menudo
+2020-02-05 19:33:06.946611 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: menudo
+ -------------menudo
+	-------------Petición http://localhost:8000/emociones/menudo/grados/
+2020-02-05 19:33:09.617112 -- ObtenerGrados
+Usamos trabajazo
+ ATENCIÓN: la palabra es: trabajazo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: trabajaz
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: trabajazo
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:33:09.609099 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: trabajazo
+ -------------trabajazo
+	-------------Petición http://localhost:8000/emociones/trabajazo/grados/
+2020-02-05 19:33:12.483898 -- ObtenerGrados
+Usamos dejo
+ ATENCIÓN: la palabra es: dejo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: dej
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: dejo
+2020-02-05 19:33:12.478291 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: dejo
+ -------------dejo
+	-------------Petición http://localhost:8000/emociones/dejo/grados/
+2020-02-05 19:33:15.302292 -- ObtenerGrados
+Usamos fotos
+ ATENCIÓN: la palabra es: fotos
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: fot
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: fotos
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: fotos
+ ATENCIÓN: la palabar acaba en -s, la dejamos como: foto
+2020-02-05 19:33:15.298086 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: fotos
+ -------------fotos
+	-------------Petición http://localhost:8000/emociones/fotos/grados/
+2020-02-05 19:33:18.342421 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:33:18.338025 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:33:22.202508 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:33:22.186922 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:33:26.253866 -- ObtenerGrados
+Usamos veáis
+ ATENCIÓN: la palabra es: veáis
+ ATENCIÓN: la palabra es del tipo: VERB
+ ATENCIÓN: su lexema es: veais
+ ATENCIÓN: tiene generonumero: VERB__Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: veais
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:33:26.248302 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: veáis
+ -------------veais
+	-------------Petición http://localhost:8000/emociones/veáis/grados/
+2020-02-05 19:33:30.564896 -- ObtenerGrados
+Usamos detalles
+ ATENCIÓN: la palabra es: detalles
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: detall
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: detalles
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: detalles
+ ATENCIÓN: la palabra acaba en -es, la dejamos como: detall
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:33:30.554037 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: detalles
+ -------------detalles
+	-------------Petición http://localhost:8000/emociones/detalles/grados/
+2020-02-05 19:33:34.319817 -- ObtenerGrados
+Usamos súper
+ ATENCIÓN: la palabra es: súper
+ ATENCIÓN: la palabra es del tipo: PROPN
+ ATENCIÓN: su lexema es: sup
+ ATENCIÓN: tiene generonumero: PROPN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: super
+2020-02-05 19:33:34.309922 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: súper
+ -------------super
+	-------------Petición http://localhost:8000/emociones/súper/grados/
+2020-02-05 19:33:37.013954 -- ObtenerGrados
+Usamos cuidado
+ ATENCIÓN: la palabra es: cuidado
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: cuid
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: cuidado
+2020-02-05 19:33:37.009820 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: cuidado
+ -------------cuidado
+	-------------Petición http://localhost:8000/emociones/cuidado/grados/
+2020-02-05 19:33:39.705887 -- ObtenerGrados
+Usamos menudo
+ ATENCIÓN: la palabra es: menudo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: menud
+ ATENCIÓN: tiene generonumero: NOUN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: menudo
+2020-02-05 19:33:39.696725 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: menudo
+ -------------menudo
+	-------------Petición http://localhost:8000/emociones/menudo/grados/
+2020-02-05 19:33:42.336920 -- ObtenerGrados
+Usamos trabajazo
+ ATENCIÓN: la palabra es: trabajazo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: trabajaz
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: trabajazo
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:33:42.332600 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: trabajazo
+ -------------trabajazo
+	-------------Petición http://localhost:8000/emociones/trabajazo/grados/
+2020-02-05 19:33:45.062996 -- ObtenerGrados
+Usamos gracias
+ ATENCIÓN: la palabra es: gracias
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: graci
+ ATENCIÓN: tiene generonumero: NOUN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: gracias
+VAMOS A VER SI ES PLURAL
+ATENCIÓN: sin numero
+2020-02-05 19:33:45.054171 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: gracias
+ -------------gracias
+	-------------Petición http://localhost:8000/emociones/gracias/grados/
+2020-02-05 19:33:47.760483 -- ObtenerGrados
+Usamos solo
+ ATENCIÓN: la palabra es: solo
+ ATENCIÓN: la palabra es del tipo: ADV
+ ATENCIÓN: su lexema es: sol
+ ATENCIÓN: tiene generonumero: ADV___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: solo
+2020-02-05 19:33:47.756294 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: solo
+ -------------solo
+	-------------Petición http://localhost:8000/emociones/solo/grados/
+2020-02-05 19:33:50.486203 -- ObtenerGrados
+Usamos marca
+ ATENCIÓN: la palabra es: marca
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: marc
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: marca
+2020-02-05 19:33:50.481947 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: marca
+ -------------marca
+	-------------Petición http://localhost:8000/emociones/marca/grados/
+2020-02-05 19:33:52.924419 -- ObtenerGrados
+Usamos hecho
+ ATENCIÓN: la palabra es: hecho
+ ATENCIÓN: la palabra es del tipo: ADJ
+ ATENCIÓN: su lexema es: hech
+ ATENCIÓN: tiene generonumero: ADJ__Gender=Masc|Number=Sing|VerbForm=Part
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: hecho
+2020-02-05 19:33:52.913586 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: hecho
+ -------------hecho
+	-------------Petición http://localhost:8000/emociones/hecho/grados/
+2020-02-05 19:33:55.527543 -- ObtenerGrados
+Usamos vuestro
+ ATENCIÓN: la palabra es: vuestro
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: vuestr
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: vuestro
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:33:55.523142 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: vuestro
+ -------------vuestro
+	-------------Petición http://localhost:8000/emociones/vuestro/grados/
+2020-02-05 19:33:58.165509 -- ObtenerGrados
+Usamos calor
+ ATENCIÓN: la palabra es: calor
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: calor
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: calor
+2020-02-05 19:33:58.154311 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: calor
+ -------------calor
+	-------------Petición http://localhost:8000/emociones/calor/grados/
+2020-02-05 19:34:01.300065 -- ObtenerGrados
+Usamos dejo
+ ATENCIÓN: la palabra es: dejo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: dej
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: dejo
+2020-02-05 19:34:01.294802 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: dejo
+ -------------dejo
+	-------------Petición http://localhost:8000/emociones/dejo/grados/
+2020-02-05 19:34:03.964117 -- ObtenerGrados
+Usamos fotos
+ ATENCIÓN: la palabra es: fotos
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: fot
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: fotos
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: fotos
+ ATENCIÓN: la palabar acaba en -s, la dejamos como: foto
+2020-02-05 19:34:03.959559 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: fotos
+ -------------fotos
+	-------------Petición http://localhost:8000/emociones/fotos/grados/
+2020-02-05 19:34:06.473024 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:34:06.468861 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:34:08.836525 -- ObtenerGrados
+Usamos paso
+ ATENCIÓN: la palabra es: paso
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: pas
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: paso
+2020-02-05 19:34:08.832255 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: paso
+ -------------paso
+	-------------Petición http://localhost:8000/emociones/paso/grados/
+2020-02-05 19:34:11.507099 -- ObtenerGrados
+Usamos veáis
+ ATENCIÓN: la palabra es: veáis
+ ATENCIÓN: la palabra es del tipo: VERB
+ ATENCIÓN: su lexema es: veais
+ ATENCIÓN: tiene generonumero: VERB__Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: veais
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:34:11.501807 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: veáis
+ -------------veais
+	-------------Petición http://localhost:8000/emociones/veáis/grados/
+2020-02-05 19:34:14.790336 -- ObtenerGrados
+Usamos detalles
+ ATENCIÓN: la palabra es: detalles
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: detall
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Plur
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: detalles
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN:es plural vamos a quitar el plural de la palabra: detalles
+ ATENCIÓN: la palabra acaba en -es, la dejamos como: detall
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:34:14.781277 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: detalles
+ -------------detalles
+	-------------Petición http://localhost:8000/emociones/detalles/grados/
+2020-02-05 19:34:18.569532 -- ObtenerGrados
+Usamos súper
+ ATENCIÓN: la palabra es: súper
+ ATENCIÓN: la palabra es del tipo: PROPN
+ ATENCIÓN: su lexema es: sup
+ ATENCIÓN: tiene generonumero: PROPN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: super
+2020-02-05 19:34:18.560880 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: súper
+ -------------super
+	-------------Petición http://localhost:8000/emociones/súper/grados/
+2020-02-05 19:34:22.124644 -- ObtenerGrados
+Usamos cuidado
+ ATENCIÓN: la palabra es: cuidado
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: cuid
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: cuidado
+2020-02-05 19:34:22.120531 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: cuidado
+ -------------cuidado
+	-------------Petición http://localhost:8000/emociones/cuidado/grados/
+2020-02-05 19:34:25.153769 -- ObtenerGrados
+Usamos menudo
+ ATENCIÓN: la palabra es: menudo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: menud
+ ATENCIÓN: tiene generonumero: NOUN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: menudo
+2020-02-05 19:34:25.149523 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: menudo
+ -------------menudo
+	-------------Petición http://localhost:8000/emociones/menudo/grados/
+2020-02-05 19:34:27.837211 -- ObtenerGrados
+Usamos trabajazo
+ ATENCIÓN: la palabra es: trabajazo
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: trabajaz
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: trabajazo
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:34:27.832852 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: trabajazo
+ -------------trabajazo
+	-------------Petición http://localhost:8000/emociones/trabajazo/grados/
+2020-02-05 19:34:30.799545 -- ObtenerGrados
+Usamos gracias
+ ATENCIÓN: la palabra es: gracias
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: graci
+ ATENCIÓN: tiene generonumero: NOUN___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: gracias
+VAMOS A VER SI ES PLURAL
+ATENCIÓN: sin numero
+2020-02-05 19:34:30.789941 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: gracias
+ -------------gracias
+	-------------Petición http://localhost:8000/emociones/gracias/grados/
+2020-02-05 19:34:35.394424 -- ObtenerGrados
+Usamos solo
+ ATENCIÓN: la palabra es: solo
+ ATENCIÓN: la palabra es del tipo: ADV
+ ATENCIÓN: su lexema es: sol
+ ATENCIÓN: tiene generonumero: ADV___
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: solo
+2020-02-05 19:34:35.386276 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: solo
+ -------------solo
+	-------------Petición http://localhost:8000/emociones/solo/grados/
+2020-02-05 19:34:38.603166 -- ObtenerGrados
+Usamos marca
+ ATENCIÓN: la palabra es: marca
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: marc
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Fem|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: marca
+2020-02-05 19:34:38.598348 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: marca
+ -------------marca
+	-------------Petición http://localhost:8000/emociones/marca/grados/
+2020-02-05 19:34:41.320943 -- ObtenerGrados
+Usamos hecho
+ ATENCIÓN: la palabra es: hecho
+ ATENCIÓN: la palabra es del tipo: ADJ
+ ATENCIÓN: su lexema es: hech
+ ATENCIÓN: tiene generonumero: ADJ__Gender=Masc|Number=Sing|VerbForm=Part
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: hecho
+2020-02-05 19:34:41.312970 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: hecho
+ -------------hecho
+	-------------Petición http://localhost:8000/emociones/hecho/grados/
+2020-02-05 19:34:45.449720 -- ObtenerGrados
+Usamos vuestro
+ ATENCIÓN: la palabra es: vuestro
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: vuestr
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: vuestro
+VAMOS A VER SI ES PLURAL
+ ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra
+ATENCIÓN: Excepción pa mi
+2020-02-05 19:34:45.445139 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: vuestro
+ -------------vuestro
+	-------------Petición http://localhost:8000/emociones/vuestro/grados/
+2020-02-05 19:34:48.839799 -- ObtenerGrados
+Usamos calor
+ ATENCIÓN: la palabra es: calor
+ ATENCIÓN: la palabra es del tipo: NOUN
+ ATENCIÓN: su lexema es: calor
+ ATENCIÓN: tiene generonumero: NOUN__Gender=Masc|Number=Sing
+ ATENCIÓN: le hemos quitado las posibles tildes y se queda como: calor
+2020-02-05 19:34:48.835254 -- interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)
+	La palabra recibida es: calor
+ -------------calor
+	-------------Petición http://localhost:8000/emociones/calor/grados/
+2020-02-05 19:34:52.281700 -- 'os dejo fotos del paso a paso para que veáis todos los detalles y cómo está todo súper cuidado. ¡menudo trabajazo! signoenter gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor.';{'solucion': ['dejo', ['2.35', '2.2', '1.26', '1.85', '1.4'], 0, 'fotos', ['1.6', '1.3', '3.95', '1.2', '1.1'], 3, 'paso', ['1.35', '1.35', '2.0', '1.5', '1.2'], 0, 'paso', ['1.35', '1.35', '2.0', '1.5', '1.2'], 0, 'veáis', ['1', '1', '1', '1', '1'], 0, 'detalles', ['1', '1', '1', '1', '1'], 0, 'súper', ['1.2', '1.2', '3.8', '1.0', '1.1'], 3, 'cuidado', ['1.5', '1.55', '2.65', '1.35', '1.5'], 3, 'menudo', ['1.47', '1.25', '2.04', '1.4', '1.2'], 0, 'trabajazo', ['1', '1', '1', '1', '1'], 0, 'gracias', ['1.07', '1.0', '4.2', '1.2', '1.12'], 3, 'solo', ['3.27', '2.49', '1.5', '1.59', '1.5'], 1, 'marca', ['1.3', '1.2', '1.7', '1.37', '1.5'], 0, 'hecho', ['1.4', '1.57', '2.4', '1.47', '1.4'], 0, 'vuestro', ['1', '1', '1', '1', '1'], 0, 'calor', ['1.27', '1.23', '3.57', '1.6', '1.47'], 3]}
+2020-02-05 19:50:53.372672 -- 'una vez más, gracias.
+una vez más me dejáis sin palabras y hacéis que todo merezca la pena. de verdad, gracias.
+esto no es solo un regalo o una muñeca más. quizás para algunos sí, pero para mí es algo muy muy especial. significa que estáis ahí y que me apoyáis, y no sabéis las ganas de comerme el mundo que siento cuando os noto tan cerca.
+os dejo fotos del paso a paso para que veáis todos los detalles y cómo está todo súper cuidado. ¡menudo trabajazo!
+gracias, no solo a la marca que me lo ha hecho, sino a todos por vuestro calor.
+gracias a vosotros las #pedrochecampanadas tienen más sentido que nunca.
+os adoro.';{'emociones': ['1.55', '1.44', '3.02', '1.41', '1.27'], 'palabras': ['vez', 'gracias', 'vez', 'dejáis', 'palabras', 'hacéis', 'merezca', 'pena', 'verdad', 'gracias', 'regalo', 'muñeca', 'especial', 'significa', 'estáis', 'apoyáis', 'sabéis', 'ganas', 'comerme', 'mundo', 'siento', 'dejo', 'fotos', 'paso', 'paso', 'veáis', 'detalles', 'súper', 'cuidado', 'menudo', 'trabajazo', 'gracias', 'solo', 'marca', 'hecho', 'vuestro', 'calor', 'gracias', 'vosotros', 'pedrochecampanadas', 'tienen', 'sentido', 'adoro']}
+2020-02-05 20:02:00.627294 -- 'los que me conocéis y los que me habéis seguido en redes sabréis que las críticas no las he llevado mal y he aguantado mucho. pero es obvio que no es agradable leer mentiras semana tras semana y aún así hacer oídos sordos y seguir adelante con tu trabajo, tu familia y tus amigos. claro que al ser 'personajes públicos' tenemos ese riesgo. no es todo de rosa y nos exponemos a que la gente hable. bien, mal, regular. como quieran. pero ¿existe algún tipo de límite? ¿quién lo pone? después de la nochecita en twitter y en prensa he visto que desde luego no existe ningún límite.';{'emociones': ['1.38', '1.48', '2.12', '1.35', '1.29'], 'palabras': ['conocéis', 'seguido', 'redes', 'sabréis', 'críticas', 'llevado', 'aguantado', 'obvio', 'agradable', 'leer', 'mentiras', 'semana', 'semana', 'hacer', 'oídos', 'sordos', 'seguir', 'trabajo', 'familia', 'amigos', 'personajes', 'públicos', 'tenemos', 'riesgo', 'exponemos', 'gente', 'hable', 'regular', 'quieran', 'existe', 'tipo', 'límite', 'pone', 'nochecita', 'prensa', 'visto', 'desde', 'existe', 'límite']}
+2020-02-05 20:58:10.116148 -- 'y bueno como ya sabéis que me encanta compartir todo con vosotros, mal que le pese a más de uno, hoy quiero hablaros de un tema me lleva preocupando las últimas semanas. ¿qué entendéis vosotros por autoestima? quizá pueda contestármelo la gente que critica que algunos no lo tenemos... yo (y por supuesto mi verdad o mi opinión no son universales no, son simplemente mi forma de ver la vida), creo que puede ser verdad que no tenga mucho autoestima, pero no lo veo como algo negativo del todo. he vivido situaciones en mi vida con determinadas personas que seguro que si me quisiese un poco más ahora mismo no formarían parte de mi vida. sin embargo lo siguen haciendo, y no me arrepiento de ello. ¿a esto lo podemos llamar no quererse a uno mismo? yo más bien diría: querer más al otro que a uno mismo. frase que por cierto me recuerda bastante a la enseñanza de dios: "ama al prójimo como a ti mismo", aunque se de bastante poco hoy en día. es diferente no tener autoestima a querer evitar problemas y preferir tener un trato cordial con personas que han sido importantes en tu vida. de todas formas esta es una decisión muy personal de cada uno y me parece injusto que se critique o se comente abiertamente sin ni si quiera conocer a la persona ni saber por qué situaciones ha pasado. no creo que haya nadie que tenga siempre el autoestima alto en todo momento. las  situaciones que vivimos a diario pueden hacer que suba o baje, pero también creo que es de ser inteligente el saber mantener nuestro autoestima dentro de unos límites. yo no soy una persona muy orgullosa y la verdad es los enfados se me pasan muy rápido, incluso prefiero pedir disculpas aunque no tenga claro del todo que ha sido mi culpa con tal de poner fin a la discusión. esto es algo que podría definir como una virtud más que como un "no me quiero a mi misma" o que tengo el autoestima baja. y me encanta que mis padres me hayan enseñado este tipo de valores y educación, de seguir siempre hacina delante te hagan lo que te hagan, perdonando y sin odiar ni guardar rencor a nadie... que eso es lo que acaba consumiendo a muchas personas hoy en día: el rencor y la envidia. en fin, me gustaría saber cómo anda vuestro autoestima y si alguna vez os han dicho que lo tenéis muy alto o muy bajo... yo me sigo queriendo y valorando a mi misma pero en su justa medida para nunca perder la visión de la realidad.';{'emociones': ['1.85', '1.79', '2.67', '1.66', '1.45'], 'palabras': ['bueno', 'sabéis', 'encanta', 'compartir', 'vosotros', 'pese', 'quiero', 'hablaros', 'tema', 'lleva', 'preocupando', 'últimas', 'semanas', 'vosotros', 'autoestima', 'contestármelo', 'gente', 'critica', 'tenemos', 'supuesto', 'verdad', 'opinión', 'universales', 'forma', 'ver', 'vida', 'creo', 'verdad', 'tenga', 'autoestima', 'veo', 'negativo', 'vivido', 'situaciones', 'vida', 'determinadas', 'personas', 'seguro', 'quisiese', 'formarían', 'parte', 'vida', 'embargo', 'haciendo', 'arrepiento', 'llamar', 'quererse', 'mismo', 'diría', 'querer', 'mismo', 'frase', 'cierto', 'recuerda', 'enseñanza', 'ama', 'prójimo', 'mismo', 'día', 'diferente', 'tener', 'autoestima', 'evitar', 'problemas', 'tener', 'trato', 'cordial', 'personas', 'importantes', 'vida', 'formas', 'decisión', 'personal', 'injusto', 'critique', 'quiera', 'conocer', 'persona', 'situaciones', 'pasado', 'creo', 'tenga', 'autoestima', 'alto', 'momento', 'situaciones', 'vivimos', 'diario', 'hacer', 'suba', 'baje', 'creo', 'inteligente', 'mantener', 'autoestima', 'límites', 'persona', 'orgullosa', 'verdad', 'enfados', 'pasan', 'rápido', 'prefiero', 'pedir', 'disculpas', 'tenga', 'claro', 'culpa', 'tal', 'poner', 'fin', 'discusión', 'definir', 'virtud', 'quiero', 'tengo', 'autoestima', 'baja', 'encanta', 'padres', 'enseñado', 'tipo', 'valores', 'educación', 'seguir', 'hacina', 'hagan', 'hagan', 'perdonando', 'odiar', 'guardar', 'rencor', 'consumiendo', 'personas', 'día', 'rencor', 'envidia', 'fin', 'gustaría', 'saber', 'anda', 'vuestro', 'autoestima', 'vez', 'dicho', 'tenéis', 'alto', 'bajo', 'queriendo', 'valorando', 'justa', 'medida', 'perder', 'visión', 'realidad']}

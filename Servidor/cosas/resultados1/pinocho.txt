@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['vez', 'artesano', 'labraba', 'madera', 'juguetes', 'bellos', 'tenían', 'escultor', 'maestro', 'llamaba', 'anciano', 'virtudes', 'figuraba', 'buen', 'carácter', 'envejecido', 'solo', 'día', 'sinténdose', 'viejo', 'solo', 'costumbre', 'ahuyentar', 'soledad', 'decidió', 'tallar', 'madera', 'muñeco', 'hiciera', 'compañía', 'construido', 'transformar', 'aburrimiento', 'niños', 'momentos', 'maravillosos', 'fabricaría', 'taller', 'colega', 'consiguió', 'tronco', 'pino', 'dispuso', 'fabricar', 'muñeco', 'Corta', 'talla', 'he', 'cabeza', 'nariz', 'boca', 'cuanto', 'modelar', 'boca', 'madera', 'muñeco', 'rompió', 'hablar', 'excalamndo', 'abuelito', 'Superado', 'asombro', 'maese', 'apresuró', 'completar', 'obra', 'tallado', 'muñeco', 'tronco', 'pino', 'pensó', 'llamarlo', 'reparar', 'traviesa', 'mirada', 'decidió', 'iría', 'nombre', 'cuanto', 'tuvo', 'par', 'piernas', 'madera', 'incorporó', 'salto', 'cogió', 'impulso', 'marchó']
+Grado de tristeza: 1.36
+Grado de miedo: 1.54
+Grado de alegria: 2.59
+Grado de ira: 1.12
+Grado de asco: 1.0
+La mayoritaria es Alegria con un grado 2.59
+-----------------------------------------------------------

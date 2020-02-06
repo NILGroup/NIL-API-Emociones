@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['sirenita', 'vivía', 'mar', 'sentía', 'fascinada', 'humanos', 'sobretodo', 'príncipe', 'pidió', 'bruja', 'mar', 'transformara', 'humana', 'estar', 'príncipe', 'besaba', 'pasarn', 'días', 'volvería', 'convertirse', 'sirena', 'magia', 'bruja', 'mar', 'separar']
+Grado de tristeza: 1.92
+Grado de miedo: 2.12
+Grado de alegria: 3.89
+Grado de ira: 1.4
+Grado de asco: 1.33
+La mayoritaria es Alegria con un grado 3.89
+-----------------------------------------------------------

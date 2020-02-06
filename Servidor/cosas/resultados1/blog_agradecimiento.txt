@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+Lista de palabras emocionales:
+['vez', 'gracias', 'vez', 'dejáis', 'palabras', 'hacéis', 'merezca', 'pena', 'verdad', 'gracias', 'regalo', 'muñeca', 'especial', 'Significa', 'estáis', 'apoyáis', 'sabéis', 'ganas', 'comerme', 'mundo', 'siento', 'Os', 'dejo', 'fotos', 'paso', 'paso', 'veáis', 'detalles', 'cuidado', 'Menudo', 'trabajazo', 'solo', 'marca', 'hecho', 'vuestro', 'calor', 'Gracias', 'vosotros', 'PedrocheCampanadas', 'tienen', 'sentido', 'adoro']
+Grado de tristeza: 1.29
+Grado de miedo: 1.21
+Grado de alegria: 2.77
+Grado de ira: 1.04
+Grado de asco: 0.95
+La mayoritaria es Alegria con un grado 2.77
+-----------------------------------------------------------
