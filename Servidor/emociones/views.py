@@ -130,9 +130,6 @@ def gradosFrase(frase):
     return InterpreteFrases.emociones_frase(frase)
 
 def vista_porcentaje(request):
-    #fichero = open("fichero.txt", "a")
-    #fichero.write(str(datetime.now()))
-    #fichero.write(" -- vista_porcentaje\n")
     if request.method=='POST':
         texto = request.POST['porcentajes']
         #fichero.write(" Va a traducir el texto: " + texto.lower() + " \n")
@@ -147,9 +144,8 @@ def vista_porcentaje(request):
         }
         fichero = open("fichero.txt", "a")
         fichero.write(str(datetime.now()))
-        fichero.write(" -- ")
+        fichero.write(" -- Peticion porcentajes\n")
         fichero.write("'" + texto.lower() + "';")
-        #fichero.write(str(solucion) + "\n")
         fichero.write(str(data) + "\n")
         fichero.close()
         return JsonResponse(data)
@@ -164,13 +160,8 @@ def traducirTextoAPorcentajes(texto):
     return TraductorPorcentajes.traducir(texto)
 
 def vista_texto(request):
-    #fichero = open("fichero.txt", "a")
-    #fichero.write(str(datetime.now()))
-    #fichero.write(" -- ")
-    #fichero.write("Views.py -- vista_texto\n")
     if request.method=='POST':
         texto = request.POST['a']
-        #fichero.close()
         grados, palabras = traducirTexto(texto.lower())
         data = {
         #       'tristeza': grados[0],
@@ -181,11 +172,11 @@ def vista_texto(request):
                 'emociones': grados, #[{'tristeza': grados[0]}, {'miedo': grados[1]} , {'alegria': grados[2]}, {'enfado': grados[3]}, {'asco' : grados[4]}],
                 'palabras': palabras
         }
+
         fichero = open("fichero.txt", "a")
         fichero.write(str(datetime.now()))
-        fichero.write(" -- ")
+        fichero.write(" -- Peticion textoGuay\n")
         fichero.write("'" + texto.lower() + "';")
-        #fichero.write(str(solucion) + "\n")
         fichero.write(str(data) + "\n")
         fichero.close()
         return JsonResponse(data)

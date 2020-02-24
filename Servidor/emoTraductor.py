@@ -43,13 +43,22 @@ class Traductor():
                 if len(texto.split(" ")) == 1:
                         if texto[len(texto)-1] == '.':
                                 texto = texto.rstrip('.')
+                        #fichero.write(str(datetime.now()))
+                        #fichero.write(" -- ")
                         #fichero.write("	Es una palabra\n")
+                        #fichero.close()
                         return interpretar_palabra(texto)
-                elif len(texto.split('.')) <= 2:
+                elif len(texto.split('.')) <= 2 and texto.split('.')[len(texto.split('.'))-1] == "":
+                        #fichero.write(str(datetime.now()))
+                        #fichero.write(" -- ")                        
                         #fichero.write("	Es una frase\n")
+                        #fichero.close()
                         return interpretar_frase(texto)
                 else:
+                        #fichero.write(str(datetime.now()))
+                        #fichero.write(" -- ")
                         #fichero.write("	Es un texto\n")
+                        #fichero.close()
                         return interpretar_texto(texto)
                 #fichero.close()
 

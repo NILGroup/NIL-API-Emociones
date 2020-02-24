@@ -31,8 +31,10 @@ def leer_diccionario():
         emociones = []
         for i in range(5): # para cada columna, se traduce el grado de certeza
             emociones.append(convertir_grado(frase[i+2]))
-        log.write(traducir(frase[0]) + " " + frase[1] + " " + str(emociones) + " "+ frase[7] + " " + frase[8] + " " +  frase[9] +"\n")
-        subida = Palabra(palabra=traducir(frase[0]), lexema=frase[1], grados=emociones, tipoPalabra=frase[7], genero=frase[8], numero=frase[9])
+        #log.write(traducir(frase[0]) + " " + frase[1] + " " + str(emociones) + " "+ frase[7] + " " + frase[8] + " " +  frase[9] +"\n")
+        log.write(frase[0] + " " + frase[1] + " " + str(emociones) + " "+ frase[7] + " " + frase[8] + " " +  frase[9] +"\n")
+        #subida = Palabra(palabra=traducir(frase[0]), lexema=frase[1], grados=emociones, tipoPalabra=frase[7], genero=frase[8], numero=frase[9])
+        subida = Palabra(palabra=frase[0], lexema=frase[1], grados=emociones, tipoPalabra=frase[7], genero=frase[8], numero=frase[9])
         #print(subida.palabra + " " + subida.lexema +"\n")
         subida.save()
         linea = fichero.readline() # se lee la siguiente palabra

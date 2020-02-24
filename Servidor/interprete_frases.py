@@ -5,6 +5,7 @@ from interprete_palabras import InterpretePalabras
 from seleccionador import Seleccionador
 from datetime import datetime
 
+
 """
 Programa que se encarga de procesar una frase, buscando las palabras emocionales de esta
 en el servicio web, y devolver la informacion que tiene sobre ella.
@@ -69,34 +70,26 @@ class InterpreteFrases():
                 lista_palabras,tipos = seleccionador_emocional.seleccionar_palabras(frase) # lista de palabras emocionales
                 num_palabras = len(lista_palabras)
                 mayoritarias = []
+                modificadores = seleccionador_emocional.seleccionar_modificadores(frase, lista_palabras)
+                
                 if num_palabras == 0: # si no hay ninguna, la frase es 100% neutral
                         return ["1","1","1","1","1"], [], []
                 else:
                         emociones_frase = [0,0,0,0,0]
                         num_validas = 0
                         for i in range(num_palabras):
+                                
                                 grados = interprete.interpretar_grados(lista_palabras[i])
                                 mayoritarias.append(grados)
                                 if len(grados) > 0:
                                         if es_emocional(grados):
-                                                actualizar_grados_frase(emociones_frase,grados,tipos[i])
+                                                
+                                                actualizar_grados_frase(emociones_frase,grados,(tipos[i]+ (modificadores[i][1]/100)))
                                                 num_validas = num_validas + tipos[i]#esto debe cambiar si empezamos a ponderar con tipos
                         emociones = obtener_medias(emociones_frase,num_validas)
                         if emociones[0]== "1.0" and emociones[1]=="1.0" and emociones[2]=="1.0" and emociones[3]=="1.0" and emociones[4] =="1.0":
-                                #fichero = open("fichero.txt", "a")
-                                #fichero.write(str(datetime.now()))
-                                #fichero.write(" -- ")
-                                #fichero.write("'" + frase + "';")
-                                #fichero.write("grados:[1,1,1,1,1];palabrasEmo:[];mayoritarias:[]\n")
-                                #fichero.close()
                                 return ["1","1","1","1","1"], [],[]
                         else:
-                                #fichero = open("fichero.txt", "a")
-                                #fichero.write(str(datetime.now()))
-                                #fichero.write(" -- ")
-                                #fichero.write("'" + frase + "';")
-                                #fichero.write("grados:" + str(emociones) + ";palabrasEmo:" + str(lista_palabras) + ";mayoritarias:" + str(mayoritarias) + "\n")
-                                #fichero.close()
                                 return emociones,lista_palabras,mayoritarias
 
         @staticmethod

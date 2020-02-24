@@ -5,6 +5,17 @@ import spacy
 """
 Programa que se encarga de seleccionar las palabras emocionales entre todas las de una frase.
 """
+modificadores = ['muy', 'genial', 'mucho', 'algo', 'dificilmente', 'duramente', 'relativamente', 'bastante', 'perfectamente', 'completamente'
+'altamente', 'articularmente', 'totalmente', 'fuertemente', 'excepcionalmente', 'terriblemente', 'super', 'súper', 'ridículamente',
+'enorme', 'absoluto', 'grande', 'extra', 'menos', 'solo', 'solamente', 'pequeño', 'realmente', 'pequeñamente', 'casi', 'obviamente',
+'definitivamente', 'verdaderamente', 'sifnificativamente', 'extremadamente', 'inmensamente', 'profundamente', 'extraordinariamente',
+'tremendamente', 'incríble', 'grandemente', 'mayormente', 'escasamente', 'reducidamente', 'escaso', 'reducido', 'pocos', 'pocas',
+'mucha', 'tan', 'tanto', 'más', 'apenas', 'ligeramente', 'justamente', 'ciertamente', 'absolutamente', 'especialmente',
+'muchísimo', 'muchísimos', 'muchísima', 'muchísimas', 'enteramente', 'increiblemente', 'vastamente', 'total', 'completo', 'alto',
+'alta', 'grandísimo', 'real', 'difícil']
+valoresModificadores = [30, 60, 35, 40, -85, -85, -50, 75, 75, 85, 75, 45, 85, 55, 75, 75, 75, 75, -65, 75, 75, 65, 20,-75, -25, -25,
+-50, 80, -75, -20, 75, 95, 75, 45, 95, 75, 75, 85, 75, 35, 35, -75, -75, -75, -75, -75, -75, 75, 75, 75, 35, -75, -75, 65, 75, 95, 70,
+75, 75, 75, 75, 75, 85, 75, 75, 75, 55, 55, 75, 20, -65]
 
 nlp = spacy.load('es')
 
@@ -80,3 +91,30 @@ class Seleccionador():
                         #fichero.write("\n")
                 #fichero.close()
                 return palabras,tipos
+
+        @staticmethod
+        def seleccionar_modificadores(frase, lista_palabras):
+                #fichero = open("fichero.txt", "a")
+                #fichero.write("entramos en modificadores\n")
+                #fichero.close()
+                doc = nlp(frase)
+                resultado = []
+                for token in doc:
+                        for palabra in lista_palabras:
+                                if token.text == palabra:
+                                        valor = 0
+                                        for child in token.children:
+                                                #fichero = open("fichero.txt", "a")
+                                                #fichero.write("child: " + str(child) + "\n")
+                                                #fichero.close()
+                                                if str(child) in modificadores:
+                                                        pos = modificadores.index(str(child))
+                                                        valor += valoresModificadores[pos]
+                                                else:
+                                                        valor += 0
+                                        resultado.append([palabra, valor])
+                return resultado
+
+
+
+

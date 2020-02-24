@@ -119,7 +119,11 @@ class SeccionadorFrases():
         @staticmethod
         def seccionar_texto(texto):
                 frases = texto.split('.')
-                frases = frases[0:len(frases)-1]
+                #fichero = open("fichero.txt", "a")
+                #fichero.write("Frases: " + str(frases) + "\n")
+                if frases[len(frases)-1] == '':
+                        frases = frases[0:len(frases)-1]
+                #fichero.write("Frases: " + str(frases) + "\n")
                 num_frases = 0
                 n = len(frases)
                 subfrases = []
@@ -131,4 +135,6 @@ class SeccionadorFrases():
                                 subfrases = subfrases + aux_f
                                 tipos = tipos + aux_t
                                 num_frases = num_frases + len(aux_f)
+                #fichero.write("subfrases: " + str(subfrases) + "\n")
+                #fichero.write("tipos: " + str(tipos) + "\n")
                 return subfrases,tipos

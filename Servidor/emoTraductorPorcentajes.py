@@ -66,7 +66,7 @@ class TraductorPorcentajes():
 
         @staticmethod
         def traducir(texto):
-                #fichero = open("fichero.txt", "a")
+                fichero = open("fichero.txt", "a")
                 #fichero.write(str(datetime.now()))
                 #fichero.write(" -- ")
                 #fichero.write("emoTraductor.Traductor.traducir(texto)\n")
@@ -83,7 +83,7 @@ class TraductorPorcentajes():
                         #fichero.write("Va a palabra\n")
                         #fichero.close()
                         return interpretar_palabra(texto)
-                elif len(texto.split('.')) <= 2:
+                elif len(texto.split('.')) <= 2 and texto.split('.')[len(texto.split('.'))-1] == "":
                         #fichero.write("Va a frase\n")
                         #fichero.close()
                         resultado = interpretar_frase(texto)

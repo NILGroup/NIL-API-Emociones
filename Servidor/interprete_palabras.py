@@ -49,8 +49,10 @@ class InterpretePalabras():
                 destino = URL + palabra + "/grados/"
                 #fichero.write(" -------------" + buscada + "\n")
                 #fichero.write("	-------------Petición " + destino + "\n")
+                #fichero.close()
                 respuesta = requests.get(destino) # consulta al servicio web
                 numeros = []
+                #fichero.write("HECHA LA PETICIÓN\n")
                 if repr(respuesta) != "<Response [404]>": # si la encuentra interpreta la  JSON
                         grados = respuesta.json()
                         numeros = coger_grados(grados)

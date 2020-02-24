@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['año', 'mas', 'enero', 'página', 'blanco', 'llena', 'palabras', 'brotan', 'interior', 'salpicadas', 'cosas', 'contar', 'escapan', 'entendimiento', 'año', 'mas', 'pasado', 'mañana', 'fría', 'cuerpos', 'separaban', 'almas', 'decidían', 'conectadas', 'verte', 'escucharte', 'achucharte', 'embargo', 'sentirte', 'través', 'personas', 'llegando', 'través', 'lágrimas', 'vida', 'través', 'historias', 'entremezclan', 'convierten', 'lágrimas', 'vida', 'besarte', 'forman', 'parte', 'instante']
+Grado de tristeza: 1.8
+Grado de miedo: 1.75
+Grado de alegria: 2.57
+Grado de ira: 1.57
+Grado de asco: 1.34
+-----------------------------------------------------------
