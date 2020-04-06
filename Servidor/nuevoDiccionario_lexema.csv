@@ -2883,8 +2883,7 @@ compadre;compadr;1,11;1;2,58;1,25;1,35;NOUN;M;S
 compaginar;compagin;1,2;1,7;2,7;1,25;1,16;VERB;X;X
 compaña;compañ;1;1,27;1,4;1,27;1,43;PROPN;X;X
 compañero;compañer;1,7;1,4;4;1,43;1,17;NOUN;M;S
-compañía;compañ;1,2;1,15;3,3;1,05;1,05;NOUN;F;S
-compañía;compañ;1,37;1,67;3,93;1,17;1,37;NOUN;F;S
+compañía;compañ;1,29;1,41;3,64;1,11;1,21;NOUN;F;S
 comparable;compar;1,5;1,35;1,35;1,45;1,45;ADJ;X;S
 comparación;compar;2,6;1,9;1,6;2,4;1,85;NOUN;F;S
 comparar;compar;2,2;2,05;1,85;2,45;1,7;VERB;X;X
@@ -12141,7 +12140,8 @@ solista;solist;1,4;1;2,7;1,05;1,1;ADJ;X;S
 solitario;solitari;4,07;2,53;1,33;1,7;1,47;ADJ;M;S
 sollozar;solloz;4,33;2,43;1,27;2,2;1,37;VERB;X;X
 sollozo;solloz;3,47;2,11;1,11;1,87;1,72;PROPN;X;X
-solo;sol;3,27;2,49;1,5;1,59;1,5;ADV;X;X
+solo;sol;3,6;2,63;1,5;1,43;1,3;ADV;X;X
+sólo;sol;2,95;2,35;1,5;1,75;1,7;ADV;X;X
 solsticio;solstici;1,63;1;2,47;1,11;1,12;NOUN;M;S
 soltar;solt;1,75;1,9;1,75;1,3;1,4;VERB;X;X
 soltera;solter;1,7;1,9;2,35;1,1;1,15;NOUN;F;S

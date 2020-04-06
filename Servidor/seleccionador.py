@@ -17,7 +17,7 @@ valoresModificadores = [30, 60, 35, 40, -85, -85, -50, 75, 75, 85, 75, 45, 85, 5
 -50, 80, -75, -20, 75, 95, 75, 45, 95, 75, 75, 85, 75, 35, 35, -75, -75, -75, -75, -75, -75, 75, 75, 75, 35, -75, -75, 65, 75, 95, 70,
 75, 75, 75, 75, 75, 85, 75, 75, 75, 55, 55, 75, 20, -65]
 
-nlp = spacy.load('es')
+nlp = spacy.load('es_core_news_sm')
 
 def es_verbo(pos):
         """
@@ -36,6 +36,15 @@ def es_sustantivo(pos):
         Comprueba si la palabra es un sustantivo.
         """
         return pos == "NOUN"
+
+def es_hastag(palabra):
+        """
+        Comprueba si la palabra recibida es un #
+        """
+        if palabra == "#":
+                return True
+        else:
+                return False
 
 def casos_especiales(palabra):
         """
@@ -75,12 +84,16 @@ class Seleccionador():
                 for token in (doc):
                         pos = token.pos_ # part of speach de la palabra
                         palabra = limpiar_palabra(token.text)
-                        if (es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) == True):
+                        #fichero = open("frases.txt", "a")
+                        #fichero.write("Palabra en seleccionador: " + token.text + " \n")
+                        if (es_hastag(token.text) == False) and ((es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) == True)):
+                                #fichero.write("ha entrado en verbo adjetivo o sustantivo\n")
                                 palabras.append(palabra)
                                 if (es_verbo(pos) == True):
                                         tipos.append(1)
                                 else:
                                         tipos.append(1)
+                        #fichero.close()
                 #fichero.write("palabras:")
                 #for palabra in palabras:
                         #fichero.write(palabra)

@@ -1,4 +1,3 @@
-{% load staticfiles %}
 {% load static %}
 <!doctype html>
 <html lang="en">
@@ -100,11 +99,11 @@
 					let colorEnfado = document.getElementById("colorEnfado").value;
 					let colorAsco = document.getElementById("colorAsco").value;
                    	for(var i = 0; i < data['emociones'].length; i++){
-                       	if(data['emociones'][i] > 2.50){
+                       	if(data['emociones'][i] > 1.5){
                             totalGrados += parseInt(data['emociones'][i]);
                         }
                     }
-					if(tristeza >= 2.50){
+					if(tristeza >= 1.50){
                        	var imgTristeza = $('<img  class="img" src="/static/img/tristeza.png" alt="sad face"/>');
                        	$('#textoTristeza').html('');
                        	$('#imagenTristeza').html('');
@@ -115,7 +114,7 @@
                         var tristezaEstilo = "width:" + 0 + "%; background-color:" + colorTriste + ";";
 					}
 
-                    if(miedo >= 2.50){
+                    if(miedo >= 1.50){
                        	var imgMiedo = $('<img  class="img" src="/static/img/miedo.png" alt="scary face"/>');
                        	$('#textoMiedo').html('');
                        	$('#imagenMiedo').html('');
@@ -127,7 +126,7 @@
                         var miedoEstilo = "width:" + 0 + "%; backgroung-color:" + colorMiedo + ";";
                 	}
 
-					if(alegria >= 2.50){
+					if(alegria >= 1.50){
                        	var imgAlegria = $('<img class="img" src="/static/img/alegria.png" alt="happy face"/>');
                       	$('#textoAlegria').html('');
                        	$('#imagenAlegria').html('');
@@ -139,7 +138,7 @@
                         var alegriaEstilo = "width:" + 0 + "%; background-color:" + colorAlegre + ";";
                     }
 
-                    if(enfado >= 2.50){
+                    if(enfado >= 1.50){
                        	var imgEnfado = $('<img class="img" src="/static/img/enfado.png" alt="angry face"/>');
                        	$('#textoEnfado').html('');
                        	$('#imagenEnfado').html('');
@@ -150,7 +149,7 @@
                     else{
                        	var enfadoEstilo = "width:" + 0 + "%; background-color:" + colorEnfado + ";";
                     }
-					if(asco >= 2.50){
+					if(asco >= 1.50){
                       	var imgAsco = $('<img  class="img" src="/static/img/asco.png" alt="dislike face"/>');
                     	$('#textoAsco').html('');
                     	$('#imagenAsco').html('');
@@ -162,7 +161,7 @@
                     	var ascoEstilo = "width:" + 0 + "%; background-color:" + colorAsco + ";";
                 	}
 
-                	if(tristeza <= 2.5 && miedo <= 2.5 && alegria <= 2.5 && enfado <= 2.5 && asco <= 2.5){
+                	if(tristeza <= 1.5 && miedo <= 1.5 && alegria <= 1.5 && enfado <= 1.5 && asco <= 1.5){
             			var imgTranquilo = $('<img class="img" src="/static/img/tranquilo.png" alt="normal-face"/>');
                         $('#textoTranquilo').html('');
 						$('#imagenTranquilo').html('');
@@ -237,7 +236,7 @@
 				contarCaracteres += cuantasVecesAparece(info, "¿");
 				contarCaracteres += cuantasVecesAparece(info, "?");
 				contarCaracteres += cuantasVecesAparece(info, "\n");
-			    var texto = replaceAll(info, ".", " signoPunto");
+			    var texto = replaceAll(info, ".", " signoPunto ");
 			    texto = replaceAll(texto, ",", " signoComa ");
 			    texto = replaceAll(texto, "¡", " signoExclamacionAbrir ");
 			    texto = replaceAll(texto, "!", " signoExclamacionCerrar ");
@@ -263,23 +262,23 @@
 					if(encontrado == 1){
 
 						var mostrar = "";
-						if(emociones[0] >= 2.5 && arrayEmociones[0]>= 2.5){
+						if(emociones[0] >= 1.5 && arrayEmociones[0]>= 1.5){
 							mostrar += "\nTristeza";
 							negrita = 1;
 						}
-						if(emociones[1] >= 2.5 && arrayEmociones[1]>= 2.5){
+						if(emociones[1] >= 1.5 && arrayEmociones[1]>= 1.5){
 							mostrar += "\nMiedo";
 							negrita = 1;
 						}
-						if(emociones[2] >= 2.5 && arrayEmociones[2]>= 2.5){
+						if(emociones[2] >= 1.5 && arrayEmociones[2]>= 1.5){
 							mostrar += "\nAlegría";
 							negrita = 1;
 						}
-						if(emociones[3] >= 2.5 && arrayEmociones[3]>= 2.5){
+						if(emociones[3] >= 1.5 && arrayEmociones[3]>= 1.5){
 							mostrar += "\nEnfado";
 							negrita = 1;
 						} 
-						if(emociones[4] >= 2.5 && arrayEmociones[4]>= 2.5){
+						if(emociones[4] >= 1.5 && arrayEmociones[4]>= 1.5){
 							mostrar += "\nAsco";
 							negrita = 1;
 						}
@@ -334,7 +333,8 @@
 			<br>
 			<div class="row">
 				<div class="col-sm-9">
-					<h2> <img  class="img" src="/static/img/logoEmoTraductor.png" alt="logoEmoTraductor"/>  </h2>
+					<img src="/static/img/logo.png" alt="logoEmoTraductor"/> 
+
 				</div>
 				<div class="col-sm-3">
 					<button type="button" class="btn btn-default botonGlyphicon" data-toggle="modal" data-target="#miModal"> <span class="glyphicon glyphicon-wrench"> </span> </button>
