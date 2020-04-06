@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['dejo', 'outfit', 'entretiempo', 'blanco', 'negro', 'llevo', 'blusa', 'blanca', 'volantes', 'storets', 'enseñado', 'vez', 'negro', 'zapatos', 'dior', 'abrigo', 'oversize', 'paño', 'fino', 'usando', 'días', 'frío', 'calor']
+Grado de tristeza: 0.4
+Grado de miedo: 0.3
+Grado de alegria: 0.83
+Grado de ira: 0.23
+Grado de asco: 0.16
+-----------------------------------------------------------

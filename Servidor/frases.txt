@@ -1,0 +1,804 @@
+LISTA: ['vez', 'artesano', 'labraba', 'madera', 'juguetes', 'bellos', 'tenían', 'escultor', 'maestro']
+PALABRA: vez
+	-------------Petición http://localhost:8000/emociones/vez/grados/
+Tristeza:1.0 || Miedo:1.0 || Alegría:1.75 || Enfado:1.0 || Asco:1.32Numeros: ['0.0', '0.0', '0.75', '0.0', '0.32']
+PALABRA: artesano
+	-------------Petición http://localhost:8000/emociones/artesano/grados/
+Tristeza:1.05 || Miedo:1.1 || Alegría:2.54 || Enfado:1.05 || Asco:1.05Numeros: ['0.05', '0.1', '1.54', '0.05', '0.05']
+PALABRA: labraba
+	-------------Petición http://localhost:8000/emociones/labraba/grados/
+Tristeza:1.24 || Miedo:1.0 || Alegría:1.63 || Enfado:1.25 || Asco:1.2Numeros: ['0.24', '0.0', '0.63', '0.25', '0.2']
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: juguetes
+	-------------Petición http://localhost:8000/emociones/juguetes/grados/
+Tristeza:1.33 || Miedo:1.37 || Alegría:3.9 || Enfado:1.12 || Asco:1.0Numeros: ['0.33', '0.37', '2.9', '0.12', '0.0']
+PALABRA: bellos
+	-------------Petición http://localhost:8000/emociones/bellos/grados/
+Tristeza:1.1 || Miedo:1.37 || Alegría:4.13 || Enfado:1.3 || Asco:1.07Numeros: ['0.1', '0.37', '3.13', '0.3', '0.07']
+PALABRA: tenían
+	-------------Petición http://localhost:8000/emociones/tenían/grados/
+Tristeza:1.14 || Miedo:1.4 || Alegría:2.54 || Enfado:1.3 || Asco:1.14Numeros: ['0.14', '0.4', '1.54', '0.3', '0.14']
+PALABRA: escultor
+	-------------Petición http://localhost:8000/emociones/escultor/grados/
+Tristeza:1.0 || Miedo:1.0 || Alegría:2.57 || Enfado:1.0 || Asco:1.0Numeros: ['0.0', '0.0', '1.57', '0.0', '0.0']
+PALABRA: maestro
+	-------------Petición http://localhost:8000/emociones/maestro/grados/
+Tristeza:1.3 || Miedo:1.47 || Alegría:2.57 || Enfado:1.3 || Asco:1.12Numeros: ['0.3', '0.47', '1.57', '0.3', '0.12']
+LISTA: ['llamaba', 'anciano', 'virtudes', 'figuraba', 'buen', 'carácter']
+PALABRA: llamaba
+	-------------Petición http://localhost:8000/emociones/llamaba/grados/
+Tristeza:1.47 || Miedo:1.63 || Alegría:3.0 || Enfado:1.4 || Asco:1.1Numeros: ['0.47', '0.63', '2.0', '0.4', '0.1']
+PALABRA: anciano
+	-------------Petición http://localhost:8000/emociones/anciano/grados/
+Tristeza:2.63 || Miedo:1.27 || Alegría:2.7 || Enfado:1.1 || Asco:1.17Numeros: ['1.63', '0.27', '1.7', '0.1', '0.17']
+PALABRA: virtudes
+	-------------Petición http://localhost:8000/emociones/virtudes/grados/
+Tristeza:1.1 || Miedo:1.2 || Alegría:3.73 || Enfado:1.1 || Asco:1.0Numeros: ['0.1', '0.2', '2.73', '0.1', '0.0']
+PALABRA: figuraba
+	-------------Petición http://localhost:8000/emociones/figuraba/grados/
+Tristeza:1.21 || Miedo:1.34 || Alegría:1.48 || Enfado:1.38 || Asco:1.21Numeros: ['0.21', '0.34', '0.48', '0.38', '0.21']
+PALABRA: buen
+	-------------Petición http://localhost:8000/emociones/buen/grados/
+Tristeza:1.26 || Miedo:1.0 || Alegría:3.2 || Enfado:1.2 || Asco:1.1Numeros: ['0.26', '0.0', '2.2', '0.2', '0.1']
+PALABRA: carácter
+	-------------Petición http://localhost:8000/emociones/carácter/grados/
+Tristeza:1.2 || Miedo:1.55 || Alegría:2.54 || Enfado:2.45 || Asco:1.37Numeros: ['0.2', '0.55', '1.54', '1.45', '0.37']
+LISTA: ['envejecido', 'solo']
+PALABRA: envejecido
+	-------------Petición http://localhost:8000/emociones/envejecido/grados/
+Tristeza:3.15 || Miedo:2.7 || Alegría:1.9 || Enfado:2.15 || Asco:2.1Numeros: ['2.15', '1.7', '0.9', '1.15', '1.1']
+PALABRA: solo
+	-------------Petición http://localhost:8000/emociones/solo/grados/
+Tristeza:3.6 || Miedo:2.63 || Alegría:1.5 || Enfado:1.43 || Asco:1.3Numeros: ['2.6', '1.63', '0.5', '0.43', '0.3']
+LISTA: ['día', 'sinténdose', 'viejo', 'solo', 'costumbre', 'ahuyentar', 'soledad', 'decidió', 'tallar', 'madera', 'muñeco', 'hiciera', 'compañía']
+PALABRA: día
+	-------------Petición http://localhost:8000/emociones/día/grados/
+Tristeza:1.0 || Miedo:1.05 || Alegría:3.65 || Enfado:1.05 || Asco:1.1Numeros: ['0.0', '0.05', '2.65', '0.05', '0.1']
+PALABRA: sinténdose
+	-------------Petición http://localhost:8000/emociones/sinténdose/grados/
+PALABRA: viejo
+	-------------Petición http://localhost:8000/emociones/viejo/grados/
+Tristeza:3.17 || Miedo:2.6 || Alegría:2.23 || Enfado:1.63 || Asco:1.67Numeros: ['2.17', '1.6', '1.23', '0.63', '0.67']
+PALABRA: solo
+	-------------Petición http://localhost:8000/emociones/solo/grados/
+Tristeza:3.6 || Miedo:2.63 || Alegría:1.5 || Enfado:1.43 || Asco:1.3Numeros: ['2.6', '1.63', '0.5', '0.43', '0.3']
+PALABRA: costumbre
+	-------------Petición http://localhost:8000/emociones/costumbre/grados/
+Tristeza:2.1 || Miedo:1.7 || Alegría:2.73 || Enfado:1.53 || Asco:1.8Numeros: ['1.1', '0.7', '1.73', '0.53', '0.8']
+PALABRA: ahuyentar
+	-------------Petición http://localhost:8000/emociones/ahuyentar/grados/
+Tristeza:1.6 || Miedo:2.0 || Alegría:1.47 || Enfado:2.25 || Asco:1.65Numeros: ['0.6', '1.0', '0.47', '1.25', '0.65']
+PALABRA: soledad
+	-------------Petición http://localhost:8000/emociones/soledad/grados/
+Tristeza:4.2 || Miedo:3.27 || Alegría:1.33 || Enfado:1.93 || Asco:1.43Numeros: ['3.2', '2.27', '0.33', '0.93', '0.43']
+PALABRA: decidió
+	-------------Petición http://localhost:8000/emociones/decidió/grados/
+Tristeza:1.87 || Miedo:2.8 || Alegría:2.8 || Enfado:1.53 || Asco:1.47Numeros: ['0.87', '1.8', '1.8', '0.53', '0.47']
+PALABRA: tallar
+	-------------Petición http://localhost:8000/emociones/tallar/grados/
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+PALABRA: hiciera
+	-------------Petición http://localhost:8000/emociones/hiciera/grados/
+Tristeza:1.0 || Miedo:1.05 || Alegría:3.05 || Enfado:1.5 || Asco:1.25Numeros: ['0.0', '0.05', '2.05', '0.5', '0.25']
+PALABRA: compañía
+	-------------Petición http://localhost:8000/emociones/compañía/grados/
+Tristeza:1.29 || Miedo:1.41 || Alegría:3.64 || Enfado:1.11 || Asco:1.21Numeros: ['0.29', '0.41', '2.64', '0.11', '0.21']
+LISTA: ['construido', 'transformar', 'aburrimiento', 'niños', 'momentos', 'maravillosos']
+PALABRA: construido
+	-------------Petición http://localhost:8000/emociones/construido/grados/
+Tristeza:1.0 || Miedo:1.2 || Alegría:2.54 || Enfado:1.14 || Asco:1.35Numeros: ['0.0', '0.2', '1.54', '0.14', '0.35']
+PALABRA: transformar
+	-------------Petición http://localhost:8000/emociones/transformar/grados/
+Tristeza:1.25 || Miedo:2.15 || Alegría:2.52 || Enfado:1.7 || Asco:1.25Numeros: ['0.25', '1.15', '1.52', '0.7', '0.25']
+PALABRA: aburrimiento
+	-------------Petición http://localhost:8000/emociones/aburrimiento/grados/
+Tristeza:3.05 || Miedo:1.95 || Alegría:1.1 || Enfado:2.04 || Asco:2.35Numeros: ['2.05', '0.95', '0.1', '1.04', '1.35']
+PALABRA: niños
+	-------------Petición http://localhost:8000/emociones/niños/grados/
+Tristeza:1.12 || Miedo:1.53 || Alegría:4.2 || Enfado:1.23 || Asco:1.07Numeros: ['0.12', '0.53', '3.2', '0.23', '0.07']
+PALABRA: momentos
+	-------------Petición http://localhost:8000/emociones/momentos/grados/
+Tristeza:1.79 || Miedo:1.9 || Alegría:2.54 || Enfado:1.62 || Asco:1.52Numeros: ['0.79', '0.9', '1.54', '0.62', '0.52']
+PALABRA: maravillosos
+	-------------Petición http://localhost:8000/emociones/maravillosos/grados/
+Tristeza:1.03 || Miedo:1.2 || Alegría:4.43 || Enfado:1.12 || Asco:1.0Numeros: ['0.03', '0.2', '3.43', '0.12', '0.0']
+LISTA: ['fabricaría']
+PALABRA: fabricaría
+	-------------Petición http://localhost:8000/emociones/fabricaría/grados/
+Tristeza:1.05 || Miedo:1.4 || Alegría:2.25 || Enfado:1.2 || Asco:1.05Numeros: ['0.05', '0.4', '1.25', '0.2', '0.05']
+LISTA: ['taller', 'colega', 'carpintero', 'consiguió', 'tronco', 'pino', 'dispuso', 'fabricar', 'muñeco']
+PALABRA: taller
+	-------------Petición http://localhost:8000/emociones/taller/grados/
+Tristeza:1.25 || Miedo:1.1 || Alegría:1.89 || Enfado:1.25 || Asco:1.68Numeros: ['0.25', '0.1', '0.89', '0.25', '0.68']
+PALABRA: colega
+	-------------Petición http://localhost:8000/emociones/colega/grados/
+Tristeza:1.1 || Miedo:1.2 || Alegría:3.95 || Enfado:1.1 || Asco:1.14Numeros: ['0.1', '0.2', '2.95', '0.1', '0.14']
+PALABRA: carpintero
+	-------------Petición http://localhost:8000/emociones/carpintero/grados/
+Tristeza:1.23 || Miedo:1.07 || Alegría:1.83 || Enfado:1.07 || Asco:1.0Numeros: ['0.23', '0.07', '0.83', '0.07', '0.0']
+PALABRA: consiguió
+	-------------Petición http://localhost:8000/emociones/consiguió/grados/
+Tristeza:1.0 || Miedo:1.6 || Alegría:4.3 || Enfado:1.07 || Asco:1.03Numeros: ['0.0', '0.6', '3.3', '0.07', '0.03']
+PALABRA: tronco
+	-------------Petición http://localhost:8000/emociones/tronco/grados/
+Tristeza:1.05 || Miedo:1.0 || Alegría:1.65 || Enfado:1.25 || Asco:1.14Numeros: ['0.05', '0.0', '0.65', '0.25', '0.14']
+PALABRA: pino
+	-------------Petición http://localhost:8000/emociones/pino/grados/
+Tristeza:1.17 || Miedo:1.2 || Alegría:2.5 || Enfado:1.0 || Asco:1.03Numeros: ['0.17', '0.2', '1.5', '0.0', '0.03']
+PALABRA: dispuso
+	-------------Petición http://localhost:8000/emociones/dispuso/grados/
+Tristeza:1.8 || Miedo:1.3 || Alegría:3.05 || Enfado:1.14 || Asco:1.14Numeros: ['0.8', '0.3', '2.05', '0.14', '0.14']
+PALABRA: fabricar
+	-------------Petición http://localhost:8000/emociones/fabricar/grados/
+Tristeza:1.05 || Miedo:1.4 || Alegría:2.25 || Enfado:1.2 || Asco:1.05Numeros: ['0.05', '0.4', '1.25', '0.2', '0.05']
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+LISTA: ['corta', 'talla', 'cabeza', 'nariz', 'boca']
+PALABRA: corta
+	-------------Petición http://localhost:8000/emociones/corta/grados/
+Tristeza:2.45 || Miedo:2.2 || Alegría:1.2 || Enfado:1.8 || Asco:1.8Numeros: ['1.45', '1.2', '0.2', '0.8', '0.8']
+PALABRA: talla
+	-------------Petición http://localhost:8000/emociones/talla/grados/
+Tristeza:1.77 || Miedo:1.77 || Alegría:1.6 || Enfado:1.77 || Asco:1.73Numeros: ['0.77', '0.77', '0.6', '0.77', '0.73']
+PALABRA: cabeza
+	-------------Petición http://localhost:8000/emociones/cabeza/grados/
+Tristeza:1.14 || Miedo:1.05 || Alegría:1.9 || Enfado:1.05 || Asco:1.6Numeros: ['0.14', '0.05', '0.9', '0.05', '0.6']
+PALABRA: nariz
+	-------------Petición http://localhost:8000/emociones/nariz/grados/
+Tristeza:1.33 || Miedo:1.4 || Alegría:1.5 || Enfado:1.4 || Asco:1.83Numeros: ['0.33', '0.4', '0.5', '0.4', '0.83']
+PALABRA: boca
+	-------------Petición http://localhost:8000/emociones/boca/grados/
+Tristeza:1.0 || Miedo:1.2 || Alegría:2.29 || Enfado:1.11 || Asco:1.95Numeros: ['0.0', '0.2', '1.29', '0.11', '0.95']
+LISTA: ['cuanto', 'terminado', 'modelar', 'boca', 'madera', 'muñeco', 'rompió', 'hablar', 'abuelito']
+PALABRA: cuanto
+	-------------Petición http://localhost:8000/emociones/cuanto/grados/
+Tristeza:1.3 || Miedo:1.1 || Alegría:1.8 || Enfado:1.5 || Asco:1.1Numeros: ['0.3', '0.1', '0.8', '0.5', '0.1']
+PALABRA: terminado
+	-------------Petición http://localhost:8000/emociones/terminado/grados/
+Tristeza:2.25 || Miedo:1.8 || Alegría:3.0 || Enfado:1.65 || Asco:1.05Numeros: ['1.25', '0.8', '2.0', '0.65', '0.05']
+PALABRA: modelar
+	-------------Petición http://localhost:8000/emociones/modelar/grados/
+Tristeza:1.14 || Miedo:1.35 || Alegría:2.0 || Enfado:1.1 || Asco:1.45Numeros: ['0.14', '0.35', '1.0', '0.1', '0.45']
+PALABRA: boca
+	-------------Petición http://localhost:8000/emociones/boca/grados/
+Tristeza:1.0 || Miedo:1.2 || Alegría:2.29 || Enfado:1.11 || Asco:1.95Numeros: ['0.0', '0.2', '1.29', '0.11', '0.95']
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+PALABRA: rompió
+	-------------Petición http://localhost:8000/emociones/rompió/grados/
+Tristeza:3.07 || Miedo:3.0 || Alegría:1.4 || Enfado:2.93 || Asco:1.73Numeros: ['2.07', '2.0', '0.4', '1.93', '0.73']
+PALABRA: hablar
+	-------------Petición http://localhost:8000/emociones/hablar/grados/
+Tristeza:1.05 || Miedo:1.55 || Alegría:3.3 || Enfado:1.2 || Asco:1.25Numeros: ['0.05', '0.55', '2.3', '0.2', '0.25']
+PALABRA: abuelito
+	-------------Petición http://localhost:8000/emociones/abuelito/grados/
+LISTA: ['superado', 'asombro', 'apresuró', 'completar', 'obra', 'tallado', 'muñeco', 'tronco', 'pino', 'pensó']
+PALABRA: superado
+	-------------Petición http://localhost:8000/emociones/superado/grados/
+Tristeza:1.6 || Miedo:1.32 || Alegría:3.95 || Enfado:1.45 || Asco:1.1Numeros: ['0.6', '0.32', '2.95', '0.45', '0.1']
+PALABRA: asombro
+	-------------Petición http://localhost:8000/emociones/asombro/grados/
+Tristeza:1.3 || Miedo:1.55 || Alegría:2.25 || Enfado:1.4 || Asco:1.05Numeros: ['0.3', '0.55', '1.25', '0.4', '0.05']
+PALABRA: apresuró
+	-------------Petición http://localhost:8000/emociones/apresuró/grados/
+Tristeza:2.2 || Miedo:1.65 || Alegría:1.4 || Enfado:2.35 || Asco:1.45Numeros: ['1.2', '0.65', '0.4', '1.35', '0.45']
+PALABRA: completar
+	-------------Petición http://localhost:8000/emociones/completar/grados/
+Tristeza:1.05 || Miedo:1.2 || Alegría:3.25 || Enfado:1.2 || Asco:1.05Numeros: ['0.05', '0.2', '2.25', '0.2', '0.05']
+PALABRA: obra
+	-------------Petición http://localhost:8000/emociones/obra/grados/
+Tristeza:1.14 || Miedo:1.35 || Alegría:2.04 || Enfado:1.3 || Asco:1.25Numeros: ['0.14', '0.35', '1.04', '0.3', '0.25']
+PALABRA: tallado
+	-------------Petición http://localhost:8000/emociones/tallado/grados/
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+PALABRA: tronco
+	-------------Petición http://localhost:8000/emociones/tronco/grados/
+Tristeza:1.05 || Miedo:1.0 || Alegría:1.65 || Enfado:1.25 || Asco:1.14Numeros: ['0.05', '0.0', '0.65', '0.25', '0.14']
+PALABRA: pino
+	-------------Petición http://localhost:8000/emociones/pino/grados/
+Tristeza:1.17 || Miedo:1.2 || Alegría:2.5 || Enfado:1.0 || Asco:1.03Numeros: ['0.17', '0.2', '1.5', '0.0', '0.03']
+PALABRA: pensó
+	-------------Petición http://localhost:8000/emociones/pensó/grados/
+Tristeza:1.55 || Miedo:1.35 || Alegría:2.8 || Enfado:1.4 || Asco:1.2Numeros: ['0.55', '0.35', '1.8', '0.4', '0.2']
+LISTA: ['reparar', 'traviesa', 'mirada', 'decidió', 'iría', 'nombre', 'pinocho']
+PALABRA: reparar
+	-------------Petición http://localhost:8000/emociones/reparar/grados/
+Tristeza:1.3 || Miedo:1.55 || Alegría:2.74 || Enfado:1.65 || Asco:1.2Numeros: ['0.3', '0.55', '1.74', '0.65', '0.2']
+PALABRA: traviesa
+	-------------Petición http://localhost:8000/emociones/traviesa/grados/
+Tristeza:1.4 || Miedo:1.65 || Alegría:2.95 || Enfado:2.0 || Asco:1.4Numeros: ['0.4', '0.65', '1.95', '1.0', '0.4']
+PALABRA: mirada
+	-------------Petición http://localhost:8000/emociones/mirada/grados/
+Tristeza:1.25 || Miedo:1.6 || Alegría:3.85 || Enfado:1.3 || Asco:1.1Numeros: ['0.25', '0.6', '2.85', '0.3', '0.1']
+PALABRA: decidió
+	-------------Petición http://localhost:8000/emociones/decidió/grados/
+Tristeza:1.87 || Miedo:2.8 || Alegría:2.8 || Enfado:1.53 || Asco:1.47Numeros: ['0.87', '1.8', '1.8', '0.53', '0.47']
+PALABRA: iría
+	-------------Petición http://localhost:8000/emociones/iría/grados/
+Tristeza:1.1 || Miedo:1.2 || Alegría:2.9 || Enfado:1.45 || Asco:1.05Numeros: ['0.1', '0.2', '1.9', '0.45', '0.05']
+PALABRA: nombre
+	-------------Petición http://localhost:8000/emociones/nombre/grados/
+Tristeza:1.17 || Miedo:1.07 || Alegría:1.33 || Enfado:1.1 || Asco:1.07Numeros: ['0.17', '0.07', '0.33', '0.1', '0.07']
+PALABRA: pinocho
+	-------------Petición http://localhost:8000/emociones/pinocho/grados/
+LISTA: ['cuanto', 'tuvo', 'par', 'piernas', 'madera', 'incorporó', 'salto', 'cogió', 'marchó', 'correr']
+PALABRA: cuanto
+	-------------Petición http://localhost:8000/emociones/cuanto/grados/
+Tristeza:1.3 || Miedo:1.1 || Alegría:1.8 || Enfado:1.5 || Asco:1.1Numeros: ['0.3', '0.1', '0.8', '0.5', '0.1']
+PALABRA: tuvo
+	-------------Petición http://localhost:8000/emociones/tuvo/grados/
+Tristeza:1.14 || Miedo:1.4 || Alegría:2.54 || Enfado:1.3 || Asco:1.14Numeros: ['0.14', '0.4', '1.54', '0.3', '0.14']
+PALABRA: par
+	-------------Petición http://localhost:8000/emociones/par/grados/
+Tristeza:1.05 || Miedo:1.05 || Alegría:2.1 || Enfado:1.05 || Asco:1.05Numeros: ['0.05', '0.05', '1.1', '0.05', '0.05']
+PALABRA: piernas
+	-------------Petición http://localhost:8000/emociones/piernas/grados/
+Tristeza:1.0 || Miedo:1.0 || Alegría:2.04 || Enfado:1.1 || Asco:1.1Numeros: ['0.0', '0.0', '1.04', '0.1', '0.1']
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: incorporó
+	-------------Petición http://localhost:8000/emociones/incorporó/grados/
+Tristeza:1.35 || Miedo:1.05 || Alegría:2.7 || Enfado:1.5 || Asco:1.14Numeros: ['0.35', '0.05', '1.7', '0.5', '0.14']
+PALABRA: salto
+	-------------Petición http://localhost:8000/emociones/salto/grados/
+Tristeza:1.12 || Miedo:2.33 || Alegría:3.07 || Enfado:1.47 || Asco:1.07Numeros: ['0.12', '1.33', '2.07', '0.47', '0.07']
+PALABRA: cogió
+	-------------Petición http://localhost:8000/emociones/cogió/grados/
+Tristeza:1.2 || Miedo:1.5 || Alegría:2.1 || Enfado:1.2 || Asco:1.14Numeros: ['0.2', '0.5', '1.1', '0.2', '0.14']
+PALABRA: marchó
+	-------------Petición http://localhost:8000/emociones/marchó/grados/
+Tristeza:2.75 || Miedo:2.15 || Alegría:1.6 || Enfado:1.65 || Asco:1.5Numeros: ['1.75', '1.15', '0.6', '0.65', '0.5']
+PALABRA: correr
+	-------------Petición http://localhost:8000/emociones/correr/grados/
+Tristeza:1.43 || Miedo:2.13 || Alegría:3.38 || Enfado:2.0 || Asco:1.37Numeros: ['0.43', '1.13', '2.38', '1.0', '0.37']
+LISTA: ['vez', 'artesano', 'labraba', 'madera', 'juguetes', 'bellos', 'tenían', 'escultor', 'maestro']
+PALABRA: vez
+	-------------Petición http://localhost:8000/emociones/vez/grados/
+Tristeza:1.0 || Miedo:1.0 || Alegría:1.75 || Enfado:1.0 || Asco:1.32Numeros: ['0.0', '0.0', '0.75', '0.0', '0.32']
+PALABRA: artesano
+	-------------Petición http://localhost:8000/emociones/artesano/grados/
+Tristeza:1.05 || Miedo:1.1 || Alegría:2.54 || Enfado:1.05 || Asco:1.05Numeros: ['0.05', '0.1', '1.54', '0.05', '0.05']
+PALABRA: labraba
+	-------------Petición http://localhost:8000/emociones/labraba/grados/
+Tristeza:1.24 || Miedo:1.0 || Alegría:1.63 || Enfado:1.25 || Asco:1.2Numeros: ['0.24', '0.0', '0.63', '0.25', '0.2']
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: juguetes
+	-------------Petición http://localhost:8000/emociones/juguetes/grados/
+Tristeza:1.33 || Miedo:1.37 || Alegría:3.9 || Enfado:1.12 || Asco:1.0Numeros: ['0.33', '0.37', '2.9', '0.12', '0.0']
+PALABRA: bellos
+	-------------Petición http://localhost:8000/emociones/bellos/grados/
+Tristeza:1.1 || Miedo:1.37 || Alegría:4.13 || Enfado:1.3 || Asco:1.07Numeros: ['0.1', '0.37', '3.13', '0.3', '0.07']
+PALABRA: tenían
+	-------------Petición http://localhost:8000/emociones/tenían/grados/
+Tristeza:1.14 || Miedo:1.4 || Alegría:2.54 || Enfado:1.3 || Asco:1.14Numeros: ['0.14', '0.4', '1.54', '0.3', '0.14']
+PALABRA: escultor
+	-------------Petición http://localhost:8000/emociones/escultor/grados/
+Tristeza:1.0 || Miedo:1.0 || Alegría:2.57 || Enfado:1.0 || Asco:1.0Numeros: ['0.0', '0.0', '1.57', '0.0', '0.0']
+PALABRA: maestro
+	-------------Petición http://localhost:8000/emociones/maestro/grados/
+Tristeza:1.3 || Miedo:1.47 || Alegría:2.57 || Enfado:1.3 || Asco:1.12Numeros: ['0.3', '0.47', '1.57', '0.3', '0.12']
+LISTA: ['llamaba', 'anciano', 'virtudes', 'figuraba', 'buen', 'carácter']
+PALABRA: llamaba
+	-------------Petición http://localhost:8000/emociones/llamaba/grados/
+Tristeza:1.47 || Miedo:1.63 || Alegría:3.0 || Enfado:1.4 || Asco:1.1Numeros: ['0.47', '0.63', '2.0', '0.4', '0.1']
+PALABRA: anciano
+	-------------Petición http://localhost:8000/emociones/anciano/grados/
+Tristeza:2.63 || Miedo:1.27 || Alegría:2.7 || Enfado:1.1 || Asco:1.17Numeros: ['1.63', '0.27', '1.7', '0.1', '0.17']
+PALABRA: virtudes
+	-------------Petición http://localhost:8000/emociones/virtudes/grados/
+Tristeza:1.1 || Miedo:1.2 || Alegría:3.73 || Enfado:1.1 || Asco:1.0Numeros: ['0.1', '0.2', '2.73', '0.1', '0.0']
+PALABRA: figuraba
+	-------------Petición http://localhost:8000/emociones/figuraba/grados/
+Tristeza:1.21 || Miedo:1.34 || Alegría:1.48 || Enfado:1.38 || Asco:1.21Numeros: ['0.21', '0.34', '0.48', '0.38', '0.21']
+PALABRA: buen
+	-------------Petición http://localhost:8000/emociones/buen/grados/
+Tristeza:1.26 || Miedo:1.0 || Alegría:3.2 || Enfado:1.2 || Asco:1.1Numeros: ['0.26', '0.0', '2.2', '0.2', '0.1']
+PALABRA: carácter
+	-------------Petición http://localhost:8000/emociones/carácter/grados/
+Tristeza:1.2 || Miedo:1.55 || Alegría:2.54 || Enfado:2.45 || Asco:1.37Numeros: ['0.2', '0.55', '1.54', '1.45', '0.37']
+LISTA: ['envejecido', 'solo']
+PALABRA: envejecido
+	-------------Petición http://localhost:8000/emociones/envejecido/grados/
+Tristeza:3.15 || Miedo:2.7 || Alegría:1.9 || Enfado:2.15 || Asco:2.1Numeros: ['2.15', '1.7', '0.9', '1.15', '1.1']
+PALABRA: solo
+	-------------Petición http://localhost:8000/emociones/solo/grados/
+Tristeza:3.6 || Miedo:2.63 || Alegría:1.5 || Enfado:1.43 || Asco:1.3Numeros: ['2.6', '1.63', '0.5', '0.43', '0.3']
+LISTA: ['día', 'sinténdose', 'viejo', 'solo', 'costumbre', 'ahuyentar', 'soledad', 'decidió', 'tallar', 'madera', 'muñeco', 'hiciera', 'compañía']
+PALABRA: día
+	-------------Petición http://localhost:8000/emociones/día/grados/
+Tristeza:1.0 || Miedo:1.05 || Alegría:3.65 || Enfado:1.05 || Asco:1.1Numeros: ['0.0', '0.05', '2.65', '0.05', '0.1']
+PALABRA: sinténdose
+	-------------Petición http://localhost:8000/emociones/sinténdose/grados/
+PALABRA: viejo
+	-------------Petición http://localhost:8000/emociones/viejo/grados/
+Tristeza:3.17 || Miedo:2.6 || Alegría:2.23 || Enfado:1.63 || Asco:1.67Numeros: ['2.17', '1.6', '1.23', '0.63', '0.67']
+PALABRA: solo
+	-------------Petición http://localhost:8000/emociones/solo/grados/
+Tristeza:3.6 || Miedo:2.63 || Alegría:1.5 || Enfado:1.43 || Asco:1.3Numeros: ['2.6', '1.63', '0.5', '0.43', '0.3']
+PALABRA: costumbre
+	-------------Petición http://localhost:8000/emociones/costumbre/grados/
+Tristeza:2.1 || Miedo:1.7 || Alegría:2.73 || Enfado:1.53 || Asco:1.8Numeros: ['1.1', '0.7', '1.73', '0.53', '0.8']
+PALABRA: ahuyentar
+	-------------Petición http://localhost:8000/emociones/ahuyentar/grados/
+Tristeza:1.6 || Miedo:2.0 || Alegría:1.47 || Enfado:2.25 || Asco:1.65Numeros: ['0.6', '1.0', '0.47', '1.25', '0.65']
+PALABRA: soledad
+	-------------Petición http://localhost:8000/emociones/soledad/grados/
+Tristeza:4.2 || Miedo:3.27 || Alegría:1.33 || Enfado:1.93 || Asco:1.43Numeros: ['3.2', '2.27', '0.33', '0.93', '0.43']
+PALABRA: decidió
+	-------------Petición http://localhost:8000/emociones/decidió/grados/
+Tristeza:1.87 || Miedo:2.8 || Alegría:2.8 || Enfado:1.53 || Asco:1.47Numeros: ['0.87', '1.8', '1.8', '0.53', '0.47']
+PALABRA: tallar
+	-------------Petición http://localhost:8000/emociones/tallar/grados/
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+PALABRA: hiciera
+	-------------Petición http://localhost:8000/emociones/hiciera/grados/
+Tristeza:1.0 || Miedo:1.05 || Alegría:3.05 || Enfado:1.5 || Asco:1.25Numeros: ['0.0', '0.05', '2.05', '0.5', '0.25']
+PALABRA: compañía
+	-------------Petición http://localhost:8000/emociones/compañía/grados/
+Tristeza:1.29 || Miedo:1.41 || Alegría:3.64 || Enfado:1.11 || Asco:1.21Numeros: ['0.29', '0.41', '2.64', '0.11', '0.21']
+LISTA: ['construido', 'transformar', 'aburrimiento', 'niños', 'momentos', 'maravillosos']
+PALABRA: construido
+	-------------Petición http://localhost:8000/emociones/construido/grados/
+Tristeza:1.0 || Miedo:1.2 || Alegría:2.54 || Enfado:1.14 || Asco:1.35Numeros: ['0.0', '0.2', '1.54', '0.14', '0.35']
+PALABRA: transformar
+	-------------Petición http://localhost:8000/emociones/transformar/grados/
+Tristeza:1.25 || Miedo:2.15 || Alegría:2.52 || Enfado:1.7 || Asco:1.25Numeros: ['0.25', '1.15', '1.52', '0.7', '0.25']
+PALABRA: aburrimiento
+	-------------Petición http://localhost:8000/emociones/aburrimiento/grados/
+Tristeza:3.05 || Miedo:1.95 || Alegría:1.1 || Enfado:2.04 || Asco:2.35Numeros: ['2.05', '0.95', '0.1', '1.04', '1.35']
+PALABRA: niños
+	-------------Petición http://localhost:8000/emociones/niños/grados/
+Tristeza:1.12 || Miedo:1.53 || Alegría:4.2 || Enfado:1.23 || Asco:1.07Numeros: ['0.12', '0.53', '3.2', '0.23', '0.07']
+PALABRA: momentos
+	-------------Petición http://localhost:8000/emociones/momentos/grados/
+Tristeza:1.79 || Miedo:1.9 || Alegría:2.54 || Enfado:1.62 || Asco:1.52Numeros: ['0.79', '0.9', '1.54', '0.62', '0.52']
+PALABRA: maravillosos
+	-------------Petición http://localhost:8000/emociones/maravillosos/grados/
+Tristeza:1.03 || Miedo:1.2 || Alegría:4.43 || Enfado:1.12 || Asco:1.0Numeros: ['0.03', '0.2', '3.43', '0.12', '0.0']
+LISTA: ['fabricaría']
+PALABRA: fabricaría
+	-------------Petición http://localhost:8000/emociones/fabricaría/grados/
+Tristeza:1.05 || Miedo:1.4 || Alegría:2.25 || Enfado:1.2 || Asco:1.05Numeros: ['0.05', '0.4', '1.25', '0.2', '0.05']
+LISTA: ['taller', 'colega', 'carpintero', 'consiguió', 'tronco', 'pino', 'dispuso', 'fabricar', 'muñeco']
+PALABRA: taller
+	-------------Petición http://localhost:8000/emociones/taller/grados/
+Tristeza:1.25 || Miedo:1.1 || Alegría:1.89 || Enfado:1.25 || Asco:1.68Numeros: ['0.25', '0.1', '0.89', '0.25', '0.68']
+PALABRA: colega
+	-------------Petición http://localhost:8000/emociones/colega/grados/
+Tristeza:1.1 || Miedo:1.2 || Alegría:3.95 || Enfado:1.1 || Asco:1.14Numeros: ['0.1', '0.2', '2.95', '0.1', '0.14']
+PALABRA: carpintero
+	-------------Petición http://localhost:8000/emociones/carpintero/grados/
+Tristeza:1.23 || Miedo:1.07 || Alegría:1.83 || Enfado:1.07 || Asco:1.0Numeros: ['0.23', '0.07', '0.83', '0.07', '0.0']
+PALABRA: consiguió
+	-------------Petición http://localhost:8000/emociones/consiguió/grados/
+Tristeza:1.0 || Miedo:1.6 || Alegría:4.3 || Enfado:1.07 || Asco:1.03Numeros: ['0.0', '0.6', '3.3', '0.07', '0.03']
+PALABRA: tronco
+	-------------Petición http://localhost:8000/emociones/tronco/grados/
+Tristeza:1.05 || Miedo:1.0 || Alegría:1.65 || Enfado:1.25 || Asco:1.14Numeros: ['0.05', '0.0', '0.65', '0.25', '0.14']
+PALABRA: pino
+	-------------Petición http://localhost:8000/emociones/pino/grados/
+Tristeza:1.17 || Miedo:1.2 || Alegría:2.5 || Enfado:1.0 || Asco:1.03Numeros: ['0.17', '0.2', '1.5', '0.0', '0.03']
+PALABRA: dispuso
+	-------------Petición http://localhost:8000/emociones/dispuso/grados/
+Tristeza:1.8 || Miedo:1.3 || Alegría:3.05 || Enfado:1.14 || Asco:1.14Numeros: ['0.8', '0.3', '2.05', '0.14', '0.14']
+PALABRA: fabricar
+	-------------Petición http://localhost:8000/emociones/fabricar/grados/
+Tristeza:1.05 || Miedo:1.4 || Alegría:2.25 || Enfado:1.2 || Asco:1.05Numeros: ['0.05', '0.4', '1.25', '0.2', '0.05']
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+LISTA: ['corta', 'talla', 'cabeza', 'nariz', 'boca']
+PALABRA: corta
+	-------------Petición http://localhost:8000/emociones/corta/grados/
+Tristeza:2.45 || Miedo:2.2 || Alegría:1.2 || Enfado:1.8 || Asco:1.8Numeros: ['1.45', '1.2', '0.2', '0.8', '0.8']
+PALABRA: talla
+	-------------Petición http://localhost:8000/emociones/talla/grados/
+Tristeza:1.77 || Miedo:1.77 || Alegría:1.6 || Enfado:1.77 || Asco:1.73Numeros: ['0.77', '0.77', '0.6', '0.77', '0.73']
+PALABRA: cabeza
+	-------------Petición http://localhost:8000/emociones/cabeza/grados/
+Tristeza:1.14 || Miedo:1.05 || Alegría:1.9 || Enfado:1.05 || Asco:1.6Numeros: ['0.14', '0.05', '0.9', '0.05', '0.6']
+PALABRA: nariz
+	-------------Petición http://localhost:8000/emociones/nariz/grados/
+Tristeza:1.33 || Miedo:1.4 || Alegría:1.5 || Enfado:1.4 || Asco:1.83Numeros: ['0.33', '0.4', '0.5', '0.4', '0.83']
+PALABRA: boca
+	-------------Petición http://localhost:8000/emociones/boca/grados/
+Tristeza:1.0 || Miedo:1.2 || Alegría:2.29 || Enfado:1.11 || Asco:1.95Numeros: ['0.0', '0.2', '1.29', '0.11', '0.95']
+LISTA: ['cuanto', 'terminado', 'modelar', 'boca', 'madera', 'muñeco', 'rompió', 'hablar', 'abuelito']
+PALABRA: cuanto
+	-------------Petición http://localhost:8000/emociones/cuanto/grados/
+Tristeza:1.3 || Miedo:1.1 || Alegría:1.8 || Enfado:1.5 || Asco:1.1Numeros: ['0.3', '0.1', '0.8', '0.5', '0.1']
+PALABRA: terminado
+	-------------Petición http://localhost:8000/emociones/terminado/grados/
+Tristeza:2.25 || Miedo:1.8 || Alegría:3.0 || Enfado:1.65 || Asco:1.05Numeros: ['1.25', '0.8', '2.0', '0.65', '0.05']
+PALABRA: modelar
+	-------------Petición http://localhost:8000/emociones/modelar/grados/
+Tristeza:1.14 || Miedo:1.35 || Alegría:2.0 || Enfado:1.1 || Asco:1.45Numeros: ['0.14', '0.35', '1.0', '0.1', '0.45']
+PALABRA: boca
+	-------------Petición http://localhost:8000/emociones/boca/grados/
+Tristeza:1.0 || Miedo:1.2 || Alegría:2.29 || Enfado:1.11 || Asco:1.95Numeros: ['0.0', '0.2', '1.29', '0.11', '0.95']
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+PALABRA: rompió
+	-------------Petición http://localhost:8000/emociones/rompió/grados/
+Tristeza:3.07 || Miedo:3.0 || Alegría:1.4 || Enfado:2.93 || Asco:1.73Numeros: ['2.07', '2.0', '0.4', '1.93', '0.73']
+PALABRA: hablar
+	-------------Petición http://localhost:8000/emociones/hablar/grados/
+Tristeza:1.05 || Miedo:1.55 || Alegría:3.3 || Enfado:1.2 || Asco:1.25Numeros: ['0.05', '0.55', '2.3', '0.2', '0.25']
+PALABRA: abuelito
+	-------------Petición http://localhost:8000/emociones/abuelito/grados/
+LISTA: ['superado', 'asombro', 'apresuró', 'completar', 'obra', 'tallado', 'muñeco', 'tronco', 'pino', 'pensó']
+PALABRA: superado
+	-------------Petición http://localhost:8000/emociones/superado/grados/
+Tristeza:1.6 || Miedo:1.32 || Alegría:3.95 || Enfado:1.45 || Asco:1.1Numeros: ['0.6', '0.32', '2.95', '0.45', '0.1']
+PALABRA: asombro
+	-------------Petición http://localhost:8000/emociones/asombro/grados/
+Tristeza:1.3 || Miedo:1.55 || Alegría:2.25 || Enfado:1.4 || Asco:1.05Numeros: ['0.3', '0.55', '1.25', '0.4', '0.05']
+PALABRA: apresuró
+	-------------Petición http://localhost:8000/emociones/apresuró/grados/
+Tristeza:2.2 || Miedo:1.65 || Alegría:1.4 || Enfado:2.35 || Asco:1.45Numeros: ['1.2', '0.65', '0.4', '1.35', '0.45']
+PALABRA: completar
+	-------------Petición http://localhost:8000/emociones/completar/grados/
+Tristeza:1.05 || Miedo:1.2 || Alegría:3.25 || Enfado:1.2 || Asco:1.05Numeros: ['0.05', '0.2', '2.25', '0.2', '0.05']
+PALABRA: obra
+	-------------Petición http://localhost:8000/emociones/obra/grados/
+Tristeza:1.14 || Miedo:1.35 || Alegría:2.04 || Enfado:1.3 || Asco:1.25Numeros: ['0.14', '0.35', '1.04', '0.3', '0.25']
+PALABRA: tallado
+	-------------Petición http://localhost:8000/emociones/tallado/grados/
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+PALABRA: tronco
+	-------------Petición http://localhost:8000/emociones/tronco/grados/
+Tristeza:1.05 || Miedo:1.0 || Alegría:1.65 || Enfado:1.25 || Asco:1.14Numeros: ['0.05', '0.0', '0.65', '0.25', '0.14']
+PALABRA: pino
+	-------------Petición http://localhost:8000/emociones/pino/grados/
+Tristeza:1.17 || Miedo:1.2 || Alegría:2.5 || Enfado:1.0 || Asco:1.03Numeros: ['0.17', '0.2', '1.5', '0.0', '0.03']
+PALABRA: pensó
+	-------------Petición http://localhost:8000/emociones/pensó/grados/
+Tristeza:1.55 || Miedo:1.35 || Alegría:2.8 || Enfado:1.4 || Asco:1.2Numeros: ['0.55', '0.35', '1.8', '0.4', '0.2']
+LISTA: ['reparar', 'traviesa', 'mirada', 'decidió', 'iría', 'nombre', 'pinocho']
+PALABRA: reparar
+	-------------Petición http://localhost:8000/emociones/reparar/grados/
+Tristeza:1.3 || Miedo:1.55 || Alegría:2.74 || Enfado:1.65 || Asco:1.2Numeros: ['0.3', '0.55', '1.74', '0.65', '0.2']
+PALABRA: traviesa
+	-------------Petición http://localhost:8000/emociones/traviesa/grados/
+Tristeza:1.4 || Miedo:1.65 || Alegría:2.95 || Enfado:2.0 || Asco:1.4Numeros: ['0.4', '0.65', '1.95', '1.0', '0.4']
+PALABRA: mirada
+	-------------Petición http://localhost:8000/emociones/mirada/grados/
+Tristeza:1.25 || Miedo:1.6 || Alegría:3.85 || Enfado:1.3 || Asco:1.1Numeros: ['0.25', '0.6', '2.85', '0.3', '0.1']
+PALABRA: decidió
+	-------------Petición http://localhost:8000/emociones/decidió/grados/
+Tristeza:1.87 || Miedo:2.8 || Alegría:2.8 || Enfado:1.53 || Asco:1.47Numeros: ['0.87', '1.8', '1.8', '0.53', '0.47']
+PALABRA: iría
+	-------------Petición http://localhost:8000/emociones/iría/grados/
+Tristeza:1.1 || Miedo:1.2 || Alegría:2.9 || Enfado:1.45 || Asco:1.05Numeros: ['0.1', '0.2', '1.9', '0.45', '0.05']
+PALABRA: nombre
+	-------------Petición http://localhost:8000/emociones/nombre/grados/
+Tristeza:1.17 || Miedo:1.07 || Alegría:1.33 || Enfado:1.1 || Asco:1.07Numeros: ['0.17', '0.07', '0.33', '0.1', '0.07']
+PALABRA: pinocho
+	-------------Petición http://localhost:8000/emociones/pinocho/grados/
+LISTA: ['cuanto', 'tuvo', 'par', 'piernas', 'madera', 'incorporó', 'salto', 'cogió', 'marchó', 'correr']
+PALABRA: cuanto
+	-------------Petición http://localhost:8000/emociones/cuanto/grados/
+Tristeza:1.3 || Miedo:1.1 || Alegría:1.8 || Enfado:1.5 || Asco:1.1Numeros: ['0.3', '0.1', '0.8', '0.5', '0.1']
+PALABRA: tuvo
+	-------------Petición http://localhost:8000/emociones/tuvo/grados/
+Tristeza:1.14 || Miedo:1.4 || Alegría:2.54 || Enfado:1.3 || Asco:1.14Numeros: ['0.14', '0.4', '1.54', '0.3', '0.14']
+PALABRA: par
+	-------------Petición http://localhost:8000/emociones/par/grados/
+Tristeza:1.05 || Miedo:1.05 || Alegría:2.1 || Enfado:1.05 || Asco:1.05Numeros: ['0.05', '0.05', '1.1', '0.05', '0.05']
+PALABRA: piernas
+	-------------Petición http://localhost:8000/emociones/piernas/grados/
+Tristeza:1.0 || Miedo:1.0 || Alegría:2.04 || Enfado:1.1 || Asco:1.1Numeros: ['0.0', '0.0', '1.04', '0.1', '0.1']
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: incorporó
+	-------------Petición http://localhost:8000/emociones/incorporó/grados/
+Tristeza:1.35 || Miedo:1.05 || Alegría:2.7 || Enfado:1.5 || Asco:1.14Numeros: ['0.35', '0.05', '1.7', '0.5', '0.14']
+PALABRA: salto
+	-------------Petición http://localhost:8000/emociones/salto/grados/
+Tristeza:1.12 || Miedo:2.33 || Alegría:3.07 || Enfado:1.47 || Asco:1.07Numeros: ['0.12', '1.33', '2.07', '0.47', '0.07']
+PALABRA: cogió
+	-------------Petición http://localhost:8000/emociones/cogió/grados/
+Tristeza:1.2 || Miedo:1.5 || Alegría:2.1 || Enfado:1.2 || Asco:1.14Numeros: ['0.2', '0.5', '1.1', '0.2', '0.14']
+PALABRA: marchó
+	-------------Petición http://localhost:8000/emociones/marchó/grados/
+Tristeza:2.75 || Miedo:2.15 || Alegría:1.6 || Enfado:1.65 || Asco:1.5Numeros: ['1.75', '1.15', '0.6', '0.65', '0.5']
+PALABRA: correr
+	-------------Petición http://localhost:8000/emociones/correr/grados/
+Tristeza:1.43 || Miedo:2.13 || Alegría:3.38 || Enfado:2.0 || Asco:1.37Numeros: ['0.43', '1.13', '2.38', '1.0', '0.37']
+LISTA: ['vez', 'artesano', 'labraba', 'madera', 'juguetes', 'bellos', 'tenían', 'escultor', 'maestro']
+PALABRA: vez
+	-------------Petición http://localhost:8000/emociones/vez/grados/
+Tristeza:1.0 || Miedo:1.0 || Alegría:1.75 || Enfado:1.0 || Asco:1.32Numeros: ['0.0', '0.0', '0.75', '0.0', '0.32']
+PALABRA: artesano
+	-------------Petición http://localhost:8000/emociones/artesano/grados/
+Tristeza:1.05 || Miedo:1.1 || Alegría:2.54 || Enfado:1.05 || Asco:1.05Numeros: ['0.05', '0.1', '1.54', '0.05', '0.05']
+PALABRA: labraba
+	-------------Petición http://localhost:8000/emociones/labraba/grados/
+Tristeza:1.24 || Miedo:1.0 || Alegría:1.63 || Enfado:1.25 || Asco:1.2Numeros: ['0.24', '0.0', '0.63', '0.25', '0.2']
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: juguetes
+	-------------Petición http://localhost:8000/emociones/juguetes/grados/
+Tristeza:1.33 || Miedo:1.37 || Alegría:3.9 || Enfado:1.12 || Asco:1.0Numeros: ['0.33', '0.37', '2.9', '0.12', '0.0']
+PALABRA: bellos
+	-------------Petición http://localhost:8000/emociones/bellos/grados/
+Tristeza:1.1 || Miedo:1.37 || Alegría:4.13 || Enfado:1.3 || Asco:1.07Numeros: ['0.1', '0.37', '3.13', '0.3', '0.07']
+PALABRA: tenían
+	-------------Petición http://localhost:8000/emociones/tenían/grados/
+Tristeza:1.14 || Miedo:1.4 || Alegría:2.54 || Enfado:1.3 || Asco:1.14Numeros: ['0.14', '0.4', '1.54', '0.3', '0.14']
+PALABRA: escultor
+	-------------Petición http://localhost:8000/emociones/escultor/grados/
+Tristeza:1.0 || Miedo:1.0 || Alegría:2.57 || Enfado:1.0 || Asco:1.0Numeros: ['0.0', '0.0', '1.57', '0.0', '0.0']
+PALABRA: maestro
+	-------------Petición http://localhost:8000/emociones/maestro/grados/
+Tristeza:1.3 || Miedo:1.47 || Alegría:2.57 || Enfado:1.3 || Asco:1.12Numeros: ['0.3', '0.47', '1.57', '0.3', '0.12']
+LISTA: ['llamaba', 'anciano', 'virtudes', 'figuraba', 'buen', 'carácter']
+PALABRA: llamaba
+	-------------Petición http://localhost:8000/emociones/llamaba/grados/
+Tristeza:1.47 || Miedo:1.63 || Alegría:3.0 || Enfado:1.4 || Asco:1.1Numeros: ['0.47', '0.63', '2.0', '0.4', '0.1']
+PALABRA: anciano
+	-------------Petición http://localhost:8000/emociones/anciano/grados/
+Tristeza:2.63 || Miedo:1.27 || Alegría:2.7 || Enfado:1.1 || Asco:1.17Numeros: ['1.63', '0.27', '1.7', '0.1', '0.17']
+PALABRA: virtudes
+	-------------Petición http://localhost:8000/emociones/virtudes/grados/
+Tristeza:1.1 || Miedo:1.2 || Alegría:3.73 || Enfado:1.1 || Asco:1.0Numeros: ['0.1', '0.2', '2.73', '0.1', '0.0']
+PALABRA: figuraba
+	-------------Petición http://localhost:8000/emociones/figuraba/grados/
+Tristeza:1.21 || Miedo:1.34 || Alegría:1.48 || Enfado:1.38 || Asco:1.21Numeros: ['0.21', '0.34', '0.48', '0.38', '0.21']
+PALABRA: buen
+	-------------Petición http://localhost:8000/emociones/buen/grados/
+Tristeza:1.26 || Miedo:1.0 || Alegría:3.2 || Enfado:1.2 || Asco:1.1Numeros: ['0.26', '0.0', '2.2', '0.2', '0.1']
+PALABRA: carácter
+	-------------Petición http://localhost:8000/emociones/carácter/grados/
+Tristeza:1.2 || Miedo:1.55 || Alegría:2.54 || Enfado:2.45 || Asco:1.37Numeros: ['0.2', '0.55', '1.54', '1.45', '0.37']
+LISTA: ['envejecido', 'solo']
+PALABRA: envejecido
+	-------------Petición http://localhost:8000/emociones/envejecido/grados/
+Tristeza:3.15 || Miedo:2.7 || Alegría:1.9 || Enfado:2.15 || Asco:2.1Numeros: ['2.15', '1.7', '0.9', '1.15', '1.1']
+PALABRA: solo
+	-------------Petición http://localhost:8000/emociones/solo/grados/
+Tristeza:3.6 || Miedo:2.63 || Alegría:1.5 || Enfado:1.43 || Asco:1.3Numeros: ['2.6', '1.63', '0.5', '0.43', '0.3']
+LISTA: ['día', 'sinténdose', 'viejo', 'solo', 'costumbre', 'ahuyentar', 'soledad', 'decidió', 'tallar', 'madera', 'muñeco', 'hiciera', 'compañía']
+PALABRA: día
+	-------------Petición http://localhost:8000/emociones/día/grados/
+Tristeza:1.0 || Miedo:1.05 || Alegría:3.65 || Enfado:1.05 || Asco:1.1Numeros: ['0.0', '0.05', '2.65', '0.05', '0.1']
+PALABRA: sinténdose
+	-------------Petición http://localhost:8000/emociones/sinténdose/grados/
+PALABRA: viejo
+	-------------Petición http://localhost:8000/emociones/viejo/grados/
+Tristeza:3.17 || Miedo:2.6 || Alegría:2.23 || Enfado:1.63 || Asco:1.67Numeros: ['2.17', '1.6', '1.23', '0.63', '0.67']
+PALABRA: solo
+	-------------Petición http://localhost:8000/emociones/solo/grados/
+Tristeza:3.6 || Miedo:2.63 || Alegría:1.5 || Enfado:1.43 || Asco:1.3Numeros: ['2.6', '1.63', '0.5', '0.43', '0.3']
+PALABRA: costumbre
+	-------------Petición http://localhost:8000/emociones/costumbre/grados/
+Tristeza:2.1 || Miedo:1.7 || Alegría:2.73 || Enfado:1.53 || Asco:1.8Numeros: ['1.1', '0.7', '1.73', '0.53', '0.8']
+PALABRA: ahuyentar
+	-------------Petición http://localhost:8000/emociones/ahuyentar/grados/
+Tristeza:1.6 || Miedo:2.0 || Alegría:1.47 || Enfado:2.25 || Asco:1.65Numeros: ['0.6', '1.0', '0.47', '1.25', '0.65']
+PALABRA: soledad
+	-------------Petición http://localhost:8000/emociones/soledad/grados/
+Tristeza:4.2 || Miedo:3.27 || Alegría:1.33 || Enfado:1.93 || Asco:1.43Numeros: ['3.2', '2.27', '0.33', '0.93', '0.43']
+PALABRA: decidió
+	-------------Petición http://localhost:8000/emociones/decidió/grados/
+Tristeza:1.87 || Miedo:2.8 || Alegría:2.8 || Enfado:1.53 || Asco:1.47Numeros: ['0.87', '1.8', '1.8', '0.53', '0.47']
+PALABRA: tallar
+	-------------Petición http://localhost:8000/emociones/tallar/grados/
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+PALABRA: hiciera
+	-------------Petición http://localhost:8000/emociones/hiciera/grados/
+Tristeza:1.0 || Miedo:1.05 || Alegría:3.05 || Enfado:1.5 || Asco:1.25Numeros: ['0.0', '0.05', '2.05', '0.5', '0.25']
+PALABRA: compañía
+	-------------Petición http://localhost:8000/emociones/compañía/grados/
+Tristeza:1.29 || Miedo:1.41 || Alegría:3.64 || Enfado:1.11 || Asco:1.21Numeros: ['0.29', '0.41', '2.64', '0.11', '0.21']
+LISTA: ['construido', 'transformar', 'aburrimiento', 'niños', 'momentos', 'maravillosos']
+PALABRA: construido
+	-------------Petición http://localhost:8000/emociones/construido/grados/
+Tristeza:1.0 || Miedo:1.2 || Alegría:2.54 || Enfado:1.14 || Asco:1.35Numeros: ['0.0', '0.2', '1.54', '0.14', '0.35']
+PALABRA: transformar
+	-------------Petición http://localhost:8000/emociones/transformar/grados/
+Tristeza:1.25 || Miedo:2.15 || Alegría:2.52 || Enfado:1.7 || Asco:1.25Numeros: ['0.25', '1.15', '1.52', '0.7', '0.25']
+PALABRA: aburrimiento
+	-------------Petición http://localhost:8000/emociones/aburrimiento/grados/
+Tristeza:3.05 || Miedo:1.95 || Alegría:1.1 || Enfado:2.04 || Asco:2.35Numeros: ['2.05', '0.95', '0.1', '1.04', '1.35']
+PALABRA: niños
+	-------------Petición http://localhost:8000/emociones/niños/grados/
+Tristeza:1.12 || Miedo:1.53 || Alegría:4.2 || Enfado:1.23 || Asco:1.07Numeros: ['0.12', '0.53', '3.2', '0.23', '0.07']
+PALABRA: momentos
+	-------------Petición http://localhost:8000/emociones/momentos/grados/
+Tristeza:1.79 || Miedo:1.9 || Alegría:2.54 || Enfado:1.62 || Asco:1.52Numeros: ['0.79', '0.9', '1.54', '0.62', '0.52']
+PALABRA: maravillosos
+	-------------Petición http://localhost:8000/emociones/maravillosos/grados/
+Tristeza:1.03 || Miedo:1.2 || Alegría:4.43 || Enfado:1.12 || Asco:1.0Numeros: ['0.03', '0.2', '3.43', '0.12', '0.0']
+LISTA: ['fabricaría']
+PALABRA: fabricaría
+	-------------Petición http://localhost:8000/emociones/fabricaría/grados/
+Tristeza:1.05 || Miedo:1.4 || Alegría:2.25 || Enfado:1.2 || Asco:1.05Numeros: ['0.05', '0.4', '1.25', '0.2', '0.05']
+LISTA: ['taller', 'colega', 'carpintero', 'consiguió', 'tronco', 'pino', 'dispuso', 'fabricar', 'muñeco']
+PALABRA: taller
+	-------------Petición http://localhost:8000/emociones/taller/grados/
+Tristeza:1.25 || Miedo:1.1 || Alegría:1.89 || Enfado:1.25 || Asco:1.68Numeros: ['0.25', '0.1', '0.89', '0.25', '0.68']
+PALABRA: colega
+	-------------Petición http://localhost:8000/emociones/colega/grados/
+Tristeza:1.1 || Miedo:1.2 || Alegría:3.95 || Enfado:1.1 || Asco:1.14Numeros: ['0.1', '0.2', '2.95', '0.1', '0.14']
+PALABRA: carpintero
+	-------------Petición http://localhost:8000/emociones/carpintero/grados/
+Tristeza:1.23 || Miedo:1.07 || Alegría:1.83 || Enfado:1.07 || Asco:1.0Numeros: ['0.23', '0.07', '0.83', '0.07', '0.0']
+PALABRA: consiguió
+	-------------Petición http://localhost:8000/emociones/consiguió/grados/
+Tristeza:1.0 || Miedo:1.6 || Alegría:4.3 || Enfado:1.07 || Asco:1.03Numeros: ['0.0', '0.6', '3.3', '0.07', '0.03']
+PALABRA: tronco
+	-------------Petición http://localhost:8000/emociones/tronco/grados/
+Tristeza:1.05 || Miedo:1.0 || Alegría:1.65 || Enfado:1.25 || Asco:1.14Numeros: ['0.05', '0.0', '0.65', '0.25', '0.14']
+PALABRA: pino
+	-------------Petición http://localhost:8000/emociones/pino/grados/
+Tristeza:1.17 || Miedo:1.2 || Alegría:2.5 || Enfado:1.0 || Asco:1.03Numeros: ['0.17', '0.2', '1.5', '0.0', '0.03']
+PALABRA: dispuso
+	-------------Petición http://localhost:8000/emociones/dispuso/grados/
+Tristeza:1.8 || Miedo:1.3 || Alegría:3.05 || Enfado:1.14 || Asco:1.14Numeros: ['0.8', '0.3', '2.05', '0.14', '0.14']
+PALABRA: fabricar
+	-------------Petición http://localhost:8000/emociones/fabricar/grados/
+Tristeza:1.05 || Miedo:1.4 || Alegría:2.25 || Enfado:1.2 || Asco:1.05Numeros: ['0.05', '0.4', '1.25', '0.2', '0.05']
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+LISTA: ['corta', 'talla', 'cabeza', 'nariz', 'boca']
+PALABRA: corta
+	-------------Petición http://localhost:8000/emociones/corta/grados/
+Tristeza:2.45 || Miedo:2.2 || Alegría:1.2 || Enfado:1.8 || Asco:1.8Numeros: ['1.45', '1.2', '0.2', '0.8', '0.8']
+PALABRA: talla
+	-------------Petición http://localhost:8000/emociones/talla/grados/
+Tristeza:1.77 || Miedo:1.77 || Alegría:1.6 || Enfado:1.77 || Asco:1.73Numeros: ['0.77', '0.77', '0.6', '0.77', '0.73']
+PALABRA: cabeza
+	-------------Petición http://localhost:8000/emociones/cabeza/grados/
+Tristeza:1.14 || Miedo:1.05 || Alegría:1.9 || Enfado:1.05 || Asco:1.6Numeros: ['0.14', '0.05', '0.9', '0.05', '0.6']
+PALABRA: nariz
+	-------------Petición http://localhost:8000/emociones/nariz/grados/
+Tristeza:1.33 || Miedo:1.4 || Alegría:1.5 || Enfado:1.4 || Asco:1.83Numeros: ['0.33', '0.4', '0.5', '0.4', '0.83']
+PALABRA: boca
+	-------------Petición http://localhost:8000/emociones/boca/grados/
+Tristeza:1.0 || Miedo:1.2 || Alegría:2.29 || Enfado:1.11 || Asco:1.95Numeros: ['0.0', '0.2', '1.29', '0.11', '0.95']
+LISTA: ['cuanto', 'terminado', 'modelar', 'boca', 'madera', 'muñeco', 'rompió', 'hablar', 'abuelito']
+PALABRA: cuanto
+	-------------Petición http://localhost:8000/emociones/cuanto/grados/
+Tristeza:1.3 || Miedo:1.1 || Alegría:1.8 || Enfado:1.5 || Asco:1.1Numeros: ['0.3', '0.1', '0.8', '0.5', '0.1']
+PALABRA: terminado
+	-------------Petición http://localhost:8000/emociones/terminado/grados/
+Tristeza:2.25 || Miedo:1.8 || Alegría:3.0 || Enfado:1.65 || Asco:1.05Numeros: ['1.25', '0.8', '2.0', '0.65', '0.05']
+PALABRA: modelar
+	-------------Petición http://localhost:8000/emociones/modelar/grados/
+Tristeza:1.14 || Miedo:1.35 || Alegría:2.0 || Enfado:1.1 || Asco:1.45Numeros: ['0.14', '0.35', '1.0', '0.1', '0.45']
+PALABRA: boca
+	-------------Petición http://localhost:8000/emociones/boca/grados/
+Tristeza:1.0 || Miedo:1.2 || Alegría:2.29 || Enfado:1.11 || Asco:1.95Numeros: ['0.0', '0.2', '1.29', '0.11', '0.95']
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+PALABRA: rompió
+	-------------Petición http://localhost:8000/emociones/rompió/grados/
+Tristeza:3.07 || Miedo:3.0 || Alegría:1.4 || Enfado:2.93 || Asco:1.73Numeros: ['2.07', '2.0', '0.4', '1.93', '0.73']
+PALABRA: hablar
+	-------------Petición http://localhost:8000/emociones/hablar/grados/
+Tristeza:1.05 || Miedo:1.55 || Alegría:3.3 || Enfado:1.2 || Asco:1.25Numeros: ['0.05', '0.55', '2.3', '0.2', '0.25']
+PALABRA: abuelito
+	-------------Petición http://localhost:8000/emociones/abuelito/grados/
+LISTA: ['superado', 'asombro', 'apresuró', 'completar', 'obra', 'tallado', 'muñeco', 'tronco', 'pino', 'pensó']
+PALABRA: superado
+	-------------Petición http://localhost:8000/emociones/superado/grados/
+Tristeza:1.6 || Miedo:1.32 || Alegría:3.95 || Enfado:1.45 || Asco:1.1Numeros: ['0.6', '0.32', '2.95', '0.45', '0.1']
+PALABRA: asombro
+	-------------Petición http://localhost:8000/emociones/asombro/grados/
+Tristeza:1.3 || Miedo:1.55 || Alegría:2.25 || Enfado:1.4 || Asco:1.05Numeros: ['0.3', '0.55', '1.25', '0.4', '0.05']
+PALABRA: apresuró
+	-------------Petición http://localhost:8000/emociones/apresuró/grados/
+Tristeza:2.2 || Miedo:1.65 || Alegría:1.4 || Enfado:2.35 || Asco:1.45Numeros: ['1.2', '0.65', '0.4', '1.35', '0.45']
+PALABRA: completar
+	-------------Petición http://localhost:8000/emociones/completar/grados/
+Tristeza:1.05 || Miedo:1.2 || Alegría:3.25 || Enfado:1.2 || Asco:1.05Numeros: ['0.05', '0.2', '2.25', '0.2', '0.05']
+PALABRA: obra
+	-------------Petición http://localhost:8000/emociones/obra/grados/
+Tristeza:1.14 || Miedo:1.35 || Alegría:2.04 || Enfado:1.3 || Asco:1.25Numeros: ['0.14', '0.35', '1.04', '0.3', '0.25']
+PALABRA: tallado
+	-------------Petición http://localhost:8000/emociones/tallado/grados/
+PALABRA: muñeco
+	-------------Petición http://localhost:8000/emociones/muñeco/grados/
+Tristeza:1.57 || Miedo:1.72 || Alegría:2.72 || Enfado:1.13 || Asco:1.17Numeros: ['0.57', '0.72', '1.72', '0.13', '0.17']
+PALABRA: tronco
+	-------------Petición http://localhost:8000/emociones/tronco/grados/
+Tristeza:1.05 || Miedo:1.0 || Alegría:1.65 || Enfado:1.25 || Asco:1.14Numeros: ['0.05', '0.0', '0.65', '0.25', '0.14']
+PALABRA: pino
+	-------------Petición http://localhost:8000/emociones/pino/grados/
+Tristeza:1.17 || Miedo:1.2 || Alegría:2.5 || Enfado:1.0 || Asco:1.03Numeros: ['0.17', '0.2', '1.5', '0.0', '0.03']
+PALABRA: pensó
+	-------------Petición http://localhost:8000/emociones/pensó/grados/
+Tristeza:1.55 || Miedo:1.35 || Alegría:2.8 || Enfado:1.4 || Asco:1.2Numeros: ['0.55', '0.35', '1.8', '0.4', '0.2']
+LISTA: ['reparar', 'traviesa', 'mirada', 'decidió', 'iría', 'nombre', 'pinocho']
+PALABRA: reparar
+	-------------Petición http://localhost:8000/emociones/reparar/grados/
+Tristeza:1.3 || Miedo:1.55 || Alegría:2.74 || Enfado:1.65 || Asco:1.2Numeros: ['0.3', '0.55', '1.74', '0.65', '0.2']
+PALABRA: traviesa
+	-------------Petición http://localhost:8000/emociones/traviesa/grados/
+Tristeza:1.4 || Miedo:1.65 || Alegría:2.95 || Enfado:2.0 || Asco:1.4Numeros: ['0.4', '0.65', '1.95', '1.0', '0.4']
+PALABRA: mirada
+	-------------Petición http://localhost:8000/emociones/mirada/grados/
+Tristeza:1.25 || Miedo:1.6 || Alegría:3.85 || Enfado:1.3 || Asco:1.1Numeros: ['0.25', '0.6', '2.85', '0.3', '0.1']
+PALABRA: decidió
+	-------------Petición http://localhost:8000/emociones/decidió/grados/
+Tristeza:1.87 || Miedo:2.8 || Alegría:2.8 || Enfado:1.53 || Asco:1.47Numeros: ['0.87', '1.8', '1.8', '0.53', '0.47']
+PALABRA: iría
+	-------------Petición http://localhost:8000/emociones/iría/grados/
+Tristeza:1.1 || Miedo:1.2 || Alegría:2.9 || Enfado:1.45 || Asco:1.05Numeros: ['0.1', '0.2', '1.9', '0.45', '0.05']
+PALABRA: nombre
+	-------------Petición http://localhost:8000/emociones/nombre/grados/
+Tristeza:1.17 || Miedo:1.07 || Alegría:1.33 || Enfado:1.1 || Asco:1.07Numeros: ['0.17', '0.07', '0.33', '0.1', '0.07']
+PALABRA: pinocho
+	-------------Petición http://localhost:8000/emociones/pinocho/grados/
+LISTA: ['cuanto', 'tuvo', 'par', 'piernas', 'madera', 'incorporó', 'salto', 'cogió', 'marchó', 'correr']
+PALABRA: cuanto
+	-------------Petición http://localhost:8000/emociones/cuanto/grados/
+Tristeza:1.3 || Miedo:1.1 || Alegría:1.8 || Enfado:1.5 || Asco:1.1Numeros: ['0.3', '0.1', '0.8', '0.5', '0.1']
+PALABRA: tuvo
+	-------------Petición http://localhost:8000/emociones/tuvo/grados/
+Tristeza:1.14 || Miedo:1.4 || Alegría:2.54 || Enfado:1.3 || Asco:1.14Numeros: ['0.14', '0.4', '1.54', '0.3', '0.14']
+PALABRA: par
+	-------------Petición http://localhost:8000/emociones/par/grados/
+Tristeza:1.05 || Miedo:1.05 || Alegría:2.1 || Enfado:1.05 || Asco:1.05Numeros: ['0.05', '0.05', '1.1', '0.05', '0.05']
+PALABRA: piernas
+	-------------Petición http://localhost:8000/emociones/piernas/grados/
+Tristeza:1.0 || Miedo:1.0 || Alegría:2.04 || Enfado:1.1 || Asco:1.1Numeros: ['0.0', '0.0', '1.04', '0.1', '0.1']
+PALABRA: madera
+	-------------Petición http://localhost:8000/emociones/madera/grados/
+Tristeza:1.35 || Miedo:1.14 || Alegría:1.9 || Enfado:1.3 || Asco:1.05Numeros: ['0.35', '0.14', '0.9', '0.3', '0.05']
+PALABRA: incorporó
+	-------------Petición http://localhost:8000/emociones/incorporó/grados/
+Tristeza:1.35 || Miedo:1.05 || Alegría:2.7 || Enfado:1.5 || Asco:1.14Numeros: ['0.35', '0.05', '1.7', '0.5', '0.14']
+PALABRA: salto
+	-------------Petición http://localhost:8000/emociones/salto/grados/
+Tristeza:1.12 || Miedo:2.33 || Alegría:3.07 || Enfado:1.47 || Asco:1.07Numeros: ['0.12', '1.33', '2.07', '0.47', '0.07']
+PALABRA: cogió
+	-------------Petición http://localhost:8000/emociones/cogió/grados/
+Tristeza:1.2 || Miedo:1.5 || Alegría:2.1 || Enfado:1.2 || Asco:1.14Numeros: ['0.2', '0.5', '1.1', '0.2', '0.14']
+PALABRA: marchó
+	-------------Petición http://localhost:8000/emociones/marchó/grados/
+Tristeza:2.75 || Miedo:2.15 || Alegría:1.6 || Enfado:1.65 || Asco:1.5Numeros: ['1.75', '1.15', '0.6', '0.65', '0.5']
+PALABRA: correr
+	-------------Petición http://localhost:8000/emociones/correr/grados/
+Tristeza:1.43 || Miedo:2.13 || Alegría:3.38 || Enfado:2.0 || Asco:1.37Numeros: ['0.43', '1.13', '2.38', '1.0', '0.37']

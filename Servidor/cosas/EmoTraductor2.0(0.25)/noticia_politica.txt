@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['estancamiento', 'político', 'agobia', 'meses', 'llegar', 'fin', 'espera', 'apruebe', 'gobierno', 'liderado', 'presidente', 'interino', 'necesitaba', 'mayoría', 'escaños', 'primera', 'votación', 'realizada', 'jueves', 'logró', 'sábado', 'realiza', 'segunda', 'votación', 'necesita', 'votos', 'favor', 'contra', 'cuenta', 'apoyo', 'legisladores', 'partido', 'centroderechista', 'dependerá', 'partido', 'socialista', 'accedido', 'votación', 'sábado', 'diputados', 'dicho', 'votarán', 'contra', 'elegido', 'juramentado', 'domingo', 'lunes', 'gobierno', 'convocará', 'tercera', 'elección']
+Grado de tristeza: 0.65
+Grado de miedo: 0.6
+Grado de alegria: 1.34
+Grado de ira: 0.74
+Grado de asco: 0.53
+-----------------------------------------------------------
