@@ -56,8 +56,9 @@ def calcular_mayoritaria(contadores,grados):
 
 def es_emocional(grados):
         for i in range(len(grados)):
-                #if float(grados[i]) > 2.5:
-                if float(grados[i]) > 0.0:
+                if float(grados[i]) > 1.5:
+                #LA DE ABAJO ES LA NUEVA!!!!!!!!!
+                #if float(grados[i]) > 0.0:
                         return True
         return False
 
@@ -73,7 +74,7 @@ class InterpreteFrases():
                 lista_palabras,tipos = seleccionador_emocional.seleccionar_palabras(frase) # lista de palabras emocionales
                 num_palabras = len(lista_palabras)
                 mayoritarias = []
-                modificadores = seleccionador_emocional.seleccionar_modificadores(frase, lista_palabras)
+                #modificadores = seleccionador_emocional.seleccionar_modificadores(frase, lista_palabras)
                 
                 #fichero = open("frases.txt", "a")
                 #fichero.write("LISTA: " + str(lista_palabras) + "\n")
@@ -92,7 +93,9 @@ class InterpreteFrases():
                                 mayoritarias.append(grados)
                                 if len(grados) > 0:
                                         if es_emocional(grados):
-                                                actualizar_grados_frase(emociones_frase,grados,(tipos[i]+ (modificadores[i][1]/100)))
+                                                actualizar_grados_frase(emociones_frase,grados,tipos[i])
+                                                # LA DE ABAJO ES LA BUENAAA!!!!!!!!
+                                                #actualizar_grados_frase(emociones_frase,grados,(tipos[i]+ (modificadores[i][1]/100)))
                                                 num_validas = num_validas + tipos[i]#esto debe cambiar si empezamos a ponderar con tipos
                                         else:
                                                 #si la palabra es emocional pero no está en el diccionario o los valores son 0 
@@ -100,6 +103,8 @@ class InterpreteFrases():
                                                 num_validas = num_validas + 0
 
                         emociones = obtener_medias(emociones_frase,num_validas)
+                        #if emociones[0]== "1.0" and emociones[1]=="1.0" and emociones[2]=="1.0" and emociones[3]=="1.0" and emociones[4] =="1.0":
+                        #LA DE ABAJO ES LA BUENA !!!!!!!!!!!!!!
                         if emociones[0]== "0.0" and emociones[1]=="0.0" and emociones[2]=="0.0" and emociones[3]=="0.0" and emociones[4] =="0.0":
                                 return ["0","0","0","0","0"], [],[]
                         else:

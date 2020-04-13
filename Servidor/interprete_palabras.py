@@ -58,7 +58,11 @@ class InterpretePalabras():
         #buscada = traducir(palabra)
         #buscada = palabra -- AQUI NO QUITA LAS TILDES
         #destino = URL + buscada + "/grados/"
-        destino = URL + palabra + "/grados/"
+        #QUITAR LA SIGUIENTE LINEA !!!!!!
+        buscada = lematizador.obtener_lema(palabra)
+        destino = URL + buscada + "/grados/"
+        #LA DE ABAJO ES LA BUENA !!!!!!!!!!!
+        #destino = URL + palabra + "/grados/"
         #fichero.write(" -------------" + buscada + "\n")
         #fichero.write("	-------------Petición " + destino + "\n")
         #fichero.close()
@@ -72,7 +76,10 @@ class InterpretePalabras():
             #fichero.write("Numeros: " + str(numeros) + "\n")
             #fichero.close()
         else:
+
             #Ponemos que si no está es 0
+            #numeros=["1","1","1","1","1"]
+            #LA DE ABAJO ES LA BUENA!!!!!!!!!!!!
             numeros=["0","0","0","0","0"]
             #El servicio de grados ya busca por lexema y tipo de palabra
             """

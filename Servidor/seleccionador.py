@@ -5,7 +5,7 @@ import spacy
 """
 Programa que se encarga de seleccionar las palabras emocionales entre todas las de una frase.
 """
-modificadores = ['muy', 'genial', 'mucho', 'algo', 'dificilmente', 'duramente', 'relativamente', 'bastante', 'perfectamente', 'completamente'
+"""modificadores = ['muy', 'genial', 'mucho', 'algo', 'dificilmente', 'duramente', 'relativamente', 'bastante', 'perfectamente', 'completamente'
 'altamente', 'articularmente', 'totalmente', 'fuertemente', 'excepcionalmente', 'terriblemente', 'super', 'súper', 'ridículamente',
 'enorme', 'absoluto', 'grande', 'extra', 'menos', 'solo', 'solamente', 'pequeño', 'realmente', 'pequeñamente', 'casi', 'obviamente',
 'definitivamente', 'verdaderamente', 'sifnificativamente', 'extremadamente', 'inmensamente', 'profundamente', 'extraordinariamente',
@@ -16,7 +16,7 @@ modificadores = ['muy', 'genial', 'mucho', 'algo', 'dificilmente', 'duramente', 
 valoresModificadores = [30, 60, 35, 40, -85, -85, -50, 75, 75, 85, 75, 45, 85, 55, 75, 75, 75, 75, -65, 75, 75, 65, 20,-75, -25, -25,
 -50, 80, -75, -20, 75, 95, 75, 45, 95, 75, 75, 85, 75, 35, 35, -75, -75, -75, -75, -75, -75, 75, 75, 75, 35, -75, -75, 65, 75, 95, 70,
 75, 75, 75, 75, 75, 85, 75, 75, 75, 55, 55, 75, 20, -65]
-
+"""
 nlp = spacy.load('es_core_news_sm')
 
 def es_verbo(pos):
@@ -37,15 +37,15 @@ def es_sustantivo(pos):
         """
         return pos == "NOUN"
 
-def es_hastag(palabra):
-        """
+"""def es_hastag(palabra):
+        
         Comprueba si la palabra recibida es un #
-        """
+        
         if palabra == "#":
                 return True
         else:
                 return False
-
+"""
 def casos_especiales(palabra):
         """
         Si la palabra cumple alguna de las siguientes características la función
@@ -86,7 +86,9 @@ class Seleccionador():
                         palabra = limpiar_palabra(token.text)
                         #fichero = open("frases.txt", "a")
                         #fichero.write("Palabra en seleccionador: " + token.text + " \n")
-                        if (es_hastag(token.text) == False) and ((es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) == True)):
+                        if (es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) ==True):
+                        #LA DE ABAJO ES LA BUENA !!!!!!!!!!
+                        #if (es_hastag(token.text) == False) and ((es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) == True)):
                                 #fichero.write("ha entrado en verbo adjetivo o sustantivo\n")
                                 palabras.append(palabra)
                                 if (es_verbo(pos) == True):

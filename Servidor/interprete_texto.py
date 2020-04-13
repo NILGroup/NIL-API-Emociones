@@ -130,23 +130,29 @@ class InterpreteTexto():
                 #fichero.write("Emociones_texto 1\n")
                 #fichero.close()
                 frases,tipos = secciona.seccionar_texto(texto)
-                #fichero = open("fichero.txt", "a")
-                #fichero.write("Frases: " + str(frases) + "\n")
-                #fichero.close()
+                fichero = open("fichero.txt", "a")
+                fichero.write("Frases: " + str(frases) + "\n")
+                fichero.write("SALÍ\n")
+                fichero.close()
                 n = len(frases)
                 num_frases = 0
                 grados = [0,0,0,0,0]
                 palabras = []
                 mayoritarias = []
+                fichero = open("fichero.txt", "a")
+                fichero.write("len(frases) = " + str(n) + "\n")
+                fichero.write("range(n) = " + str(range(n)) + "\n")
+                #fichero.close()
                 for i in range(n):
-                        #fichero.write("Vuelta: " + str(i) + "\n")
+                        fichero.write("Vuelta: " + str(i) + "\n")
                         if len(frases[i]) > 0:
-                                #fichero.write("Frases[i]: " +frases[i] + "\n")
-                                #fichero.write("Grados: " + str(grados) + "\n")
-                                #fichero.write("Palabras: " + str(palabras) + "\n")
-                                #fichero.write("Tipos: " + str(tipos) + "\n")
+                                fichero.write("Frases[i]: " +frases[i] + "\n")
+                                fichero.write("Grados: " + str(grados) + "\n")
+                                fichero.write("Palabras: " + str(palabras) + "\n")
+                                fichero.write("Tipos: " + str(tipos) + "\n")
                                 grados,palabras,num_frases,mayoritarias = analizar_grados_frase(frases[i],grados,palabras,tipos[i],num_frases, mayoritarias)
                 resultado = obtener_medias(grados,num_frases)
+                fichero.close()
                 return resultado,palabras,mayoritarias
 
         @staticmethod
