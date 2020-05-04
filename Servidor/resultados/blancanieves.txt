@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['vez', 'princesa', 'dulce', 'gentil', 'llamada', 'blancanieves', 'malvada', 'reina', 'celosa', 'belleza', 'blancanieves', 'tuvo', 'huir', 'refugió', 'casa', 'enanitos', 'reina', 'engañó', 'blancanieves', 'manzana', 'envenenada', 'llegó', 'príncipe', 'despertó', 'blancanieves', 'beso', 'vivieron', 'felices']
+Grado de tristeza: 1.19
+Grado de miedo: 1.06
+Grado de alegria: 1.31
+Grado de ira: 0.98
+Grado de asco: 0.57
+-----------------------------------------------------------
