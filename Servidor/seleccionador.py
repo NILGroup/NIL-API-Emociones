@@ -37,15 +37,15 @@ def es_sustantivo(pos):
         """
         return pos == "NOUN"
 
-"""def es_hastag(palabra):
-        
+def es_hastag(palabra):
+        """
         Comprueba si la palabra recibida es un #
-        
+        """
         if palabra == "#":
                 return True
         else:
                 return False
-"""
+
 def casos_especiales(palabra):
         """
         Si la palabra cumple alguna de las siguientes características la función
@@ -86,9 +86,9 @@ class Seleccionador():
                         palabra = limpiar_palabra(token.text)
                         #fichero = open("frases.txt", "a")
                         #fichero.write("Palabra en seleccionador: " + token.text + " \n")
-                        if (es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) ==True):
+                        #if (es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) ==True):
                         #LA DE ABAJO ES LA BUENA !!!!!!!!!!
-                        #if (es_hastag(token.text) == False) and ((es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) == True)):
+                        if (es_hastag(token.text) == False) and ((es_verbo(pos) == True) or (es_adjetivo(pos) == True) or (es_sustantivo(pos) == True)):
                                 #fichero.write("ha entrado en verbo adjetivo o sustantivo\n")
                                 palabras.append(palabra)
                                 if (es_verbo(pos) == True):

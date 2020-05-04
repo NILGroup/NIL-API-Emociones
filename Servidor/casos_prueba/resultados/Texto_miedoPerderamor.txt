@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['tengo', 'miedo', 'perderte', 'tengo', 'miedo', 'hacías', 'películas', 'mires', 'mirabas', 'dediques', 'canciones', 'tengo', 'vez', 'quiero', 'quisiera', 'darte', 'amor', 'matando', 'perdiendo', 'único', 'pedazo', 'único', 'faltaba', 'echo', 'olor', 'piel', 'casa', 'sonrisa', 'ojos', 'puros', 'echo', 'encerrada', 'volviendo', 'tiempo', 'duermo', 'cuido', 'debería', 'dando', 'llevado', 'último', 'pedazo', 'quiero', 'persona', 'puente', 'tengo', 'miedo', 'miedo', 'quiero', 'quiero', 'quiero', 'único', 'queda', 'trozo', 'papel', 'impregnado', 'puño', 'letra', 'fragancia', 'cansaré', 'olvidaré', 'caja', 'roja', 'palabras', 'ayuda', 'olvidaré', 'amor', 'crudo', 'puro', 'rudo', 'diste', 'sangra', 'cuerpo', 'creo', 'morir', 'siento', 'exhausta', 'perdí', 'batalla', 'sigo', 'sigo', 'sigo', 'estoy', 'pasa', 'sigo', 'sigo', 'sigo', 'doy', 'vuelta', 'ido', 'doy', 'vuelta', 'destruido', 'ir', 'mirar', 'paso', 'doy', 'recordar', 'quiero', 'tenerte', 'brazos', 'soltarte', 'perdí', 'fe', 'perdí', 'rendí', 'di', 'vencida', 'difícil', 'avanzar', 'pedazos', 'sientes', 'difícil', 'luchar', 'tiene', 'sentido', 'abrázame', 'sueltes', 'caigo', 'estampar', 'acelero', 'cierro', 'ojos', 'respirar', 'da', 'verdad', 'da', 'tengo', 'miedo', 'miedo']
+Grado de tristeza: 0.47
+Grado de miedo: 0.5
+Grado de alegria: 0.71
+Grado de ira: 0.37
+Grado de asco: 0.25
+-----------------------------------------------------------

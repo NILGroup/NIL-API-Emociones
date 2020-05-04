@@ -2,9 +2,9 @@
 http://localhost:8000/textosGuay/
 Lista de palabras emocionales:
 ['expertos', 'recomiendan', 'declarar', 'libre', 'grupo', 'expertos', 'salud', 'recomendó', 'declarar', 'país', 'libre', 'verificar', 'situación', 'enfermedad', 'terreno', 'semanas', 'informó', 'domingo', 'salud', 'pública', 'cartera', 'sanitaria', 'explicó', 'través', 'comunicado', 'expertos', 'comprobaron', 'país', 'suramericano', 'registran', 'casos', 'transmisión', 'local', 'últimos', 'años', 'sistema', 'sanitario', 'prevenir', 'eventuales', 'casos', 'enfermedad', 'recomendación', 'cierra', 'esfuerzo', 'sistema', 'sanitario', 'paraguayo', 'últimos', 'años', '2012', 'registra', 'casos', 'autóctonos', 'enfermedad', 'gran', 'logro', 'nacional', 'posibilita', 'privilegiado', 'sitial', 'primer', 'país', 'sudamericano', 'erradicar', 'enfermedad', 'indicaron', 'salud', 'pública', 'malaria', 'pasó', 'historia', 'registros', 'médicos', 'país', '2011', 'último', 'caso', 'registrado', 'datos', 'servicio', 'nacional', 'paludismo', 'presentados', 'septiembre', 'fundó', 'raíz', 'brote', 'sufrió', '1957', 'personas', 'territorio', 'país', 'contrajeran', 'enfermedad', 'paludismo', 'malaria', 'enfermedad', 'letal', 'causada', 'parásitos', 'género', 'transmiten', 'humano', 'picadura', 'mosquitos', 'infectados', 'paludismo', 'mantiene', 'presente', 'países', 'calcula', '2016', 'fallecidos', 'mundo', 'millones', 'casos', 'datos']
-Grado de tristeza: 1.03
-Grado de miedo: 1.14
-Grado de alegria: 1.5
-Grado de ira: 0.72
-Grado de asco: 0.63
+Grado de tristeza: 0.86
+Grado de miedo: 0.9
+Grado de alegria: 1.28
+Grado de ira: 0.65
+Grado de asco: 0.45
 -----------------------------------------------------------

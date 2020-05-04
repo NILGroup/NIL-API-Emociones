@@ -2,9 +2,9 @@
 http://localhost:8000/textosGuay/
 Lista de palabras emocionales:
 ['vivía', 'pequeña', 'aldea', 'encantaba', 'leer', 'quería', 'padre', 'desapareció', 'salió', 'encontró', 'padre', 'castillo', 'bestia', 'amigos', 'enamoró', 'bestia', 'volvió']
-Grado de tristeza: 0.58
-Grado de miedo: 0.94
-Grado de alegria: 2.38
-Grado de ira: 0.48
-Grado de asco: 0.25
+Grado de tristeza: 0.42
+Grado de miedo: 0.91
+Grado de alegria: 2.02
+Grado de ira: 0.49
+Grado de asco: 0.31
 -----------------------------------------------------------

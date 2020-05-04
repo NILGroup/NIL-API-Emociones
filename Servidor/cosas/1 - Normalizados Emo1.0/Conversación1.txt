@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['asiento', 'seguro', 'entrada', 'dice', 'fila', 'asiento', 'mismo', 'visto', 'entrada', 'asiento', 'dejo', 'asiento', '–', 'gracias', '–']
+Grado de tristeza: 0.01
+Grado de miedo: 0.02
+Grado de alegria: 0.47
+Grado de ira: 0.02
+Grado de asco: 0.01
+-----------------------------------------------------------

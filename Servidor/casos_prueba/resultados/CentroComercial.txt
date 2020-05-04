@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['centro', 'comercial', 'quedado', 'penumbra', 'límite', 'mismo', 'universos', 'tanto', 'oeste', 'seguían', 'alternándose', 'día', 'noche', 'ventanas', 'filtraba', 'interior', 'luz', 'sucia', 'nacía', 'mezcla', 'eterno', 'crepúsculo', 'promesa', 'fructificar', 'puro', 'azar', 'planta', 'alineaba', 'forma', 'tal', 'grieta', 'partía', 'mitad', 'hendidura', 'visible', 'claro', 'resultaba', 'patente', 'disparidad', 'establecimientos', 'podían', 'encontrarse', 'lado', 'centro', 'comercial', 'abarrotado', 'tiendas', 'trabajaban', 'forma', 'ininterrumpida', 'mezclándose', 'trabajadores', 'turno', 'día', 'noche', 'parte', 'tímidas', 'pruebas', 'efectuadas', 'contratar', 'empleados', 'universo', 'opuesto', 'acabado', 'locura', 'respectivos', 'consejos', 'dirección', 'puesto', 'acuerdo', 'cobrar', 'limitar', 'entrada', 'momento', 'dado', 'admitían', 'clientes', 'agolpaban', 'asombrados', 'escaparates', 'adquiriendo', 'producto', 'utilidad', 'desconocían', 'osados', 'verdad', 'escabulléndose', 'salas', 'cine', 'echar', 'fascinado', 'asqueado', 'vistazo', 'aguardaba', 'agazapado', 'penumbra', 'embargo', 'ocasiones', 'visitante', 'sentía', 'despertar', 'distinto', 'interior', 'recuerdo', 'formado', 'anhelo', 'antinatural', 'salía', 'centro', 'comercial', 'puerta', 'opuesta', 'accedido', 'desaparecía', 'mundo', 'visto', 'nacer', 'grieta', 'sirva', 'corregir', 'trágico', 'error', 'cósmico', 'devolver', 'casa', 'hijos', 'pródigos', 'asegurarlo', 'único', 'cierto', 'penumbra', 'cumple', 'función', 'tal', 'vez', 'revelada', 'fin', 'día']
+Grado de tristeza: 0.6
+Grado de miedo: 0.54
+Grado de alegria: 1.16
+Grado de ira: 0.55
+Grado de asco: 0.36
+-----------------------------------------------------------

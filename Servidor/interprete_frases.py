@@ -56,9 +56,9 @@ def calcular_mayoritaria(contadores,grados):
 
 def es_emocional(grados):
         for i in range(len(grados)):
-                if float(grados[i]) > 1.5:
+                #if float(grados[i]) > 1.5:
                 #LA DE ABAJO ES LA NUEVA!!!!!!!!!
-                #if float(grados[i]) > 0.0:
+                if float(grados[i]) > 0.0:
                         return True
         return False
 

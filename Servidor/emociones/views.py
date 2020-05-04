@@ -269,13 +269,109 @@ class ObtenerGrados(APIView):
 
     def get_object(self,pk):
         try:
-            return Palabra.objects.get(palabra=pk)
-        except Palabra.DoesNotExist:
+            #fichero = open("fichero.txt", "a")
+            #fichero.write(str(datetime.now()))
+            #fichero.write(" -- ObtenerGrados\n")
+            #fichero.write("Usamos " + pk + "\n")
+            nlp = spacy.load('es_core_news_sm')
+            doc = nlp(pk)
+            stemmer = Stemmer.Stemmer('spanish')
+            generonumero = ""
+            for token in doc:
+                pos = token.pos_
+                lema = token.lemma_
+                generonumero = token.tag_
+            tipo = pos
+            lex = stemmer.stemWord(pk)
+            #fichero.write(" ATENCIÓN: la palabra es: " + pk + "\n")
+            #fichero.write(" ATENCIÓN: la palabra es del tipo: " + tipo+ "\n")
+            #fichero.write(" ATENCIÓN: su lexema pystemmer es: " + lex + "\n")
+            #fichero.write(" ATENCIÓN: su lexema spacy es: " + lema + "\n")
+            #fichero.write(" ATENCIÓN: tiene generonumero: " + generonumero + "\n")
+            #quitamos las tildes
+            #pk = traducir(pk)
+            #fichero.write(" ATENCIÓN: se queda como: " + pk + "\n")
+            #fichero.close()
+            return Palabra.objects.get(palabra=pk) #buscamos la palabra tal cual
+        except Palabra.DoesNotExist: #si falla entonces vemos si es plural o singular.
             try:
-                return Palabra.objects.get(lexema=pk)
-            except Palabra.DoesNotExist:
+                #fichero = open("fichero.txt", "a")
+                #fichero.write("VAMOS A VER SI ES PLURAL\n")
+                numero_ini = generonumero.find("Number")
+                if numero_ini != -1:
+                    numero = generonumero[numero_ini + 7]
+                    if numero == 'S':
+                        #fichero.write(" ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra\n")
+                        #fichero.write("si el lexema de pystemmer y el lema de spacy no coincide vamos a probar los dos\n")
+                        if lex == lema:
+                            #fichero.write("Los lexemas son iguales \n")
+                            return Palabra.objects.get(lexema=lex, tipoPalabra = tipo)
+                        else:
+                            #fichero.write("Los lexemas son distintos\n")
+                            try:
+                                #fichero.write("probamos lexema pystemmer\n")
+                                return Palabra.objects.get(lexema = lex, tipoPalabra = tipo)
+                            except:
+                                #fichero.write("probamos lexema spacy\n")
+                                try: 
+                                    return Palabra.objects.get(lexema = lema, tipoPalabra = tipo)
+                                except:
+                                    #fichero.write("y si fuera palabra?\n")
+                                    return Palabra.objects.get(palabra= lema)
+                    else:
+                        #Es plural vamos a quitarle el plural
+                        #fichero.write(" ATENCIÓN:es plural vamos a quitar el plural de la palabra: "+ pk + "\n")
+                        longitudPK = len(pk)
+                        if pk[longitudPK-1] == 's':
+                            if pk[longitudPK-2] == 'e':
+                                p = pk[0:longitudPK-2]
+                                #fichero.write(" ATENCIÓN: la palabra acaba en -es, la dejamos como: " + p + "\n")
+                                return Palabra.objects.get(palabra = p)
+                            else:
+                                p = pk[0:longitudPK-1]
+                                #fichero.write(" ATENCIÓN: la palabar acaba en -s, la dejamos como: " + p + "\n")
+                                return Palabra.objects.get(palabra = p)
+                        else:
+                            #fichero.write("ATENCIÓN: es plural pero sin s por lo que vamos a buscar por lexema y tipo de palabra por si es verbo\n")
+                            #fichero.write("vamos a probar con los dos lexemas el de pystemmer y el de spacy si son distintos\n")
+                            if lex == lema:
+                                #fichero.write("Lexemas iguales\n")
+                                return Palabra.objects.get(lexema = lex, tipoPalabra = tipo)
+                            else:
+                                #fichero.write("Lexemas diferentes\n")
+                                try:
+                                    #fichero.write("Probamos pystemmer\n")
+                                    return Palabra.objects.get(lexema = lex, tipoPalabra = tipo)
+                                except:
+                                    #fichero.write("Probamos con spacy\n")
+                                    try:
+                                        return Palabra.objects.get(lexema = lema, tipoPalabra = tipo)
+                                    except:
+                                        #fichero.write("y si fuera palabra?\n")
+                                        return Palabra.objects.get(palabra = lema)
+                else: #no tiene numero
+                    #fichero.write("ATENCIÓN: sin numero\n")
+                    #fichero.write("ATENCIÓN: vamos a probar si el lexema de pystmmer y el lema de spacy coinciden\n")
+                    if lex == lema:
+                        #fichero.write("Los lexemas son iguales\n")
+                        return Palabra.objects.get(lexema=lex, tipoPalabra = tipo)
+                    else:
+                        #fichero.write("Los lexemas son distintos\n")
+                        try:
+                            #fichero.write("probamos el de pystemmer\n")
+                            return Palabra.objects.get(lexma = lex, tipoPalabra = tipo)
+                        except:
+                            #fichero.write("probamos el de spacy\n")
+                            try:
+                                return Palabra.objects.get(lexema = lema, tipoPalabra = tipo)
+                            except:
+                                #fichero.write("y si fuera palabra?\n")
+                                return Palabra.objects.get(palabra = lema)
+            except:
+                #fichero.write("ATENCIÓN: Excepción pa mi\n")
+                #fichero.close()
                 raise Http404()
-    
+
     def get_degrees(self,numeros):
         emociones = ["Tristeza", "Miedo", "Alegría", "Enfado", "Asco"]
         numeros = numeros.split(",")
