@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['vivía', 'castillo', 'encantado', 'señora', 'dón', 'dieron', 'bienvenida', 'esforzaron', 'sintiera', 'casa', 'disfrutaba', 'cenas', 'bestia', 'gran', 'comedor', 'castillo', 'sintió', 'feliz', 'castillo', 'hogar']
+Grado de tristeza: 0.24
+Grado de miedo: 0.45
+Grado de alegria: 2.09
+Grado de ira: 0.22
+Grado de asco: 0.25
+-----------------------------------------------------------
