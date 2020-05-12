@@ -15,6 +15,7 @@ def interpretar_palabra(palabra):
         return grados,[palabra]
 
 def interpretar_frase(frase):
+        
         interpreta = InterpreteFrases()
         grados,palabras,mayoritariasFinales = interpreta.emociones_frase(frase)
         return grados,palabras
@@ -28,16 +29,14 @@ class Traductor():
 
         @staticmethod
         def traducir(texto):
+                
                 if len(texto.split(" ")) == 1:
                         if texto[len(texto)-1] == '.':
                                 texto = texto.rstrip('.')
                         
                         return interpretar_palabra(texto)
-                elif len(texto.split('.')) <= 2: 
-                        
+                elif len(texto.split('.')) <= 2 and texto.split('.')[len(texto.split('.'))-1] == "":
                         return interpretar_frase(texto)
                 else:
-                       
                         return interpretar_texto(texto)
-                #fichero.close()
 

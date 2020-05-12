@@ -12,6 +12,9 @@ class Palabra(models.Model):
     palabra = models.CharField(max_length=30)
     lexema = models.CharField(max_length=30)
     grados = models.CharField(validators=[validate_comma_separated_integer_list], max_length = 500)
+    tipoPalabra = models.CharField(max_length=30)
+    genero = models.CharField(max_length=2)
+    numero = models.CharField(max_length=2)
 
     def __str__(self):
         return self.palabra

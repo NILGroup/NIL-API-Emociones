@@ -9,7 +9,7 @@ def obtener_mayoritaria(grados):
         mayor = "0"
         posicion = 0;
         for i in range(5):
-                if(grados[i] > mayor and grados[i] >= "1.5"):
+                if(grados[i] > mayor and float(grados[i]) >= 0.0):
                         mayor = grados[i]
                         posicion = i+1
 
@@ -20,7 +20,7 @@ def obtener_mayoritaria(grados):
 
 def obtener_emociones(grados):
         for i in range(5):
-                if(grados[i] >= "1.5"): #lo cambiamos a 1.5
+                if(float(grados[i]) >= 0.0): #Ahora no hay limite de ser emocional
                         solucion.append(i)
         return solucion
 
@@ -66,12 +66,16 @@ class TraductorPorcentajes():
 
         @staticmethod
         def traducir(texto):
+                                
                 if len(texto.split(" ")) == 1:
                         if texto[len(texto)-1] == '.':
                                 texto = texto.rstrip('.')
+                        
                         return interpretar_palabra(texto)
-                elif len(texto.split('.')) <= 2:
-                        return interpretar_frase(texto)
+                elif len(texto.split('.')) <= 2 and texto.split('.')[len(texto.split('.'))-1] == "":
+                        
+                        resultado = interpretar_frase(texto)
+                        return resultado
                 else:
                         return interpretar_texto(texto)
 

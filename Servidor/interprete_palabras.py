@@ -22,6 +22,9 @@ def coger_grados(grados):
     Funcion que traduce la cadena de grados que devuelve el servicio web a una lista
     de 5 strings que representan los grados (uno por cada emocion).
     """
+    #fichero = open("frases.txt" , "a")
+    #fichero.write(str(grados))
+    #fichero.close()
     tokens = grados.split(" || ")
     numeros = []
     for i in range(5):
@@ -40,16 +43,21 @@ class InterpretePalabras():
         Funcion que dada una URL del servicio web correspondiente a los grados de una palabra
         busca la palabra y devuelve una lista con sus grados (o una lista vacia si no la encuentra).
         """
-        buscada = lematizador.obtener_lema(palabra)
-        destino = URL + buscada + "/grados/"
+        
+        destino = URL + palabra + "/grados/"
+        
         respuesta = requests.get(destino) # consulta al servicio web
         numeros = []
+        #fichero.write("HECHA LA PETICIÓN\n")
         if repr(respuesta) != "<Response [404]>": # si la encuentra interpreta la  JSON
             grados = respuesta.json()
             numeros = coger_grados(grados)
+            
         else:
+
+            #Ponemos que si no está es 0
             numeros=["0","0","0","0","0"]
-           
+              
         return numeros
 
     @staticmethod

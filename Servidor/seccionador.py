@@ -70,7 +70,7 @@ def obtener_subfrases2(frase):
                         ini_i = frase.index("¿")                
                         fin_i = frase.index("?")
                 #if "¡".decode("utf-8") in frase and "!" in frase:
-                #       ini_e = frase.index("¡".decode("utf-8"))
+                #        ini_e = frase.index("¡".decode("utf-8"))
                 if "¡" in frase and "!" in frase:
                         ini_e = frase.index("¡")                
                         fin_e = frase.index("!")
@@ -112,8 +112,37 @@ class SeccionadorFrases():
 
         @staticmethod
         def seccionar_texto(texto):
+                #fichero = open("fichero.txt", "a")
                 frases = texto.split('.')
-                frases = frases[0:len(frases)-1]
+                #fichero.write("Frases: " + str(frases) + "\n")
+                #fichero = open("fichero.txt", "a")
+                #fichero.write("Frases: " + str(frases) + "\n")
+                i = 0
+                while i < len(frases): 
+                        #fichero.write("Frase: " +  frases[i] + "\n")
+                        if frases[i] == ' ' or frases[i] == '':
+                                frasesDelante = ''
+                                frasesDetras = ''
+                                if i != 0:
+                                        frasesDelante = frases[0:i]
+                                        #fichero.write(" ----- Frase que se queda: " + str(frasesDelante) + "\n")
+                                fraseFuera = frases[i]
+                                #fichero.write(" ----- Frase que se va: " + fraseFuera + "\n")
+                                
+                                if i != len(frases)-1:
+                                        frasesDetras = frases[i+1:len(frases)]
+                                        #fichero.write(" ----- Frases de detrás: " + str(frasesDetras) + "\n")
+                                
+                                if frasesDelante != '' and frasesDetras != '':
+                                        frases = frasesDelante + frasesDetras
+                                elif frasesDelante != '' and frasesDetras == '':
+                                        frases = frasesDelante
+                                elif frasesDelante == '' and frasesDetras != '':
+                                        frases = frasesDetras
+                                #fichero.write(" ----- Se queda: " +  str(frases) + "\n")
+                        else: 
+                                i = i+1
+                #fichero.write("Frases: " + str(frases) + "\n")
                 num_frases = 0
                 n = len(frases)
                 subfrases = []
@@ -125,4 +154,7 @@ class SeccionadorFrases():
                                 subfrases = subfrases + aux_f
                                 tipos = tipos + aux_t
                                 num_frases = num_frases + len(aux_f)
-                return subfrases, tipos
+                #fichero.write("subfrases: " + str(subfrases) + "\n")
+                #fichero.write("tipos: " + str(tipos) + "\n")
+                #fichero.close()
+                return subfrases,tipos
