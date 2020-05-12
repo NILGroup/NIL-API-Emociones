@@ -22,23 +22,12 @@ def coger_grados(grados):
     Funcion que traduce la cadena de grados que devuelve el servicio web a una lista
     de 5 strings que representan los grados (uno por cada emocion).
     """
-    #fichero = open("frases.txt" , "a")
-    #fichero.write(str(grados))
-    #fichero.close()
     tokens = grados.split(" || ")
     numeros = []
     for i in range(5):
         emocion = tokens[i].split(':')
         grado = emocion[1]
-        #fichero = open("grado.txt", "a")
-        #fichero.write("Vuelta: "+ str(i)+ "\n")
-        numero = float(grado)
-        #fichero.write("Grado: " +  grado + "\n")
-        #fichero.write("número: " + str(numero) + "\n" )
-        numero2 = round(numero - 1.0, 2)
-        #fichero.write("número2: " + str(numero2) + "\n")
-        #fichero.close()
-        numeros.append(str(numero2))
+        numeros.append(grado)
 
     return numeros
 
@@ -50,60 +39,16 @@ class InterpretePalabras():
         Funcion que dada una URL del servicio web correspondiente a los grados de una palabra
         busca la palabra y devuelve una lista con sus grados (o una lista vacia si no la encuentra).
         """
-        #fichero = open("frases.txt", "a")
-        #fichero.write(str(datetime.now()))
-        #fichero.write(" -- ")
-        #fichero.write("interprete_palabras.py -- InterpretePalabras.interpretar_grados(palabra)\n")
-        #fichero.write("	La palabra recibida es: " + palabra + "\n")
-        #buscada = traducir(palabra)
-        #buscada = palabra -- AQUI NO QUITA LAS TILDES
-        #destino = URL + buscada + "/grados/"
-        #QUITAR LA SIGUIENTE LINEA !!!!!!
         buscada = lematizador.obtener_lema(palabra)
         destino = URL + buscada + "/grados/"
-        #LA DE ABAJO ES LA BUENA !!!!!!!!!!!
-        #destino = URL + palabra + "/grados/"
-        #fichero.write(" -------------" + buscada + "\n")
-        #fichero.write("	-------------Petición " + destino + "\n")
-        #fichero.close()
         respuesta = requests.get(destino) # consulta al servicio web
         numeros = []
-        #fichero.write("HECHA LA PETICIÓN\n")
         if repr(respuesta) != "<Response [404]>": # si la encuentra interpreta la  JSON
             grados = respuesta.json()
             numeros = coger_grados(grados)
-            #fichero = open("frases.txt", "a")
-            #fichero.write("Numeros: " + str(numeros) + "\n")
-            #fichero.close()
         else:
-
-            #Ponemos que si no está es 0
-            #numeros=["1","1","1","1","1"]
-            #LA DE ABAJO ES LA BUENA!!!!!!!!!!!!
-            numeros=["0","0","0","0","0"]
-            #El servicio de grados ya busca por lexema y tipo de palabra
-            """
-            buscada = lematizador.obtener_lema(palabra)
-            destino  = URL + buscada + "/grados/"
-            fichero.write("	Ha fallado la petición, ahora vamos a buscar por lexema: " + buscada + "\n")
-            fichero.write("	Petición " + destino + "\n")
-            respuesta = requests.get(destino) #consulta al servicio web
-            try:
-                if repr(respuesta) != "<Response [404]>": # si la encuentra interpreta la respuesta JSON
-                    grados = respuesta.json()
-                    numeros = coger_grados(grados)
-                else:
-                    numeros=["1","1","1","1","1"]
-            except:
-                if repr(respuesta) != "<Response [404]>": # si la encuentra interpreta la respuesta JSON
-                    grados = respuesta.json()
-                   numeros = coger_grados(grados)
-                else:
-                    numeros=["1","1","1","1","1"]	
-           """
-        #fichero = open("grado.txt", "a")  
-       	#fichero.write(str(numeros))
-       	#fichero.close()      
+            numeros=["1","1","1","1","1"]
+           
         return numeros
 
     @staticmethod

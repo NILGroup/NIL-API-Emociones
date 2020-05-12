@@ -20,7 +20,7 @@ def obtener_mayoritaria(grados):
 
 def obtener_emociones(grados):
         for i in range(5):
-                if(grados[i] >= "2.5"):
+                if(grados[i] >= "2.5"): #lo cambiamos a 1.5
                         solucion.append(i)
         return solucion
 
@@ -66,31 +66,12 @@ class TraductorPorcentajes():
 
         @staticmethod
         def traducir(texto):
-                fichero = open("fichero.txt", "a")
-                #fichero.write(str(datetime.now()))
-                #fichero.write(" -- ")
-                #fichero.write("emoTraductor.Traductor.traducir(texto)\n")
-                #fichero.write(texto)
-                #fichero.write("\n")
-                #fichero.write("Ahí va\n")
-                #fichero.write(str(len(texto.split(" "))))
-                #fichero.write("\n")
-                #fichero.write(str(len(texto.split("."))))
-                #fichero.write("\n")
                 if len(texto.split(" ")) == 1:
                         if texto[len(texto)-1] == '.':
                                 texto = texto.rstrip('.')
-                        #fichero.write("Va a palabra\n")
-                        #fichero.close()
                         return interpretar_palabra(texto)
-                elif len(texto.split('.')) <= 2 and texto.split('.')[len(texto.split('.'))-1] == "":
-                        #fichero.write("Va a frase\n")
-                        #fichero.close()
-                        resultado = interpretar_frase(texto)
-                        #fichero.write("RESULTADO: " + str(resultado) + "\n")
-                        return resultado
+                elif len(texto.split('.')) <= 2:
+                        return interpretar_frase(texto)
                 else:
-                        #fichero.write("Va a texto\n")
-                        #fichero.close()
                         return interpretar_texto(texto)
 

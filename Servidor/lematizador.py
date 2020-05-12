@@ -111,8 +111,7 @@ class Lematizador():
         def obtener_lema(palabra):
                 palabra = palabra.lower()
                 lema = stemmer.stemWord(palabra) #obtenemos el lexema de la palabra
-                fichero = open("lema.txt", "a")
-                fichero.write("Palabra: " + palabra + " -> lema: " + lema + "\n")
+                
                 """
                 if lema in lemas_repetidos:
                         i = lemas_repetidos.index(lema)

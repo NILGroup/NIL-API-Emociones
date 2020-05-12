@@ -22,16 +22,9 @@ def obtener_medias(grados,num_frases):
 	de las que se han obtenido, haya las medias para cada emocion. Devuelve una
 	lista con los grados medios.
 	"""
-	fichero = open("fichero.txt", "a")
-	fichero.write("---------- Num_frases: " + str(num_frases)+ "\n")
-	fichero.write("---------- Grados: " + str(grados) + "\n") 
-	fichero.close()
 	if num_frases > 0:
 		for i in range(5):
 			grados[i] = str(round(grados[i] / num_frases,2))
-		fichero = open("fichero.txt", "a")
-		fichero.write("----------- Grados final: "+ str(grados) + "\n")
-		fichero.close()
 		return grados
 	else:
 		return ["1","1","1","1","1"]
@@ -54,16 +47,19 @@ def calcular_mayoritaria(contadores,grados):
 				indices.append(i)
 	return indices,mayor
 
-def analizar_grados_frase(frase, grados, lista_palabras, peso, num_frases, mayoritarias):
+def analizar_grados_frase(frase, grados, lista_palabras, peso, num_frases):
 	emociones,aux,mayoritariasFinales = interpreta.emociones_frase(frase)
 	lista_palabras = lista_palabras + aux
-	mayoritarias = mayoritarias + mayoritariasFinales
+	mayoritariasFinales = []
+
+	for i in range(len(lista_palabras)):
+		mayoritariasFinales.append(interpretaPalabra.interpretar_grados(lista_palabras[i]))
 	
 	for j in range(5):
 		grados[j] = grados[j] + (float(emociones[j]) * peso)
-	num_frases = num_frases + 2 #+ peso #pongo porque el peso de las enunciativas es 2
+	num_frases = num_frases + peso
 
-	return grados, lista_palabras,num_frases,mayoritarias
+	return grados, lista_palabras,num_frases,mayoritariasFinales
 
 def analizar_mayoritarias(frase, grados, contadores):
 	mayoritarias,grado = interpreta.emociones_mayoritaria_frase(frases)
@@ -87,14 +83,14 @@ class InterpreteTexto():
 		num_frases = 0
 		grados = [0,0,0,0,0]
 		palabras = []
-		mayoritarias = []
+		#mayoritarias = []
 
 		for i in range(n):
 			if len(frases[i]) > 0:
-				grados,palabras,num_frases,mayoritarias = analizar_grados_frase(frases[i],grados,palabras,tipos[i],num_frases, mayoritarias) 
+				grados,palabras,num_frases,mayoritariasFinales = analizar_grados_frase(frases[i],grados,palabras,tipos[i],num_frases) 
 		resultado = obtener_medias(grados,num_frases)
 
-		return resultado,palabras,mayoritarias
+		return resultado,palabras,mayoritariasFinales
 
 	@staticmethod
 	def emociones_mayoritarias_texto(texto):
