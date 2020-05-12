@@ -53,7 +53,7 @@ def calcular_mayoritaria(contadores,grados):
 
 def es_emocional(grados):
         for i in range(len(grados)):
-                if float(grados[i]) > 2.5: 
+                if float(grados[i]) > 1.5: 
                         return True
         return False
 
@@ -84,7 +84,7 @@ class InterpreteFrases():
                                                 num_validas = num_validas + tipos[i]#esto debe cambiar si empezamos a ponderar con tipos
                                         
                         emociones = obtener_medias(emociones_frase,num_validas)
-                        if emociones[0]== "1.0" and emociones[1]=="1.0" and emociones[2]=="1.0" and emociones[3]=="1.0" and emociones[4] =="1.0":
+                        if emociones[0]== "0.0" and emociones[1]=="0.0" and emociones[2]=="0.0" and emociones[3]=="0.0" and emociones[4] =="0.0":
                                 return ["0","0","0","0","0"], [],[]
                         else:
                                 return emociones,lista_palabras,mayoritarias

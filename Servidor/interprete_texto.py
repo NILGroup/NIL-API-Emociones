@@ -27,7 +27,7 @@ def obtener_medias(grados,num_frases):
 			grados[i] = str(round(grados[i] / num_frases,2))
 		return grados
 	else:
-		return ["1","1","1","1","1"]
+		return ["0","0","0","0","0"]
 
 def actualizar_grados(emocion,contadores,grados,grado):
 	i = emociones.index(emocion)

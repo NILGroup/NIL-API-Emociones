@@ -27,7 +27,8 @@ def coger_grados(grados):
     for i in range(5):
         emocion = tokens[i].split(':')
         grado = emocion[1]
-        numeros.append(grado)
+        gradoNormalizado = round(float(grado) - 1.0, 2)
+        numeros.append(str(gradoNormalizado))
 
     return numeros
 
@@ -47,7 +48,7 @@ class InterpretePalabras():
             grados = respuesta.json()
             numeros = coger_grados(grados)
         else:
-            numeros=["1","1","1","1","1"]
+            numeros=["0","0","0","0","0"]
            
         return numeros
 
