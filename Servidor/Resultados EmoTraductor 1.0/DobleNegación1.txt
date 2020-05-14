@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['plan', 'hermana', 'disgusta']
+Grado de tristeza: 1.97
+Grado de miedo: 1.54
+Grado de alegria: 2.62
+Grado de ira: 1.7
+Grado de asco: 1.31
+-----------------------------------------------------------

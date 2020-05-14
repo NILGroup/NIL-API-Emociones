@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['olvidar', 'tarde', 'cara', 'dejaras', 'adivino', 'historia', 'sonríes', 'ojos', 'nota', 'dolor', 'nota', 'olvidar', 'piense', 'penas', 'tuve', 'dejé', 'ir']
+Grado de tristeza: 2.29
+Grado de miedo: 2.19
+Grado de alegria: 1.45
+Grado de ira: 1.56
+Grado de asco: 1.19
+-----------------------------------------------------------

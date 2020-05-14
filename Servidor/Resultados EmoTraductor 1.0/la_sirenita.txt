@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['sirenita', 'vivía', 'mar', 'sentía', 'fascinada', 'humanos', 'sobretodo', 'pidió', 'bruja', 'mar', 'transformara', 'estar', 'príncipe', 'besaba', 'pasarn', 'días', 'volvería', 'sirena', 'magia', 'bruja', 'mar', 'separar']
+Grado de tristeza: 1.89
+Grado de miedo: 2.17
+Grado de alegria: 3.92
+Grado de ira: 1.34
+Grado de asco: 1.28
+-----------------------------------------------------------

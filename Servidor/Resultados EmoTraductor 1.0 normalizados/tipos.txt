@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['ido', 'parque', 'mañana', 'ido', 'sabes', 'visto', 'vaya', 'sorpresa', 'sabía', 'estaría', 'verdad', 'quedado', 'flipando', 'llevaba', 'verle', 'buenos', 'días']
+Grado de tristeza: 0.13
+Grado de miedo: 0.27
+Grado de alegria: 1.0
+Grado de ira: 0.1
+Grado de asco: 0.08
+-----------------------------------------------------------

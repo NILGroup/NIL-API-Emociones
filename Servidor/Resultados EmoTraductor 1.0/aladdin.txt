@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['princesa', 'vivía', 'palacio', 'real', 'padre', 'quería', 'casara', 'enamorada', 'escapó', 'palacio', 'deseaba', 'libre', 'conoció', 'aladdín', 'bazar', 'ayuda', 'genio', 'aladdín', 'enamoraron']
+Grado de tristeza: 1.44
+Grado de miedo: 1.67
+Grado de alegria: 3.79
+Grado de ira: 1.26
+Grado de asco: 1.14
+-----------------------------------------------------------

@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['amable', 'blancanieves', 'tenía', 'amigos', 'animales', 'amigos', 'pequeño', 'pajarito', 'amigo', 'príncipe', 'azul', 'amigo', 'enanitos', 'mejores', 'amigos', 'blancanieves']
+Grado de tristeza: 1.29
+Grado de miedo: 1.4
+Grado de alegria: 4.18
+Grado de ira: 1.17
+Grado de asco: 1.1
+-----------------------------------------------------------

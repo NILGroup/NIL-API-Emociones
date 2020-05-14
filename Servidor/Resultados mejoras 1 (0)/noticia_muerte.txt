@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['brutal', 'caso', 'violencia', 'machista', 'paraliza', 'centros', 'comerciales', 'concurridos', 'ciudad', 'burló', 'controles', 'seguridad', 'subió', 'segunda', 'planta', 'centro', 'comercial', 'disparos', 'pecho', 'abdomen', 'dejó', 'nota', 'mostrador', 'tienda', 'trabajaba', 'esposa', 'disparó', 'cara', 'feminicidio', 'intento', 'suicidio', 'paralizó', 'lunes', 'reforma', 'centros', 'comerciales', 'concurridos', 'ciudad', 'años', 'falleció', 'horas', 'agresor', 'sobrevivió', 'encuentra', 'grave', 'estable', 'hospital', 'capital', 'detonaciones', 'trabajadores', 'tiendas', 'clientes', 'corrieron', 'hechos', 'produjeron', 'tarde', 'anodina', 'puente', 'primeras', 'versiones', 'barajaban', 'tratado', 'robo', 'zapatería', 'plaza', 'comercial', 'encuentra', 'paseo', 'reforma', 'avenidas', 'transitadas', 'icónicas', 'capital', 'autoridades', 'dieron', 'homicidio', 'local', 'iniciado', 'investigaciones', 'delito', 'homicidio', 'calificado', 'pedido', 'divorcio', 'custodia', 'hijo', 'agresor', 'preso', 'veces', 'robo', '2002', '2004', '2012', 'amenazado', 'días', 'vas', 'destruir', 'vida', 'puta', 'pasó', 'lee', 'supuesta', 'nota', 'dejó', 'divulgada', 'prensa', 'mexicana', 'mujer', 'lesionada', 'manifestó', 'hombre', 'amenazado', 'causa', 'conflicto', 'pasional', 'señaló', 'policía', 'capitalina', 'país', 'asesinadas', 'mujeres', 'diario', 'violencia', 'machista', 'crímenes', 'pasionales', 'vistos', 'excusas', 'detonantes', 'atacar', 'mujeres', 'hecho', 'mujeres']
+Grado de tristeza: 1.14
+Grado de miedo: 1.22
+Grado de alegria: 1.13
+Grado de ira: 1.09
+Grado de asco: 0.73
+-----------------------------------------------------------

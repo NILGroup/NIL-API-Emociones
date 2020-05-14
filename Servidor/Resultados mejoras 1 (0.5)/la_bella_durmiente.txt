@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['nació', 'princesa', 'aurora', 'hadas', 'buenas', 'hicieron', 'maravillosos', 'regalos', 'regalo', 'malvada', 'maléfica', 'maldición', 'cumplir', 'años', 'princesa', 'pincharía', 'rueca', 'hadas', 'llevaron', 'aurora', 'vivir', 'bosque', 'querían', 'maldición', 'fuerte', 'hizo', 'aurora', 'pinchara', 'dedo', 'durmiera', 'príncipe', 'rompió', 'hechizo', 'despertó', 'durmiente']
+Grado de tristeza: 0.56
+Grado de miedo: 0.77
+Grado de alegria: 1.89
+Grado de ira: 0.51
+Grado de asco: 0.27
+-----------------------------------------------------------

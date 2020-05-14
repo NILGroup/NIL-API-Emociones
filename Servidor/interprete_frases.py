@@ -53,7 +53,7 @@ def calcular_mayoritaria(contadores,grados):
 
 def es_emocional(grados):
         for i in range(len(grados)):
-                if float(grados[i]) >= 0.0: #no hay limite
+                if float(grados[i]) > 0.0: #no hay limite
                         return True
         return False
 
@@ -95,7 +95,7 @@ class InterpreteFrases():
                                         else:
                                                 #si la palabra es emocional pero no está en el diccionario o los valores son 0 
                                                 #quizá queramos contemplar la palabra.
-                                                num_validas = num_validas + 0.0
+                                                num_validas = num_validas + 0
 
                         emociones = obtener_medias(emociones_frase,num_validas)
                         if emociones[0]== "0.0" and emociones[1]=="0.0" and emociones[2]=="0.0" and emociones[3]=="0.0" and emociones[4] =="0.0":

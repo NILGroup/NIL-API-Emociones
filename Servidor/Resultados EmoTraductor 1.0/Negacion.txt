@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['encanta', 'pasear', 'gusta', 'lluvia', 'hace', 'sol', 'desiste', 'sale', 'todos', 'modos', 'perro', 'quiere', 'olvida', 'coger', 'paraguas', 'perro', 'gusta', 'agua', 'pone', 'sombrero']
+Grado de tristeza: 2.0
+Grado de miedo: 2.06
+Grado de alegria: 3.33
+Grado de ira: 1.37
+Grado de asco: 1.24
+-----------------------------------------------------------

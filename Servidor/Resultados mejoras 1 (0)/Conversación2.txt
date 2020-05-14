@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['–', 'buen', 'día', '–', 'buen', 'día', 'ayudarla', 'necesito', 'kilos', 'pan', 'favor', '–', 'kilos', 'pan', 'están', '–', 'nada', 'debo', 'pesos', 'tiene', '–', 'gracias', 'buenas', 'tardes', 'buenas', 'tardes']
+Grado de tristeza: 0.38
+Grado de miedo: 0.32
+Grado de alegria: 1.52
+Grado de ira: 0.27
+Grado de asco: 0.24
+-----------------------------------------------------------

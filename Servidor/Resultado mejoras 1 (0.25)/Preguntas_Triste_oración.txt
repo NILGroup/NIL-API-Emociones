@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['lloran', 'océanos', 'llenos', 'gotas', 'infinito', 'caben', 'gotas', 'lleno', 'queja', 'llama', 'viento', 'nubes', 'descarguen', 'van', 'vientos', 'tempetuosos', 'llenos', 'ira', 'estan', 'tope', 'cabida', 'terrenal', 'dicen', 'mundo', 'soplen', 'tiene', 'cabida', 'van', 'fuegos', 'tronidos', 'rugen', 'barabunta', 'fuegos', 'tierra', 'dicen', 'cosmos', 'ennegrezcan', 'tronar', 'fuerte', 'van', 'seres', 'descansan', 'moradas', 'tierra', 'vio', 'nacer', 'tierra', 'dice', 'universo', 'mates', 'queda', 'terreno', 'seno', 'acoger', 'alma', 'van', 'almas', 'cielo', 'cielo', 'dice', 'hablo', 'favor', 'súplicas', 'tienes', 'montones', 'millones', 'ten', 'piedad', 'dadnos', 'oportunidad', 'vivir']
+Grado de tristeza: 0.32
+Grado de miedo: 0.4
+Grado de alegria: 0.92
+Grado de ira: 0.26
+Grado de asco: 0.13
+-----------------------------------------------------------

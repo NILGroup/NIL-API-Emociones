@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['digas', 'dije', 'marcos', 'martes', 'final', 'vimos', 'película']
+Grado de tristeza: 1.0
+Grado de miedo: 0.99
+Grado de alegria: 1.39
+Grado de ira: 0.53
+Grado de asco: 0.49
+-----------------------------------------------------------

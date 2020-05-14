@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['pocahontas', 'indígena', 'amaba', 'naturaleza', 'día', 'barco', 'llegó', 'ingleses', 'codiciosos', 'malvados', 'bondadoso', 'amable', 'tribu', 'pocahontas', 'quería', 'ingleses', 'fueran', 'ingleses', 'fueron', 'barco', 'pocahontas', 'olvidarían']
+Grado de tristeza: 0.61
+Grado de miedo: 0.72
+Grado de alegria: 1.76
+Grado de ira: 0.35
+Grado de asco: 0.24
+-----------------------------------------------------------

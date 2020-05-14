@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['sol', 'llueve', 'golpes', 'suelo', 'marcas', 'convertidas', 'simbolos', 'vez', 'sucedió', 'distancia', 'marcada', 'pasos', 'sueños', 'sueños', 'despertado', 'llama', 'realidad', 'solo', 'viento', 'calma', 'notaba', 'temporal', 'habitaba', 'cabeza', 'hace', 'tiempo', 'entristeció', 'salido', 'hacerme', 'sufrir']
+Grado de tristeza: 0.82
+Grado de miedo: 0.65
+Grado de alegria: 1.05
+Grado de ira: 0.45
+Grado de asco: 0.34
+-----------------------------------------------------------
