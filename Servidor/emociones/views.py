@@ -279,39 +279,139 @@ class ObtenerGrados(APIView):
                 generonumero = token.tag_
             tipo = pos
             lex = stemmer.stemWord(pk)
+
+            numero_ini = generonumero.find("Number") #Vamos a ver donde aparece el número
+            if numero_ini != -1: #Spacy ha sido capaz de reconocer el número de la palabra.
+                numero = generonumero[numero_ini + 7] #En este caracter comienza a detectar si es singular o plural
+            else:
+                numero = " "
+
+            genero_ini = generonumero.find("Gender") #Vamos a ver donde aparece el género
+            if genero_ini != -1: #Ha sido capaz de reconocer el género
+                genero = generonumero[genero_ini + 7] #Ahí econtramos donde comienza femenino o masculino
+            else:
+                genero = " "
+
+            fichero = open("lemas.txt", "a")
+            fichero.write("--------------------------------------------\n")
+            fichero.write("PALABRA = " + pk + "\n")
+            fichero.write("Tipo = " + tipo + "\n")
+            fichero.write("Raiz Spacy = " + lema + "\n")
+            fichero.write("Raiz Pystemmer = " + lex + "\n")
+            fichero.write("GeneroNumero = " + generonumero + "\n")
+            fichero.write("Numero = " + numero + "\n")
+            fichero.write("Genero = " + genero + "\n")
+            fichero.close()
             
             return Palabra.objects.get(palabra=pk) #buscamos la palabra tal cual
-        except Palabra.DoesNotExist: #si falla entonces vemos si es plural o singular.
+            #Si no encontramos la palabra tal cual, vamos a intentar obtener el lema de la palabra 
+        except Palabra.DoesNotExist: 
+            fichero = open("lemas.txt", "a")
+            fichero.write("     No existía la palabra directamente\n")
+            try: 
+                if lex == lema: #Si la raiz de Spacy y Pystemmer es la misma la buscamos
+                    try:
+                        try:
+                            fichero.write("     Spacy y Pystemmer están de acuerdo en la raíz, probamos\n")
+                            fichero.write("     " + str(Palabra.objects.get(lexema=lex, tipoPalabra=tipo)) + "\n")
+                            return Palabra.objects.get(lexema=lex, tipoPalabra = tipo)
+                        except Palabra.MultipleObjectsReturned:
+                            fichero.write("     Se intentan devolver más de una palabra \n")
+                            #Ha fallado porque tenemos más de una palabar con ese lexema para un tipo de palabra.
+                            #Vamos a buscar lo mismo con el género de la palabra
+                            if genero != " ":
+                                return Palabra.objects.get(lexema=lex, tipoPalabra=tipo, genero=genero)
+                            else:
+                                fichero.write("     ESTA ENTRANDO AQUI\n")
+                                raise Palabra.DoesNotExist()
+                    except: 
+                        fichero.write("     No estaba buscando el lexema y el tipo de palabra, buscamos el lexema como palabra\n")
+                        fichero.write("     " + str(Palabra.objects.get(palabra=lex)) + "\n")
+                        #si esto falla, cabe la posibilidad que el lema sea una palabra en si misma y aparezca en el diccionario
+                        return Palabra.objects.get(palabra = lex)
+                else:
+                    #Si tenemos raices distintas
+                    try: #Primero probamos con la de pystemmer, ya que el diccionario es el metodo que usó
+                        
+                        try:
+                            fichero.write("     Spacy y Pystemmer NO están de acuerdo en la raíz, probamos primero la de Pystemmer\n")
+                            fichero.write("     " + Palabra.objects.get(lexema=lex, tipoPalabra=tipo) + "\n")
+                            return Palabra.objects.get(lexema = lex, tipoPalabra = tipo)
+                        except Palabra.MultipleObjectsReturned:
+                            fichero.write("     Se intentan devolver más de una palabra \n")
+                            #Ha fallado porque tenemos más de una palabar con ese lexema para un tipo de palabra.
+                            #Vamos a buscar lo mismo con el género de la palabra
+                            if genero != " ":
+                                return Palabra.objects.get(lexema=lex, tipoPalabra=tipo, genero=genero)
+                            else:
+                                fichero.write("     ESTA ENTRANDO AQUI\n")
+                                raise Palabra.DoesNotExist()
+                    except:
+                        fichero.write("Error inesperado 1\n")
+                        try:
+                            try:
+                                fichero.write("     Con su raiz de PyStemmer y el tipo de palabra no está, buscamos con spacy\n")
+                                fichero.write("     " + str(Palabra.objects.get(lexema=lex, tipoPalabra=tipo)) + "\n")
+                                return Palabra.objects.get(lexema = lema, tipoPalabra = tipo)
+                            except Palabra.MultipleObjectsReturned:
+                                fichero.write("     Se intentan devolver más de una palabra \n")
+                                #Ha fallado porque tenemos más de una palabar con ese lexema para un tipo de palabra.
+                                #Vamos a buscar lo mismo con el género de la palabra
+                                if genero != " ":
+                                    return Palabra.objects.get(lexema=lema, tipoPalabra=tipo, genero=genero)
+                                else:
+                                    fichero.write("     ESTA ENTRANDO AQUI\n")
+                                    raise Palabra.DoesNotExist()
+                        except: 
+                            #si esto falla, cabe la posibilidad que el lema sea una palabra en si misma
+                            try: 
+                                fichero.write("     Buscamos si es una palabra como tal con la raiz de pystemmer\n")
+                                fichero.write("     " + str(Palabra.objects.get(palabra = lex)) + "\n")
+                                return Palabra.objects.get(palabra = lex)
+                            except:
+                                fichero.write("     Con la otra raiz, spacy \n")
+                                fichero.write("     " + str(Palabra.objects.get(palabra = lema)) + "\n")
+                                return Palabra.objects.get(palabra = lema)
+            except:
+                fichero.write("Error inesperado 2 \n")
+                raise Http404()
+            """
+            #si falla entonces vemos si es plural o singular.
             try:
-                
                 numero_ini = generonumero.find("Number")
-                if numero_ini != -1:
-                    numero = generonumero[numero_ini + 7]
-                    if numero == 'S':
-                        #fichero.write(" ATENCIÓN: es singular ahora vamos a buscar por el lexema y tipo de palabra\n")
-                        #fichero.write("si el lexema de pystemmer y el lema de spacy no coincide vamos a probar los dos\n")
-                        if lex == lema:
-                            #fichero.write("Los lexemas son iguales \n")
+                if numero_ini != -1: #Spacy ha sido capaz de reconocer el número de la palabra.
+                    numero = generonumero[numero_ini + 7] #En este caracter comienza a detectar si es singular o plural
+                    if numero == 'S': #Si es singular:
+                        #Solo podremos buscar la palabra con su lema. Como tenemos el obtenido por Spacy y el Pystemmer probaremos si son el mismo.
+                        #  MUY IMPORTANTE usamos el tipo de palabra para evitar la duplicidad de lemas. 
+                        if lex == lema: #Si ambos son el mismo lexema, lo buscamos directamente
                             return Palabra.objects.get(lexema=lex, tipoPalabra = tipo)
                         else:
-                            #fichero.write("Los lexemas son distintos\n")
+                            #Los lexemas no son los mismo. Primero usaremos el de Pystemmer porque es el que se usó para generar el diccionario.
                             try:
-                                #fichero.write("probamos lexema pystemmer\n")
+                                #Se intenta encontrar con el lema de Pystemmer
                                 return Palabra.objects.get(lexema = lex, tipoPalabra = tipo)
                             except:
-                                #fichero.write("probamos lexema spacy\n")
+                                #Si falla intentamos encontrar el lema de Spacy
                                 try: 
                                     return Palabra.objects.get(lexema = lema, tipoPalabra = tipo)
-                                except:
-                                    #fichero.write("y si fuera palabra?\n")
-                                    return Palabra.objects.get(palabra= lema)
+
+                                except: #En caso de que falle, vamos a ver si el lema es una palabra que aparezca en el diccionario.
+                                #POdríamos estar ante una palabra compuesta y que apareciese la palabra en el diccionario. 
+                                #Por ejemplo, si la palabra solar no apareciese ni tuviesemos ninguna palabra en el diccionario con lema sol- pero tuvieramos
+                                #la palabra sol con el lema mal sacado encontraríamos las emociones adecuadas.
+                                    try:
+                                        #Primero el lema de Pystemmer
+                                        return Palabra.objects.get(palabra= lex)
+                                    except:
+                                        #Lema de Spacy
+                                        return Palabra.objects.get(palabra=lema)
                     else:
-                        #Es plural vamos a quitarle el plural
-                        #fichero.write(" ATENCIÓN:es plural vamos a quitar el plural de la palabra: "+ pk + "\n")
+                        #Es plural vamos a quitarle el plural (a ver si podemos)
                         longitudPK = len(pk)
-                        if pk[longitudPK-1] == 's':
-                            if pk[longitudPK-2] == 'e':
-                                p = pk[0:longitudPK-2]
+                        if pk[longitudPK-1] == 's': #Si la palabra acaba en -s podemos encontrarnos con una palabra cuyo plural se forme con -s o -es
+                            if pk[longitudPK-2] == 'e': #Si la paalbra tiene después una -e- estamos en el caso de la formación de plural con -es
+                                p = pk[0:longitudPK-2] #Reducimos la palabra quitándole -es para convertirla en plural
                                 #fichero.write(" ATENCIÓN: la palabra acaba en -es, la dejamos como: " + p + "\n")
                                 return Palabra.objects.get(palabra = p)
                             else:
@@ -358,6 +458,7 @@ class ObtenerGrados(APIView):
                 #fichero.write("ATENCIÓN: Excepción pa mi\n")
                 #fichero.close()
                 raise Http404()
+            """
 
     def get_degrees(self,numeros):
         emociones = ["Tristeza", "Miedo", "Alegría", "Enfado", "Asco"]
