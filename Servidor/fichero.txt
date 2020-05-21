@@ -3309,3 +3309,103 @@ notaba ahí fuera el temporal que habitaba en mi cabeza hace tiempo, eso me entr
 'abogadas';{'emociones': ['0.47', '0.32', '0.84', '0.74', '0.41'], 'palabras': ['abogadas']}
 2020-05-20 18:40:18.676174 -- Peticion porcentajes
 'abogadas';{'solucion': ['abogadas', ['0.47', '0.32', '0.84', '0.74', '0.41'], 3]}
+2020-05-21 17:06:16.638297 -- Peticion textoGuay
+'abadía';{'emociones': ['0.43', '0.22', '1.33', '0.21', '0.21'], 'palabras': ['abadía']}
+2020-05-21 17:06:45.274552 -- Peticion porcentajes
+'abadía';{'solucion': ['abadía', ['0.43', '0.22', '1.33', '0.21', '0.21'], 3]}
+2020-05-21 17:08:25.062793 -- Peticion textoGuay
+'abadías';{'emociones': ['0.35', '0.56', '0.71', '0.24', '1.23'], 'palabras': ['abadías']}
+2020-05-21 17:08:28.065186 -- Peticion porcentajes
+'abadías';{'solucion': ['abadías', ['0.35', '0.56', '0.71', '0.24', '1.23'], 5]}
+2020-05-21 17:12:34.584072 -- Peticion textoGuay
+'abuela';{'emociones': ['1.29', '0.67', '3.33', '0.12', '0.1'], 'palabras': ['abuela']}
+2020-05-21 17:12:38.065283 -- Peticion porcentajes
+'abuela';{'solucion': ['abuela', ['1.29', '0.67', '3.33', '0.12', '0.1'], 3]}
+2020-05-21 17:28:19.082573 -- Peticion textoGuay
+'absolutistas';{'emociones': ['1.35', '2.05', '0.25', '2.5', '1.8'], 'palabras': ['absolutistas']}
+2020-05-21 17:28:22.091551 -- Peticion porcentajes
+'absolutistas';{'solucion': ['absolutistas', ['1.35', '2.05', '0.25', '2.5', '1.8'], 4]}
+2020-05-21 17:30:05.026936 -- Peticion textoGuay
+'aburrida';{'emociones': ['1.45', '0.8', '0.05', '1.65', '1.0'], 'palabras': ['aburrida']}
+2020-05-21 17:30:08.187957 -- Peticion porcentajes
+'aburrida';{'solucion': ['aburrida', ['1.45', '0.8', '0.05', '1.65', '1.0'], 4]}
+2020-05-21 17:32:01.915476 -- Peticion textoGuay
+'abusón';{'emociones': ['0', '0', '0', '0', '0'], 'palabras': ['abusón']}
+2020-05-21 17:32:04.950232 -- Peticion porcentajes
+'abusón';{'solucion': ['abusón', ['0', '0', '0', '0', '0'], 0]}
+2020-05-21 17:32:25.918976 -- Peticion textoGuay
+'abusación';{'emociones': ['0', '0', '0', '0', '0'], 'palabras': ['abusación']}
+2020-05-21 17:32:28.793659 -- Peticion porcentajes
+'abusación';{'solucion': ['abusación', ['0', '0', '0', '0', '0'], 0]}
+2020-05-21 17:40:43.924714 -- Peticion textoGuay
+'activamiento';{'emociones': ['0.25', '0.68', '2.0', '0.55', '0.35'], 'palabras': ['activamiento']}
+2020-05-21 17:40:47.224444 -- Peticion porcentajes
+'activamiento';{'solucion': ['activamiento', ['0.25', '0.68', '2.0', '0.55', '0.35'], 3]}
+2020-05-21 17:43:29.645572 -- Peticion textoGuay
+'abuelito';{'emociones': ['0', '0', '0', '0', '0'], 'palabras': ['abuelito']}
+2020-05-21 17:43:33.018144 -- Peticion porcentajes
+'abuelito';{'solucion': ['abuelito', ['0', '0', '0', '0', '0'], 0]}
+2020-05-21 17:43:46.213399 -- Peticion textoGuay
+'abuelita';{'emociones': ['0', '0', '0', '0', '0'], 'palabras': ['abuelita']}
+2020-05-21 17:43:49.191081 -- Peticion porcentajes
+'abuelita';{'solucion': ['abuelita', ['0', '0', '0', '0', '0'], 0]}
+2020-05-21 17:43:54.416853 -- Peticion textoGuay
+'abuelísimo';{'emociones': ['0', '0', '0', '0', '0'], 'palabras': ['abuelísimo']}
+2020-05-21 17:43:57.353529 -- Peticion porcentajes
+'abuelísimo';{'solucion': ['abuelísimo', ['0', '0', '0', '0', '0'], 0]}
+2020-05-21 17:44:03.260594 -- Peticion textoGuay
+'abueloso';{'emociones': ['0', '0', '0', '0', '0'], 'palabras': ['abueloso']}
+2020-05-21 17:44:07.123992 -- Peticion porcentajes
+'abueloso';{'solucion': ['abueloso', ['0', '0', '0', '0', '0'], 0]}
+2020-05-21 18:22:51.200182 -- Peticion textoGuay
+'abuelas';{'emociones': ['1.6', '0.2', '3.59', '0.07', '0.1'], 'palabras': ['abuelas']}
+2020-05-21 18:22:54.410173 -- Peticion porcentajes
+'abuelas';{'solucion': ['abuelas', ['1.6', '0.2', '3.59', '0.07', '0.1'], 3]}
+2020-05-21 18:23:58.324005 -- Peticion textoGuay
+'abuelas';{'emociones': ['1.6', '0.2', '3.59', '0.07', '0.1'], 'palabras': ['abuelas']}
+2020-05-21 18:24:01.838989 -- Peticion porcentajes
+'abuelas';{'solucion': ['abuelas', ['1.6', '0.2', '3.59', '0.07', '0.1'], 3]}
+2020-05-21 18:25:30.410869 -- Peticion textoGuay
+'abuelas';{'emociones': ['1.6', '0.2', '3.59', '0.07', '0.1'], 'palabras': ['abuelas']}
+2020-05-21 18:25:34.052230 -- Peticion porcentajes
+'abuelas';{'solucion': ['abuelas', ['1.6', '0.2', '3.59', '0.07', '0.1'], 3]}
+2020-05-21 18:28:23.041147 -- Peticion textoGuay
+'abuelas';{'emociones': ['1.6', '0.2', '3.59', '0.07', '0.1'], 'palabras': ['abuelas']}
+2020-05-21 18:28:26.704175 -- Peticion porcentajes
+'abuelas';{'solucion': ['abuelas', ['1.6', '0.2', '3.59', '0.07', '0.1'], 3]}
+2020-05-21 18:29:41.500289 -- Peticion textoGuay
+'abuelas';{'emociones': ['1.6', '0.2', '3.59', '0.07', '0.1'], 'palabras': ['abuelas']}
+2020-05-21 18:29:44.610086 -- Peticion porcentajes
+'abuelas';{'solucion': ['abuelas', ['1.6', '0.2', '3.59', '0.07', '0.1'], 3]}
+2020-05-21 18:32:06.506891 -- Peticion textoGuay
+'abuelas';{'emociones': ['1.6', '0.2', '3.59', '0.07', '0.1'], 'palabras': ['abuelas']}
+2020-05-21 18:32:09.891199 -- Peticion porcentajes
+'abuelas';{'solucion': ['abuelas', ['1.6', '0.2', '3.59', '0.07', '0.1'], 3]}
+2020-05-21 18:33:13.800071 -- Peticion textoGuay
+'abuelas';{'emociones': ['1.6', '0.2', '3.59', '0.07', '0.1'], 'palabras': ['abuelas']}
+2020-05-21 18:33:16.822744 -- Peticion porcentajes
+'abuelas';{'solucion': ['abuelas', ['1.6', '0.2', '3.59', '0.07', '0.1'], 3]}
+2020-05-21 18:34:03.362081 -- Peticion textoGuay
+'abuelas';{'emociones': ['1.6', '0.2', '3.59', '0.07', '0.1'], 'palabras': ['abuelas']}
+2020-05-21 18:34:06.991115 -- Peticion porcentajes
+'abuelas';{'solucion': ['abuelas', ['1.6', '0.2', '3.59', '0.07', '0.1'], 3]}
+2020-05-21 18:35:00.827183 -- Peticion textoGuay
+'abuelas';{'emociones': ['1.6', '0.2', '3.59', '0.07', '0.1'], 'palabras': ['abuelas']}
+2020-05-21 18:35:04.222486 -- Peticion porcentajes
+'abuelas';{'solucion': ['abuelas', ['1.6', '0.2', '3.59', '0.07', '0.1'], 3]}
+2020-05-21 18:42:25.690631 -- Peticion textoGuay
+'abuelas';{'emociones': ['1.6', '0.2', '3.59', '0.07', '0.1'], 'palabras': ['abuelas']}
+2020-05-21 18:42:29.568022 -- Peticion porcentajes
+'abuelas';{'solucion': ['abuelas', ['1.6', '0.2', '3.59', '0.07', '0.1'], 3]}
+2020-05-21 18:43:50.738906 -- Peticion textoGuay
+'abuelas';{'emociones': ['1.29', '0.67', '3.33', '0.12', '0.1'], 'palabras': ['abuelas']}
+2020-05-21 18:43:53.509738 -- Peticion porcentajes
+'abuelas';{'solucion': ['abuelas', ['1.29', '0.67', '3.33', '0.12', '0.1'], 3]}
+2020-05-21 18:49:52.747320 -- Peticion textoGuay
+'acusación';{'emociones': ['2.25', '1.65', '0.2', '1.7', '1.25'], 'palabras': ['acusación']}
+2020-05-21 18:49:56.682116 -- Peticion porcentajes
+'acusación';{'solucion': ['acusación', ['2.25', '1.65', '0.2', '1.7', '1.25'], 1]}
+2020-05-21 18:54:08.129398 -- Peticion textoGuay
+'constructora';{'emociones': ['0.2', '0.25', '1.2', '0.25', '0.0'], 'palabras': ['constructora']}
+2020-05-21 18:54:11.567715 -- Peticion porcentajes
+'constructora';{'solucion': ['constructora', ['0.2', '0.25', '1.2', '0.25', '0.0'], 3]}

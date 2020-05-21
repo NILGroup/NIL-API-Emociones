@@ -1,0 +1,46 @@
+--------------------------------------------
+PALABRA = abadía
+Tipo = PROPN
+Raiz Spacy = abadía
+Raiz Pystemmer = abad
+GeneroNumero = PROPN___
+Numero =  
+Genero =  
+--------------------------------------------
+PALABRA = abadía
+Tipo = PROPN
+Raiz Spacy = abadía
+Raiz Pystemmer = abad
+GeneroNumero = PROPN___
+Numero =  
+Genero =  
+--------------------------------------------
+PALABRA = abadías
+Tipo = NOUN
+Raiz Spacy = abadía
+Raiz Pystemmer = abad
+GeneroNumero = NOUN__Gender=Fem|Number=Plur
+Numero = P
+Genero = F
+     No existía la palabra directamente
+     Spacy y Pystemmer NO están de acuerdo en la raíz, probamos primero la de Pystemmer
+Error inesperado 1
+     Con su raiz de PyStemmer y el tipo de palabra no está, buscamos con spacy
+     abad
+     Buscamos si es una palabra como tal con la raiz de pystemmer
+     abad
+--------------------------------------------
+PALABRA = abadías
+Tipo = NOUN
+Raiz Spacy = abadía
+Raiz Pystemmer = abad
+GeneroNumero = NOUN__Gender=Fem|Number=Plur
+Numero = P
+Genero = F
+     No existía la palabra directamente
+     Spacy y Pystemmer NO están de acuerdo en la raíz, probamos primero la de Pystemmer
+Error inesperado 1
+     Con su raiz de PyStemmer y el tipo de palabra no está, buscamos con spacy
+     abad
+     Buscamos si es una palabra como tal con la raiz de pystemmer
+     abad

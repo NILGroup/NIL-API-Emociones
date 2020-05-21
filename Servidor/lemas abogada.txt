@@ -1,0 +1,46 @@
+--------------------------------------------
+PALABRA = abogada
+Tipo = ADJ
+Raiz Spacy = abogar
+Raiz Pystemmer = abog
+GeneroNumero = ADJ__Gender=Fem|Number=Sing|VerbForm=Part
+Numero = S
+Genero = F
+--------------------------------------------
+PALABRA = abogada
+Tipo = ADJ
+Raiz Spacy = abogar
+Raiz Pystemmer = abog
+GeneroNumero = ADJ__Gender=Fem|Number=Sing|VerbForm=Part
+Numero = S
+Genero = F
+--------------------------------------------
+PALABRA = abogadas
+Tipo = ADJ
+Raiz Spacy = abogar
+Raiz Pystemmer = abog
+GeneroNumero = ADJ__Gender=Fem|Number=Plur|VerbForm=Part
+Numero = P
+Genero = F
+     No existía la palabra directamente
+     Spacy y Pystemmer NO están de acuerdo en la raíz, probamos primero la de Pystemmer
+Error inesperado 1
+     Con su raiz de PyStemmer y el tipo de palabra no está, buscamos con spacy
+     Buscamos si es una palabra como tal con la raiz de pystemmer
+     Con la otra raiz, spacy 
+     abogar
+--------------------------------------------
+PALABRA = abogadas
+Tipo = ADJ
+Raiz Spacy = abogar
+Raiz Pystemmer = abog
+GeneroNumero = ADJ__Gender=Fem|Number=Plur|VerbForm=Part
+Numero = P
+Genero = F
+     No existía la palabra directamente
+     Spacy y Pystemmer NO están de acuerdo en la raíz, probamos primero la de Pystemmer
+Error inesperado 1
+     Con su raiz de PyStemmer y el tipo de palabra no está, buscamos con spacy
+     Buscamos si es una palabra como tal con la raiz de pystemmer
+     Con la otra raiz, spacy 
+     abogar
