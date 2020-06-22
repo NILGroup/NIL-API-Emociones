@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['vez', 1, 'NOUN'], ['gracias', 4, 'NOUN'], ['vez', 1, 'NOUN'], ['dejáis', 4, 'VERB'], ['palabras', 6, 'NOUN'], ['hacéis', 8, 'VERB'], ['merezca', 11, 'VERB'], ['pena', 13, 'NOUN'], ['verdad', 1, 'NOUN'], ['gracias', 3, 'NOUN'], ['regalo', 5, 'NOUN'], ['muñeca', 8, 'NOUN'], ['especial', 12, 'ADJ'], ['significa', 0, 'VERB'], ['estáis', 2, 'VERB'], ['apoyáis', 7, 'VERB'], ['sabéis', 11, 'VERB'], ['ganas', 13, 'NOUN'], ['comerme', 15, 'NOUN'], ['mundo', 17, 'NOUN'], ['siento', 19, 'VERB'], ['dejo', 1, 'VERB'], ['fotos', 2, 'NOUN'], ['paso', 4, 'NOUN'], ['paso', 6, 'NOUN'], ['veáis', 9, 'VERB'], ['detalles', 12, 'NOUN'], ['está', 15, 'VERB'], ['súper', 17, 'VERB'], ['cuidado', 18, 'NOUN'], ['menudo', 0, 'ADJ'], ['trabajazo', 1, 'NOUN'], ['gracias', 0, 'NOUN'], ['solo', 3, 'NOUN'], ['marca', 6, 'NOUN'], ['hecho', 11, 'VERB'], ['vuestro', 17, 'NOUN'], ['calor', 18, 'NOUN'], ['gracias', 0, 'NOUN'], ['vosotros', 2, 'NOUN'], ['pedrochecampanadas', 4, 'NOUN'], ['tienen', 5, 'VERB'], ['sentido', 7, 'NOUN'], ['adoro', 1, 'VERB']]
+Grado de tristeza: 0.97
+Grado de miedo: 0.57
+Grado de alegria: 1.88
+Grado de ira: 0.78
+Grado de asco: 0.5
+-----------------------------------------------------------

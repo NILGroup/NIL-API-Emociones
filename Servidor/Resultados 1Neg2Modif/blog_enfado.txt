@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['conocéis', 3, 'VERB'], ['seguido', 9, 'VERB'], ['redes', 11, 'NOUN'], ['sabréis', 12, 'ADJ'], ['críticas', 15, 'NOUN'], ['llevado', 19, 'VERB'], ['aguantado', 23, 'VERB'], ['obvio', 2, 'ADJ'], ['agradable', 6, 'ADJ'], ['leer', 7, 'VERB'], ['mentiras', 8, 'NOUN'], ['semana', 9, 'NOUN'], ['semana', 11, 'NOUN'], ['hacer', 15, 'VERB'], ['oídos', 16, 'NOUN'], ['sordos', 17, 'ADJ'], ['seguir', 19, 'VERB'], ['trabajo', 23, 'NOUN'], ['familia', 26, 'NOUN'], ['amigos', 29, 'NOUN'], ['personajes', 5, 'NOUN'], ['públicos', 6, 'ADJ'], ['tenemos', 8, 'VERB'], ['riesgo', 10, 'NOUN'], ['exponemos', 7, 'VERB'], ['gente', 11, 'NOUN'], ['hable', 12, 'ADJ'], ['regular', 4, 'ADJ'], ['quieran', 1, 'VERB'], ['existe', 0, 'VERB'], ['tipo', 2, 'NOUN'], ['límite', 4, 'NOUN'], ['pone', 2, 'VERB'], ['nochecita', 3, 'NOUN'], ['prensa', 8, 'NOUN'], ['visto', 10, 'VERB'], ['desde', 12, 'NOUN'], ['existe', 15, 'VERB'], ['límite', 17, 'NOUN']]
+Grado de tristeza: 0.64
+Grado de miedo: 0.58
+Grado de alegria: 1.35
+Grado de ira: 0.48
+Grado de asco: 0.45
+-----------------------------------------------------------

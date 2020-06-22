@@ -1,0 +1,102 @@
+Palabra: mujer
+CHILDREN: <generator object at 0x7f19abb5f828>
+Palabra otra vez: mujer
+Palabra: tranquila
+CHILDREN: <generator object at 0x7f19abb5f828>
+Palabra: gustan
+CHILDREN: <generator object at 0x7f19abb5f828>
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra: fiestas
+CHILDREN: <generator object at 0x7f19abb5f828>
+Palabra otra vez: fiestas
+Palabra: mujer
+CHILDREN: <generator object at 0x7f19a0156828>
+Palabra otra vez: mujer
+Palabra: tranquila
+CHILDREN: <generator object at 0x7f19a0156828>
+Palabra: gustan
+CHILDREN: <generator object at 0x7f19a0156828>
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra: fiestas
+CHILDREN: <generator object at 0x7f19a0156828>
+Palabra otra vez: fiestas
+Palabra: mujer
+Palabra: mujer
+Palabra: mujer
+Palabra otra vez: mujer
+Palabra: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra: fiestas
+Palabra otra vez: fiestas
+Palabra: mujer
+Palabra otra vez: mujer
+Palabra: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra: fiestas
+Palabra otra vez: fiestas
+Palabra: mujer
+Palabra otra vez: mujer
+Palabra: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra: fiestas
+Palabra otra vez: fiestas
+Palabra: mujer
+Palabra otra vez: mujer
+Palabra: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra otra vez: calmada
+Palabra: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra otra vez: gustan
+Palabra: fiestas
+Palabra otra vez: fiestas
+Palabra: alegre
+Palabra otra vez: alegre
+Palabra: alegre
+Palabra otra vez: alegre
+Palabra: alegre
+Palabra otra vez: alegre
+Palabra otra vez: alegre
+Palabra otra vez: alegre
+Palabra: alegre
+Palabra otra vez: alegre
+Palabra otra vez: alegre
+Palabra otra vez: alegre

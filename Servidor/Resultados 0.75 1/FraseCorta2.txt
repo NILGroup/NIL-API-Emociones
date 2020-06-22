@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['mañanas', 'llego', 'oficina', 'siento', 'enciendo', 'lámpara', 'abro', 'portafolios', 'comenzar', 'tarea', 'diaria', 'escribo', 'línea', 'larga', 'carta', 'años', 'explico', 'razones', 'suicidio']
+Grado de tristeza: 0.63
+Grado de miedo: 0.59
+Grado de alegria: 1.42
+Grado de ira: 0.37
+Grado de asco: 0.23
+-----------------------------------------------------------

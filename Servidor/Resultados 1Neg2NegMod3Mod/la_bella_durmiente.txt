@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['nació', 1, 'VERB'], ['princesa', 3, 'NOUN'], ['aurora', 4, 'ADJ'], ['hadas', 7, 'NOUN'], ['buenas', 8, 'ADJ'], ['hicieron', 10, 'VERB'], ['maravillosos', 11, 'ADJ'], ['regalos', 12, 'NOUN'], ['regalo', 2, 'NOUN'], ['malvada', 5, 'NOUN'], ['maléfica', 6, 'ADJ'], ['maldición', 9, 'NOUN'], ['cumplir', 12, 'VERB'], ['años', 14, 'NOUN'], ['princesa', 17, 'NOUN'], ['pincharía', 19, 'VERB'], ['rueca', 22, 'NOUN'], ['hadas', 1, 'NOUN'], ['llevaron', 3, 'VERB'], ['aurora', 5, 'NOUN'], ['vivir', 7, 'VERB'], ['bosque', 9, 'NOUN'], ['querían', 0, 'VERB'], ['maldición', 1, 'NOUN'], ['fuerte', 6, 'ADJ'], ['hizo', 0, 'VERB'], ['aurora', 2, 'VERB'], ['pinchara', 4, 'VERB'], ['dedo', 6, 'NOUN'], ['durmiera', 9, 'VERB'], ['príncipe', 1, 'NOUN'], ['rompió', 3, 'VERB'], ['hechizo', 5, 'NOUN'], ['despertó', 7, 'VERB'], ['durmiente', 11, 'ADJ']]
+Grado de tristeza: 0.58
+Grado de miedo: 0.82
+Grado de alegria: 2.02
+Grado de ira: 0.55
+Grado de asco: 0.28
+-----------------------------------------------------------

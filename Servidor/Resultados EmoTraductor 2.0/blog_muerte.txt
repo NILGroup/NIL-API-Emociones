@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['año', 1, 'NOUN'], ['enero', 7, 'NOUN'], ['página', 10, 'NOUN'], ['blanco', 12, 'NOUN'], ['llena', 14, 'VERB'], ['palabras', 16, 'NOUN'], ['brotan', 18, 'VERB'], ['interior', 21, 'NOUN'], ['salpicadas', 23, 'ADJ'], ['cosas', 26, 'NOUN'], ['contar', 28, 'VERB'], ['escapan', 31, 'VERB'], ['entendimiento', 34, 'NOUN'], ['año', 1, 'NOUN'], ['pasado', 4, 'VERB'], ['mañana', 13, 'NOUN'], ['fría', 15, 'ADJ'], ['cuerpos', 20, 'NOUN'], ['separaban', 22, 'VERB'], ['almas', 26, 'NOUN'], ['conectadas', 29, 'ADJ'], ['verte', 2, 'NOUN'], ['escucharte', 5, 'NOUN'], ['achucharte', 8, 'VERB'], ['…', 9, 'NOUN'], ['embargo', 12, 'NOUN'], ['sentirte', 15, 'VERB'], ['través', 17, 'NOUN'], ['personas', 20, 'NOUN'], ['llegando', 23, 'VERB'], ['través', 25, 'NOUN'], ['lágrimas', 27, 'NOUN'], ['vida', 29, 'NOUN'], ['través', 1, 'NOUN'], ['historias', 4, 'NOUN'], ['entremezclan', 7, 'VERB'], ['convierten', 13, 'VERB'], ['lágrimas', 15, 'NOUN'], ['vida', 17, 'NOUN'], ['achucharte', 26, 'VERB'], ['forman', 29, 'VERB'], ['parte', 30, 'NOUN'], ['instante', 34, 'NOUN']]
+Grado de tristeza: 0.87
+Grado de miedo: 0.64
+Grado de alegria: 1.32
+Grado de ira: 0.58
+Grado de asco: 0.3
+-----------------------------------------------------------

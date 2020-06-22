@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['vez', 'artesano', 'labraba', 'madera', 'juguetes', 'bellos', 'tenían', 'escultor', 'maestro', 'llamaba', 'anciano', 'virtudes', 'figuraba', 'buen', 'carácter', 'envejecido', 'solo', 'día', 'sinténdose', 'viejo', 'solo', 'costumbre', 'ahuyentar', 'soledad', 'decidió', 'tallar', 'madera', 'muñeco', 'hiciera', 'compañía', 'construido', 'transformar', 'aburrimiento', 'niños', 'momentos', 'maravillosos', 'fabricaría', 'taller', 'colega', 'carpintero', 'consiguió', 'tronco', 'pino', 'dispuso', 'fabricar', 'muñeco', 'corta', 'talla', 'cabeza', 'nariz', 'boca', 'cuanto', 'terminado', 'modelar', 'boca', 'madera', 'muñeco', 'rompió', 'hablar', 'abuelito', 'superado', 'asombro', 'apresuró', 'completar', 'obra', 'tallado', 'muñeco', 'tronco', 'pino', 'pensó', 'reparar', 'traviesa', 'mirada', 'decidió', 'iría', 'nombre', 'pinocho', 'cuanto', 'tuvo', 'par', 'piernas', 'madera', 'incorporó', 'salto', 'cogió', 'marchó', 'correr']
+Grado de tristeza: 0.57
+Grado de miedo: 0.55
+Grado de alegria: 1.32
+Grado de ira: 0.42
+Grado de asco: 0.31
+-----------------------------------------------------------

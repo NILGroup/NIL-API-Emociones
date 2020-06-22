@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['visto', 2, 'VERB'], ['vida', 5, 'NOUN'], ['paisaje', 7, 'NOUN'], ['hermoso', 9, 'ADJ']]
+Grado de tristeza: 2.49
+Grado de miedo: 2.54
+Grado de alegria: 2.02
+Grado de ira: 2.69
+Grado de asco: 2.77
+-----------------------------------------------------------

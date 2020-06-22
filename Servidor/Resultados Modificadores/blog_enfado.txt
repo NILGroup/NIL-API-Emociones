@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['conocéis', 'seguido', 'redes', 'sabréis', 'críticas', 'llevado', 'aguantado', 'obvio', 'agradable', 'leer', 'mentiras', 'semana', 'semana', 'hacer', 'oídos', 'sordos', 'seguir', 'trabajo', 'familia', 'amigos', 'personajes', 'públicos', 'tenemos', 'riesgo', 'exponemos', 'gente', 'hable', 'regular', 'quieran', 'existe', 'tipo', 'límite', 'pone', 'nochecita', 'prensa', 'visto', 'desde', 'existe', 'límite']
+Grado de tristeza: 0.41
+Grado de miedo: 0.5
+Grado de alegria: 1.34
+Grado de ira: 0.36
+Grado de asco: 0.3
+-----------------------------------------------------------

@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['lloran', 1, 'VERB'], ['océanos', 3, 'NOUN'], ['llenos', 9, 'ADJ'], ['gotas', 13, 'NOUN'], ['infinito', 15, 'NOUN'], ['caben', 3, 'VERB'], ['gotas', 5, 'NOUN'], ['lleno', 8, 'ADJ'], ['queja', 12, 'VERB'], ['llama', 15, 'VERB'], ['viento', 17, 'NOUN'], ['nubes', 21, 'NOUN'], ['descarguen', 25, 'VERB'], ['van', 1, 'VERB'], ['vientos', 3, 'NOUN'], ['tempetuosos', 4, 'ADJ'], ['llenos', 5, 'ADJ'], ['ira', 7, 'NOUN'], ['estan', 11, 'VERB'], ['tope', 13, 'NOUN'], ['cabida', 16, 'NOUN'], ['terrenal', 17, 'ADJ'], ['dicen', 2, 'VERB'], ['mundo', 4, 'NOUN'], ['soplen', 7, 'VERB'], ['tiene', 13, 'VERB'], ['cabida', 14, 'NOUN'], ['van', 1, 'VERB'], ['fuegos', 3, 'NOUN'], ['tronidos', 4, 'ADJ'], ['rugen', 9, 'VERB'], ['barabunta', 11, 'NOUN'], ['fuegos', 13, 'NOUN'], ['tierra', 16, 'NOUN'], ['dicen', 2, 'VERB'], ['cosmos', 4, 'NOUN'], ['ennegrezcan', 9, 'VERB'], ['tronar', 15, 'VERB'], ['fuerte', 17, 'ADJ'], ['van', 1, 'VERB'], ['seres', 3, 'NOUN'], ['descansan', 6, 'VERB'], ['moradas', 9, 'NOUN'], ['tierra', 13, 'NOUN'], ['vio', 16, 'VERB'], ['nacer', 17, 'VERB'], ['tierra', 20, 'NOUN'], ['dice', 29, 'VERB'], ['universo', 31, 'NOUN'], ['mates', 34, 'VERB'], ['queda', 41, 'VERB'], ['terreno', 42, 'NOUN'], ['seno', 45, 'NOUN'], ['acoger', 47, 'VERB'], ['alma', 50, 'NOUN'], ['van', 1, 'VERB'], ['almas', 3, 'NOUN'], ['cielo', 2, 'NOUN'], ['cielo', 5, 'NOUN'], ['dice', 6, 'VERB'], ['hablo', 5, 'VERB'], ['favor', 8, 'NOUN'], ['súplicas', 10, 'NOUN'], ['tienes', 11, 'ADJ'], ['montones', 13, 'NOUN'], ['millones', 17, 'NOUN'], ['ten', 19, 'VERB'], ['piedad', 20, 'NOUN'], ['dadnos', 24, 'ADJ'], ['oportunidad', 26, 'NOUN'], ['vivir', 28, 'VERB'], ['ayúdanos', 0, 'NOUN']]
+Grado de tristeza: 0.63
+Grado de miedo: 0.65
+Grado de alegria: 0.93
+Grado de ira: 0.53
+Grado de asco: 0.44
+-----------------------------------------------------------

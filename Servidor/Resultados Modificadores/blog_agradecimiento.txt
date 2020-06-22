@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['vez', 'gracias', 'vez', 'dejáis', 'palabras', 'hacéis', 'merezca', 'pena', 'verdad', 'gracias', 'regalo', 'muñeca', 'especial', 'significa', 'estáis', 'apoyáis', 'sabéis', 'ganas', 'comerme', 'mundo', 'siento', 'dejo', 'fotos', 'paso', 'paso', 'veáis', 'detalles', 'está', 'súper', 'cuidado', 'menudo', 'trabajazo', 'gracias', 'solo', 'marca', 'hecho', 'vuestro', 'calor', 'gracias', 'vosotros', 'pedrochecampanadas', 'tienen', 'sentido', 'adoro']
+Grado de tristeza: 0.55
+Grado de miedo: 0.48
+Grado de alegria: 2.63
+Grado de ira: 0.5
+Grado de asco: 0.29
+-----------------------------------------------------------

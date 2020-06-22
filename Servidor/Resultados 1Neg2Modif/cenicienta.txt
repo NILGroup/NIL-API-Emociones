@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['trabajaba', 1, 'VERB'], ['día', 4, 'NOUN'], ['noche', 6, 'NOUN'], ['pesar', 2, 'NOUN'], ['alegre', 6, 'ADJ'], ['divertía', 1, 'VERB'], ['amigos', 4, 'NOUN'], ['ratones', 6, 'NOUN'], ['ponía', 2, 'VERB'], ['contenta', 3, 'NOUN'], ['cantaba', 5, 'VERB'], ['creer', 1, 'VERB'], ['sueños', 4, 'NOUN'], ['hacía', 9, 'VERB'], ['sentirse', 10, 'ADJ'], ['feliz', 12, 'ADJ']]
+Grado de tristeza: 0.51
+Grado de miedo: 0.53
+Grado de alegria: 2.46
+Grado de ira: 0.35
+Grado de asco: 0.32
+-----------------------------------------------------------

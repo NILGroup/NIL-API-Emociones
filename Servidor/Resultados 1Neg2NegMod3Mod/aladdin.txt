@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['princesa', 3, 'NOUN'], ['vivía', 5, 'VERB'], ['palacio', 8, 'NOUN'], ['real', 9, 'ADJ'], ['padre', 1, 'NOUN'], ['quería', 2, 'VERB'], ['casara', 5, 'VERB'], ['enamorada', 4, 'ADJ'], ['escapó', 1, 'VERB'], ['palacio', 3, 'NOUN'], ['deseaba', 0, 'VERB'], ['libre', 2, 'ADJ'], ['conoció', 1, 'VERB'], ['aladdín', 3, 'VERB'], ['bazar', 6, 'NOUN'], ['ayuda', 2, 'NOUN'], ['genio', 4, 'NOUN'], ['aladdín', 8, 'VERB'], ['enamoraron', 10, 'VERB']]
+Grado de tristeza: 1.74
+Grado de miedo: 0.87
+Grado de alegria: 2.31
+Grado de ira: 1.24
+Grado de asco: 0.78
+-----------------------------------------------------------

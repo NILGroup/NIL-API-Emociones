@@ -6,11 +6,13 @@ from interprete_texto import InterpreteTexto
 from datetime import datetime
 
 def obtener_mayoritaria(grados):
-        mayor = "0"
+        mayor = 0.0
         posicion = 0;
-        for i in range(5):
-                if(grados[i] > mayor and float(grados[i]) >= 0.0):
-                        mayor = grados[i]
+        
+        for i in range(5):     
+                grado = float(grados[i])
+                if(grado > mayor and float(grados[i]) >= 0.0):
+                        mayor = grado
                         posicion = i+1
 
         if(mayor == 0):

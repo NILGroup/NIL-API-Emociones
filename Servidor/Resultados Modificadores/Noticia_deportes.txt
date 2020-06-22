@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['impuso', 'clásico', 'vibrante', 'recupera', 'liderato', 'blancos', 'derrotaron', 'gran', 'segunda', 'mitad', 'goles', 'mariano', 'sentenciaron', 'encuentro', 'primera', 'parte', 'ocasiones', 'equipos', 'primero', 'intentarlo', 'minuto', 'volea', 'benzema', 'área', 'marchó', 'réplica', 'puso', 'remató', 'elevado', 'presión', 'alta', 'blancos', 'hacía', 'daño', 'visitantes', 'trataban', 'contrarrestarlo', 'posesiones', 'largas', 'busca', 'espacio', 'encontró', 'acertado', 'mano', 'mano', 'última', 'jugada', 'peligro', 'primeros', 'minutos', 'llegó', 'pase', 'espalda', 'defensa', 'anticipó', 'centímetros', 'desvió', 'potente', 'disparo', 'segunda', 'mitad', 'gozó', 'ocasión', 'clara', 'momento', 'recibió', 'escorado', 'frontal', 'levantó', 'cabeza', 'inventó', 'bonito', 'disparo', 'rosca', 'obligó', 'gran', 'estirada', 'mejores', 'minutos', 'locales', 'encerraban', 'rival', 'sumar', 'jugadas', 'peligro', 'centró', 'carvajal', 'escorado', 'salvó', 'equipo', 'línea', 'gol', 'testarazo', 'isco', 'superado', 'minutos', 'recuperó', 'esférico', 'lateral', 'derecho', 'madridista', 'centrar', 'volea', 'benzema', 'área', 'encontró', 'portería', 'transcurrían', 'minutos', 'gol', 'llegó', 'susto', 'entrar', 'campo', 'banda', 'derecha', 'superar', 'mano', 'mano', 'minuto', 'llegó', 'primer', 'tanto', 'madridista', 'marcó', 'desmarque', 'asistió', 'líneas', 'brasileño', 'internó', 'área', 'disparo', 'tocó', 'justo', 'superar', 'dominio', 'local', 'tenía', 'final', 'vieron', 'ocasiones', 'salió', 'mariano', 'campo', 'delantero', 'arrancó', 'minuto', 'plantó', 'batió', 'definición', 'recupera', 'liderato']
+Grado de tristeza: 0.55
+Grado de miedo: 0.68
+Grado de alegria: 1.42
+Grado de ira: 0.57
+Grado de asco: 0.42
+-----------------------------------------------------------

@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['quería', 'llevar', 'honor', 'familia', 'veces', 'difícil', 'día', 'padre', 'enteró', 'tenía', 'ir', 'guerra', 'fingió', 'muchacho', 'unió', 'padre', 'tuviera', 'hacerlo', 'entrenó', 'ayudó', 'ejército', 'chino', 'ganar', 'guerra', 'familia', 'sintió', 'orgullosa']
+Grado de tristeza: 0.68
+Grado de miedo: 0.75
+Grado de alegria: 1.79
+Grado de ira: 0.71
+Grado de asco: 0.45
+-----------------------------------------------------------

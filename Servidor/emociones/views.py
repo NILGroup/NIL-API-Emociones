@@ -295,51 +295,54 @@ class ObtenerGrados(APIView):
             palabraSingular = " "
 
 
-            fichero = open("lemas.txt", "a")
-            fichero.write("--------------------------------------------\n")
-            fichero.write("PALABRA = " + pk + "\n")
-            fichero.write("Tipo = " + tipo + "\n")
-            fichero.write("Raiz Spacy = " + lema + "\n")
-            fichero.write("Raiz Pystemmer = " + lex + "\n")
-            fichero.write("GeneroNumero = " + generonumero + "\n")
-            fichero.write("Numero = " + numero + "\n")
-            fichero.write("Genero = " + genero + "\n")
-            fichero.close()
+            #fichero = open("lemas.txt", "a")
+            #fichero.write("--------------------------------------------\n")
+            #fichero.write("PALABRA = " + pk + "\n")
+            #fichero.write("Tipo = " + tipo + "\n")
+            #fichero.write("Raiz Spacy = " + lema + "\n")
+            #fichero.write("Raiz Pystemmer = " + lex + "\n")
+            #fichero.write("GeneroNumero = " + generonumero + "\n")
+            #fichero.write("Numero = " + numero + "\n")
+            #fichero.write("Genero = " + genero + "\n")
+            #fichero.close()
             
             
             return Palabra.objects.get(palabra=pk) #buscamos la palabra tal cual
             #Si no encontramos la palabra tal cual, vamos a intentar obtener el lema de la palabra 
         except Palabra.DoesNotExist: 
-            fichero = open("lemas.txt", "a")
-            fichero.write("     No existía la palabra directamente\n")
+            #fichero = open("lemas.txt", "a")
+            #fichero.write("     No existía la palabra directamente\n")
             try: 
                 try:
                 #Si es una palabra en plural acabada en -es o -s queremos quitar esta paricula y buscar la palabra directamente en el diccionario.
                     if numero == "P": #Spacy ha sido capaz de reconocer el número de la palabra y es plural
                         #Es plural vamos a quitarle el plural (a ver si podemos)
-                        fichero.write("     La palabra es plural\n")
+                        #fichero.write("     La palabra es plural\n")
                         longitudPK = len(pk)
                         if pk[longitudPK-1] == 's': #Si la palabra acaba en -s podemos encontrarnos con una palabra cuyo plural se forme con -s o -es
-                            fichero.write("     Holaaaaa")
+                            #fichero.write("     Holaaaaa")
                             if pk[longitudPK-2] == 'e': #Si la paalbra tiene después una -e- estamos en el caso de la formación de plural con -es
-                                fichero.write("     Acabada en -es\n")
-                                fichero.write("     PalabraSingular: " + palabraSingular + " aa\n")
-                                fichero.write("     PK: " + pk + " bbb \n")
-                                fichero.write("     LongitudPK: " + str(longitudPK) + " ccc\n")
-                                fichero.write("     Trozito: " + pk[0:longitudPK-2] + " ddd\n")
+                                #fichero.write("     Acabada en -es\n")
+                                #fichero.write("     PalabraSingular: " + palabraSingular + " aa\n")
+                                #fichero.write("     PK: " + pk + " bbb \n")
+                                #fichero.write("     LongitudPK: " + str(longitudPK) + " ccc\n")
+                                #fichero.write("     Trozito: " + pk[0:longitudPK-2] + " ddd\n")
                                 palabraSingular = pk[0:longitudPK-2] #Reducimos la palabra quitándole -es para convertirla en plural
-                                fichero.write("     Palabra: " + palabraSingular + "\n")
+                                #fichero.write("     Palabra: " + palabraSingular + "\n")
                             else:
-                                fichero.write("     Acabada en -s\n")
-                                fichero.write("     PalabraSingular: " + palabraSingular + " aa\n")
-                                fichero.write("     PK: " + pk + " bbb \n")
-                                fichero.write("     LongitudPK: " + str(longitudPK) + " ccc\n")
-                                fichero.write("     Trozito: " + pk[0:longitudPK-1] + " ddd\n")
+                                #fichero.write("     Acabada en -s\n")
+                                #fichero.write("     PalabraSingular: " + palabraSingular + " aa\n")
+                                #fichero.write("     PK: " + pk + " bbb \n")
+                                #fichero.write("     LongitudPK: " + str(longitudPK) + " ccc\n")
+                                #fichero.write("     Trozito: " + pk[0:longitudPK-1] + " ddd\n")
                                 palabraSingular = pk[0:longitudPK-1]
-                                fichero.write("     Palabra: " + palabraSingular + "\n")
+                                #fichero.write("     Palabra: " + palabraSingular + "\n")
                                             
                             #fichero.write("     Buscamos la palabra singular " + palabraSingular + "\n")
                             return Palabra.objects.get(palabra = palabraSingular)
+                        else:
+                            #fichero.write("     No es plural")
+                            raise(Palabra.DoesNotExist)
                     else:
                         #fichero.write("     No es plural")
                         raise(Palabra.DoesNotExist)
@@ -372,8 +375,8 @@ class ObtenerGrados(APIView):
                         try: #Primero probamos con la de pystemmer, ya que el diccionario es el metodo que usó
                         
                             try:
-                                fichero.write("     Spacy y Pystemmer NO están de acuerdo en la raíz, probamos primero la de Pystemmer\n")
-                                fichero.write("     " + Palabra.objects.get(lexema=lex, tipoPalabra=tipo) + "\n")
+                                #fichero.write("     Spacy y Pystemmer NO están de acuerdo en la raíz, probamos primero la de Pystemmer\n")
+                                #fichero.write("     " + Palabra.objects.get(lexema=lex, tipoPalabra=tipo) + "\n")
                                 return Palabra.objects.get(lexema = lex, tipoPalabra = tipo)
                             except Palabra.MultipleObjectsReturned:
                                 #fichero.write("     Se intentan devolver más de una palabra \n")
@@ -385,7 +388,7 @@ class ObtenerGrados(APIView):
                                     #fichero.write("     ESTA ENTRANDO AQUI\n")
                                     raise Palabra.DoesNotExist()
                         except:
-                            fichero.write("Error inesperado 1\n")
+                            #fichero.write("Error inesperado 1\n")
                             try:
                                 try:
                                     #fichero.write("     Con su raiz de PyStemmer y el tipo de palabra no está, buscamos con spacy\n")

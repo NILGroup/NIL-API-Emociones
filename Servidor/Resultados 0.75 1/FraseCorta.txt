@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['soles', 'finales', 'marzo', 'mamá', 'animó', 'bajar', 'altillos', 'maletas', 'ropa', 'verano', 'sacó', 'camisetas', 'shorts', 'sandalias', '…', 'aferrado', 'cubo', 'sacó', 'hermano', 'pequeño', 'olvidado']
+Grado de tristeza: 0.5
+Grado de miedo: 0.39
+Grado de alegria: 1.58
+Grado de ira: 0.3
+Grado de asco: 0.26
+-----------------------------------------------------------

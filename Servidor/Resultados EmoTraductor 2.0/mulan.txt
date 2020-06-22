@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['quería', 1, 'VERB'], ['llevar', 2, 'VERB'], ['honor', 4, 'NOUN'], ['familia', 7, 'NOUN'], ['veces', 1, 'NOUN'], ['difícil', 3, 'ADJ'], ['día', 1, 'NOUN'], ['padre', 4, 'NOUN'], ['enteró', 8, 'VERB'], ['tenía', 10, 'VERB'], ['ir', 12, 'VERB'], ['guerra', 15, 'NOUN'], ['fingió', 1, 'VERB'], ['muchacho', 4, 'NOUN'], ['unió', 1, 'VERB'], ['padre', 7, 'NOUN'], ['tuviera', 9, 'VERB'], ['hacerlo', 11, 'VERB'], ['entrenó', 2, 'VERB'], ['ayudó', 0, 'VERB'], ['ejército', 2, 'NOUN'], ['chino', 3, 'ADJ'], ['ganar', 5, 'VERB'], ['guerra', 7, 'NOUN'], ['familia', 1, 'NOUN'], ['sintió', 5, 'VERB'], ['orgullosa', 7, 'ADJ']]
+Grado de tristeza: 0.67
+Grado de miedo: 0.74
+Grado de alegria: 1.7
+Grado de ira: 0.71
+Grado de asco: 0.46
+-----------------------------------------------------------

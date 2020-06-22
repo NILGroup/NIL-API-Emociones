@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+['informado', 'especificaciones', 'técnicas', 'necesita', 'tanto', 'podemos', 'enviarle', 'productos', 'solicitado']
+Grado de tristeza: 0.53
+Grado de miedo: 0.57
+Grado de alegria: 1.08
+Grado de ira: 0.47
+Grado de asco: 0.31
+-----------------------------------------------------------

@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['verdad', 1, 'NOUN'], ['mal', 6, 'ADJ'], ['sueño', 7, 'NOUN'], ['desperté', 11, 'VERB'], ['vi', 13, 'VERB'], ['verdad', 16, 'NOUN'], ['volví', 18, 'VERB'], ['silencio', 1, 'NOUN'], ['catacumbas', 3, 'NOUN'], ['paredes', 5, 'NOUN'], ['soñé', 0, 'VERB'], ['volver', 2, 'VERB'], ['dormirme', 4, 'NOUN'], ['cabeza', 9, 'NOUN'], ['rota', 10, 'NOUN'], ['pensamientos', 12, 'NOUN'], ['tenía', 16, 'VERB'], ['miedo', 17, 'NOUN'], ['tener', 19, 'VERB'], ['miserable', 22, 'ADJ'], ['pesadilla', 23, 'NOUN'], ['pesadilla', 5, 'NOUN'], ['vida', 7, 'NOUN'], ['sentí', 1, 'VERB'], ['miré', 4, 'VERB'], ['silencio', 6, 'NOUN'], ['vacío', 8, 'NOUN'], ['reflejaba', 11, 'VERB'], ['paisaje', 14, 'NOUN'], ['invernal', 15, 'ADJ'], ['esperaba', 18, 'VERB'], ['pasase', 20, 'VERB'], ['tiempo', 22, 'NOUN'], ['volviera', 25, 'VERB'], ['normalidad', 28, 'NOUN']]
+Grado de tristeza: 0.79
+Grado de miedo: 0.74
+Grado de alegria: 0.91
+Grado de ira: 0.66
+Grado de asco: 0.61
+-----------------------------------------------------------

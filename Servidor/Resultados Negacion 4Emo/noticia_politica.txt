@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['estancamiento', 1, 'NOUN'], ['político', 2, 'ADJ'], ['agobia', 4, 'VERB'], ['meses', 10, 'NOUN'], ['llegar', 12, 'VERB'], ['fin', 15, 'NOUN'], ['espera', 18, 'VERB'], ['apruebe', 22, 'VERB'], ['gobierno', 24, 'NOUN'], ['liderado', 25, 'ADJ'], ['presidente', 28, 'NOUN'], ['interino', 29, 'ADJ'], ['necesitaba', 1, 'VERB'], ['mayoría', 3, 'NOUN'], ['escaños', 9, 'NOUN'], ['primera', 12, 'ADJ'], ['votación', 13, 'NOUN'], ['realizada', 14, 'ADJ'], ['jueves', 16, 'NOUN'], ['logró', 21, 'VERB'], ['sábado', 1, 'NOUN'], ['realiza', 3, 'VERB'], ['segunda', 5, 'ADJ'], ['votación', 6, 'NOUN'], ['necesita', 10, 'VERB'], ['votos', 12, 'NOUN'], ['favor', 14, 'NOUN'], ['contra', 17, 'NOUN'], ['cuenta', 0, 'VERB'], ['apoyo', 3, 'NOUN'], ['legisladores', 6, 'NOUN'], ['partido', 16, 'NOUN'], ['centroderechista', 19, 'NOUN'], ['dependerá', 1, 'VERB'], ['partido', 3, 'NOUN'], ['socialista', 4, 'ADJ'], ['accedido', 1, 'VERB'], ['votación', 6, 'NOUN'], ['sábado', 8, 'NOUN'], ['diputados', 11, 'NOUN'], ['dicho', 13, 'VERB'], ['votarán', 15, 'VERB'], ['contra', 17, 'NOUN'], ['elegido', 2, 'VERB'], ['juramentado', 6, 'VERB'], ['domingo', 13, 'NOUN'], ['lunes', 3, 'NOUN'], ['gobierno', 6, 'NOUN'], ['convocará', 9, 'VERB'], ['tercera', 12, 'ADJ'], ['elección', 13, 'NOUN']]
+Grado de tristeza: 0.67
+Grado de miedo: 0.6
+Grado de alegria: 1.38
+Grado de ira: 0.77
+Grado de asco: 0.57
+-----------------------------------------------------------

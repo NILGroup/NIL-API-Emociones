@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['película', 1, 'NOUN'], ['aburrida', 4, 'ADJ'], ['aburrida', 7, 'ADJ'], ['quedé', 10, 'VERB'], ['dormido', 11, 'ADJ'], ['despertarme', 1, 'NOUN'], ['dio', 3, 'VERB'], ['rabia', 4, 'NOUN'], ['gran', 6, 'ADJ'], ['cantidad', 7, 'NOUN'], ['dinero', 9, 'NOUN'], ['gastado', 13, 'VERB'], ['entrada', 16, 'NOUN'], ['cine', 18, 'NOUN'], ['vez', 1, 'NOUN'], ['volví', 7, 'VERB'], ['equivocar', 9, 'VERB']]
+Grado de tristeza: 1.17
+Grado de miedo: 0.7
+Grado de alegria: 1.45
+Grado de ira: 0.71
+Grado de asco: 0.5
+-----------------------------------------------------------

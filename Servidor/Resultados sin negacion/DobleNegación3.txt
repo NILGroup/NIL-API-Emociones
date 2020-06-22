@@ -1,0 +1,10 @@
+-----------------------------------------------------------
+http://localhost:8000/textosGuay/
+Lista de palabras emocionales:
+[['comeré', 1, 'NOUN'], ['hígado', 3, 'ADJ'], ['cerdo', 5, 'NOUN'], ['asco', 1, 'NOUN']]
+Grado de tristeza: 1.62
+Grado de miedo: 1.48
+Grado de alegria: 0.71
+Grado de ira: 2.36
+Grado de asco: 3.79
+-----------------------------------------------------------
